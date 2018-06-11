@@ -44,3 +44,5 @@ themes/wav-theme/node_modules/*
 # ================== #
 themes/wav-theme/gulpfile.js
 themes/wav-theme/build/*
+
+package-lock.json
