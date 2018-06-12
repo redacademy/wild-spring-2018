@@ -64,3 +64,63 @@ function wav_register_person() {
 
 }
 add_action( 'init', 'wav_register_person', 0 );
+
+
+
+// Register Custom Post Type
+function wav_register_press_item() {
+
+	$labels = array(
+		'name'                  => 'Press items',
+		'singular_name'         => 'Press item',
+		'menu_name'             => 'Press items',
+		'name_admin_bar'        => 'Press item',
+		'archives'              => 'Press item Archives',
+		'attributes'            => 'Press item Attributes',
+		'parent_item_colon'     => 'Parent Press item:',
+		'all_items'             => 'All Press items',
+		'add_new_item'          => 'Add New Press item',
+		'add_new'               => 'Add New',
+		'new_item'              => 'New Press item',
+		'edit_item'             => 'Edit Press item',
+		'update_item'           => 'Update Press item',
+		'view_item'             => 'View Press item',
+		'view_items'            => 'View Press items',
+		'search_items'          => 'Search Press item',
+		'not_found'             => 'Not found',
+		'not_found_in_trash'    => 'Not found in Trash',
+		'featured_image'        => 'Featured Image',
+		'set_featured_image'    => 'Set featured image',
+		'remove_featured_image' => 'Remove featured image',
+		'use_featured_image'    => 'Use as featured image',
+		'insert_into_item'      => 'Insert into Press item',
+		'uploaded_to_this_item' => 'Uploaded to this Press item',
+		'items_list'            => 'Press items list',
+		'items_list_navigation' => 'Press items list navigation',
+		'filter_items_list'     => 'Filter Press items list',
+	);
+	$args = array(
+		'label'                 => 'Press item',
+		'description'           => 'Custom post type to display press articles',
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-megaphone',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+	);
+	register_post_type( 'press-item', $args );
+
+}
+add_action( 'init', 'wav_register_press_item', 0 );
