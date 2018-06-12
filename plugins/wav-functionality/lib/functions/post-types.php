@@ -124,3 +124,61 @@ function wav_register_press_item() {
 
 }
 add_action( 'init', 'wav_register_press_item', 0 );
+
+// Register Custom Post Type
+function wav_register_festival() {
+
+	$labels = array(
+		'name'                  => 'Festivals',
+		'singular_name'         => 'Festival',
+		'menu_name'             => 'Festivals',
+		'name_admin_bar'        => 'Festival',
+		'archives'              => 'Festival Archives',
+		'attributes'            => 'Festival Attributes',
+		'parent_item_colon'     => 'Parent Festival:',
+		'all_items'             => 'All Festivals',
+		'add_new_item'          => 'Add New Festival',
+		'add_new'               => 'Add New',
+		'new_item'              => 'New Festival',
+		'edit_item'             => 'Edit Festival',
+		'update_item'           => 'Update Festival',
+		'view_item'             => 'View Festival',
+		'view_items'            => 'View Festivals',
+		'search_items'          => 'Search Festival',
+		'not_found'             => 'Not found',
+		'not_found_in_trash'    => 'Not found in Trash',
+		'featured_image'        => 'Featured Image',
+		'set_featured_image'    => 'Set featured image',
+		'remove_featured_image' => 'Remove featured image',
+		'use_featured_image'    => 'Use as featured image',
+		'insert_into_item'      => 'Insert into Festival',
+		'uploaded_to_this_item' => 'Uploaded to this Festival',
+		'items_list'            => 'Festivals list',
+		'items_list_navigation' => 'Festivals list navigation',
+		'filter_items_list'     => 'Filter Festivals list',
+	);
+	$args = array(
+		'label'                 => 'Festival',
+		'description'           => 'custom post time to show festivals',
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'post-formats' ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-tickets-alt',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+	);
+	register_post_type( 'festival', $args );
+
+}
+add_action( 'init', 'wav_register_festival', 0 );
