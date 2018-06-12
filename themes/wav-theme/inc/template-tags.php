@@ -2,13 +2,13 @@
 /**
  * Custom template tags for this theme.
  *
- * @package RED_Starter_Theme
+ * @package WAV_Starter_Theme
  */
 
  /**
   * Prints HTML with meta information for the current post-date/time.
   */
- function red_starter_posted_on() {
+ function WAV_Starter_posted_on() {
  	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
  	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
  		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -30,7 +30,7 @@
  /**
   * Prints HTML with meta information for the post author.
   */
- function red_starter_posted_by() {
+ function WAV_Starter_posted_by() {
  	$byline = sprintf(
  		esc_html( 'by %s' ),
  		'<span class="author vcard">' . esc_html( get_the_author() ) . '</span>'
@@ -43,7 +43,7 @@
  /**
   * Prints HTML with meta information for the comments with pop-up link.
   */
- function red_starter_comment_count() {
+ function WAV_Starter_comment_count() {
  	if ( is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
  		echo '<span class="comments-link">';
  		comments_popup_link( esc_html( '0 Comments' ), esc_html( '1 Comment' ), esc_html( '% Comments' ) );
@@ -55,12 +55,12 @@
  /**
   * Prints HTML with meta information for the categories and tags.
   */
- function red_starter_entry_footer() {
+ function WAV_Starter_entry_footer() {
  	// Hide category and tag text for pages.
  	if ( 'post' === get_post_type() ) {
  		/* translators: used between list items, there is a space after the comma */
  		$categories_list = get_the_category_list( esc_html( ', ' ) );
- 		if ( $categories_list && red_starter_categorized_blog() ) {
+ 		if ( $categories_list && WAV_Starter_categorized_blog() ) {
  			printf( '<span class="cat-links">' . esc_html( 'Posted in &rarr; %1$s' ) . '</span>', $categories_list ); // WPCS: XSS OK.
  		}
 
@@ -77,8 +77,8 @@
   *
   * @return bool
   */
- function red_starter_categorized_blog() {
- 	if ( false === ( $all_the_cool_cats = get_transient( 'red_starter_categories' ) ) ) {
+ function WAV_Starter_categorized_blog() {
+ 	if ( false === ( $all_the_cool_cats = get_transient( 'WAV_Starter_categories' ) ) ) {
  		// Create an array of all the categories that are attached to posts.
  		$all_the_cool_cats = get_categories( array(
  			'fields'     => 'ids',
@@ -91,37 +91,37 @@
  		// Count the number of categories that are attached to the posts.
  		$all_the_cool_cats = count( $all_the_cool_cats );
 
- 		set_transient( 'red_starter_categories', $all_the_cool_cats );
+ 		set_transient( 'WAV_Starter_categories', $all_the_cool_cats );
  	}
 
  	if ( $all_the_cool_cats > 1 ) {
- 		// This blog has more than 1 category so red_starter_categorized_blog should return true.
+ 		// This blog has more than 1 category so WAV_Starter_categorized_blog should return true.
  		return true;
  	} else {
- 		// This blog has only 1 category so red_starter_categorized_blog should return false.
+ 		// This blog has only 1 category so WAV_Starter_categorized_blog should return false.
  		return false;
  	}
  }
 
  /**
-  * Flush out the transients used in red_starter_categorized_blog.
+  * Flush out the transients used in WAV_Starter_categorized_blog.
   */
- function red_starter_category_transient_flusher() {
+ function WAV_Starter_category_transient_flusher() {
  	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
  		return;
  	}
  	// Like, beat it. Dig?
- 	delete_transient( 'red_starter_categories' );
+ 	delete_transient( 'WAV_Starter_categories' );
  }
- add_action( 'edit_category', 'red_starter_category_transient_flusher' );
- add_action( 'save_post',     'red_starter_category_transient_flusher' );
+ add_action( 'edit_category', 'WAV_Starter_category_transient_flusher' );
+ add_action( 'save_post',     'WAV_Starter_category_transient_flusher' );
 
  /**
   * Template for comments. We have opted out of displaying pingbacks and trackbacks.
   *
   * Used as a callback by wp_list_comments() for displaying the comments.
   */
- function red_starter_comment_list( $comment, $args, $depth ) {
+ function WAV_Starter_comment_list( $comment, $args, $depth ) {
  	$GLOBALS['comment'] = $comment;
  	?>
 
@@ -171,7 +171,7 @@
  /**
   * Display numbered post pagination instead of "Older Posts" and "Next Posts".
   */
- function red_starter_numbered_pagination() {
+ function WAV_Starter_numbered_pagination() {
  	global $wp_query;
  	$big = 999999999;
 

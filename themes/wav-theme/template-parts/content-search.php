@@ -2,7 +2,7 @@
 /**
  * Template part for displaying results in search pages.
  *
- * @package RED_Starter_Theme
+ * @package WAV_Starter_Theme
  */
 
 ?>
@@ -13,7 +13,7 @@
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php red_starter_posted_by(); ?>
+			<?php WAV_Starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php WAV_Starter_posted_by(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
