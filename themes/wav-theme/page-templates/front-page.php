@@ -30,7 +30,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+test
 <img src="<?php echo CFS()->get( 'front_page_wav_img' ); ?>">
 <h1><?php echo CFS()->get('front_page_wav_main_title')?></h1>
 <p><?php echo CFS()->get('front_page_wav_mission')?></p>
