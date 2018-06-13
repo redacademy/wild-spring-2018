@@ -20,7 +20,11 @@ get_header(); ?>
 	</div><!-- #primary -->
 
     <h1>About WAV</h1>
+        <?php echo CFS()->get( 'about_wav' ); ?>
+        <?php echo CFS()->get( 'video_about' ); ?>
+        <?php echo CFS()->get( 'text_about_video' ); ?>
     <h1>Our Festival</h1>
+        <?php echo CFS()->get( 'our_festival' ); ?>
     <a>More Info</a>
     <h1>The Team</h1>
     <a>See More</a>
