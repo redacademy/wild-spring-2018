@@ -5,21 +5,6 @@
  * @package WAV_Starter_Theme
  */
 
-get_header(); ?>
-
-<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
-
-<?php
-/**
- * The main template file.
- *
- * @package WAV_Starter_Theme
- */
 
 get_header(); ?>
 <!--banner-->
@@ -30,46 +15,9 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-test
 <img src="<?php echo CFS()->get( 'front_page_wav_img' ); ?>">
 <h1><?php echo CFS()->get('front_page_wav_main_title')?></h1>
 <p><?php echo CFS()->get('front_page_wav_mission')?></p>
-
-            <section class="front activity container">
-			    <h2>Seasonal Activity Ideas</h2>
-
-				<div class="activity-posts-container">
-					<?php
-					$args = array(
-						'post_type' => 'activity',
-						'posts_per_page' => 2,
-						'orderby' => 'date',
-						'order' => 'ASC'
-						);
-					$activities = get_posts( $args ); // returns an array of posts
-					?>
-
-					<?php foreach ( $activities as $activity ) : setup_postdata( $post ); ?>
-
-						<article class="activity-posts-single">
-							<?php if ( has_post_thumbnail() ) : ?>
-								<?php the_post_thumbnail( 'large' ); ?>
-							<?php endif; ?>
-
-							<div class="activity-posts-single-text">
-								<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
-                                <?php the_excerpt('<p></>')?>
-								<a class="activity-post-button" href=<?php echo get_permalink() ?>>see details</a>
-							</div><!-- .activity-posts-single-text-->
-						</article><!-- activity-posts-single -->
-
-					<?php endforeach; wp_reset_postdata(); ?>
-
-				</div><!-- activity-posts-container -->
-
-					 <div class="activity-button yellow-button">
-          				<a href=<?php echo get_post_type_archive_link( 'activity' ) ?>>see activities</a>
-					</div>
 			</section>
             <section>
                 <h2>Upcoming Events</h2>
@@ -137,6 +85,3 @@ test
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
 </div><!-- #primary -->
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
