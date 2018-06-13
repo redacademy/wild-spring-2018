@@ -91,7 +91,7 @@ get_header(); ?>
                 <div class="about-container">
                         <div class="single-about-cotainer">
                             <h3>About us</h3>
-                            <p>Wild About Vancouver is an organization that helps people to learn outdoor activity benefits and share outdoor experience to the world. </p>
+                            <p>Wild About Vancouver, is an organization that helps people to learn outdoor activity benefits and share outdoor experience to the world. </p>
                             <a href="#">learn more &rsaquo; </a>
                         </div>
                         <div class="single-about-cotainer">
