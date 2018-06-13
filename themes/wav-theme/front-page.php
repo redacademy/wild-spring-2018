@@ -73,7 +73,9 @@ get_header(); ?>
             }
             else foreach( $events as $event ) {
                 echo('<article class="event-post-single">');
+                echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_post_thumbnail( $event, 'medium').'</a></div>');
                 echo('<h3 class="entry-title"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_title( $event).'</a></h3>' );
+                echo('<p>'.get_the_excerpt($event).'</p>');
                 echo('</article>');
             }
             ?>
