@@ -58,14 +58,32 @@ get_header(); ?>
 			</section>
             <section>
                 <h2>Upcoming Events</h2>
-                <div class="events-container">
-                <!--shortcode from the plugin?-->
+                <div class="tribe_event-container">
+                <div class="tribe_event-posts-container">
+                <!-- // the loop for events as per documentation -->
+           <?php 
+           $args = array(//array to get the upcoming events, only three of them
+			'posts_per_page' => 3,
+			'orderby' => 'date',
+            'order' => 'ASC'
+        );
+            $events = tribe_get_events($args);
+            if ( empty( $events ) ) {
+                echo('Sorry, nothing found.');
+            }
+            else foreach( $events as $event ) {
+                echo('<article class="event-post-single">');
+                echo('<h3 class="entry-title"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_title( $event).'</a></h3>' );
+                echo('</article>');
+            }
+            ?>
+				</div><!-- tribe_event-posts-container -->
                  </div>
-                 <div class="create-event-button yellow-button">
+                 <div class="create-tribe_event-button yellow-button">
                         <a href="#">create events</a>
                 </div>
-                 <div class="find-event-button blue-button">
-          				<a href=<?php echo get_post_type_archive_link( 'event' ) ?>>find events</a>
+                 <div class="find-tribe_event-button blue-button">
+          				<a href=<?php echo get_post_type_archive_link( 'tribe_event' ) ?>>find events</a>
 				</div>
             </section>
             <section>
