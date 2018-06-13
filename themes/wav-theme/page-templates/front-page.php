@@ -25,7 +25,7 @@ get_header(); ?>
                 <div class="tribe_event-container">
                 <div class="tribe_event-posts-container">
                 <!-- // the loop for events as per documentation -->
-           <?php 
+           <?php
            $args = array(//array to get the upcoming events, only three of them
 			'posts_per_page' => 3,
 			'orderby' => 'date',
@@ -79,15 +79,14 @@ get_header(); ?>
                         <a href="#">find more</a>
                 </div>
                 </div>
-            </section>
+            </section><!--end of what is WAV section-->
+<!--social media feeds-->
             <section>
                 <h2>Stay Up to Date</h2>
-            </section>
+            </section><!--end of social media feeds-->
 
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
-</div><!-- #primary -->
