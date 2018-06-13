@@ -16,11 +16,47 @@ get_header(); ?>
 		<p><?php echo CFS()->get('front_page_wav_mission')?></p>
 	</section><!--end of banner-->
 <!--activity ideas-->
-<section>
+<section class="activities">
+			<h2>Seasonal Activity Ideas</h2>
+
+				<div class="activities-posts-container">
+					<?php
+					$args = array(
+						'post_type' => 'activity',
+						'posts_per_page' => 2,
+						'orderby' => 'date',
+						'order' => 'ASC'
+						);
+					$latest_activity_posts = get_posts( $args ); // returns an array of posts
+					?>
+
+					<?php foreach ( $latest_activity_posts as $post ) : setup_postdata( $post ); ?>
+
+						<article class="activities-posts-single">
+							<div class="activities-posts-single-text">
+								<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+								<?php if ( has_post_thumbnail() ) : ?>
+								<?php the_post_thumbnail( '' ); ?>
+								<p><?php echo CFS()->get('description')?></p>
+							<?php endif; ?>
+
+								<a class="activities-post-button" href=<?php echo get_permalink() ?>>see details</a>
+							</div><!-- .activities-posts-single-text-->
+						</article><!-- activities-posts-single -->
+
+					<?php endforeach; wp_reset_postdata(); ?>
+
+				</div><!-- activities-posts-container -->
+
+					 <div class="activities-button">
+          				<a href=<?php echo get_post_type_archive_link( 'activity' ) ?>>see activities</a>
+					</div>
+
+
 </section><!--end of activity section-->
 
 <!--upcoming events-->
-    <section>
+    <section class="events">
                 <h2>Upcoming Events</h2>
                 <div class="tribe_event-container">
                 <div class="tribe_event-posts-container">
@@ -81,8 +117,11 @@ get_header(); ?>
                 </div>
             </section><!--end of what is WAV section-->
 <!--social media feeds-->
-            <section>
+            <section class="sm-feed">
                 <h2>Stay Up to Date</h2>
+<div><?php echo CFS()->get('front_page_wav_facebook_feed')?></div>
+<div><?php echo CFS()->get('front_page_wav_twitter_feed')?></div>
+<div><?php echo CFS()->get('front_page_wav_instagram_feed')?></div>
             </section><!--end of social media feeds-->
 
 		</main><!-- #main -->
