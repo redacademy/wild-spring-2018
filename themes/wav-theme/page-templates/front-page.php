@@ -7,19 +7,20 @@
 
 
 get_header(); ?>
-<!--banner-->
-<section class="front-page-banner">
-			<a href="<?php echo home_url() ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>" alt="front-page-banner"/></a>
-			</section><!--banner-->
-
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-<img src="<?php echo CFS()->get( 'front_page_wav_img' ); ?>">
-<h1><?php echo CFS()->get('front_page_wav_main_title')?></h1>
-<p><?php echo CFS()->get('front_page_wav_mission')?></p>
-			</section>
-            <section>
+<!--banner-->
+	<section class="front-page-banner">
+		<img src="<?php echo CFS()->get( 'front_page_wav_img' ); ?>">
+		<h1><?php echo CFS()->get('front_page_wav_main_title')?></h1>
+		<p><?php echo CFS()->get('front_page_wav_mission')?></p>
+	</section><!--end of banner-->
+<!--activity ideas-->
+<section>
+</section><!--end of activity section-->
+
+<!--upcoming events-->
+    <section>
                 <h2>Upcoming Events</h2>
                 <div class="tribe_event-container">
                 <div class="tribe_event-posts-container">
@@ -50,23 +51,28 @@ get_header(); ?>
                  <div class="find-tribe_event-button blue-button">
           				<a href=<?php echo get_post_type_archive_link( 'tribe_event' ) ?>>find events</a>
 				</div>
-            </section>
+    </section><!--end of events section-->
+
+<!--what is WAV-->
             <section>
                 <h2>What is WAV?</h2>
                 <div class="about-container">
                         <div class="single-about-cotainer">
-                            <h3>About us</h3>
-                            <p>Wild About Vancouver, is an organization that helps people to learn outdoor activity benefits and share outdoor experience to the world. </p>
+                            <h3><?php echo CFS()->get('front_page_wav_what_is_wav_about_header')?></h3>
+							<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_about_img')?>">
+                            <p><?php echo CFS()->get('front_page_wav_what_is_wav_about_text')?></p>
                             <a href="#">learn more &rsaquo; </a>
                         </div>
                         <div class="single-about-cotainer">
-                            <h3>Our Festival</h3>
-                            <p>WAV hosts various kinds of local festivals on streets and schools. <br>Please check our calendar, blog, and social medias to keep on track!</p>
+                            <h3><?php echo CFS()->get('front_page_wav_what_is_wav_festival_header')?></h3>
+							<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_festival_img')?>">
+							<p><?php echo CFS()->get('front_page_wav_what_is_wav_festival_text')?></p>
                             <a href="#">learn more &rsaquo; </a>
                         </div>
                         <div class="single-about-cotainer">
-                            <h3>School Outreach</h3>
-                            <p>WAV involves local schools to help UBC students to design a local outdoor learning project unique to the individual school. Expanding outdoor learning program will get INvolve more students to outdoor activities. </p>
+						<h3><?php echo CFS()->get('front_page_wav_what_is_wav_school_header')?></h3>
+						<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_school_img')?>">
+						<p><?php echo CFS()->get('front_page_wav_what_is_wav_school_text')?></p>
                             <a href="#">learn more &rsaquo; </a>
                         </div>
                         <div class="more-about-button yellow-button">
