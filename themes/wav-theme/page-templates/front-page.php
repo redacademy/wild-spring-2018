@@ -5,17 +5,23 @@
  * @package WAV_Starter_Theme
  */
 
+
 get_header(); ?>
+<!--banner-->
+<section class="front-page-banner">
+			<a href="<?php echo home_url() ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>" alt="front-page-banner"/></a>
+			</section><!--banner-->
 
-<div id="primary" class="content-area">
+
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
-
-
-				<div class="tribe_event-container">
+<img src="<?php echo CFS()->get( 'front_page_wav_img' ); ?>">
+<h1><?php echo CFS()->get('front_page_wav_main_title')?></h1>
+<p><?php echo CFS()->get('front_page_wav_mission')?></p>
+			</section>
+            <section>
+                <h2>Upcoming Events</h2>
+                <div class="tribe_event-container">
                 <div class="tribe_event-posts-container">
                 <!-- // the loop for events as per documentation -->
            <?php 
@@ -45,11 +51,37 @@ get_header(); ?>
           				<a href=<?php echo get_post_type_archive_link( 'tribe_event' ) ?>>find events</a>
 				</div>
             </section>
+            <section>
+                <h2>What is WAV?</h2>
+                <div class="about-container">
+                        <div class="single-about-cotainer">
+                            <h3>About us</h3>
+                            <p>Wild About Vancouver, is an organization that helps people to learn outdoor activity benefits and share outdoor experience to the world. </p>
+                            <a href="#">learn more &rsaquo; </a>
+                        </div>
+                        <div class="single-about-cotainer">
+                            <h3>Our Festival</h3>
+                            <p>WAV hosts various kinds of local festivals on streets and schools. <br>Please check our calendar, blog, and social medias to keep on track!</p>
+                            <a href="#">learn more &rsaquo; </a>
+                        </div>
+                        <div class="single-about-cotainer">
+                            <h3>School Outreach</h3>
+                            <p>WAV involves local schools to help UBC students to design a local outdoor learning project unique to the individual school. Expanding outdoor learning program will get INvolve more students to outdoor activities. </p>
+                            <a href="#">learn more &rsaquo; </a>
+                        </div>
+                        <div class="more-about-button yellow-button">
+                        <a href="#">find more</a>
+                </div>
+                </div>
+            </section>
+            <section>
+                <h2>Stay Up to Date</h2>
+            </section>
 
-                			<?php endwhile; // End of the loop. ?>
 
-</main><!-- #main -->
-</div><!-- #primary -->
+		</main><!-- #main -->
+	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+</div><!-- #primary -->
