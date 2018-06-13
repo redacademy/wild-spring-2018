@@ -182,3 +182,61 @@ function wav_register_festival() {
 
 }
 add_action( 'init', 'wav_register_festival', 0 );
+
+// Register Custom Post Type
+function wav_register_activity() {
+
+	$labels = array(
+		'name'                  => 'Activities',
+		'singular_name'         => 'Activity',
+		'menu_name'             => 'Activities',
+		'name_admin_bar'        => 'Activity',
+		'archives'              => 'Activity Archives',
+		'attributes'            => 'Activity Attributes',
+		'parent_item_colon'     => 'Parent Activity:',
+		'all_items'             => 'All Activities',
+		'add_new_item'          => 'Add New Activity',
+		'add_new'               => 'Add New',
+		'new_item'              => 'New Activity',
+		'edit_item'             => 'Edit Activity',
+		'update_item'           => 'Update Activity',
+		'view_item'             => 'View Activity',
+		'view_items'            => 'View Activities',
+		'search_items'          => 'Search Activity',
+		'not_found'             => 'Not found',
+		'not_found_in_trash'    => 'Not found in Trash',
+		'featured_image'        => 'Featured Image',
+		'set_featured_image'    => 'Set featured image',
+		'remove_featured_image' => 'Remove featured image',
+		'use_featured_image'    => 'Use as featured image',
+		'insert_into_item'      => 'Insert into activity',
+		'uploaded_to_this_item' => 'Uploaded to this activity',
+		'items_list'            => 'Activities list',
+		'items_list_navigation' => 'Activities list navigation',
+		'filter_items_list'     => 'Filter activities list',
+	);
+	$args = array(
+		'label'                 => 'Activity',
+		'description'           => 'Custom post type for activities',
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail' ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-location-alt',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+	);
+	register_post_type( 'activity', $args );
+
+}
+add_action( 'init', 'wav_register_activity', 0 );
