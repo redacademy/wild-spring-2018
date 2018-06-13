@@ -85,7 +85,6 @@ get_header(); ?>
                 <h2>Stay Up to Date</h2>
             </section><!--end of social media feeds-->
 
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 <?php get_sidebar(); ?>
