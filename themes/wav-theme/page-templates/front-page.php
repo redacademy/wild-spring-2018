@@ -119,6 +119,11 @@ get_header(); ?>
 <!--social media feeds-->
             <section class="sm-feed">
                 <h2>Stay Up to Date</h2>
+				<a class="twitter-timeline"
+  href="https://twitter.com/WildAboutVan">
+Tweets by @WildAboutVan
+</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fwildaboutvancouver%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1670564316547876" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 <div><?php echo CFS()->get('front_page_wav_facebook_feed')?></div>
 <div><?php echo CFS()->get('front_page_wav_twitter_feed')?></div>
 <div><?php echo CFS()->get('front_page_wav_instagram_feed')?></div>
