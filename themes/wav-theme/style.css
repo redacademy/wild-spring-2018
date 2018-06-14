@@ -881,8 +881,15 @@ object {
       grid-gap: 1rem; } }
   .home .activities-container .activities-posts-single {
     border: 1px solid #72CB7E; }
+  .home .events-container .flickity-page-dots {
+    visibility: hidden; }
+  .home .events-container .carousel-cell {
+    width: 100%; }
   @media (min-width: 620px) {
-    .home .events-container, .home .about-container {
+    .home .events-container {
+      display: block; } }
+  @media (min-width: 620px) {
+    .home .about-container {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 1rem; } }
@@ -891,6 +898,6 @@ object {
     @media (min-width: 620px) {
       .home .sm-feed {
         display: block; }
-        .home .sm-feed .sm-feed.container {
+        .home .sm-feed .sm-feed-container {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr; } }
