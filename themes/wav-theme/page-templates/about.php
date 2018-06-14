@@ -75,11 +75,10 @@ get_header(); ?>
                                     <?php if ( has_post_thumbnail() ) : ?>
                                         <?php the_post_thumbnail( 'large' ); ?>
                                     <?php endif; ?>
-                                </header>
-                            
-                                <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-                                
 
+                                    <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+                                </header>
+     
                             </div><!--end of teamMember-->
                             <?php endforeach; wp_reset_postdata(); ?>
                     </div><!--end of teamMembers-->
