@@ -91,6 +91,8 @@ function wav_starter_scripts() {
 
 	wp_enqueue_script('flickity', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', true);
 
+	wp_enqueue_style( 'flickity-css', 'https://unpkg.com/flickity@2/dist/flickity.min.css', false );
+
 	wp_enqueue_script( 'carousel', get_template_directory_uri() . '/build/js/carousel.min.js', array('jquery'), '20180613', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

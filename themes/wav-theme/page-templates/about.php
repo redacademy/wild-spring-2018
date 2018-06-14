@@ -83,8 +83,6 @@ get_header(); ?>
                             <?php endforeach; wp_reset_postdata(); ?>
                     </div><!--end of teamMembers-->
 
-                        
-
             </section>
             
 		</main><!-- #main -->
