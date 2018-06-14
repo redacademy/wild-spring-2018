@@ -64,7 +64,7 @@ get_header(); ?>
                     <div class="teamMembers">
 
                         <?php
-                            $args = array( 'post_type' => 'person', 'category_name' => 'team', 'order' => 'ASC', 'numberposts' => '4' );
+                            $args = array( 'post_type' => 'person', 'category_name' => 'team', 'order' => 'ASC');
                             $team_posts = get_posts( $args ); // returns an array of posts
                         ?>
 
