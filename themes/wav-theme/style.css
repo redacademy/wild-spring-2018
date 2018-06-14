@@ -901,3 +901,59 @@ object {
         .home .sm-feed .sm-feed-container {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr; } }
+
+.aboutNavigation {
+  background-color: #72CB7E;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px; }
+  .aboutNavigation a {
+    color: white; }
+
+.page-template-about h1 {
+  text-align: center; }
+
+.page-template-about .header-img-container {
+  height: 200px;
+  width: auto;
+  overflow: hidden; }
+  .page-template-about .header-img-container img {
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.page-template-about .aboutWav, .page-template-about .ourFestival {
+  padding: 10px; }
+  .page-template-about .aboutWav a, .page-template-about .ourFestival a {
+    text-align: right;
+    text-decoration: underline;
+    color: #40B2C4;
+    display: block; }
+  .page-template-about .aboutWav .center-button, .page-template-about .ourFestival .center-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .page-template-about .aboutWav .green-button, .page-template-about .ourFestival .green-button {
+    background-color: #72CB7E;
+    color: white;
+    padding: 10px 30px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    margin: 0 auto; }
