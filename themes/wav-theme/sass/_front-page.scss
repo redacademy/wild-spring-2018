@@ -1,0 +1,50 @@
+/*--------------------------------------------------------------
+# style for Front-Page by kate
+--------------------------------------------------------------*/
+
+.home{
+    // width:400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include tablet{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    @include desktop{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .site-content{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .sm-feed{
+        display: none;
+        @include tablet{
+            display: block;
+            .sm-feed-container{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    }
+    .front-page-banner p{
+        display: none;
+        @include desktop{
+            display: inline;
+        }
+    }
+    .activities-posts-container{
+        @include tablet{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
+        }
+        .activities-posts-single{
+            border: 1px solid $color__green;
+        }
+    }
+}

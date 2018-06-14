@@ -598,7 +598,8 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: royalblue;
+  text-decoration: none; }
   a:visited {
     color: purple; }
   a:hover, a:focus, a:active {
@@ -848,3 +849,60 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+/*--------------------------------------------------------------
+# style for Front-Page by kate
+--------------------------------------------------------------*/
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media (min-width: 620px) {
+    .home {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+  @media (min-width: 1080px) {
+    .home {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+  .home .site-content {
+    text-align: center;
+    margin: 0 auto; }
+  .home .sm-feed {
+    display: none; }
+    @media (min-width: 620px) {
+      .home .sm-feed {
+        display: block; }
+        .home .sm-feed .sm-feed-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr; } }
+  .home .front-page-banner p {
+    display: none; }
+    @media (min-width: 1080px) {
+      .home .front-page-banner p {
+        display: inline; } }
+  @media (min-width: 620px) {
+    .home .activities-posts-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem; } }
+  .home .activities-posts-container .activities-posts-single {
+    border: 1px solid #72CB7E; }
