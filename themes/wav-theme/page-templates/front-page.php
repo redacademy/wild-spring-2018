@@ -19,7 +19,7 @@ get_header(); ?>
 <section class="activities">
 			<h2>Seasonal Activity Ideas</h2>
 
-				<div class="activities-posts-container">
+				<div class="activities-container">
 					<?php
 					$args = array(
 						'post_type' => 'activity',
@@ -46,7 +46,7 @@ get_header(); ?>
 
 					<?php endforeach; wp_reset_postdata(); ?>
 
-				</div><!-- activities-posts-container -->
+				</div><!-- activities-container -->
 
 					 <div class="activities-button">
           				<a href=<?php echo get_post_type_archive_link( 'activity' ) ?>>see activities</a>
@@ -58,8 +58,8 @@ get_header(); ?>
 <!--upcoming events-->
     <section class="events">
                 <h2>Upcoming Events</h2>
-                <div class="tribe_event-container">
-                <div class="tribe_event-posts-container">
+                <!-- <div class="tribe_event-container"> -->
+                <div class="events-container">
                 <!-- // the loop for events as per documentation -->
            <?php
            $args = array(//array to get the upcoming events, only three of them
@@ -73,13 +73,13 @@ get_header(); ?>
             }
             else foreach( $events as $event ) {
                 echo('<article class="event-post-single">');
-                echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_post_thumbnail( $event, 'medium').'</a></div>');
+                echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_post_thumbnail( $event, 'large').'</a></div>');
                 echo('<h3 class="entry-title"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_title( $event).'</a></h3>' );
                 echo('<p>'.get_the_excerpt($event).'</p>');
                 echo('</article>');
             }
             ?>
-				</div><!-- tribe_event-posts-container -->
+				</div><!-- events-container -->
                  </div>
                  <div class="create-tribe_event-button yellow-button">
                         <a href="#">create events</a>
