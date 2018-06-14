@@ -83,14 +83,15 @@ add_filter( 'stylesheet_uri', 'wav_starter_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function wav_starter_scripts() {
-	
 	wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Oswald', false );
 
 	wp_enqueue_style( 'wav-starter-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'wav-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
-	wp_enqueue_script( 'front-page', get_template_directory_uri() . '/build/js/front-page.min.js', array('jquery'), '20180613', true );
+	wp_enqueue_script('flickity', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', true);
+
+	wp_enqueue_script( 'carousel', get_template_directory_uri() . '/build/js/carousel.min.js', array('jquery'), '20180613', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -131,6 +131,5 @@ Tweets by @WildAboutVan
 
 		</main><!-- #main -->
     </div><!-- #primary -->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
