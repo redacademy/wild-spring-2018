@@ -59,7 +59,7 @@ get_header(); ?>
     <section class="events">
                 <h2>Upcoming Events</h2>
                 <!-- <div class="tribe_event-container"> -->
-                <div class="events-container">
+                <div class="events-container carousel">
                 <!-- // the loop for events as per documentation -->
            <?php
            $args = array(//array to get the upcoming events, only three of them
@@ -72,7 +72,7 @@ get_header(); ?>
                 echo('Sorry, nothing found.');
             }
             else foreach( $events as $event ) {
-                echo('<article class="event-post-single">');
+                echo('<article class="event-post-single carousel-cell">');
                 echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_post_thumbnail( $event, 'large').'</a></div>');
                 echo('<h3 class="entry-title"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_title( $event).'</a></h3>' );
                 echo('<p>'.get_the_excerpt($event).'</p>');
@@ -130,6 +130,7 @@ Tweets by @WildAboutVan
             </section><!--end of social media feeds-->
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
+    </div><!-- #primary -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

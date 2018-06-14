@@ -29,7 +29,18 @@
             border: 1px solid $color__green;
         }
     }
-    .events-container, .about-container{
+    .events-container{
+        .flickity-page-dots{
+            visibility: hidden;
+        }
+        .carousel-cell {
+            width: 100%;
+          }
+        @include tablet{
+            display: block;
+        }
+    }
+     .about-container{
         @include tablet{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
