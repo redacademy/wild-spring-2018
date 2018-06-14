@@ -1,0 +1,14 @@
+.page-id-81 {
+
+    img {
+        display: none;
+    }
+
+    input[type=text],
+    input[type=tel],
+    input[type=email],
+    input[type=date] {
+        border: 1px solid $color__green;
+        border-radius: 1rem;
+    }
+}

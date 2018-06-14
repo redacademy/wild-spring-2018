@@ -598,7 +598,8 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: royalblue;
+  text-decoration: none; }
   a:visited {
     color: purple; }
   a:hover, a:focus, a:active {
@@ -784,9 +785,6 @@ a {
 .bypostauthor {
   display: block; }
 
-.page-id-81 img {
-  display: none; }
-
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -851,3 +849,120 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+/*--------------------------------------------------------------
+# style for Front-Page by kate
+--------------------------------------------------------------*/
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media (min-width: 620px) {
+    .home {
+      width: 100%; } }
+  .home .site-content {
+    text-align: center;
+    margin: 0 auto; }
+  .home .front-page-banner p {
+    display: none; }
+    @media (min-width: 1080px) {
+      .home .front-page-banner p {
+        display: inline; } }
+  @media (min-width: 620px) {
+    .home .activities-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem; } }
+  .home .activities-container .activities-posts-single {
+    border: 1px solid #72CB7E; }
+  .home .events-container .flickity-page-dots {
+    visibility: hidden; }
+  .home .events-container .carousel-cell {
+    width: 100%; }
+  @media (min-width: 620px) {
+    .home .events-container {
+      display: block; } }
+  @media (min-width: 620px) {
+    .home .about-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1rem; } }
+  .home .sm-feed {
+    display: none; }
+    @media (min-width: 620px) {
+      .home .sm-feed {
+        display: block; }
+        .home .sm-feed .sm-feed-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr; } }
+
+.aboutNavigation {
+  background-color: #72CB7E;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px; }
+  .aboutNavigation a {
+    color: white; }
+
+.page-template-about h1 {
+  text-align: center; }
+
+.page-template-about .header-img-container {
+  height: 200px;
+  width: auto;
+  overflow: hidden; }
+  .page-template-about .header-img-container img {
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.page-template-about .aboutWav, .page-template-about .ourFestival {
+  padding: 10px; }
+  .page-template-about .aboutWav a, .page-template-about .ourFestival a {
+    text-align: right;
+    text-decoration: underline;
+    color: #40B2C4;
+    display: block; }
+  .page-template-about .aboutWav .center-button, .page-template-about .ourFestival .center-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .page-template-about .aboutWav .green-button, .page-template-about .ourFestival .green-button {
+    background-color: #72CB7E;
+    color: white;
+    padding: 10px 30px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    margin: 0 auto; }
+
+.page-id-81 img {
+  display: none; }
+
+.page-id-81 input[type=text],
+.page-id-81 input[type=tel],
+.page-id-81 input[type=email],
+.page-id-81 input[type=date] {
+  border: 1px solid #72CB7E; }
