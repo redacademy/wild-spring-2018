@@ -7,6 +7,9 @@
  * @package wav_starter_Theme
  */
 
+/* functions.php */
+include('faq/faq.php');
+
 if ( ! function_exists( 'wav_starter_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -67,6 +70,21 @@ function wav_starter_widgets_init() {
 }
 add_action( 'widgets_init', 'wav_starter_widgets_init' );
 
+
+add_action( 'widgets_init', 'child_register_sidebar' );
+
+function child_register_sidebar(){
+    register_sidebar(array(
+        'name' => 'Sidebar 2',
+        'id' => 'sidebar-2',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4 class="widgettitle">',
+        'after_title' => '</h4>',
+    ));
+}
+
+
 /**
  * Filter the stylesheet_uri to output the minified CSS file.
  */
@@ -82,6 +100,16 @@ add_filter( 'stylesheet_uri', 'wav_starter_minified_css', 10, 2 );
 /**
  * Enqueue scripts and styles.
  */
+
+add_action( 'wp_enqueue_scripts', 'wptuts_enqueue' );
+function wptuts_enqueue() {
+    wp_register_style('wptuts-jquery-ui-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/south-street/jquery-ui.css');
+    wp_enqueue_style('wptuts-jquery-ui-style');
+ 
+    wp_register_script('wptuts-custom-js', get_template_directory_uri() . '/faq/faq.js', 'jquery-ui-accordion', '', true);
+    wp_enqueue_script('wptuts-custom-js');
+}
+
 function wav_starter_scripts() {
 	
 	wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Oswald', false );
@@ -94,6 +122,7 @@ function wav_starter_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
 add_action( 'wp_enqueue_scripts', 'wav_starter_scripts' );
 
 /**
@@ -105,3 +134,4 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+

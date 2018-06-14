@@ -11,6 +11,10 @@ get_header(); ?>
 
 <img src="<?php echo CFS()->get( 'contact_img' ); ?>">
 
+<aside id="sidebar-2">
+    <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-2') ) ?>
+</aside>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -22,6 +26,5 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 
 <?php get_footer(); ?>
