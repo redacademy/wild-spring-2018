@@ -4,11 +4,66 @@
         display: none;
     }
 
+    .post-81 {
+        padding: 3%;
+    }
+
     input[type=text],
     input[type=tel],
     input[type=email],
-    input[type=date] {
+    input[type=date],
+    textarea {
         border: 1px solid $color__green;
-        border-radius: 1rem;
+        border-radius: 5px;
+        width: 100%;
+
+
     }
+
+    .get-inv-form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .text-462, .text-900, .tel-754, .date-431, .city, .postal-code {
+        width: 50%;
+        padding: 0.5rem 0;
+    }
+
+    .text-462, .tel-754, .city {
+        padding-right: 0.5rem;
+    }
+
+    .email-975, .text-942, .text-935, .message , .text-289 {
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+
+    p, h2 {
+        margin: 0;
+    }
+
+    .big-label, .text-289 {
+        height: 5rem;
+    }
+
+    input[type=submit] {
+        border: 3px solid $color__yellow;
+        border-radius: 25px;
+        background: white;
+        color: black;
+        box-shadow: none;
+        font-size: 1.5rem;
+    }
+
+    
+
+
+
+
+
+ 
+
+
+
 }
