@@ -11,12 +11,12 @@ get_header(); ?>
 
 <div class="top" id="top">
 		<main id="main" class="site-main" role="main">
-			<img src="<?php echo CFS()->get( 'contact_img' ); ?>">
+			<img src="<?php echo CFS()->get( 'contact_image' ); ?>">
 			<div class="contact-top">
-				<h2> contact us </h2>
-				<button class="contact-button">
+				<h2 class="contactus"> contact us </h2>
+				<div class="contact-button1">
 					<a href="#faq">faq</a>
-				</button>
+			</div>
 			</div>
 			<aside id="sidebar-2">
 				<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-2') ) ?>
@@ -32,9 +32,9 @@ get_header(); ?>
 				<section class="faq" id="faq">
 				</section>
 
-				<button class="contact-button">
+				<div class="contact-button2">
 					<a href="#top">Back To Top</a>
-				</butto >
+				</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

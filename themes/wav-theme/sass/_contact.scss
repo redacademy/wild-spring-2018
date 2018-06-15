@@ -1,7 +1,54 @@
 .page-id-72 {
     background: $color__background-body;
 
-        .contact-button a {
-            color: $color_contactbtn;
-        }
+    .contactus {
+        text-transform: capitalize;
+        margin: 0;
+    }
+
+    .contact-top {
+        border-bottom: 1px solid $color__greyborder;
+        display: flex;
+        justify-content: space-between;
+        margin-top: .5rem;
+        position: relative;
+        margin-bottom: .5rem;
+        
+    }
+
+    .contact-button1, .contact-button2 {
+        padding: 6px 25px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50px;
+    }
+
+    .contact-button1 {
+        background-color: $color__yellow;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: .5rem;
+        position: absolute;
+        right: 0%;
+        bottom: 1%;
+            a {
+                color: #fff;
+            }
+    }
+
+    .contact-button2 {
+        background-color: $color__background-pre;
+        color: $color__background-pre;
+        border: 1px solid $color__greyborder;
+        display: flex;
+        justify-content: center;
+        width: 65%;
+        padding-bottom: .5rem;
+        padding-top: .5rem;
+        margin: 0 auto;
+            a {
+                color: $color__black;
+            }
+    }
+    
 }

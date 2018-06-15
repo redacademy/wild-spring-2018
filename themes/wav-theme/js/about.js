@@ -1,6 +1,6 @@
-(function ($){
-    //    $('body').append('hello'); 
+// (function ($){
+//     //    $('body').append('hello'); 
    
     
     
-    })(jQuery);
+//     })(jQuery);
