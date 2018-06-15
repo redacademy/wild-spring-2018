@@ -15,7 +15,7 @@
 }
 
 .page-template-about{
-    h1{
+    h1, h2{
         text-align: center;
     }
 
@@ -23,6 +23,9 @@
         height: 200px;
         width: auto;
         overflow: hidden;
+        @include tablet{
+            height: 400px;
+        }
         img{
             object-fit: cover;
             
@@ -54,5 +57,106 @@
     }
 
    
+    
+}
+
+.teamMember, .collaborator{
+    @include desktop{
+        a{
+            display: none;
+        }
+        &:hover a{
+            display: block;
+        }
+    }
+}
+
+.teamMember, .collaborator, .festival, .schoolItem, .pressItem{
+    width: 45%;
+    height: 45vw;
+    // padding: 10px;
+    // border: 3px solid skyblue;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 5px;
+    @include desktop{
+        width: 25%;
+        height: 25vw;
+    }
+    
+    & .entry-title a {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 16px;
+        color: white;
+        
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        opacity: 0.9;
+       
+   
+    }
+    
+    
+
+
+    .entry-header{
+        height: 100%;
+        width: 100%;
+       
+        img{
+            object-fit: cover;
+            position: absolute;
+           height: 300px;
+           width: 300px;
+           @include tablet{
+               height: 400px;
+               width: 400px;
+           }
+            
+        }
+       
+    }
+}
+
+.teamMember a, .collaborator a{
+    background-color: $color__green;
+}
+
+.festival a, .schoolItem a{
+    background-color: $color__yellow;
+    opacity: 0.9;
+}
+
+.pressItem a{
+    background-color: $color__blue;
+}
+
+.hidden-mobile{
+    display: none;
+    @include desktop{
+        display: block;
+    }
+}
+
+.videoAboutWav{
+    display: flex;
+    flex-direction: column;
+    @include tablet{
+        flex-direction: row; 
+    }
+    iframe{
+        width: 50%;
+
+    }
+    p{
+        width: 50%;
+    }
     
 }

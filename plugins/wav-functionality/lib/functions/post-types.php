@@ -54,7 +54,7 @@ function wav_register_person() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => true,
+		'has_archive'           => 'persons',
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
@@ -114,7 +114,7 @@ function wav_register_press_item() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => true,
+		'has_archive'           => 'press-items',
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
@@ -172,7 +172,7 @@ function wav_register_festival() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => true,
+		'has_archive'           => 'festivals',
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
@@ -202,7 +202,7 @@ function wav_register_activity() {
 		'update_item'           => 'Update Activity',
 		'view_item'             => 'View Activity',
 		'view_items'            => 'View Activities',
-		'search_items'          => 'Search Activity',
+		'search_items'          => 'Search Activities',
 		'not_found'             => 'Not found',
 		'not_found_in_trash'    => 'Not found in Trash',
 		'featured_image'        => 'Featured Image',
@@ -230,7 +230,7 @@ function wav_register_activity() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => true,
+		'has_archive'           => 'activities',
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
@@ -240,3 +240,41 @@ function wav_register_activity() {
 
 }
 add_action( 'init', 'wav_register_activity', 0 );
+
+/* Register the Custom Post Type */
+/* faq.php */
+add_action('init', function() {
+ 
+    $labels = array(
+        'name' => _x('FAQ', 'post type general name'),
+        'singular_name' => _x('Question', 'post type singular name'),
+        'add_new' => _x('Add New Question', 'Question'),
+        'add_new_item' => __('Add New Question'),
+        'edit_item' => __('Edit Question'),
+        'new_item' => __('New Question'),
+        'all_items' => __('All FAQ Questions'),
+        'view_item' => __('View Question'),
+        'search_items' => __('Search FAQ'),
+        'not_found' => __('No FAQ found'),
+        'not_found_in_trash' => __('No FAQ found in Trash'),
+        'parent_item_colon' => '',
+        'menu_name' => 'FAQ'
+    );
+ 
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title', 'editor', 'page-attributes')
+    );
+    register_post_type('FAQ', $args);
+});
+

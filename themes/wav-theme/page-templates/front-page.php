@@ -19,7 +19,7 @@ get_header(); ?>
 <section class="activities">
 			<h2>Seasonal Activity Ideas</h2>
 
-				<div class="activities-container">
+				<div class="activities-container carousel">
 					<?php
 					$args = array(
 						'post_type' => 'activity',
@@ -32,24 +32,25 @@ get_header(); ?>
 
 					<?php foreach ( $latest_activity_posts as $post ) : setup_postdata( $post ); ?>
 
-						<article class="activities-posts-single">
+						<article class="activities-posts-single carousel-cell">
 							<div class="activities-posts-single-text">
 								<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 								<?php if ( has_post_thumbnail() ) : ?>
 								<?php the_post_thumbnail( '' ); ?>
-								<p><?php echo CFS()->get('description')?></p>
-							<?php endif; ?>
-
-								<a class="activities-post-button" href=<?php echo get_permalink() ?>>see details</a>
+                                <p><?php echo CFS()->get('description')?></p>
+                                <div class="read-more">
+                            <a href="<?php echo esc_url(get_permalink())?>" class="button-green">see details</a>
+                        </div>
 							</div><!-- .activities-posts-single-text-->
-						</article><!-- activities-posts-single -->
+                        </article><!-- activities-posts-single -->
+                        <?php endif; ?>
 
 					<?php endforeach; wp_reset_postdata(); ?>
 
 				</div><!-- activities-container -->
 
 					 <div class="activities-button">
-          				<a href=<?php echo get_post_type_archive_link( 'activity' ) ?>>see activities</a>
+          				<a class="yellow-button" href=<?php echo get_post_type_archive_link( 'activity' ) ?>>see activities</a>
 					</div>
 
 
@@ -68,50 +69,53 @@ get_header(); ?>
             'order' => 'ASC'
         );
             $events = tribe_get_events($args);
+
             if ( empty( $events ) ) {
                 echo('Sorry, nothing found.');
             }
+            
             else foreach( $events as $event ) {
+                print_r($event);
                 echo('<article class="event-post-single carousel-cell">');
                 echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_post_thumbnail( $event, 'large').'</a></div>');
                 echo('<h3 class="entry-title"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_title( $event).'</a></h3>' );
-                echo('<p>'.get_the_excerpt($event).'</p>');
+                echo('<p>'.$event->post_content.'</p>');
+                echo('<p>'.tribe_get_start_date( $event).'<p>');
                 echo('</article>');
             }
             ?>
 				</div><!-- events-container -->
-                 </div>
-                 <div class="create-tribe_event-button yellow-button">
+                 <div class="button yellow-button">
                         <a href="#">create events</a>
                 </div>
-                 <div class="find-tribe_event-button blue-button">
-          				<a href=<?php echo get_post_type_archive_link( 'tribe_event' ) ?>>find events</a>
+                 <div class="button blue-button">
+          				<a href=<?php echo get_post_type_archive_link( 'tribe_event' ) ?>>find events &rsaquo;</a>
 				</div>
     </section><!--end of events section-->
 
 <!--what is WAV-->
             <section>
                 <h2>What is WAV?</h2>
-                <div class="about-container">
-                        <div class="single-about-cotainer">
+                <div class="about-container carousel">
+                        <div class="single-about-cotainer carousel-cell">
                             <h3><?php echo CFS()->get('front_page_wav_what_is_wav_about_header')?></h3>
 							<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_about_img')?>">
                             <p><?php echo CFS()->get('front_page_wav_what_is_wav_about_text')?></p>
                             <a href="#">learn more &rsaquo; </a>
                         </div>
-                        <div class="single-festival-cotainer">
+                        <div class="single-festival-cotainer carousel-cell">
                             <h3><?php echo CFS()->get('front_page_wav_what_is_wav_festival_header')?></h3>
 							<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_festival_img')?>">
 							<p><?php echo CFS()->get('front_page_wav_what_is_wav_festival_text')?></p>
                             <a href="#">learn more &rsaquo; </a>
                         </div>
-                        <div class="single-school-cotainer">
+                        <div class="single-school-cotainer carousel-cell">
 						<h3><?php echo CFS()->get('front_page_wav_what_is_wav_school_header')?></h3>
 						<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_school_img')?>">
 						<p><?php echo CFS()->get('front_page_wav_what_is_wav_school_text')?></p>
                             <a href="#">learn more &rsaquo; </a>
                         </div>
-                        <div class="more-about-button yellow-button">
+                        <div class="button yellow-button">
                         <a href="#">find more</a>
                 </div>
                 </div>
@@ -131,6 +135,5 @@ Tweets by @WildAboutVan
 
 		</main><!-- #main -->
     </div><!-- #primary -->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
