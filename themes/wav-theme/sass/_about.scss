@@ -56,3 +56,48 @@
    
     
 }
+
+.teamMember{
+    width: 45%;
+    height: 45vw;
+    // padding: 10px;
+    // border: 3px solid skyblue;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 5px;
+    
+    & .entry-title a {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 16px;
+        color: white;
+        background-color: $color__green;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        opacity: 0.8;
+        
+    }
+    .entry-header{
+        height: 100%;
+        width: 100%;
+       
+        img{
+            object-fit: cover;
+            position: absolute;
+           height: 300px;
+           width: 300px;
+            
+        }
+       
+    }
+}
+
+.hidden{
+    display: none;
+}

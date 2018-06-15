@@ -957,3 +957,43 @@ object {
     text-decoration: none;
     border-radius: 50px;
     margin: 0 auto; }
+
+.teamMember {
+  width: 45%;
+  height: 45vw;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  margin: 5px; }
+  .teamMember .entry-title a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 16px;
+    color: white;
+    background-color: #72CB7E;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    opacity: 0.8; }
+  .teamMember .entry-header {
+    height: 100%;
+    width: 100%; }
+    .teamMember .entry-header img {
+      -o-object-fit: cover;
+         object-fit: cover;
+      position: absolute;
+      height: 300px;
+      width: 300px; }
+
+.hidden {
+  display: none; }
