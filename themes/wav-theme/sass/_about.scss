@@ -15,7 +15,7 @@
 }
 
 .page-template-about{
-    h1{
+    h1, h2{
         text-align: center;
     }
 
@@ -57,7 +57,7 @@
     
 }
 
-.teamMember{
+.teamMember, .collaborator, .festival, .schoolItem, .pressItem{
     width: 45%;
     height: 45vw;
     // padding: 10px;
@@ -75,14 +75,17 @@
         left: 0;
         font-size: 16px;
         color: white;
-        background-color: $color__green;
+        
         display: block;
         width: 100%;
         padding: 10px;
         text-align: center;
-        opacity: 0.8;
-        
+        opacity: 0.9;
+   
     }
+    
+
+
     .entry-header{
         height: 100%;
         width: 100%;
@@ -96,6 +99,19 @@
         }
        
     }
+}
+
+.teamMember a, .collaborator a{
+    background-color: $color__green;
+}
+
+.festival a, .schoolItem a{
+    background-color: $color__yellow;
+    opacity: 0.9;
+}
+
+.pressItem a{
+    background-color: $color__blue;
 }
 
 .hidden{

@@ -86,208 +86,125 @@ get_header(); ?>
                     <a class="hidden">See More</a>
                 </section>
 
-          
+                <div class="anchor" id="collaboratorsJump"></div>
+    
+                    <section class="collaborators">
+                        <h1>Collaborators</h1>
+                        <div class="collaborators carousel">
 
-<div class="anchor" id="collaboratorsJump"></div>
-<h1>Collaborators</h1>
-<section class="container-holder">
-            <div class="container">
-                <h1 class="container-header">Inhabitent Journal</h1>
-                <div class="inhabitent-journal listed-posts">
+                        <?php
+                            $args = array( 'post_type' => 'person', 'category_name' => 'collaborator', 'order' => 'ASC', 'numberposts'=>-1);
+                            $collaborators_posts = get_posts( $args ); // returns an array of posts
+                        ?>
 
-            <?php
-                $args = array( 'post_type' => 'person', 'category_name' => 'collaborator', 'order' => 'ASC', 'numberposts' => '4' );
-                $collaborators = get_posts( $args ); // returns an array of posts
-            ?>
+                        <?php foreach ( $collaborators_posts as $post ) : setup_postdata( $post ); ?>
+                    
+                            <div class="collaborator carousel-cell">
+                                <header class="entry-header">
+                                    <?php if ( has_post_thumbnail() ) : ?>
+                                    <a href="<?php echo esc_url( get_permalink()) ?>" alt="Team Image"><?php the_post_thumbnail( 'large' ); ?></a>
+                                    <?php endif; ?>
 
-            <?php foreach ( $collaborators as $post ) : setup_postdata( $post ); ?>
-            <div class="ijbox">
-                <header class="entry-header">
-                    <?php if ( has_post_thumbnail() ) : ?>
-                        <?php the_post_thumbnail( 'large' ); ?>
-                    <?php endif; ?>
-                </header>
+                                    <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+                                </header>
+                                
+     
+                            </div><!--end of collaborator-->
+                            <?php endforeach; wp_reset_postdata(); ?>
+                    </div><!--end of collaborators-->
 
-                <div class="entry-meta solid-border">
-                    <div class="journal-meta">
+                </section>
+
+                <div class="anchor" id="workJump"></div>
+                    <h1>Work</h1>
                         
-                        <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-                    </div> <!-- end of journal-meta-->
 
-                    <div class="read-more">
-                        <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read Entry </a>
-                    </div><!--end of read-more-->
+                        <section class="festivals">
+                        <h2>Festival History</h2>
+                        <div class="festivals carousel">
 
-                </div><!--end of entry-meta-->
-            </div><!--end of ijbox-->
+                        <?php
+                            $args = array( 'post_type' => 'festival', 'order' => 'ASC', 'numberposts'=>-1);
+                            $festival_posts = get_posts( $args ); // returns an array of posts
+                        ?>
 
-                    <?php endforeach; wp_reset_postdata(); ?>
-                </div> <!--end of inhabitent-journal-->
+                        <?php foreach ( $festival_posts as $post ) : setup_postdata( $post ); ?>
+                    
+                            <div class="festival carousel-cell">
+                                <header class="entry-header">
+                                    <?php if ( has_post_thumbnail() ) : ?>
+                                    <a href="<?php echo esc_url( get_permalink()) ?>" alt="Festival Image"><?php the_post_thumbnail( 'large' ); ?></a>
+                                    <?php endif; ?>
 
-            </div><!--end of container-->
-        </section>
-            
+                                    <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+                                </header>
+                                
+     
+                            </div><!--end of collaborator-->
+                            <?php endforeach; wp_reset_postdata(); ?>
+                    </div><!--end of collaborators-->
+
+                </section>
+
+                  <section class="schoolOutreach">
+                        <h2>School Outreach</h2>
+                        <div class="schoolOutreach carousel">
+
+                        <?php
+                            $args = array( 'post_type' => 'post', 'category'=>'school-outreach', 'order' => 'ASC', 'numberposts'=>-1);
+                            $school_posts = get_posts( $args ); // returns an array of posts
+                        ?>
+
+                        <?php foreach ( $school_posts as $post ) : setup_postdata( $post ); ?>
+                    
+                            <div class="schoolItem carousel-cell">
+                                <header class="entry-header">
+                                    <?php if ( has_post_thumbnail() ) : ?>
+                                    <a href="<?php echo esc_url( get_permalink()) ?>" alt="School Outreach Image"><?php the_post_thumbnail( 'large' ); ?></a>
+                                    <?php endif; ?>
+
+                                    <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+                                </header>
+                                
+     
+                            </div><!--end of collaborator-->
+                            <?php endforeach; wp_reset_postdata(); ?>
+                    </div><!--end of collaborators-->
+
+                </section>
+
+                <div class="anchor" id="pressJump"></div>
+
+                 <section class="press">
+                        <h1>Press</h1>
+                        <div class="press carousel">
+
+                        <?php
+                            $args = array( 'post_type' => 'press-item', 'order' => 'ASC', 'numberposts'=>-1);
+                            $press_posts = get_posts( $args ); // returns an array of posts
+                        ?>
+
+                        <?php foreach ( $press_posts as $post ) : setup_postdata( $post ); ?>
+                    
+                            <div class="pressItem carousel-cell">
+                                <header class="entry-header">
+                                    <?php if ( has_post_thumbnail() ) : ?>
+                                    <a href="<?php echo esc_url( get_permalink()) ?>" alt="Press Image"><?php the_post_thumbnail( 'large' ); ?></a>
+                                    <?php endif; ?>
+
+                                    <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+                                </header>
+                                
+     
+                            </div><!--end of pressItem-->
+                            <?php endforeach; wp_reset_postdata(); ?>
+                    </div><!--end of press-->
+
+                </section>
+
+                   
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-
-    <a>See More</a>
-
-    <div class="anchor" id="collaboratorsJump"></div>
-    <h1>Collaborators</h1>
-    <section class="container-holder">
-                <div class="container">
-                    <h1 class="container-header">Inhabitent Journal</h1>
-                    <div class="inhabitent-journal listed-posts">
-
-                <?php
-                    $args = array( 'post_type' => 'person', 'category_name' => 'collaborator', 'order' => 'ASC', 'numberposts' => '4' );
-                    $collaborators = get_posts( $args ); // returns an array of posts
-                ?>
-
-                <?php foreach ( $collaborators as $post ) : setup_postdata( $post ); ?>
-                <div class="ijbox">
-                    <header class="entry-header">
-                        <?php if ( has_post_thumbnail() ) : ?>
-                            <?php the_post_thumbnail( 'large' ); ?>
-                        <?php endif; ?>
-                    </header>
-
-                    <div class="entry-meta solid-border">
-                        <div class="journal-meta">
-                            
-                            <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-                        </div> <!-- end of journal-meta-->
-
-                        <div class="read-more">
-                            <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read Entry </a>
-                        </div><!--end of read-more-->
-
-                    </div><!--end of entry-meta-->
-                </div><!--end of ijbox-->
-
-                        <?php endforeach; wp_reset_postdata(); ?>
-                    </div> <!--end of inhabitent-journal-->
-
-                </div><!--end of container-->
-            </section>
-
-             <div class="anchor" id="workJump"></div>
-    <h1>Work</h1>
-        <h2>Festival History</h2>
         
-    <section class="container-holder">
-                <div class="container">
-
-                    <div class="inhabitent-journal listed-posts">
-
-                <?php
-                    $args = array( 'post_type' => 'festival', 'order' => 'ASC', 'numberposts' => '5' );
-                    $journal_posts = get_posts( $args ); // returns an array of posts
-                ?>
-
-                <?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
-                <div class="ijbox">
-                    <header class="entry-header">
-                        <?php if ( has_post_thumbnail() ) : ?>
-                            <?php the_post_thumbnail( 'large' ); ?>
-                        <?php endif; ?>
-                    </header>
-
-                    <div class="entry-meta solid-border">
-                        <div class="journal-meta">
-                            
-                            <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-                        </div> <!-- end of journal-meta-->
-
-                        <div class="read-more">
-                            <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read Entry </a>
-                        </div><!--end of read-more-->
-
-                    </div><!--end of entry-meta-->
-                </div><!--end of ijbox-->
-
-                        <?php endforeach; wp_reset_postdata(); ?>
-                    </div> <!--end of inhabitent-journal-->
-
-                </div><!--end of container-->
-            </section>
-        <h2>School Outreach</h2>
-        <section class="container-holder">
-                <div class="container">
-
-                    <div class="inhabitent-journal listed-posts">
-
-                <?php
-                    $args = array( 'post_type' => 'post', 'category' => 'school-outreach','order' => 'ASC', 'numberposts' => '5' );
-                    $journal_posts = get_posts( $args ); // returns an array of posts
-                ?>
-
-                <?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
-                <div class="ijbox">
-                    <header class="entry-header">
-                        <?php if ( has_post_thumbnail() ) : ?>
-                            <?php the_post_thumbnail( 'large' ); ?>
-                        <?php endif; ?>
-                    </header>
-
-                    <div class="entry-meta solid-border">
-                        <div class="journal-meta">
-                            
-                            <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-                        </div> <!-- end of journal-meta-->
-
-                        <div class="read-more">
-                            <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read Entry </a>
-                        </div><!--end of read-more-->
-
-                    </div><!--end of entry-meta-->
-                </div><!--end of ijbox-->
-
-                        <?php endforeach; wp_reset_postdata(); ?>
-                    </div> <!--end of inhabitent-journal-->
-
-                </div><!--end of container-->
-            </section>
-
-        <div class="anchor" id="pressJump"></div>
-    <h1>Press</h1>
-
-    <section class="container-holder">
-                <div class="container">
-
-                    <div class="inhabitent-journal listed-posts">
-
-                <?php
-                    $args = array( 'post_type' => 'press-item', 'order' => 'ASC', 'numberposts' => '5' );
-                    $journal_posts = get_posts( $args ); // returns an array of posts
-                ?>
-
-                <?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
-                <div class="ijbox">
-                    <header class="entry-header">
-                        <?php if ( has_post_thumbnail() ) : ?>
-                            <?php the_post_thumbnail( 'large' ); ?>
-                        <?php endif; ?>
-                    </header>
-
-                    <div class="entry-meta solid-border">
-                        <div class="journal-meta">
-                            
-                            <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-                        </div> <!-- end of journal-meta-->
-
-                        <div class="read-more">
-                            <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read Entry </a>
-                        </div><!--end of read-more-->
-
-                    </div><!--end of entry-meta-->
-                </div><!--end of ijbox-->
-
-                        <?php endforeach; wp_reset_postdata(); ?>
-                    </div> <!--end of inhabitent-journal-->
-
-                </div><!--end of container-->
-            </section>
-
 <?php get_footer(); ?>

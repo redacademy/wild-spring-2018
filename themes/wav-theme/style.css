@@ -923,7 +923,7 @@ object {
   .aboutNavigation a {
     color: white; }
 
-.page-template-about h1 {
+.page-template-about h1, .page-template-about h2 {
   text-align: center; }
 
 .page-template-about .header-img-container {
@@ -958,7 +958,7 @@ object {
     border-radius: 50px;
     margin: 0 auto; }
 
-.teamMember {
+.teamMember, .collaborator, .festival, .schoolItem, .pressItem {
   width: 45%;
   height: 45vw;
   position: relative;
@@ -973,27 +973,36 @@ object {
           align-items: center;
   overflow: hidden;
   margin: 5px; }
-  .teamMember .entry-title a {
+  .teamMember .entry-title a, .collaborator .entry-title a, .festival .entry-title a, .schoolItem .entry-title a, .pressItem .entry-title a {
     position: absolute;
     bottom: 0;
     left: 0;
     font-size: 16px;
     color: white;
-    background-color: #72CB7E;
     display: block;
     width: 100%;
     padding: 10px;
     text-align: center;
-    opacity: 0.8; }
-  .teamMember .entry-header {
+    opacity: 0.9; }
+  .teamMember .entry-header, .collaborator .entry-header, .festival .entry-header, .schoolItem .entry-header, .pressItem .entry-header {
     height: 100%;
     width: 100%; }
-    .teamMember .entry-header img {
+    .teamMember .entry-header img, .collaborator .entry-header img, .festival .entry-header img, .schoolItem .entry-header img, .pressItem .entry-header img {
       -o-object-fit: cover;
          object-fit: cover;
       position: absolute;
       height: 300px;
       width: 300px; }
+
+.teamMember a, .collaborator a {
+  background-color: #72CB7E; }
+
+.festival a, .schoolItem a {
+  background-color: #F9D169;
+  opacity: 0.9; }
+
+.pressItem a {
+  background-color: #40B2C4; }
 
 .hidden {
   display: none; }
