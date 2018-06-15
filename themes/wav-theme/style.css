@@ -1067,6 +1067,54 @@ object {
   .videoAboutWav p {
     width: 50%; }
 
+.page-id-81 img {
+  display: none; }
+
+.page-id-81 .post-81 {
+  padding: 3%; }
+
+.page-id-81 input[type=text],
+.page-id-81 input[type=tel],
+.page-id-81 input[type=email],
+.page-id-81 input[type=date],
+.page-id-81 textarea {
+  border: 1px solid #72CB7E;
+  border-radius: 5px;
+  width: 100%; }
+
+.page-id-81 .get-inv-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.page-id-81 .text-462, .page-id-81 .text-900, .page-id-81 .tel-754, .page-id-81 .date-431, .page-id-81 .city, .page-id-81 .postal-code {
+  width: 50%;
+  padding: 0.5rem 0; }
+
+.page-id-81 .text-462, .page-id-81 .tel-754, .page-id-81 .city {
+  padding-right: 0.5rem; }
+
+.page-id-81 .email-975, .page-id-81 .text-942, .page-id-81 .text-935, .page-id-81 .message, .page-id-81 .text-289 {
+  width: 100%;
+  padding: 0.5rem 0; }
+
+.page-id-81 p, .page-id-81 h2 {
+  margin: 0; }
+
+.page-id-81 .big-label, .page-id-81 .text-289 {
+  height: 5rem; }
+
+.page-id-81 input[type=submit] {
+  border: 3px solid #F9D169;
+  border-radius: 25px;
+  background: white;
+  color: black;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 1.5rem; }
+
 .page-id-72 {
   background: #fff; }
   .page-id-72 .contactus {

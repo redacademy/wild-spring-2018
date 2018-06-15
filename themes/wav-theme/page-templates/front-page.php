@@ -73,14 +73,15 @@ get_header(); ?>
             if ( empty( $events ) ) {
                 echo('Sorry, nothing found.');
             }
-            
+            //write conditional to show only upcoming events
             else foreach( $events as $event ) {
-                print_r($event);
                 echo('<article class="event-post-single carousel-cell">');
                 echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_post_thumbnail( $event, 'large').'</a></div>');
                 echo('<h3 class="entry-title"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_title( $event).'</a></h3>' );
                 echo('<p>'.$event->post_content.'</p>');
-                echo('<p>'.tribe_get_start_date( $event).'<p>');
+                echo('<p>'.tribe_get_start_date($event).'<p>');
+                echo('<p id="get-category">click here</p>');
+                //need to add ajax get tags from json
                 echo('</article>');
             }
             ?>
