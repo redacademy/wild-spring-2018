@@ -153,7 +153,7 @@ get_header(); ?>
 
                   <section class="schoolOutreach">
                         <h2>School Outreach</h2>
-                        <div class="schoolOutreach carousel">
+                        <div class="schoolOutreach">
 
                         <?php
                             $args = array( 'post_type' => 'post', 'category'=>'school-outreach', 'order' => 'ASC', 'numberposts'=>-1);
@@ -162,7 +162,7 @@ get_header(); ?>
 
                         <?php foreach ( $school_posts as $post ) : setup_postdata( $post ); ?>
                     
-                            <div class="schoolItem carousel-cell">
+                            <div class="schoolItem">
                                 <header class="entry-header">
                                     <?php if ( has_post_thumbnail() ) : ?>
                                     <a href="<?php echo esc_url( get_permalink()) ?>" alt="School Outreach Image"><?php the_post_thumbnail( 'large' ); ?></a>
