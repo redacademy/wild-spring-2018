@@ -101,6 +101,11 @@ add_filter( 'stylesheet_uri', 'wav_starter_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 
+wp_register_script('smoothscroll_script', get_template_directory_uri() . '/js/smoothscroll.js', array('jquery'),'20180615', true);
+
+wp_enqueue_script('smoothscroll_script');
+
+
 add_action( 'wp_enqueue_scripts', 'wptuts_enqueue' );
 function wptuts_enqueue() {
     wp_register_style('wptuts-jquery-ui-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/south-street/jquery-ui.css');
