@@ -930,6 +930,9 @@ object {
   height: 200px;
   width: auto;
   overflow: hidden; }
+  @media (min-width: 620px) {
+    .page-template-about .header-img-container {
+      height: 400px; } }
   .page-template-about .header-img-container img {
     -o-object-fit: cover;
        object-fit: cover; }
@@ -958,6 +961,12 @@ object {
     border-radius: 50px;
     margin: 0 auto; }
 
+@media (min-width: 1080px) {
+  .teamMember a, .collaborator a {
+    display: none; }
+  .teamMember:hover a, .collaborator:hover a {
+    display: block; } }
+
 .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
   width: 45%;
   height: 45vw;
@@ -973,6 +982,10 @@ object {
           align-items: center;
   overflow: hidden;
   margin: 5px; }
+  @media (min-width: 1080px) {
+    .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
+      width: 25%;
+      height: 25vw; } }
   .teamMember .entry-title a, .collaborator .entry-title a, .festival .entry-title a, .schoolItem .entry-title a, .pressItem .entry-title a {
     position: absolute;
     bottom: 0;
@@ -993,6 +1006,10 @@ object {
       position: absolute;
       height: 300px;
       width: 300px; }
+      @media (min-width: 620px) {
+        .teamMember .entry-header img, .collaborator .entry-header img, .festival .entry-header img, .schoolItem .entry-header img, .pressItem .entry-header img {
+          height: 400px;
+          width: 400px; } }
 
 .teamMember a, .collaborator a {
   background-color: #72CB7E; }
@@ -1004,5 +1021,27 @@ object {
 .pressItem a {
   background-color: #40B2C4; }
 
-.hidden {
+.hidden-mobile {
   display: none; }
+  @media (min-width: 1080px) {
+    .hidden-mobile {
+      display: block; } }
+
+.videoAboutWav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media (min-width: 620px) {
+    .videoAboutWav {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+  .videoAboutWav iframe {
+    width: 50%; }
+  .videoAboutWav p {
+    width: 50%; }

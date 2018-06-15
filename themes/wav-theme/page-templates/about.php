@@ -37,11 +37,16 @@ get_header(); ?>
 
                 <a href="#">Read about Wild About Vancouver's Goals</a>
                 
-                <div> <!--Container for a video-->
-                    <?php echo CFS()->get( 'video_about' ); ?>
+                <div class="videoAboutWav"> <!--Container for a video-->
+
+                <h1><?php echo CFS()->get( 'video_about' ); ?></h1>
+
+                <iframe width="560" height="315" src="<?php echo CFS()->get( 'video_about' ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                
+                    <p><?php echo CFS()->get( 'text_about_video' ); ?></p>
                 </div>
 
-                <p><?php echo CFS()->get( 'text_about_video' ); ?></p>
+                
             </section><!--end of aboutWav-->
 
             <div class="anchor" id="festivalJump"></div>
@@ -83,7 +88,7 @@ get_header(); ?>
                             </div><!--end of teamMember-->
                             <?php endforeach; wp_reset_postdata(); ?>
                     </div><!--end of teamMembers-->
-                    <a class="hidden">See More</a>
+                    <a class="hidden-mobile">See More</a>
                 </section>
 
                 <div class="anchor" id="collaboratorsJump"></div>
@@ -194,6 +199,10 @@ get_header(); ?>
 
                                     <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
                                 </header>
+                                <div class="hidden-mobile">
+                                    <p><?php echo CFS()->get( 'source' ); ?></p>
+                                    <p><?php echo CFS()->get( 'date' ); ?></p>
+                                </div>
                                 
      
                             </div><!--end of pressItem-->
