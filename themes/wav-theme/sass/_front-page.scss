@@ -1,0 +1,104 @@
+/*--------------------------------------------------------------
+# style for Front-Page by kate
+--------------------------------------------------------------*/
+
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include tablet{
+        width: 100%;
+    }
+    .site-content{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .front-page-banner p{
+        display: none;
+        @include desktop{
+            display: inline;
+        }
+    }
+    .activities-container{
+        // @include tablet{
+        //     // display: grid;
+        //     // grid-template-columns: 1fr 1fr;
+        //     // grid-gap: 1rem;
+        // }
+        .flickity-page-dots{
+            visibility: hidden;
+        }
+        .carousel-cell {
+            width: 100%;
+          }
+        .activities-posts-single{
+            border: 1px solid $color__green;
+        }
+    }
+    .events-container{
+        article{
+            padding: 0 1rem;
+            border: 1px solid green;
+        }
+        .flickity-page-dots{
+            visibility: hidden;
+        }
+        .carousel-cell {
+            width: 100%;
+          }
+        @include tablet{
+            display: block;
+        }
+    }
+     .about-container{
+        // @include tablet{
+        //     // display: grid;
+        //     // grid-template-columns: 1fr 1fr 1fr;
+        //     // grid-gap:1rem;
+        // }
+        .flickity-page-dots{
+            visibility: hidden;
+        }
+        .carousel-cell {
+            width: 100%;
+          }
+    }
+    .sm-feed{
+        display: none;
+        @include tablet{
+            display: block;
+            .sm-feed-container{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    }
+    .button{
+        color: white;
+        padding: 10px 30px;
+        @include tablet{
+        display: inline-block;
+        }
+
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50px;
+        margin: 0 auto;
+        width: 50%;
+        a{
+            color: white;
+        }
+        &.green-button{
+            background-color: $color__green;
+        }
+        &.yellow-button{
+            background-color: $color__yellow;
+            margin-bottom: 1rem;
+
+        }
+        &.blue-button{
+            background-color: $color__blue;
+        }
+    }
+
+}

@@ -7,6 +7,12 @@ $base__space-unit: 1.5rem;
 $color__background-body: #fff;
 $color__text-main: #404040;
 
+//Colors for the theme
+$color__blue:#40B2C4;
+$color__green:#72CB7E;
+$color__yellow: #F9D169;
+
+
 $color__background-screen: #f1f1f1;
 $color__text-screen: #21759b;
 
@@ -26,3 +32,12 @@ $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+
+// Media Query - tablet and desktop breakpoints
+
+$tablet-width: 620px;
+$desktop-width: 1080px;
+
+
+
+

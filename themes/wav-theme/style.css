@@ -598,7 +598,8 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
+  color: royalblue;
+  text-decoration: none; }
   a:visited {
     color: purple; }
   a:hover, a:focus, a:active {
@@ -848,3 +849,199 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+/*--------------------------------------------------------------
+# style for Front-Page by kate
+--------------------------------------------------------------*/
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media (min-width: 620px) {
+    .home {
+      width: 100%; } }
+  .home .site-content {
+    text-align: center;
+    margin: 0 auto; }
+  .home .front-page-banner p {
+    display: none; }
+    @media (min-width: 1080px) {
+      .home .front-page-banner p {
+        display: inline; } }
+  @media (min-width: 620px) {
+    .home .activities-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem; } }
+  .home .activities-container .activities-posts-single {
+    border: 1px solid #72CB7E; }
+  .home .events-container .flickity-page-dots {
+    visibility: hidden; }
+  .home .events-container .carousel-cell {
+    width: 100%; }
+  @media (min-width: 620px) {
+    .home .events-container {
+      display: block; } }
+  @media (min-width: 620px) {
+    .home .about-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1rem; } }
+  .home .sm-feed {
+    display: none; }
+    @media (min-width: 620px) {
+      .home .sm-feed {
+        display: block; }
+        .home .sm-feed .sm-feed-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr; } }
+
+.aboutNavigation {
+  background-color: #72CB7E;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px; }
+  .aboutNavigation a {
+    color: white; }
+
+.page-template-about h1, .page-template-about h2 {
+  text-align: center; }
+
+.page-template-about .header-img-container {
+  height: 200px;
+  width: auto;
+  overflow: hidden; }
+  @media (min-width: 620px) {
+    .page-template-about .header-img-container {
+      height: 400px; } }
+  .page-template-about .header-img-container img {
+    -o-object-fit: cover;
+       object-fit: cover; }
+
+.page-template-about .aboutWav, .page-template-about .ourFestival {
+  padding: 10px; }
+  .page-template-about .aboutWav a, .page-template-about .ourFestival a {
+    text-align: right;
+    text-decoration: underline;
+    color: #40B2C4;
+    display: block; }
+  .page-template-about .aboutWav .center-button, .page-template-about .ourFestival .center-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .page-template-about .aboutWav .green-button, .page-template-about .ourFestival .green-button {
+    background-color: #72CB7E;
+    color: white;
+    padding: 10px 30px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    margin: 0 auto; }
+
+@media (min-width: 1080px) {
+  .teamMember a, .collaborator a {
+    display: none; }
+  .teamMember:hover a, .collaborator:hover a {
+    display: block; } }
+
+.teamMember, .collaborator, .festival, .schoolItem, .pressItem {
+  width: 45%;
+  height: 45vw;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  margin: 5px; }
+  @media (min-width: 1080px) {
+    .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
+      width: 25%;
+      height: 25vw; } }
+  .teamMember .entry-title a, .collaborator .entry-title a, .festival .entry-title a, .schoolItem .entry-title a, .pressItem .entry-title a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 16px;
+    color: white;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    opacity: 0.9; }
+  .teamMember .entry-header, .collaborator .entry-header, .festival .entry-header, .schoolItem .entry-header, .pressItem .entry-header {
+    height: 100%;
+    width: 100%; }
+    .teamMember .entry-header img, .collaborator .entry-header img, .festival .entry-header img, .schoolItem .entry-header img, .pressItem .entry-header img {
+      -o-object-fit: cover;
+         object-fit: cover;
+      position: absolute;
+      height: 300px;
+      width: 300px; }
+      @media (min-width: 620px) {
+        .teamMember .entry-header img, .collaborator .entry-header img, .festival .entry-header img, .schoolItem .entry-header img, .pressItem .entry-header img {
+          height: 400px;
+          width: 400px; } }
+
+.teamMember a, .collaborator a {
+  background-color: #72CB7E; }
+
+.festival a, .schoolItem a {
+  background-color: #F9D169;
+  opacity: 0.9; }
+
+.pressItem a {
+  background-color: #40B2C4; }
+
+.hidden-mobile {
+  display: none; }
+  @media (min-width: 1080px) {
+    .hidden-mobile {
+      display: block; } }
+
+.videoAboutWav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media (min-width: 620px) {
+    .videoAboutWav {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+  .videoAboutWav iframe {
+    width: 50%; }
+  .videoAboutWav p {
+    width: 50%; }

@@ -10,126 +10,210 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+			
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
-
-			<?php endwhile; // End of the loop. ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-     <nav class="mainNavigation">
-                <ul>
+            <nav>
+                <ul class="aboutNavigation">
                     <li><a href="#aboutJump">About Wav</a></li>
-                    <li><a href="#festivalJump">Our Festival</a></li> 
-                    <li><a href="#teamJump">The Team</a></li> 
+                    <li><a href="#festivalJump">Festival</a></li> 
+                    <li><a href="#teamJump">Team</a></li> 
                     <li><a href="#collaboratorsJump">Collaborators</a></li>
                     <li><a href="#workJump">Work</a></li> 
                     <li><a href="#pressJump">Press</a></li>
                 </ul>
             </nav>
 
-<div class="anchor" id="aboutJump"></div>
-    <h1>About WAV</h1>
-        <img src="<?php echo CFS()->get( 'about_wav_img' ); ?>">
-        <p><?php echo CFS()->get( 'about_wav' ); ?></p>
-        <a href="#">Read about Wild About Vancouver's Goals</a>
-        <div> <!--Container for a video-->
-            <?php echo CFS()->get( 'video_about' ); ?>
-        </div>
-        <p><?php echo CFS()->get( 'text_about_video' ); ?></p>
+            <div class="anchor" id="aboutJump"></div>
+           
+            <section class="aboutWav">
 
-      <div class="anchor" id="festivalJump"></div>
-    <h1>Our Festival</h1>
-        <img src="<?php echo CFS()->get( 'our_festival_img' ); ?>">
-        <p><?php echo CFS()->get( 'our_festival' ); ?></p>
-    <a>More Info</a>
+                <h1>About WAV</h1>
 
-<div class="anchor" id="teamJump"></div>
-    <h1>The Team</h1>
-        <section class="container-holder">
-                <div class="container">
-                    <h1 class="container-header">Inhabitent Journal</h1>
-                    <div class="inhabitent-journal listed-posts">
+                <div class="header-img-container">
+                    <img class="header-img" src="<?php echo CFS()->get( 'about_wav_img' ); ?>"> 
+                </div>
 
-                <?php
-                    $args = array( 'post_type' => 'person', 'category_name' => 'team', 'order' => 'ASC', 'numberposts' => '4' );
-                    $journal_posts = get_posts( $args ); // returns an array of posts
-                ?>
+                <p><?php echo CFS()->get( 'about_wav' ); ?></p>
 
-                <?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
-                <div class="ijbox">
-                    <header class="entry-header">
-                        <?php if ( has_post_thumbnail() ) : ?>
-                            <?php the_post_thumbnail( 'large' ); ?>
-                        <?php endif; ?>
-                    </header>
+                <a href="#">Read about Wild About Vancouver's Goals</a>
+                
+                <div class="videoAboutWav"> <!--Container for a video-->
 
-                    <div class="entry-meta solid-border">
-                        <div class="journal-meta">
-                            
-                            <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-                        </div> <!-- end of journal-meta-->
+                <h1><?php echo CFS()->get( 'video_about' ); ?></h1>
 
-                        <div class="read-more">
-                            <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read Entry </a>
-                        </div><!--end of read-more-->
+                <iframe width="560" height="315" src="<?php echo CFS()->get( 'video_about' ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                
+                    <p><?php echo CFS()->get( 'text_about_video' ); ?></p>
+                </div>
 
-                    </div><!--end of entry-meta-->
-                </div><!--end of ijbox-->
+                
+            </section><!--end of aboutWav-->
 
-                        <?php endforeach; wp_reset_postdata(); ?>
-                    </div> <!--end of inhabitent-journal-->
+            <div class="anchor" id="festivalJump"></div>
+            <section class="ourFestival">
+            
+                <h1>Our Festival</h1>
+                <div class="header-img-container">
+                    <img class="header-img" src="<?php echo CFS()->get( 'our_festival_img' ); ?>">
+                </div>
+                <p><?php echo CFS()->get( 'our_festival' ); ?></p>
 
-                </div><!--end of container-->
-            </section>
-    <a>See More</a>
-
-    <div class="anchor" id="collaboratorsJump"></div>
-    <h1>Collaborators</h1>
-    <section class="container-holder">
-                <div class="container">
-                    <h1 class="container-header">Inhabitent Journal</h1>
-                    <div class="inhabitent-journal listed-posts">
-
-                <?php
-                    $args = array( 'post_type' => 'person', 'category_name' => 'collaborator', 'order' => 'ASC', 'numberposts' => '4' );
-                    $collaborators = get_posts( $args ); // returns an array of posts
-                ?>
-
-                <?php foreach ( $collaborators as $post ) : setup_postdata( $post ); ?>
-                <div class="ijbox">
-                    <header class="entry-header">
-                        <?php if ( has_post_thumbnail() ) : ?>
-                            <?php the_post_thumbnail( 'large' ); ?>
-                        <?php endif; ?>
-                    </header>
-
-                    <div class="entry-meta solid-border">
-                        <div class="journal-meta">
-                            
-                            <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-                        </div> <!-- end of journal-meta-->
-
-                        <div class="read-more">
-                            <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read Entry </a>
-                        </div><!--end of read-more-->
-
-                    </div><!--end of entry-meta-->
-                </div><!--end of ijbox-->
-
-                        <?php endforeach; wp_reset_postdata(); ?>
-                    </div> <!--end of inhabitent-journal-->
-
-                </div><!--end of container-->
+                <div class="center-button">
+                    <a href="#" class="green-button">More Information</a>
+                </div>  
             </section>
 
-             <div class="anchor" id="workJump"></div>
-    <h1>Work</h1>
-        <h2>Festival History</h2>
-        <h2>School Outreach</h2>
+            <div class="anchor" id="teamJump"></div>
+            <section class="theTeam">
+                <h1>The Team</h1>
+                    <div class="teamMembers carousel">
 
-        <div class="anchor" id="pressJump"></div>
-    <h1>Press</h1>
+                        <?php
+                            $args = array( 'post_type' => 'person', 'category_name' => 'team', 'order' => 'ASC', 'numberposts'=>-1);
+                            $team_posts = get_posts( $args ); // returns an array of posts
+                        ?>
+
+                        <?php foreach ( $team_posts as $post ) : setup_postdata( $post ); ?>
+                    
+                            <div class="teamMember carousel-cell">
+                                <header class="entry-header">
+                                    <?php if ( has_post_thumbnail() ) : ?>
+                                    <a href="<?php echo esc_url( get_permalink()) ?>" alt="Team Image"><?php the_post_thumbnail( 'large' ); ?></a>
+                                    <?php endif; ?>
+
+                                    <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+                                </header>
+                                
+     
+                            </div><!--end of teamMember-->
+                            <?php endforeach; wp_reset_postdata(); ?>
+                    </div><!--end of teamMembers-->
+                    <a class="hidden-mobile">See More</a>
+                </section>
+
+                <div class="anchor" id="collaboratorsJump"></div>
+    
+                    <section class="collaborators">
+                        <h1>Collaborators</h1>
+                        <div class="collaborators carousel">
+
+                        <?php
+                            $args = array( 'post_type' => 'person', 'category_name' => 'collaborator', 'order' => 'ASC', 'numberposts'=>-1);
+                            $collaborators_posts = get_posts( $args ); // returns an array of posts
+                        ?>
+
+                        <?php foreach ( $collaborators_posts as $post ) : setup_postdata( $post ); ?>
+                    
+                            <div class="collaborator carousel-cell">
+                                <header class="entry-header">
+                                    <?php if ( has_post_thumbnail() ) : ?>
+                                    <a href="<?php echo esc_url( get_permalink()) ?>" alt="Team Image"><?php the_post_thumbnail( 'large' ); ?></a>
+                                    <?php endif; ?>
+
+                                    <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+                                </header>
+                                
+     
+                            </div><!--end of collaborator-->
+                            <?php endforeach; wp_reset_postdata(); ?>
+                    </div><!--end of collaborators-->
+
+                </section>
+
+                <div class="anchor" id="workJump"></div>
+                    <h1>Work</h1>
+                        
+
+                        <section class="festivals">
+                        <h2>Festival History</h2>
+                        <div class="festivals carousel">
+
+                        <?php
+                            $args = array( 'post_type' => 'festival', 'order' => 'ASC', 'numberposts'=>-1);
+                            $festival_posts = get_posts( $args ); // returns an array of posts
+                        ?>
+
+                        <?php foreach ( $festival_posts as $post ) : setup_postdata( $post ); ?>
+                    
+                            <div class="festival carousel-cell">
+                                <header class="entry-header">
+                                    <?php if ( has_post_thumbnail() ) : ?>
+                                    <a href="<?php echo esc_url( get_permalink()) ?>" alt="Festival Image"><?php the_post_thumbnail( 'large' ); ?></a>
+                                    <?php endif; ?>
+
+                                    <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+                                </header>
+                                
+     
+                            </div><!--end of collaborator-->
+                            <?php endforeach; wp_reset_postdata(); ?>
+                    </div><!--end of collaborators-->
+
+                </section>
+
+                  <section class="schoolOutreach">
+                        <h2>School Outreach</h2>
+                        <div class="schoolOutreach">
+
+                        <?php
+                            $args = array( 'post_type' => 'post', 'category'=>'school-outreach', 'order' => 'ASC', 'numberposts'=>-1);
+                            $school_posts = get_posts( $args ); // returns an array of posts
+                        ?>
+
+                        <?php foreach ( $school_posts as $post ) : setup_postdata( $post ); ?>
+                    
+                            <div class="schoolItem">
+                                <header class="entry-header">
+                                    <?php if ( has_post_thumbnail() ) : ?>
+                                    <a href="<?php echo esc_url( get_permalink()) ?>" alt="School Outreach Image"><?php the_post_thumbnail( 'large' ); ?></a>
+                                    <?php endif; ?>
+
+                                    <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+                                </header>
+                                
+     
+                            </div><!--end of collaborator-->
+                            <?php endforeach; wp_reset_postdata(); ?>
+                    </div><!--end of collaborators-->
+
+                </section>
+
+                <div class="anchor" id="pressJump"></div>
+
+                 <section class="press">
+                        <h1>Press</h1>
+                        <div class="press carousel">
+
+                        <?php
+                            $args = array( 'post_type' => 'press-item', 'order' => 'ASC', 'numberposts'=>-1);
+                            $press_posts = get_posts( $args ); // returns an array of posts
+                        ?>
+
+                        <?php foreach ( $press_posts as $post ) : setup_postdata( $post ); ?>
+                    
+                            <div class="pressItem carousel-cell">
+                                <header class="entry-header">
+                                    <?php if ( has_post_thumbnail() ) : ?>
+                                    <a href="<?php echo esc_url( get_permalink()) ?>" alt="Press Image"><?php the_post_thumbnail( 'large' ); ?></a>
+                                    <?php endif; ?>
+
+                                    <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+                                </header>
+                                <div class="hidden-mobile">
+                                    <p><?php echo CFS()->get( 'source' ); ?></p>
+                                    <p><?php echo CFS()->get( 'date' ); ?></p>
+                                </div>
+                                
+     
+                            </div><!--end of pressItem-->
+                            <?php endforeach; wp_reset_postdata(); ?>
+                    </div><!--end of press-->
+
+                </section>
+
+                   
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+        
 <?php get_footer(); ?>
