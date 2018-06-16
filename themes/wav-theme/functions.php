@@ -125,6 +125,8 @@ function wav_starter_scripts() {
 
 	wp_enqueue_script( 'carousel', get_template_directory_uri() . '/build/js/carousel.min.js', array('jquery'), '20180613', true );
 
+	wp_enqueue_script( 'pamweekend', get_template_directory_uri() . '/build/js/pamweekend.min.js', array('jquery'), '20180615', true );
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

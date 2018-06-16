@@ -13,6 +13,7 @@ get_header(); ?>
 
          <section class="event-submission">
             <header class="entry-header">
+                <?php echo CFS()->get( 'create_event_hero_image' ); ?>
          		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
          	</header><!-- .entry-header -->
 
@@ -47,11 +48,20 @@ get_header(); ?>
                         <label for="eventTypeLesson">Lesson</label>
                      </div>
                      <div>
-                        <label for="event-source-url">Provide the the URL of the event source, if available.</label>
-                        <input type="url" name="event_source_url" id="event-source-url">
+                        <label for="event-tags">Event Tags*</label>
+                        <input type="text" name="event_tags" placeholder="Try #Hiking or #Trail" id="event-tags">
+                     </div>
+                     <div>
+                        <label for="event-photos">Upload photos*</label>
+                        <input type="button" value="Choose file">
+                        
+                     </div>
+                     <div>
+                        <label for="event-tickets">Tickets</label>
+                        <input type="hyperlink" name="event_tickets" placeholder="Link" id="event-tickets">
                      </div>
 
-                     <input type="submit" value="Submit event">
+                     <input type="submit" value="Submit" class="pamclicky">
                   </form>
 
                   <p class="submit-success-message" style="display:none;"></p>
