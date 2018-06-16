@@ -878,6 +878,9 @@ object {
     visibility: hidden; }
   .home .activities-container .carousel-cell {
     width: 100%; }
+    @media (min-width: 620px) {
+      .home .activities-container .carousel-cell {
+        width: 50%; } }
   .home .activities-container .activities-posts-single {
     border: 1px solid #72CB7E; }
   .home .events-container article {
@@ -887,6 +890,9 @@ object {
     visibility: hidden; }
   .home .events-container .carousel-cell {
     width: 100%; }
+    @media (min-width: 620px) {
+      .home .events-container .carousel-cell {
+        width: 50%; } }
   @media (min-width: 620px) {
     .home .events-container {
       display: block; } }
@@ -894,6 +900,9 @@ object {
     visibility: hidden; }
   .home .about-container .carousel-cell {
     width: 100%; }
+    @media (min-width: 620px) {
+      .home .about-container .carousel-cell {
+        width: 50%; } }
   .home .sm-feed {
     display: none; }
     @media (min-width: 620px) {
@@ -905,8 +914,6 @@ object {
   .home .button {
     color: white;
     padding: 10px 30px;
-    text-align: center;
-    text-decoration: none;
     border-radius: 50px;
     margin: 0 auto;
     width: 50%; }
