@@ -1,6 +1,7 @@
 <?php
 /**
  * The template for displaying the Submit a event page.
+ * Template Name: Submit an Event Page
  * Adapted for WAV
  * @package QOD_Starter_Theme
  */
