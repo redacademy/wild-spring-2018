@@ -106,20 +106,26 @@ get_header(); ?>
 <!--what is WAV-->
             <section>
                 <h2>What is WAV?</h2>
-                <div class="about-container">
-                        <div class="single-about-container">
+                <!--tab navigation-->
+                <ul class="tabs">
+                    <li class="tab-link current" data-tab="tab-1"><?php echo CFS()->get('front_page_wav_what_is_wav_about_header')?></li>
+                    <li class="tab-link" data-tab="tab-2"><?php echo CFS()->get('front_page_wav_what_is_wav_festival_header')?></li>
+                    <li class="tab-link" data-tab="tab-3"><?php echo CFS()->get('front_page_wav_what_is_wav_school_header')?></li>
+                </ul>
+                <div class="about-container data-tab">
+                        <div id="tab-1" class="single-about-container tab-content current">
                             <h3><?php echo CFS()->get('front_page_wav_what_is_wav_about_header')?></h3>
 							<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_about_img')?>">
                             <p><?php echo CFS()->get('front_page_wav_what_is_wav_about_text')?></p>
                             <a href="#">learn more &rsaquo; </a>
                         </div>
-                        <div class="single-festival-container">
+                        <div id="tab-2" class="single-festival-container tab-content">
                             <h3><?php echo CFS()->get('front_page_wav_what_is_wav_festival_header')?></h3>
 							<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_festival_img')?>">
 							<p><?php echo CFS()->get('front_page_wav_what_is_wav_festival_text')?></p>
                             <a href="#">learn more &rsaquo; </a>
                         </div>
-                        <div class="single-school-container">
+                        <div id="tab-3" class="single-school-container tab-content">
 						<h3><?php echo CFS()->get('front_page_wav_what_is_wav_school_header')?></h3>
 						<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_school_img')?>">
 						<p><?php echo CFS()->get('front_page_wav_what_is_wav_school_text')?></p>

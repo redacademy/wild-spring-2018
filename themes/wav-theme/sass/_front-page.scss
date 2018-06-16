@@ -31,51 +31,122 @@
             }
         }
     }
-
-    .activities-container{
-        // @include tablet{
-        //     // display: grid;
-        //     // grid-template-columns: 1fr 1fr;
-        //     // grid-gap: 1rem;
-        // }
-        .flickity-page-dots{
-            visibility: hidden;
-        }
-        .carousel-cell {
-            width: 100%;
-            &.carousell-tablet{
-                width: 50%;
-            }
+    section{
+        .flickity-viewport {
+            transition: height 0.2s;
           }
-        .activities-posts-single{
-            border: 1px solid $color__green;
+          p{
+              text-align: left;
+          }
+        .activities-container{
+            // @include tablet{
+            //     // display: grid;
+            //     // grid-template-columns: 1fr 1fr;
+            //     // grid-gap: 1rem;
+            // }
+            .flickity-page-dots{
+                visibility: hidden;
+            }
+            .carousel-cell {
+                margin: 0 1rem;
+                width: 100%;
+                &.carousell-tablet{
+                    width: 50%;
+                }
+              }
+            .activities-posts-single{
+                border: 1px solid $color__green;
+            }
         }
-    }
-    .events-container{
-        article{
-            padding: 0 1rem;
-            border: 1px solid green;
-        }
-        .flickity-page-dots{
-            visibility: hidden;
-        }
-        .carousel-cell {
-            width: 100%;
+        .events-container{
+            article{
+                padding: 0 1rem;
+                border: 1px solid green;
+            }
+            .flickity-page-dots{
+                visibility: hidden;
+            }
+            .carousel-cell {
+                margin: 0 1rem;
+                width: 100%;
+                @include tablet{
+                    margin: 0 1rem;
+                    width: 50%;
+                }
+              }
             @include tablet{
-                width: 50%;
+                display: block;
+                .button {
+                    display: inline;
+                }
             }
-          }
-        @include tablet{
-            display: block;
         }
-    }
-     .about-container{
-        @include tablet{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-gap:1rem;
+         .about-container{
+            // @include tablet{
+            //     display: grid;
+            //     grid-template-columns: 1fr 1fr 1fr;
+            //     grid-gap:1rem;
+            // }
+            body{
+                margin-top: 100px;
+                font-family: 'Trebuchet MS', serif;
+                line-height: 1.6
+            }
+            .container{
+                width: 800px;
+                margin: 0 auto;
+            }
+            ul{
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+             li{
+                background: none;
+                color: #222;
+                display: inline-block;
+                padding: 10px 15px;
+                cursor: pointer;
+                &.current{
+                    background: #ededed;
+                    color: #222;
+                    }
+                }
+            }
+            .tab-content{
+                display: none;
+                background: #ededed;
+                padding: 15px;
+            &.current{
+                display: inherit;
+            }
         }
-
+        }
+        .button{
+            color: white;
+            padding: 10px 30px;
+            @include tablet{
+            display: inline-block;
+            }
+            border-radius: 50px;
+            margin: 0 auto;
+            width: 50%;
+            a{
+                color: white;
+            }
+            &.green-button{
+                background-color: $color__green;
+            }
+            &.yellow-button{
+                background-color: $color__yellow;
+                margin-bottom: 1rem;
+            }
+            &.blue-button{
+                background-color: $color__blue;
+            }
+        }
     }
     .sm-feed{
         display: none;
@@ -85,30 +156,6 @@
             display:grid;
             grid-template-columns: 1fr 1fr 1fr;
             }
-        }
-    }
-    .button{
-        color: white;
-        padding: 10px 30px;
-        @include tablet{
-        display: inline-block;
-        }
-        border-radius: 50px;
-        margin: 0 auto;
-        width: 50%;
-        a{
-            color: white;
-        }
-        &.green-button{
-            background-color: $color__green;
-        }
-        &.yellow-button{
-            background-color: $color__yellow;
-            margin-bottom: 1rem;
-
-        }
-        &.blue-button{
-            background-color: $color__blue;
         }
     }
 

@@ -500,10 +500,13 @@ ul, ol {
   margin: 0 0 1.5rem 3rem; }
 
 ul {
-  list-style: disc; }
+  list-style: none; }
 
 ol {
-  list-style: decimal; }
+  list-style: none; }
+
+li {
+  list-style: none; }
 
 li > ul,
 li > ol {
@@ -880,32 +883,88 @@ object {
     @media (min-width: 1080px) {
       .home .front-page-banner p {
         display: inline; } }
-  .home .activities-container .flickity-page-dots {
+  .home section .flickity-viewport {
+    -webkit-transition: height 0.2s;
+    transition: height 0.2s; }
+  .home section p {
+    text-align: left; }
+  .home section .activities-container .flickity-page-dots {
     visibility: hidden; }
-  .home .activities-container .carousel-cell {
+  .home section .activities-container .carousel-cell {
+    margin: 0 1rem;
     width: 100%; }
-    .home .activities-container .carousel-cell.carousell-tablet {
+    .home section .activities-container .carousel-cell.carousell-tablet {
       width: 50%; }
-  .home .activities-container .activities-posts-single {
+  .home section .activities-container .activities-posts-single {
     border: 1px solid #72CB7E; }
-  .home .events-container article {
+  .home section .events-container article {
     padding: 0 1rem;
     border: 1px solid green; }
-  .home .events-container .flickity-page-dots {
+  .home section .events-container .flickity-page-dots {
     visibility: hidden; }
-  .home .events-container .carousel-cell {
+  .home section .events-container .carousel-cell {
+    margin: 0 1rem;
     width: 100%; }
     @media (min-width: 620px) {
-      .home .events-container .carousel-cell {
+      .home section .events-container .carousel-cell {
+        margin: 0 1rem;
         width: 50%; } }
   @media (min-width: 620px) {
-    .home .events-container {
+    .home section .events-container {
       display: block; } }
-  @media (min-width: 620px) {
-    .home .about-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 1rem; } }
+  .home section .about-container body {
+    margin-top: 100px;
+    font-family: 'Trebuchet MS', serif;
+    line-height: 1.6; }
+  .home section .about-container .container {
+    width: 800px;
+    margin: 0 auto; }
+  .home section .about-container ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .home section .about-container ul li {
+      background: none;
+      color: #222;
+      display: inline-block;
+      padding: 10px 15px;
+      cursor: pointer; }
+      .home section .about-container ul li.current {
+        background: #ededed;
+        color: #222; }
+  .home section .about-container .tab-content {
+    display: none;
+    background: #ededed;
+    padding: 15px; }
+    .home section .about-container .tab-content.current {
+      display: inherit; }
+  .home section .button {
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    margin: 0 auto;
+    width: 50%; }
+    @media (min-width: 620px) {
+      .home section .button {
+        display: inline-block; } }
+    .home section .button a {
+      color: white; }
+    .home section .button.green-button {
+      background-color: #72CB7E; }
+    .home section .button.yellow-button {
+      background-color: #F9D169;
+      margin-bottom: 1rem; }
+    .home section .button.blue-button {
+      background-color: #40B2C4; }
   .home .sm-feed {
     display: none; }
     @media (min-width: 620px) {
@@ -914,24 +973,6 @@ object {
         .home .sm-feed .sm-feed-container {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr; } }
-  .home .button {
-    color: white;
-    padding: 10px 30px;
-    border-radius: 50px;
-    margin: 0 auto;
-    width: 50%; }
-    @media (min-width: 620px) {
-      .home .button {
-        display: inline-block; } }
-    .home .button a {
-      color: white; }
-    .home .button.green-button {
-      background-color: #72CB7E; }
-    .home .button.yellow-button {
-      background-color: #F9D169;
-      margin-bottom: 1rem; }
-    .home .button.blue-button {
-      background-color: #40B2C4; }
 
 .aboutNavigation {
   background-color: #72CB7E;
