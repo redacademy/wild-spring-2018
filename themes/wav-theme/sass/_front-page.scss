@@ -13,12 +13,25 @@
         text-align: center;
         margin: 0 auto;
     }
-    .front-page-banner p{
+    .front-page-banner{
+        h1 {
+            transform: translateY(-150px);
+            color: white;
+            text-align: left;
+            padding-left: 1rem;
+        }
+        p{
         display: none;
         @include desktop{
             display: inline;
+            // transform: translateY(-130px);
+            // color: white;
+            // text-align: left;
+            // padding-left: 1rem;
+            }
         }
     }
+
     .activities-container{
         // @include tablet{
         //     // display: grid;
@@ -57,20 +70,12 @@
         }
     }
      .about-container{
-        // @include tablet{
-        //     // display: grid;
-        //     // grid-template-columns: 1fr 1fr 1fr;
-        //     // grid-gap:1rem;
-        // }
-        .flickity-page-dots{
-            visibility: hidden;
+        @include tablet{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap:1rem;
         }
-        .carousel-cell {
-            width: 100%;
-            @include tablet{
-                width: 50%;
-            }
-          }
+
     }
     .sm-feed{
         display: none;
