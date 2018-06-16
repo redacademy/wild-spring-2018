@@ -38,6 +38,7 @@ get_header(); ?>
 								<?php if ( has_post_thumbnail() ) : ?>
 								<?php the_post_thumbnail( '' ); ?>
                                 <p><?php echo CFS()->get('description')?></p>
+
                                 <div class="read-more">
                             <a href="<?php echo esc_url(get_permalink())?>" class="button-green">see details</a>
                         </div>
@@ -74,14 +75,21 @@ get_header(); ?>
             if ( empty( $events ) ) {
                 echo('Sorry, nothing found.');
             }
-            //write conditional to show only upcoming events
             else foreach( $events as $event ) {
                 echo('<article class="event-post-single carousel-cell">');
                 echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_post_thumbnail( $event, 'large').'</a></div>');
                 echo('<h3 class="entry-title"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_title( $event).'</a></h3>' );
                 echo('<p>'.$event->post_content.'</p>');
                 echo('<p>'.tribe_get_start_date($event).'<p>');
+                echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">See details &rsaquo;</a></div>');
                 echo('<p id="get-category">click here</p>');
+                $tags = wp_get_post_tags($event->ID);
+                echo('<ul>');
+                foreach ( $tags as $tag ) {
+                    echo('<li>'.$tag->name.'</li>');
+                }
+                echo('</ul>');
+
                 //need to add ajax get tags from json
                 echo('</article>');
             }
@@ -98,20 +106,26 @@ get_header(); ?>
 <!--what is WAV-->
             <section>
                 <h2>What is WAV?</h2>
-                <div class="about-container carousel">
-                        <div class="single-about-cotainer carousel-cell">
+                <!--tab navigation-->
+                <ul class="tabs">
+                    <li class="tab-link current" data-tab="tab-1"><?php echo CFS()->get('front_page_wav_what_is_wav_about_header')?></li>
+                    <li class="tab-link" data-tab="tab-2"><?php echo CFS()->get('front_page_wav_what_is_wav_festival_header')?></li>
+                    <li class="tab-link" data-tab="tab-3"><?php echo CFS()->get('front_page_wav_what_is_wav_school_header')?></li>
+                </ul>
+                <div class="about-container data-tab">
+                        <div id="tab-1" class="single-about-container tab-content current">
                             <h3><?php echo CFS()->get('front_page_wav_what_is_wav_about_header')?></h3>
 							<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_about_img')?>">
                             <p><?php echo CFS()->get('front_page_wav_what_is_wav_about_text')?></p>
                             <a href="#">learn more &rsaquo; </a>
                         </div>
-                        <div class="single-festival-cotainer carousel-cell">
+                        <div id="tab-2" class="single-festival-container tab-content">
                             <h3><?php echo CFS()->get('front_page_wav_what_is_wav_festival_header')?></h3>
 							<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_festival_img')?>">
 							<p><?php echo CFS()->get('front_page_wav_what_is_wav_festival_text')?></p>
                             <a href="#">learn more &rsaquo; </a>
                         </div>
-                        <div class="single-school-cotainer carousel-cell">
+                        <div id="tab-3" class="single-school-container tab-content">
 						<h3><?php echo CFS()->get('front_page_wav_what_is_wav_school_header')?></h3>
 						<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_school_img')?>">
 						<p><?php echo CFS()->get('front_page_wav_what_is_wav_school_text')?></p>

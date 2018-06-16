@@ -124,6 +124,8 @@ function wav_starter_scripts() {
 
 	wp_enqueue_script( 'carousel', get_template_directory_uri() . '/build/js/carousel.min.js', array('jquery'), '20180613', true );
 
+	wp_enqueue_script( 'front-page-tab', get_template_directory_uri() . '/build/js/front-page-tab.min.js', array('jquery'), '20180615', true );
+
 	wp_enqueue_script( 'pamweekend', get_template_directory_uri() . '/build/js/pamweekend.min.js', array('jquery'), '20180615', true );
 
 
