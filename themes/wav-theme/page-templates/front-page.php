@@ -12,8 +12,10 @@ get_header(); ?>
 <!--banner-->
 	<section class="front-page-banner">
 		<img src="<?php echo CFS()->get( 'front_page_wav_img' ); ?>">
-		<h1><?php echo CFS()->get('front_page_wav_main_title')?></h1>
-		<p><?php echo CFS()->get('front_page_wav_mission')?></p>
+        <div class="banner-text">
+            <h1><?php echo CFS()->get('front_page_wav_main_title')?></h1>
+            <p><?php echo CFS()->get('front_page_wav_mission')?></p>
+        </div>    
 	</section><!--end of banner-->
 <!--activity ideas-->
 <section class="activities">
@@ -50,8 +52,8 @@ get_header(); ?>
 
 				</div><!-- activities-container -->
 
-					 <div class="activities-button">
-          				<a class="yellow-button" href=<?php echo get_post_type_archive_link( 'activity' ) ?>>see activities</a>
+					 <div class="button yellow-button activities-button">
+          				<a  href=<?php echo get_post_type_archive_link( 'activity' ) ?>>see activities</a>
 					</div>
 
 
@@ -82,25 +84,26 @@ get_header(); ?>
                 echo('<p>'.$event->post_content.'</p>');
                 echo('<p>'.tribe_get_start_date($event).'<p>');
                 echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">See details &rsaquo;</a></div>');
-                echo('<p id="get-category">click here</p>');
-                $tags = wp_get_post_tags($event->ID);
-                echo('<ul>');
-                foreach ( $tags as $tag ) {
-                    echo('<li>'.$tag->name.'</li>');
-                }
-                echo('</ul>');
+                    $tags = wp_get_post_tags($event->ID);
+                    echo('<ul>');
+                         foreach ( $tags as $tag ) {
+                            echo('<li>'.$tag->name.'</li>');
+                         }
+                    echo('</ul>');
 
-                //need to add ajax get tags from json
                 echo('</article>');
             }
             ?>
-				</div><!-- events-container -->
-                 <div class="button yellow-button">
-                        <a href="#">create events</a>
+                </div><!-- events-container -->
+                <div class="events-buttons-container">
+                    <div class="button yellow-button">
+                    <a href=<?php echo get_post_type_archive_link( 'tribe_event' ) ?>>create events</a>
+                    </div>
+                    <div class="button blue-button">
+                            <a href=<?php echo get_post_type_archive_link( 'tribe_event' ) ?>>find events</a>
+                    </div>
                 </div>
-                 <div class="button blue-button">
-          				<a href=<?php echo get_post_type_archive_link( 'tribe_event' ) ?>>find events &rsaquo;</a>
-				</div>
+
     </section><!--end of events section-->
 
 <!--what is WAV-->

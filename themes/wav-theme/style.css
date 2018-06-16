@@ -872,34 +872,33 @@ object {
   .home .site-content {
     text-align: center;
     margin: 0 auto; }
-  .home .front-page-banner h1 {
+  .home .front-page-banner .banner-text {
     -webkit-transform: translateY(-150px);
             transform: translateY(-150px);
     color: white;
     text-align: left;
     padding-left: 1rem; }
-  .home .front-page-banner p {
-    display: none; }
-    @media (min-width: 1080px) {
-      .home .front-page-banner p {
-        display: inline; } }
   .home section .flickity-viewport {
     -webkit-transition: height 0.2s;
     transition: height 0.2s; }
   .home section p {
     text-align: left; }
+  .home section article {
+    padding: 0 1rem;
+    border: 1px solid green; }
   .home section .activities-container .flickity-page-dots {
     visibility: hidden; }
   .home section .activities-container .carousel-cell {
     margin: 0 1rem;
     width: 100%; }
     .home section .activities-container .carousel-cell.carousell-tablet {
+      margin: 0 1rem;
       width: 50%; }
   .home section .activities-container .activities-posts-single {
     border: 1px solid #72CB7E; }
-  .home section .events-container article {
-    padding: 0 1rem;
-    border: 1px solid green; }
+  .home section .button.yellow-button.activities-button {
+    margin: 2rem auto;
+    max-width: 80%; }
   .home section .events-container .flickity-page-dots {
     visibility: hidden; }
   .home section .events-container .carousel-cell {
@@ -911,14 +910,9 @@ object {
         width: 50%; } }
   @media (min-width: 620px) {
     .home section .events-container {
-      display: block; } }
-  .home section .about-container body {
-    margin-top: 100px;
-    font-family: 'Trebuchet MS', serif;
-    line-height: 1.6; }
-  .home section .about-container .container {
-    width: 800px;
-    margin: 0 auto; }
+      display: block; }
+      .home section .events-container .button {
+        display: inline; } }
   .home section .about-container ul {
     margin: 0px;
     padding: 0px;
@@ -951,20 +945,24 @@ object {
     color: white;
     padding: 10px 30px;
     border-radius: 50px;
-    margin: 0 auto;
-    width: 50%; }
+    margin: 1rem; }
     @media (min-width: 620px) {
       .home section .button {
         display: inline-block; } }
     .home section .button a {
-      color: white; }
+      color: white;
+      text-transform: capitalize;
+      font-size: 1.5rem; }
     .home section .button.green-button {
       background-color: #72CB7E; }
     .home section .button.yellow-button {
-      background-color: #F9D169;
-      margin-bottom: 1rem; }
+      background-color: #F9D169; }
     .home section .button.blue-button {
       background-color: #40B2C4; }
+  @media (min-width: 620px) {
+    .home section .events-buttons-container {
+      margin: 2rem auto;
+      max-width: 80%; } }
   .home .sm-feed {
     display: none; }
     @media (min-width: 620px) {

@@ -14,21 +14,11 @@
         margin: 0 auto;
     }
     .front-page-banner{
-        h1 {
+        .banner-text{
             transform: translateY(-150px);
             color: white;
             text-align: left;
             padding-left: 1rem;
-        }
-        p{
-        display: none;
-        @include desktop{
-            display: inline;
-            // transform: translateY(-130px);
-            // color: white;
-            // text-align: left;
-            // padding-left: 1rem;
-            }
         }
     }
     section{
@@ -38,6 +28,10 @@
           p{
               text-align: left;
           }
+          article{
+            padding: 0 1rem;
+            border: 1px solid green;
+        }
         .activities-container{
             // @include tablet{
             //     // display: grid;
@@ -51,6 +45,7 @@
                 margin: 0 1rem;
                 width: 100%;
                 &.carousell-tablet{
+                    margin: 0 1rem;
                     width: 50%;
                 }
               }
@@ -58,12 +53,15 @@
                 border: 1px solid $color__green;
             }
         }
+        .button.yellow-button.activities-button{
+            margin: 2rem auto;
+            max-width: 80%;
+            // @include tablet{
+            //     padding: 0 5rem;
+            // }
+        }
         .events-container{
-            article{
-                padding: 0 1rem;
-                border: 1px solid green;
-            }
-            .flickity-page-dots{
+                .flickity-page-dots{
                 visibility: hidden;
             }
             .carousel-cell {
@@ -86,16 +84,7 @@
             //     display: grid;
             //     grid-template-columns: 1fr 1fr 1fr;
             //     grid-gap:1rem;
-            // }
-            body{
-                margin-top: 100px;
-                font-family: 'Trebuchet MS', serif;
-                line-height: 1.6
-            }
-            .container{
-                width: 800px;
-                margin: 0 auto;
-            }
+            // 
             ul{
                 margin: 0px;
                 padding: 0px;
@@ -127,24 +116,32 @@
         .button{
             color: white;
             padding: 10px 30px;
-            @include tablet{
-            display: inline-block;
-            }
+                @include tablet{
+                display: inline-block;
+                 }
             border-radius: 50px;
-            margin: 0 auto;
-            width: 50%;
+            margin: 1rem;
             a{
                 color: white;
+                text-transform: capitalize;
+                font-size: 1.5rem;
             }
             &.green-button{
                 background-color: $color__green;
             }
             &.yellow-button{
                 background-color: $color__yellow;
-                margin-bottom: 1rem;
-            }
+                }
             &.blue-button{
                 background-color: $color__blue;
+            }
+        }
+        .events-buttons-container{
+            @include tablet{
+                // display: grid;
+                // grid-template-columns: 1fr 1fr;
+                margin: 2rem auto;
+                max-width: 80%;;
             }
         }
     }
