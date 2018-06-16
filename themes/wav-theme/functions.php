@@ -125,11 +125,23 @@ function wav_starter_scripts() {
 
 	wp_enqueue_script( 'carousel', get_template_directory_uri() . '/build/js/carousel.min.js', array('jquery'), '20180613', true );
 
-	//script for ajax get
-	wp_enqueue_script( 'ajax', get_template_directory_uri() . '/build/js/ajax.min.js' , array('jquery'), '20180615', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
+	}
+	/**
+	 *  add localize script rest api JavaScript
+	 */
+	if(function_exists('rest_url') ){
+		//script for ajax get
+		wp_enqueue_script( 'ajax', get_template_directory_uri() . '/build/js/ajax.min.js' , array('jquery'), '20180615', true );
+		wp_localize_script( 'ajax', 'api_vars', array(
+			'root_url' => esc_url_raw(rest_url()),
+			'home_url'=> esc_url_raw(home_url()),
+			'nonce'=> wp_create_nonce('wp_rest'),
+			'success'=>'Thanks, your event submission was received',
+			'failure'=>'Sorry, your submission could not be processed',
+		));
 	}
 }
 

@@ -66,7 +66,8 @@ get_header(); ?>
            $args = array(//array to get the upcoming events, only three of them
 			'posts_per_page' => 3,
 			'orderby' => 'date',
-            'order' => 'ASC'
+            'order' => 'ASC',
+            'eventDisplay'=>'upcoming'
         );
             $events = tribe_get_events($args);
 
@@ -116,9 +117,9 @@ get_header(); ?>
 						<p><?php echo CFS()->get('front_page_wav_what_is_wav_school_text')?></p>
                             <a href="#">learn more &rsaquo; </a>
                         </div>
-                        <div class="button yellow-button">
-                        <a href="#">find more</a>
                 </div>
+                <div class="button yellow-button">
+                        <a href="#">find more</a>
                 </div>
             </section><!--end of what is WAV section-->
 <!--social media feeds-->
