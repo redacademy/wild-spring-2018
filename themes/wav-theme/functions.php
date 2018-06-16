@@ -84,7 +84,6 @@ function child_register_sidebar(){
     ));
 }
 
-
 /**
  * Filter the stylesheet_uri to output the minified CSS file.
  */
@@ -148,6 +147,7 @@ function wav_starter_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'wav_starter_scripts' );
+
 
 /**
  * Custom template tags for this theme.
