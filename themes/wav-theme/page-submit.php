@@ -24,8 +24,8 @@ get_header(); ?>
                      <div>
                         <label for="event-author">Event contact *</label>
                         <input type="text" name="event_author_firstName" id="event-author-firstName" placeholder="First name" required aria-required="true">
-                        <input type="text" name="event_author_lastName" id="event-author-firstName" placeholder="Last name" required aria-required="true">
-                        <input type="text" name="event_author_phoneNumber" id="event-author-firstName" placeholder="Phone number" required aria-required="true">
+                        <input type="text" name="event_author_lastName" id="event-author-lastName" placeholder="Last name" required aria-required="true">
+                        <input type="text" name="event_author_phoneNumber" id="event-author-phoneNumber" placeholder="Phone number" required aria-required="true">
                         <input type="text" name="event_author_email" id="event-author-email" placeholder="Email address" required aria-required="true">
                     </div>
                      <div>
@@ -34,7 +34,7 @@ get_header(); ?>
                         <input type="date" name="event_start_date" id="event_startDate" placeholder="Start date" required aria-required="true">
                         <input type="date" name="event_end_date" id="event_endDate" placeholder="End date" required aria-required="true">
                         <input type="time" name="event_start_time" id="event_startTime" placeholder="Start time" required aria-required="true">
-                        <input type="time" name="event_start_time" id="event_startTime" placeholder="End time" required aria-required="true">
+                        <input type="time" name="event_end_time" id="event_endTime" placeholder="End time" required aria-required="true">
                         <input type="text" name="event_location" id="event_location" placeholder="Location" required aria-required="true">
                         <textarea rows="3" cols="20" name="event_description" id="event-description" required aria-required="true"></textarea>
                      </div>
