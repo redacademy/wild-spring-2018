@@ -11,8 +11,9 @@ console.log('Hello World')
     
     var authorName;
     authorName = $('#event-author-firstName').val() + ' ' + $('#event-author-lastName').val();
-   
-    
+  
+
+
     $.ajax({
       method: 'POST',
       url: api_vars.root_url+'tribe/events/v1/events',
@@ -27,11 +28,17 @@ console.log('Hello World')
           phone: $('#event-author-phoneNumber').val(),
           email: $('#event-author-email').val()
         }],
-      
+        venue: {
+          venue: $('#event_location').val()
+          // venue: 'Vancouver'
+        },
+        tags: [
+          'balloons'
+        ],
         
         // start_date: $('#event-startDate').val() + $('#event-startTime').val(),
         // end_date: $('#event-endDate').val() + $('#event-endTime').val(),
-        // address: $('#event-location').val(),
+    
         description: $('#event-description').val(),
         // tags: document.querySelector('input[name="eventType"]:checked').value + $('#event-tags').val(),
         // _qod_quote_source_url: $('#event-ticket').val(),
