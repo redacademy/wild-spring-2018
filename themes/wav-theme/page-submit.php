@@ -23,10 +23,10 @@ get_header(); ?>
                   <form name="eventForm" id="event-submission-form">
                      <div>
                         <label for="event-author">Event contact *</label>
-                        <input type="text" name="event_author_firstName" id="event-author-firstName" placeholder="First name" required aria-required="true">
-                        <input type="text" name="event_author_lastName" id="event-author-lastName" placeholder="Last name" required aria-required="true">
-                        <input type="text" name="event_author_phoneNumber" id="event-author-phoneNumber" placeholder="Phone number" required aria-required="true">
-                        <input type="text" name="event_author_email" id="event-author-email" placeholder="Email address" required aria-required="true">
+                        <input type="text" name="event_author_firstName" id="event-author-firstName" placeholder="First name" required aria-required="true"/>
+                        <input type="text" name="event_author_lastName" id="event-author-lastName" placeholder="Last name" required aria-required="true"/>
+                        <input type="text" name="event_author_phoneNumber" id="event-author-phoneNumber" placeholder="Phone number" required aria-required="true"/>
+                        <input type="text" name="event_author_email" id="event-author-email" placeholder="Email address" required aria-required="true"/>
                     </div>
                      <div>
                         <label for="event-details">Event Details*</label>
