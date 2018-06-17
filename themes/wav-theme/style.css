@@ -872,24 +872,28 @@ object {
   .home .site-content {
     text-align: center;
     margin: 0 auto; }
-  .home .front-page-banner .banner-text {
+    .home .site-content h2 {
+      font-size: 48px;
+      font-family: 'Tofino';
+      font-weight: lighter; }
+  .home section.front-page-banner .banner-text {
     -webkit-transform: translateY(-200px);
             transform: translateY(-200px);
     color: white;
     text-align: left;
     padding-left: 1rem; }
-    .home .front-page-banner .banner-text h1 {
+    .home section.front-page-banner .banner-text h1 {
       font-family: 'Oswald';
       font-size: 48px;
       font-weight: bolder; }
-    .home .front-page-banner .banner-text p {
+    .home section.front-page-banner .banner-text p {
       font-size: 33px;
       visibility: hidden;
       color: white; }
       @media (min-width: 1080px) {
-        .home .front-page-banner .banner-text p {
+        .home section.front-page-banner .banner-text p {
           visibility: visible; } }
-    .home .front-page-banner .banner-text h3 {
+    .home section.front-page-banner .banner-text h3 {
       color: white; }
   .home section .flickity-viewport {
     -webkit-transition: height 0.2s;
@@ -904,6 +908,11 @@ object {
       color: black; }
       .home section h3 a:visited, .home section h3 a:hover {
         color: black; }
+  .home section .read-more {
+    text-align: right; }
+    .home section .read-more a {
+      font-size: 24px;
+      color: #72CB7E; }
   .home section article {
     padding: 0 1rem;
     border: 1px solid green; }
@@ -920,6 +929,11 @@ object {
   .home section .button.yellow-button.activities-button {
     margin: 2rem auto;
     max-width: 80%; }
+  @media (min-width: 620px) {
+    .home section .events-container {
+      display: block; }
+      .home section .events-container .button {
+        display: inline; } }
   .home section .events-container .flickity-page-dots {
     visibility: hidden; }
   .home section .events-container .carousel-cell {
@@ -930,15 +944,10 @@ object {
         margin: 0 1rem;
         width: 50%; } }
   @media (min-width: 620px) {
-    .home section .events-container {
-      display: block; }
-      .home section .events-container .button {
-        display: inline; } }
-  @media (min-width: 620px) {
     .home section .about-container {
       margin: 0 auto;
       width: 50%; } }
-  .home section .about-container ul.tabs {
+  .home section ul.tabs {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -951,61 +960,58 @@ object {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .home section .about-container ul.tabs li {
+    .home section ul.tabs li {
       background: none;
       color: #222;
       display: inline-block;
       padding: 10px 15px;
       cursor: pointer; }
-      .home section .about-container ul.tabs li.current {
+      .home section ul.tabs li.current {
         background: #ededed;
         color: #222; }
-  .home section .about-container .tab-content {
+  .home section .tab-content {
     display: none;
     background: #ededed;
     padding: 15px; }
-    .home section .about-container .tab-content.current {
+    .home section .tab-content.current {
       display: inherit; }
-  .home section .button {
+  .home .button {
     color: white;
     padding: 10px 30px;
     border-radius: 50px;
     margin: 1rem; }
     @media (min-width: 620px) {
-      .home section .button {
+      .home .button {
         display: inline-block; } }
-    .home section .button a {
+    .home .button a {
       color: white;
       text-transform: capitalize;
       font-size: 1.5rem; }
-    .home section .button.green-button {
+    .home .button.green-button {
       background-color: #72CB7E; }
-    .home section .button.yellow-button {
+    .home .button.yellow-button {
       background-color: #F9D169; }
-    .home section .button.blue-button {
+    .home .button.blue-button {
       background-color: #40B2C4; }
   @media (min-width: 620px) {
-    .home section .events-buttons-container {
+    .home .events-buttons-container {
       margin: 2rem auto;
       max-width: 80%; } }
-  .home .sm-feed {
-    display: none; }
-    @media (min-width: 620px) {
-      .home .sm-feed {
-        display: block; }
-        .home .sm-feed .sm-feed-container {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr; } }
-    .home .sm-feed .widget {
-      margin: 0; }
-    .home .sm-feed .timeline-Widget {
-      max-width: 800px;
-      max-height: 600px;
-      overflow: hidden; }
-  .home h2 {
-    font-size: 48px;
-    font-family: 'Tofino';
-    font-weight: lighter; }
+
+.sm-feed {
+  display: none; }
+  @media (min-width: 620px) {
+    .sm-feed {
+      display: block; }
+      .sm-feed .sm-feed-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; } }
+  .sm-feed .widget {
+    margin: 0; }
+  .sm-feed .timeline-Widget {
+    max-width: 800px;
+    max-height: 600px;
+    overflow: hidden; }
 
 .aboutNavigation {
   background-color: #72CB7E;
