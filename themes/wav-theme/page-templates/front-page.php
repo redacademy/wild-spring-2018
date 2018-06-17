@@ -139,13 +139,13 @@ get_header(); ?>
                         <a href="#">find more</a>
                 </div>
             </section><!--end of what is WAV section-->
-<!--social media feeds-->
+            <!--social media feeds-->
             <section class="sm-feed">
 				<h2>Stay Up to Date</h2>
-				<div class="sm-feed-container">
-<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-front-page') ) ?>
-            </section><!--end of social media feeds-->
-
+			        <div id="sidebar-front-page" class=" sm-feed-container">
+				        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-front-page') ) ?>
+                    </div>
+                </section><!--end of social media feeds-->
 		</main><!-- #main -->
     </div><!-- #primary -->
 <?php get_sidebar(); ?>

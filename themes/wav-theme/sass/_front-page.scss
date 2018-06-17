@@ -20,22 +20,41 @@
             text-align: left;
             padding-left: 1rem;
             h1{
-                font-family: 'Oswald Bold';
+                font-family: 'Oswald';
                 font-size: 48px;
                 font-weight: bolder;
             }
             p{
-                font-family: 'Tofino';
+                // font-family: 'Tofino';
                 font-size: 33px;
+                visibility: hidden;
+                color:white;
+                @include desktop{
+                    visibility: visible;
+                }
+            }
+            h3{
+                color:white;
             }
         }
     }
     section{
         .flickity-viewport {
-            transition: height 0.2s;
+            transition: height 0.2s; 
           }
           p{
               text-align: left;
+              color:black;
+          }
+          h3{
+              font-family: 'Oswald';
+              font-size: 36px;
+              a{
+                  color:black;
+                  &:visited, &:hover {
+                      color:black
+                  }
+              }
           }
           article{
             padding: 0 1rem;
@@ -154,7 +173,7 @@
             }
         }
     }
-    .sidebar-front-page{
+    .sm-feed{
         display: none;
         @include tablet{
             display: block;
@@ -163,11 +182,19 @@
             grid-template-columns: 1fr 1fr 1fr;
             }
         }
+        .widget{
+            margin: 0;
+        }
         .timeline-Widget{
             max-width: 800px;
             max-height: 600px;
             overflow: hidden;
         }
     }
+    h2{
+        font-size: 48px;
+font-family: 'Tofino';
+font-weight: lighter;
+}
 
 }

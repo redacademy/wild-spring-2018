@@ -879,17 +879,31 @@ object {
     text-align: left;
     padding-left: 1rem; }
     .home .front-page-banner .banner-text h1 {
-      font-family: 'Oswald Bold';
+      font-family: 'Oswald';
       font-size: 48px;
       font-weight: bolder; }
     .home .front-page-banner .banner-text p {
-      font-family: 'Tofino Pro Bold';
-      font-size: 33px; }
+      font-size: 33px;
+      visibility: hidden;
+      color: white; }
+      @media (min-width: 1080px) {
+        .home .front-page-banner .banner-text p {
+          visibility: visible; } }
+    .home .front-page-banner .banner-text h3 {
+      color: white; }
   .home section .flickity-viewport {
     -webkit-transition: height 0.2s;
     transition: height 0.2s; }
   .home section p {
-    text-align: left; }
+    text-align: left;
+    color: black; }
+  .home section h3 {
+    font-family: 'Oswald';
+    font-size: 36px; }
+    .home section h3 a {
+      color: black; }
+      .home section h3 a:visited, .home section h3 a:hover {
+        color: black; }
   .home section article {
     padding: 0 1rem;
     border: 1px solid green; }
@@ -974,18 +988,24 @@ object {
     .home section .events-buttons-container {
       margin: 2rem auto;
       max-width: 80%; } }
-  .home .sidebar-front-page {
+  .home .sm-feed {
     display: none; }
     @media (min-width: 620px) {
-      .home .sidebar-front-page {
+      .home .sm-feed {
         display: block; }
-        .home .sidebar-front-page .sm-feed-container {
+        .home .sm-feed .sm-feed-container {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr; } }
-    .home .sidebar-front-page .timeline-Widget {
+    .home .sm-feed .widget {
+      margin: 0; }
+    .home .sm-feed .timeline-Widget {
       max-width: 800px;
       max-height: 600px;
       overflow: hidden; }
+  .home h2 {
+    font-size: 48px;
+    font-family: 'Tofino';
+    font-weight: lighter; }
 
 .aboutNavigation {
   background-color: #72CB7E;
