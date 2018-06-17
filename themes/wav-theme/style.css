@@ -1013,6 +1013,12 @@ object {
     max-height: 600px;
     overflow: hidden; }
 
+/*--------------------------------------------------------------
+# stylesheet for events archive view
+--------------------------------------------------------------*/
+#tribe-bar-form {
+  background-color: aqua; }
+
 .aboutNavigation {
   background-color: #72CB7E;
   list-style-type: none;
