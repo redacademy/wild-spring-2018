@@ -67,8 +67,18 @@ function wav_starter_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html( 'Sidebar social media' ),
+		'id'            => 'sidebar-front-page',
+		'description'   => 'widget area for social media feed',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'wav_starter_widgets_init' );
+
 
 
 add_action( 'widgets_init', 'child_register_sidebar' );

@@ -497,7 +497,7 @@ hr {
   margin-bottom: 1.5rem; }
 
 ul, ol {
-  margin: 0 0 1.5rem 3rem; }
+  margin: 0; }
 
 ul {
   list-style: none; }
@@ -873,11 +873,18 @@ object {
     text-align: center;
     margin: 0 auto; }
   .home .front-page-banner .banner-text {
-    -webkit-transform: translateY(-150px);
-            transform: translateY(-150px);
+    -webkit-transform: translateY(-200px);
+            transform: translateY(-200px);
     color: white;
     text-align: left;
     padding-left: 1rem; }
+    .home .front-page-banner .banner-text h1 {
+      font-family: 'Oswald Bold';
+      font-size: 48px;
+      font-weight: bolder; }
+    .home .front-page-banner .banner-text p {
+      font-family: 'Tofino Pro Bold';
+      font-size: 33px; }
   .home section .flickity-viewport {
     -webkit-transition: height 0.2s;
     transition: height 0.2s; }
@@ -913,9 +920,13 @@ object {
       display: block; }
       .home section .events-container .button {
         display: inline; } }
-  .home section .about-container ul {
-    margin: 0px;
-    padding: 0px;
+  @media (min-width: 620px) {
+    .home section .about-container {
+      margin: 0 auto;
+      width: 50%; } }
+  .home section .about-container ul.tabs {
+    margin: 0;
+    padding: 0;
     list-style: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -926,13 +937,13 @@ object {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .home section .about-container ul li {
+    .home section .about-container ul.tabs li {
       background: none;
       color: #222;
       display: inline-block;
       padding: 10px 15px;
       cursor: pointer; }
-      .home section .about-container ul li.current {
+      .home section .about-container ul.tabs li.current {
         background: #ededed;
         color: #222; }
   .home section .about-container .tab-content {
@@ -963,14 +974,18 @@ object {
     .home section .events-buttons-container {
       margin: 2rem auto;
       max-width: 80%; } }
-  .home .sm-feed {
+  .home .sidebar-front-page {
     display: none; }
     @media (min-width: 620px) {
-      .home .sm-feed {
+      .home .sidebar-front-page {
         display: block; }
-        .home .sm-feed .sm-feed-container {
+        .home .sidebar-front-page .sm-feed-container {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr; } }
+    .home .sidebar-front-page .timeline-Widget {
+      max-width: 800px;
+      max-height: 600px;
+      overflow: hidden; }
 
 .aboutNavigation {
   background-color: #72CB7E;
