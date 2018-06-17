@@ -42,7 +42,7 @@ get_header(); ?>
                                 <p><?php echo CFS()->get('description')?></p>
 
                                 <div class="read-more">
-                            <a href="<?php echo esc_url(get_permalink())?>" class="button-green">see details</a>
+                            <a href="<?php echo esc_url(get_permalink())?>" class="button-green">see details &rsaquo;</a>
                         </div>
 							</div><!-- .activities-posts-single-text-->
                         </article><!-- activities-posts-single -->
@@ -83,7 +83,7 @@ get_header(); ?>
                 echo('<h3 class="entry-title"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_title( $event).'</a></h3>' );
                 echo('<p>'.$event->post_content.'</p>');
                 echo('<p>'.tribe_get_start_date($event).'<p>');
-                echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">See details &rsaquo;</a></div>');
+                echo('<div class="read-more"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">See details &rsaquo;</a></div>');
                     $tags = wp_get_post_tags($event->ID);
                     echo('<ul>');
                          foreach ( $tags as $tag ) {
@@ -120,19 +120,19 @@ get_header(); ?>
                             <h3><?php echo CFS()->get('front_page_wav_what_is_wav_about_header')?></h3>
 							<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_about_img')?>">
                             <p><?php echo CFS()->get('front_page_wav_what_is_wav_about_text')?></p>
-                            <a href="#">learn more &rsaquo; </a>
+                            <a div="read-more" href="#">learn more &rsaquo; </a>
                         </div>
                         <div id="tab-2" class="single-festival-container tab-content">
                             <h3><?php echo CFS()->get('front_page_wav_what_is_wav_festival_header')?></h3>
 							<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_festival_img')?>">
 							<p><?php echo CFS()->get('front_page_wav_what_is_wav_festival_text')?></p>
-                            <a href="#">learn more &rsaquo; </a>
+                            <a class="read-more" href="#">learn more &rsaquo; </a>
                         </div>
                         <div id="tab-3" class="single-school-container tab-content">
 						<h3><?php echo CFS()->get('front_page_wav_what_is_wav_school_header')?></h3>
 						<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_school_img')?>">
 						<p><?php echo CFS()->get('front_page_wav_what_is_wav_school_text')?></p>
-                            <a href="#">learn more &rsaquo; </a>
+                            <a class="read-more" href="#">learn more &rsaquo; </a>
                         </div>
                 </div>
                 <div class="button yellow-button">
