@@ -12,7 +12,13 @@ console.log('Hello World')
     var authorName;
     authorName = $('#event-author-firstName').val() + ' ' + $('#event-author-lastName').val();
   
+    // var userSubmittedTags=[];
+    userSubmittedTags = $('#event-tags').val().replace(/\s+/g, '').split(',')
+    eventType = $('input[name="eventType"]:checked').val();
 
+    eventType = eventType.push(userSubmittedTags)
+    console.log(eventType)
+    
 
     $.ajax({
       method: 'POST',
@@ -32,9 +38,9 @@ console.log('Hello World')
           venue: $('#event_location').val()
           // venue: 'Vancouver'
         },
-        tags: [
-          'balloons'
-        ],
+        tags: [{
+
+        }],
         
         // start_date: $('#event-startDate').val() + $('#event-startTime').val(),
         // end_date: $('#event-endDate').val() + $('#event-endTime').val(),
