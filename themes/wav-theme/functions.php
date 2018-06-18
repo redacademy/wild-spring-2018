@@ -140,7 +140,7 @@ function wav_starter_scripts() {
 
 	wp_enqueue_script( 'activity', get_template_directory_uri() . '/build/js/activity.min.js', array('jquery'), '20180616', true );
 
-	wp_enqueue_script( 'activity', get_template_directory_uri() . '/build/js/hamburger.min.js', array('jquery'), '20180618', true );
+	wp_enqueue_script( 'wav-script', get_template_directory_uri() . '/build/js/hamburger.min.js', array('jquery'), '20180618', true );
 
 
 
