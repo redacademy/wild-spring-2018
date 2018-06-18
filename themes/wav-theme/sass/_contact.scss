@@ -1,6 +1,16 @@
 .page-id-72 {
     background: $color__background-body;
 
+    .contact-main {
+        @include desktop {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: 2px solid $color__greyborder;
+            position: relative;
+            top: -7px;
+        }
+    }
+
     .contactus {
         text-transform: capitalize;
         margin: 0;
@@ -13,14 +23,29 @@
         margin-top: .5rem;
         position: relative;
         margin-bottom: .5rem;
+            @include desktop {
+                border-bottom: none;
+                margin: .67em;
+                font-size: 1.25rem;
+            }
         
     }
 
-    .contact-button1, .contact-button2 {
+    .contact-button1, .contact-button2, {
         padding: 6px 25px;
         text-align: center;
         text-decoration: none;
-        border-radius: 50px;
+        border-radius: 30px;
+    }
+
+    input[type=submit] {
+        border-radius: 7px;
+        padding: 10px 25px;
+        font-size: 1rem;
+        box-shadow: none;
+        text-shadow: none;
+        background-color: $color__darkgreen;
+        color: #fff;
     }
 
     .contact-button1 {
@@ -34,6 +59,9 @@
             a {
                 color: #fff;
             }
+                @include desktop {
+                    display: none;
+                }
     }
 
     .contact-button2 {
@@ -43,12 +71,63 @@
         display: flex;
         justify-content: center;
         width: 65%;
-        padding-bottom: .5rem;
-        padding-top: .5rem;
         margin: 0 auto;
             a {
                 color: $color__black;
             }
+                @include desktop {
+                    display: none;
+                }
+    }
+
+    .contactandfaq {
+        @include desktop {
+            margin: 1em;
+        }
+    }
+
+    .textwidget {
+        margin: 1.25rem;
+    }
+
+    .widget.widget_text {
+        border-bottom: 1px solid $color__greyborder;
+            @include desktop {
+                border: none;
+            }
+    }
+
+    .contact-submit {
+        @include desktop {
+            border-left: 2px solid $color__greyborder;
+        }
+    }
+
+    input[type=text], input[type=email], input[type=submit], label, .entry-title {
+        width: 95vw;
+        margin-left: .5rem;
+        margin-right: .5rem;
+        border-radius: 5px;
+            @include desktop {
+                width: 45vw;
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
     }
     
+    .wpcf7-form-control.wpcf7-textarea {
+        width: 95vw;
+        margin-left: .5rem;
+        margin-right: .5rem;
+        max-height: 7rem;
+        border-radius: 5px;
+            @include desktop {
+                width: 45vw;
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
+    }
+
+    .faq-item .answer { display: none; }
+
 }

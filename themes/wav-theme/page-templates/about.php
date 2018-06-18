@@ -44,6 +44,8 @@ get_header(); ?>
                 <iframe width="560" height="315" src="<?php echo CFS()->get( 'video_about' ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 
                     <p><?php echo CFS()->get( 'text_about_video' ); ?></p>
+
+                 <div></div>   
                 </div>
 
                 

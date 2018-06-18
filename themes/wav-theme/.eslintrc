@@ -19,7 +19,7 @@
     "jQuery": false,
     "$": false,
     "_": false,
-    "api_vars":false
+    "api_vars": false
   },
   "env": {
     "es6": true,

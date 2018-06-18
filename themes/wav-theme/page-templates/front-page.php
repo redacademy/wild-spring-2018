@@ -81,7 +81,8 @@ get_header(); ?>
                 echo('<article class="event-post-single carousel-cell">');
                 echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_post_thumbnail( $event, 'large').'</a></div>');
                 echo('<h3 class="entry-title"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_title( $event).'</a></h3>' );
-                echo('<p>'.$event->post_content.'</p>');
+                // echo('<p>'.$event->post_content.'</p>');
+                echo('<p>'.get_the_excerpt($event).'</p>');
                 echo('<p>'.tribe_get_start_date($event).'<p>');
                 echo('<div class="read-more"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">See details &rsaquo;</a></div>');
                     $tags = wp_get_post_tags($event->ID);

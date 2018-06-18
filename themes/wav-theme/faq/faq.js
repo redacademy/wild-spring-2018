@@ -1,6 +1,7 @@
-(function(){ 
-    jQuery("#wptuts-accordion").accordion({
-    collapsible: true,
-    active: false
-    }); 
-    })();
+(function($) { 
+    $('.faq-item .question').click(function() {
+    	var parent = $(this).parent();
+    	parent.children("div").slideToggle();
+    });
+})(jQuery);
+
