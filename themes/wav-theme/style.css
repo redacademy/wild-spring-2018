@@ -227,8 +227,8 @@ th {
 --------------------------------------------------------------*/
 @font-face {
   font-family: 'Tofino';
-  src: url("../../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.eot");
-  src: url("../../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.woff2") format("woff2"), url("../../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.woff") format("woff"), url("../../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.ttf") format("truetype"), url("../../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.svg#TofinoProPersonal-ThinItalic") format("svg");
+  src: url("../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.eot");
+  src: url("../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.woff2") format("woff2"), url("../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.woff") format("woff"), url("../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.ttf") format("truetype"), url("../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.svg#TofinoProPersonal-ThinItalic") format("svg");
   font-weight: 100;
   font-style: italic; }
 
@@ -1293,6 +1293,15 @@ object {
     margin: 0 auto; }
     .page-id-72 .contact-button2 a {
       color: #000; }
+<<<<<<< HEAD
+
+.single-activity .carousel-cell {
+  width: 25%;
+  height: auto; }
+
+.carousel-nav .carousel-cell.is-nav-selected {
+  background: #ED2; }
+=======
     @media (min-width: 1080px) {
       .page-id-72 .contact-button2 {
         display: none; } }
@@ -1332,3 +1341,4 @@ object {
         margin-right: 2rem; } }
   .page-id-72 .faq-item .answer {
     display: none; }
+>>>>>>> 519a99c62c7f1cc5a6331e99a7b6e153bf431aa0
