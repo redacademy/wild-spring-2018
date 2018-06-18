@@ -1016,8 +1016,21 @@ object {
 /*--------------------------------------------------------------
 # stylesheet for events archive view
 --------------------------------------------------------------*/
-#tribe-bar-form {
-  background-color: aqua; }
+#tribe-events-pg-template.tribe-events-pg-template {
+  margin: 0 auto;
+  max-width: 100%; }
+
+.tribe-clearfix {
+  max-width: 1200px;
+  margin: 0 auto; }
+  .tribe-clearfix .tribe-events-page-title {
+    -webkit-transform: translateY(-250px);
+            transform: translateY(-250px);
+    color: white;
+    font-family: 'Oswald';
+    font-size: 48px;
+    font-weight: bolder;
+    text-align: left; }
 
 .aboutNavigation {
   background-color: #72CB7E;
