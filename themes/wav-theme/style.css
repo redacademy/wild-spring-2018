@@ -1293,15 +1293,6 @@ object {
     margin: 0 auto; }
     .page-id-72 .contact-button2 a {
       color: #000; }
-<<<<<<< HEAD
-
-.single-activity .carousel-cell {
-  width: 25%;
-  height: auto; }
-
-.carousel-nav .carousel-cell.is-nav-selected {
-  background: #ED2; }
-=======
     @media (min-width: 1080px) {
       .page-id-72 .contact-button2 {
         display: none; } }
@@ -1341,4 +1332,10 @@ object {
         margin-right: 2rem; } }
   .page-id-72 .faq-item .answer {
     display: none; }
->>>>>>> 519a99c62c7f1cc5a6331e99a7b6e153bf431aa0
+
+.single-activity .carousel-cell {
+  width: 25%;
+  height: auto; }
+
+.carousel-nav .carousel-cell.is-nav-selected {
+  background: #ED2; }
