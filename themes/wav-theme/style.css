@@ -227,8 +227,8 @@ th {
 --------------------------------------------------------------*/
 @font-face {
   font-family: 'Tofino';
-  src: url("../../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.eot");
-  src: url("../../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.woff2") format("woff2"), url("../../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.woff") format("woff"), url("../../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.ttf") format("truetype"), url("../../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.svg#TofinoProPersonal-ThinItalic") format("svg");
+  src: url("../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.eot");
+  src: url("../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.woff2") format("woff2"), url("../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.woff") format("woff"), url("../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.ttf") format("truetype"), url("../../assets/fonts/Tofino/TofinoProPersonal-ThinItalic.svg#TofinoProPersonal-ThinItalic") format("svg");
   font-weight: 100;
   font-style: italic; }
 
