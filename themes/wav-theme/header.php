@@ -27,7 +27,15 @@
 				</div><!-- .site-branding -->
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
+					<div class="menu-toggle">
+						<button class="hamburger hamburger--collapse" type="button" aria-expanded="false" aria-controls="primary-menu">
+							<?php esc_html('Primary Menu');?>
+								<span class="hamburger-box">
+									<span class="hamburger-inner"></span>
+								</span>
+								<span class="hamburger-label">Menu</span>
+							</button>
+					</div>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
