@@ -33,10 +33,12 @@
 								<span class="hamburger-box">
 									<span class="hamburger-inner"></span>
 								</span>
-								<span class="hamburger-label">Menu</span>
+								<span class="hamburger-label"></span>
 							</button>
 					</div>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->
 
