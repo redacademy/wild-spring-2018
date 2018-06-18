@@ -1258,3 +1258,10 @@ object {
     margin: 0 auto; }
     .page-id-72 .contact-button2 a {
       color: #000; }
+
+.single-activity .carousel-cell {
+  width: 25%;
+  height: auto; }
+
+.carousel-nav .carousel-cell.is-nav-selected {
+  background: #ED2; }

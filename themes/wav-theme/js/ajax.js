@@ -13,8 +13,8 @@ console.log('Hello World')
     authorName = $('#event-author-firstName').val() + ' ' + $('#event-author-lastName').val();
   
     // var userSubmittedTags=[];
-    userSubmittedTags = $('#event-tags').val().replace(/\s+/g, '').split(',')
-    eventType = $('input[name="eventType"]:checked').val();
+    var userSubmittedTags = $('#event-tags').val().replace(/\s+/g, '').split(',')
+    var eventType = $('input[name="eventType"]:checked').val();
 
     eventType = eventType.push(userSubmittedTags)
     console.log(eventType)

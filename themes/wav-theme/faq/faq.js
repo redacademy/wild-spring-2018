@@ -1,6 +1,6 @@
-(function(){ 
-    jQuery("#wptuts-accordion").accordion({
-    collapsible: true,
-    active: false
-    }); 
-    })();
+// (function(){ 
+//     jQuery("#wptuts-accordion").accordion({
+//     collapsible: true,
+//     active: false
+//     }); 
+//     })();
