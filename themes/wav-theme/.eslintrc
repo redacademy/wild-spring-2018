@@ -18,7 +18,8 @@
   "globals": {
     "jQuery": false,
     "$": false,
-    "_": false
+    "_": false,
+    "api_vars": false
   },
   "env": {
     "es6": true,
