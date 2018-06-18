@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: blog-1 Page
+ * Template Name: blog Page
  *
  * @package WAV_Starter_Theme
  */
@@ -63,7 +63,7 @@ get_header(); ?>
 									<div class="small-post-wrapper">
 
 										<div class="entry-meta">
-										<p class="posted-date"><?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?></p>
+										<p class="posted-date"><?php WAV_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?></p>
 										<?php the_title( sprintf( '<h3 class="post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 										</div>
 									</div>
