@@ -107,7 +107,11 @@ a {
 		display: none;
 	}
 	.main-navigation ul {
+		//this is for css of primary menu
 		display: block;
+		opacity:1;
+		position:static;
+
 	}
 }
 
@@ -121,12 +125,12 @@ a {
 	}
 
 	.nav-previous {
-		float: left;
+		// float: left;
 		width: 50%;
 	}
 
 	.nav-next {
-		float: right;
+		// float: right;
 		text-align: right;
 		width: 50%;
 	}
