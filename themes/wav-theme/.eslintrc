@@ -19,10 +19,14 @@
     "jQuery": false,
     "$": false,
     "_": false,
+<<<<<<< HEAD
     "api_vars": false,
     "userSubmittedTags": false,
     "eventType": false,
     "lastPage":false
+=======
+    "api_vars": false
+>>>>>>> 519a99c62c7f1cc5a6331e99a7b6e153bf431aa0
   },
   "env": {
     "es6": true,

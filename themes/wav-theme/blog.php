@@ -34,7 +34,57 @@ get_header(); ?>
 		<?php endif; ?>
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
+    </div><!-- #primary -->
+    
+
+
+
+
+    				<section class="last-journal">
+					<div class="container">
+						<?php
+							$args = array(
+							'post_type' => 'post',
+							'order' => 'DSC' );
+							$post_posts = get_posts( $args ); // returns an array of posts
+						?>
+
+						<ul>
+							<?php foreach ( $post_posts as $post ) : setup_postdata( $post ); ?>
+
+								<li>
+
+									<div class="small-photo-wrapper">
+										<?php if ( has_post_thumbnail() ) : ?>
+											<?php the_post_thumbnail( 'large' ); ?>
+										<?php endif; ?>
+									</div>
+
+									<div class="small-post-wrapper">
+
+										<div class="entry-meta">
+										<p class="posted-date"><?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?></p>
+										<?php the_title( sprintf( '<h3 class="post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
+										</div>
+									</div>
+
+									<a href="<?php the_permalink(); ?>"class="journal-button">Read Entry</a>
+
+								</li>
+
+							
+						
+							<?php endforeach; wp_reset_postdata(); ?>
+
+						</ul>
+
+					</div>
+
+                </section>
+                
+
+
+
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
