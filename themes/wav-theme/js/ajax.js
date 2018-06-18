@@ -13,12 +13,18 @@ console.log('Hello World')
     authorName = $('#event-author-firstName').val() + ' ' + $('#event-author-lastName').val();
   
     // var userSubmittedTags=[];
-    userSubmittedTags = $('#event-tags').val().replace(/\s+/g, '').split(',')
+    userSubmittedTags1 = $('#event-tags').val().replace(/\s+/g, '').split(',')
     eventType = $('input[name="eventType"]:checked').val();
 
-    eventType = eventType.push(userSubmittedTags)
-    console.log(eventType)
+    userSubmittedTags1.push(eventType)
+    // console.log(userSubmittedTags2, "user submited tags2");
+    console.log(userSubmittedTags1, eventType)
     
+    startTime= $('#event_startDate').val() + ' ' +  $('#event_startTime').val();
+    endTime = $('#event_endDate').val() + ' ' +  $('#event_endTime').val();
+
+    description = $('#event-description').val() + ' &nbsp; User suggested tags: ' + userSubmittedTags1;
+    console.log(description);
 
     $.ajax({
       method: 'POST',
@@ -33,19 +39,21 @@ console.log('Hello World')
           organizer: authorName,
           phone: $('#event-author-phoneNumber').val(),
           email: $('#event-author-email').val()
-        }],
+        },
+      {
+        organizer:'testtest'
+      }],
         venue: {
           venue: $('#event_location').val()
           // venue: 'Vancouver'
         },
-        tags: [{
-
-        }],
+  
         
-        // start_date: $('#event-startDate').val() + $('#event-startTime').val(),
-        // end_date: $('#event-endDate').val() + $('#event-endTime').val(),
+        start_date: startTime,
+        end_date: endTime,
     
-        description: $('#event-description').val(),
+      // NTS: Can't post tags. Added to description for moderator to add manually
+        description: description,
         // tags: document.querySelector('input[name="eventType"]:checked').value + $('#event-tags').val(),
         // _qod_quote_source_url: $('#event-ticket').val(),
 
@@ -59,6 +67,25 @@ console.log('Hello World')
     .done(function(){
       $('#event-submission-form').slideUp('slow');
       $('.event-submission-wrapper').append('<p>'+api_vars.success+'</p>');
+
+    //   $.ajax({
+    //     method: 'POST',
+    //     url: api_vars.root_url+'tribe/events/v1/tags',
+    //     // url: functions.php,
+    //     data: {
+    //       name: 'benjamin',
+    //       name: 'jane'
+    //     },
+    //     beforeSend: function(xhr) {
+    //       xhr.setRequestHeader( 'X-WP-Nonce', api_vars.nonce );
+    //    }
+    //   })
+    //   .done(function(){
+    //     console.log('tags added');
+    //   })
+    //   .fail(function(){
+    //     console.log('tags failjor');
+    //   });
     })
     .fail(function(){
       $('#event-submission-form').append('<p>'+api_vars.failure+'</p>');
