@@ -74,7 +74,6 @@
       
 //  }
   
-<<<<<<< HEAD
   
      
   
@@ -92,24 +91,6 @@
 //       // console.log(userSubmittedTags2, "user submited tags2");
 //       console.log(userSubmittedTags1);
 //       // 
-=======
-    // var userSubmittedTags=[];
-    // userSubmittedTags = $('#event-tags').val();
-    // .val().replace(/\s+/g, '').split(',')
-    // var eventType = $('input[name="eventType"]:checked').val();
-
-    // userSubmittedTags1.push(eventType)
-    // console.log(userSubmittedTags2, "user submited tags2");
-    // console.log(userSubmittedTags1)
-    
-    // startTime= $('#event_startDate').val() + ' ' +  $('#event_startTime').val();
-    // endTime = $('#event_endDate').val() + ' ' +  $('#event_endTime').val();
-
-    // description = $('#event-description').val() + ' &nbsp; User suggested tags: ' + userSubmittedTags1;
-    // console.log(description);
-
-    // console.log(tags,'whatami');
->>>>>>> e6d5d01ff5a018b2275195926bea5ab7436e9a6e
 
 //       startTime= $('#event_startDate').val() + ' ' +  $('#event_startTime').val();
 //       endTime = $('#event_endDate').val() + ' ' +  $('#event_endTime').val();
@@ -180,7 +161,6 @@
 //         $('#event-submission-form').slideUp('slow');
 //         $('.event-submission-wrapper').append('<p>'+api_vars.success+'</p>');
   
-<<<<<<< HEAD
 //       //   $.ajax({
 //       //     method: 'POST',
 //       //     url: api_vars.root_url+'tribe/events/v1/tags',
@@ -203,18 +183,6 @@
 //       .fail(function(){
 //         $('#event-submission-form').append('<p>'+api_vars.failure+'</p>');
 //       })
-=======
-        
-        // start_date: startTime,
-        // end_date: endTime,
-    
-      // NTS: Can't post tags. Added to description for moderator to add manually
-        // description: description,
-        // tags: document.querySelector('input[name="eventType"]:checked').value + $('#event-tags').val(),
-        // _qod_quote_source_url: $('#event-ticket').val(),
-
-        status: 'pending'
->>>>>>> e6d5d01ff5a018b2275195926bea5ab7436e9a6e
     
   
      
