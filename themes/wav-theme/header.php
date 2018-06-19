@@ -41,6 +41,10 @@
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 
 						<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu'));?>
+						<div class="social-nav">
+							<p class="social-nav-menu">Stay Up To Date</p>
+							<?php get_sidebar(); ?>
+						</div>
 
 				</nav><!-- #site-navigation -->
 			</header><!-- #masthead -->

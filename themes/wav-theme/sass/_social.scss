@@ -1,0 +1,29 @@
+.widget-area {
+
+    a {
+        border-radius: 8rem;
+        background-color: $color__blue;
+        width: 2.5rem;
+        height: 2.5rem;
+        position: relative;
+        display: inline-block;
+    }
+
+    i::before {
+        position: absolute;
+        font-size: 1.75rem;
+        padding: .5rem;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        right: 0;
+    }
+
+    .fab.fa-facebook-f::before {
+        left: 14%;
+    }
+
+    li {
+        display: inline;
+    }
+}

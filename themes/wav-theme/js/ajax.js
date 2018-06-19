@@ -1,22 +1,25 @@
 //this is a js file for ajax request for events, tribe_events
 
 (function ($){
-console.log('Hello World')
-     /**
-   * Ajax-based front-end post submissions
+  console.log('Hello World')
+       /**
+     * Ajax-based front-end post submissions
+     */
+
+     $eventForm = $('#event-submission-form');
+
+     var allTags =[];
+     
+
+     if($eventForm.length) {
+       getTags();
+     }
+
+     
+  /**
+   * Get Tags
    */
-
-   var $eventSubmitForm = $('#event-submission-form');
-
-   
-  var allTags = [];
-
-   if ($eventSubmitForm.length){
-     getTags();
-     console.log('im here')
-   }
-
-   function getTags() {
+  function getTags() {
     $.ajax({
       method: 'get',
       url: api_vars.root_url + 'wp/v2/tags'
@@ -29,27 +32,19 @@ console.log('Hello World')
             name: value.name
           });
         });
-
-        console.log(data)
+        console.log(data);
       })
       .fail(function(err) {
         console.log(err);
       });
   }
 
-  
   /**
    * Check Tags
    * @param {*} tags
    */
 
-   
-
-   $('#event-submission-form').submit(function(event){
-    event.preventDefault();
-    
-    var authorName;
-    authorName = $('#event-author-firstName').val() + ' ' + $('#event-author-lastName').val();
+ 
   
     // var userSubmittedTags=[];
     // userSubmittedTags = $('#event-tags').val();
@@ -68,27 +63,53 @@ console.log('Hello World')
 
     // console.log(tags,'whatami');
 
-    $.ajax({
-      method: 'POST',
-      url: api_vars.root_url+'tribe/events/v1/events',
-      // url: functions.php,
-      data: {
+      startTime= $('#event_startDate').val() + ' ' +  $('#event_startTime').val();
+      endTime = $('#event_endDate').val() + ' ' +  $('#event_endTime').val();
+  
+      description = $('#event-description').val() + ' &nbsp; User suggested tags: ' + userSubmittedTags1;
+      console.log(description);
+  
+      $.ajax({
+        method: 'POST',
+        url: api_vars.root_url+'tribe/events/v1/events',
+        // url: functions.php,
+        data: {
+      
+          title: $('#event-name').val(),
+          start_date: '2018-06-20 11:30:00',
+          end_date: '2018-06-21 12:00:00',
+          organizer: [{
+            organizer: authorName,
+            phone: $('#event-author-phoneNumber').val(),
+            email: $('#event-author-email').val()
+          },
+        {
+          organizer:'testtest'
+        }],
+          venue: {
+            venue: $('#event_location').val()
+            // venue: 'Vancouver'
+          },
     
-        title: $('#event-name').val(),
-        start_date: '2018-06-20 11:30:00',
-        end_date: '2018-06-21 12:00:00',
-        organizer: [{
-          organizer: authorName,
-          phone: $('#event-author-phoneNumber').val(),
-          email: $('#event-author-email').val()
+          
+          start_date: startTime,
+          end_date: endTime,
+      
+        // NTS: Can't post tags. Added to description for moderator to add manually
+          description: description,
+          // tags: document.querySelector('input[name="eventType"]:checked').value + $('#event-tags').val(),
+          // _qod_quote_source_url: $('#event-ticket').val(),
+  
+          status: 'pending'
+      
         },
-      {
-        organizer:'testtest'
-      }],
-        venue: {
-          venue: $('#event_location').val()
-          // venue: 'Vancouver'
-        },
+        beforeSend: function(xhr) {
+          xhr.setRequestHeader( 'X-WP-Nonce', api_vars.nonce );
+       }
+      })
+      .done(function(){
+        $('#event-submission-form').slideUp('slow');
+        $('.event-submission-wrapper').append('<p>'+api_vars.success+'</p>');
   
         
         // start_date: startTime,
@@ -101,44 +122,12 @@ console.log('Hello World')
 
         status: 'pending'
     
-      },
-      beforeSend: function(xhr) {
-        xhr.setRequestHeader( 'X-WP-Nonce', api_vars.nonce );
-     }
-    })
-    .done(function(){
-      $('#event-submission-form').slideUp('slow');
-      $('.event-submission-wrapper').append('<p>'+api_vars.success+'</p>');
-
-    //   $.ajax({
-    //     method: 'POST',
-    //     url: api_vars.root_url+'tribe/events/v1/tags',
-    //     // url: functions.php,
-    //     data: {
-    //       name: 'benjamin',
-    //       name: 'jane'
-    //     },
-    //     beforeSend: function(xhr) {
-    //       xhr.setRequestHeader( 'X-WP-Nonce', api_vars.nonce );
-    //    }
-    //   })
-    //   .done(function(){
-    //     console.log('tags added');
-    //   })
-    //   .fail(function(){
-    //     console.log('tags failjor');
-    //   });
-    })
-    .fail(function(){
-      $('#event-submission-form').append('<p>'+api_vars.failure+'</p>');
-    })
   
-
-   
-  });
-    //Widnow Pop State //when you click arrows
-    $(window).on('popstate', function(){
-        window.location.replace(lastPage);
-    })
-
-    })(jQuery);
+     
+    });
+      //Widnow Pop State //when you click arrows
+      $(window).on('popstate', function(){
+          window.location.replace(lastPage);
+      })
+  
+      })(jQuery);

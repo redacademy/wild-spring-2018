@@ -32,6 +32,7 @@ a {
 	display: block;
 	float: left;
 	width: 100%;
+	position: relative;
 
 	ul {
 		display: none;
@@ -101,14 +102,46 @@ a {
 
 /* Small menu. */
 
+.social-nav {
+	display: none;
+}
+
 .main-navigation.toggled {
 	position: absolute;
     right: 0;
 	top: 3.55rem;
 	width: 50%;
 	height: 100vh;
+	font-family: 'Tofino';
 	background: $color__blue__menu__background;
+	
+		a {
+			color: #fff;
+			border-bottom: 1px solid #fff;
+			padding: 1rem;
+		}
+
+		.social-nav {
+			display: block;
+			padding: 1rem;
+			color: #fff;
+			position: relative;
+			margin: 0;
+
+			ul {
+				text-align: center;
+			}
+
+			.widget-area {
+				padding-top: .75rem;
+			}
+		}
+
+		.social-nav-menu {
+			margin: 0;
+		}
 }
+
 
 .menu-toggle,
 .main-navigation.toggled ul {

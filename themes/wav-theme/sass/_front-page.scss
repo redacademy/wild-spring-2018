@@ -139,6 +139,16 @@
                     width: 50%;
                 }
               }
+            .tags-list{
+                display: flex;
+                justify-content: center;
+                li{
+                    border:1px solid $color__blue;
+                    border-radius: 30%;
+                    margin: auto;
+                    padding: 0.5rem;
+                }
+            }
         }
          .about-container{
             @include tablet{
