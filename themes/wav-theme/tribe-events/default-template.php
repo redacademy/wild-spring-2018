@@ -18,8 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 <div id="tribe-events-pg-template" class="tribe-events-pg-template">
-	<?php echo('I am custom template from wav/tribe-events/folder');
-	?>
 	<?php tribe_events_before_html(); ?>
 	<?php tribe_get_view(); ?>
 	<?php tribe_events_after_html(); ?>

@@ -657,7 +657,11 @@ a {
   .menu-toggle {
     display: none; }
   .main-navigation ul {
-    display: block; } }
+    display: block;
+    opacity: 1;
+    height: auto;
+    overflow: auto;
+    position: static; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -668,13 +672,11 @@ a {
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
-  float: left;
   width: 50%; }
 
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
-  float: right;
   text-align: right;
   width: 50%; }
 
@@ -920,28 +922,34 @@ object {
   .home section .activities-container .carousel-cell {
     margin: 0 1rem;
     width: 100%; }
-    .home section .activities-container .carousel-cell.carousell-tablet {
-      margin: 0 1rem;
-      width: 50%; }
+    @media (min-width: 620px) {
+      .home section .activities-container .carousel-cell {
+        margin: 0 1rem;
+        width: 50%; } }
   .home section .activities-container .activities-posts-single {
     border: 1px solid #72CB7E; }
   .home section .button.yellow-button.activities-button {
     margin: 2rem auto;
     max-width: 80%; }
+  .home section .events-container.carousel:after {
+    content: 'flickity';
+    display: none; }
   @media (min-width: 620px) {
     .home section .events-container {
-      display: block; }
+      display: block;
+      /* disable Flickity for large devices */ }
       .home section .events-container .button {
-        display: inline; } }
+        display: inline; }
+      .home section .events-container.carousel:after {
+        content: ''; }
+      .home section .events-container.carousel {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
   .home section .events-container .flickity-page-dots {
     visibility: hidden; }
   .home section .events-container .carousel-cell {
-    margin: 0 1rem;
-    width: 100%; }
-    @media (min-width: 620px) {
-      .home section .events-container .carousel-cell {
-        margin: 0 1rem;
-        width: 50%; } }
+    width: 66%; }
   @media (min-width: 620px) {
     .home section .about-container {
       margin: 0 auto;
@@ -1015,6 +1023,9 @@ object {
 /*--------------------------------------------------------------
 # stylesheet for events archive view
 --------------------------------------------------------------*/
+#tribe-bar-form {
+  background-color: #efefef; }
+
 #tribe-events-pg-template.tribe-events-pg-template {
   margin: 0 auto;
   max-width: 100%; }
@@ -1023,13 +1034,38 @@ object {
   max-width: 1200px;
   margin: 0 auto; }
   .tribe-clearfix .tribe-events-page-title {
-    -webkit-transform: translateY(-250px);
-            transform: translateY(-250px);
-    color: white;
     font-family: 'Oswald';
     font-size: 48px;
     font-weight: bolder;
     text-align: left; }
+
+.tribe_events-template-default.single-tribe_events .tribe-events-before-html {
+  display: none; }
+
+.tribe_events-template-default.single-tribe_events .events-container {
+  text-align: center; }
+  .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-event-title {
+    font-family: 'Oswald'; }
+  .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-event-description.tribe-events-content {
+    text-align: left;
+    padding: 0 4%; }
+  .tribe_events-template-default.single-tribe_events .events-container .single-event-details-title {
+    display: none; }
+    @media (min-width: 1080px) {
+      .tribe_events-template-default.single-tribe_events .events-container .single-event-details-title {
+        display: inline; } }
+  .tribe_events-template-default.single-tribe_events .events-container .tribe-events-event-meta {
+    background: white;
+    border: none; }
+  .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-section-title {
+    display: none; }
+
+.tribe-events-meta-group.tribe-events-meta-group-details, .tribe-events-meta-group.tribe-events-meta-group-gmap {
+  padding: 0;
+  margin: 0; }
+
+.tribe-events-ical.tribe-events-button {
+  visibility: hidden; }
 
 .aboutNavigation {
   background-color: #72CB7E;

@@ -2,7 +2,7 @@
 # stylesheet for events archive view
 --------------------------------------------------------------*/
 #tribe-bar-form{
-    // background-color: red;
+    background-color: #efefef;
     // display: grid;
     // grid-template-columns: 1fr 1fr;
     // grid-gap: 1rem;
@@ -16,11 +16,50 @@
     max-width: 1200px;
     margin: 0 auto;
     .tribe-events-page-title{
-    transform: translateY(-250px);
-    color: white;
+    // transform: translateY(-250px);
+    // color: white;
     font-family: 'Oswald';
     font-size: 48px;
     font-weight: bolder;
     text-align:  left;
     }
+}
+
+//style for single event page:
+
+.tribe_events-template-default.single-tribe_events{
+    .tribe-events-before-html{
+        display: none;
+    }
+    .events-container{
+        text-align: center;
+        .tribe-events-single-event-title{
+            font-family: 'Oswald';
+        }
+        .tribe-events-single-event-description.tribe-events-content{
+            text-align: left;
+            padding: 0 4%;
+
+        }
+        .single-event-details-title{
+            display: none;
+            @include desktop{
+                display:inline; 
+            }
+        }
+        .tribe-events-event-meta{
+            background: white;
+            border:none;
+        }
+        .tribe-events-single-section-title{
+            display:none;
+        }
+    }
+}
+.tribe-events-meta-group.tribe-events-meta-group-details, .tribe-events-meta-group.tribe-events-meta-group-gmap{
+    padding: 0;
+    margin: 0;
+}
+.tribe-events-ical.tribe-events-button{
+    visibility:hidden;
 }

@@ -63,7 +63,7 @@ get_header(); ?>
     <section class="events">
                 <h2>Upcoming Events</h2>
                 <!-- <div class="tribe_event-container"> -->
-                <div class="events-container carousel">
+                <div class="events-container carousel" data-flickity='{ "watchCSS": true }'>
                 <!-- // the loop for events as per documentation -->
            <?php
            $args = array(//array to get the upcoming events, only three of them
@@ -81,7 +81,8 @@ get_header(); ?>
                 echo('<article class="event-post-single carousel-cell">');
                 echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_post_thumbnail( $event, 'large').'</a></div>');
                 echo('<h3 class="entry-title"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_title( $event).'</a></h3>' );
-                echo('<p>'.$event->post_content.'</p>');
+                // echo('<p>'.$event->post_content.'</p>');
+                echo('<p>'.get_the_excerpt($event).'</p>');
                 echo('<p>'.tribe_get_start_date($event).'<p>');
                 echo('<div class="read-more"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">See details &rsaquo;</a></div>');
                     $tags = wp_get_post_tags($event->ID);
