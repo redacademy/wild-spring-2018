@@ -32,6 +32,7 @@ a {
 	display: block;
 	float: left;
 	width: 100%;
+	position: relative;
 
 	ul {
 		display: none;
@@ -99,11 +100,11 @@ a {
 	// }
 }
 
+/* Small menu. */
+
 .social-nav {
 	display: none;
 }
-
-/* Small menu. */
 
 .main-navigation.toggled {
 	position: absolute;
@@ -121,10 +122,22 @@ a {
 		}
 
 		.social-nav {
-			display: inline;
-			color: #fff;
+			display: block;
 			padding: 1rem;
-			position: absolute;
+			color: #fff;
+			position: relative;
+			margin: 0;
+
+			ul {
+				text-align: center;
+			}
+
+			.widget-area {
+				padding-top: .75rem;
+			}
+		}
+
+		.social-nav-menu {
 			margin: 0;
 		}
 }

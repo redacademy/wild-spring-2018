@@ -15,7 +15,7 @@ get_header(); ?>
             </div>
         <?php } ?>
     </div>
-        hello
+       
     <div class="carousel carousel-nav" data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false }'>
         <?php $loop = CFS()->get( 'activity_image_loop' );
             foreach ( $loop as $row ) {?>
