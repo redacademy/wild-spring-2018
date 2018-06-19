@@ -36,22 +36,20 @@ get_header(); ?>
                 <p><?php echo CFS()->get( 'about_wav' ); ?></p>
 
                 <a href="#">Read about Wild About Vancouver's Goals</a>
-                
+
                 <div class="videoAboutWav"> <!--Container for a video-->
 
                 <div><?php echo CFS()->get('video_about_test');?></div>
 
                     <p><?php echo CFS()->get( 'text_about_video' ); ?></p>
 
-                 <div></div>   
+                 <div></div>
                 </div>
 
-                
             </section><!--end of aboutWav-->
 
             <div class="anchor" id="festivalJump"></div>
             <section class="ourFestival">
-            
                 <h1>Our Festival</h1>
                 <div class="header-img-container">
                     <img class="header-img" src="<?php echo CFS()->get( 'our_festival_img' ); ?>">
@@ -60,7 +58,7 @@ get_header(); ?>
 
                 <div class="center-button">
                     <a href="<?php echo get_post_type_archive_link( 'festival' ) ?>" class="green-button">More Information</a>
-                </div>  
+                </div>
             </section>
 
             <div class="anchor" id="teamJump"></div>
@@ -193,7 +191,7 @@ get_header(); ?>
                             </div><!--end of pressItem-->
                             <?php endforeach; wp_reset_postdata(); ?>
                     </div><!--end of press-->
-                    <a class="green-button" href=<?php echo get_post_type_archive_link( 'press' ) ?>>See More</a>
+                    <a class="green-button" href=<?php echo get_post_type_archive_link( 'press-items' ) ?>>See More</a>
                 </section>
 
 		</main><!-- #main -->
