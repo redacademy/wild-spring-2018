@@ -239,7 +239,9 @@ function wav_register_activity() {
 	register_post_type( 'activity', $args );
 
 }
-add_action( 'init', 'wav_register_contactus', 0 );
+
+
+add_action( 'init', 'wav_register_activity', 0 );
 
 // Register Custom Post Type
 function wav_register_contactus() {
