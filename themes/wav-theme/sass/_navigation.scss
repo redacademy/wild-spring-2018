@@ -78,12 +78,15 @@ a {
 		}
 	}
 	li {
-		float: left;
+		// float: left;
 		position: relative;
 
 		// &:hover > a,
 		// &.focus > a {
 		// }
+			@include desktop {
+				float: left;
+			}
 	}
 	a {
 		display: block;
