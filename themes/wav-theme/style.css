@@ -1387,6 +1387,7 @@ object {
   padding: 15px 15px;
   display: inline-block;
   cursor: pointer;
+  position: absolute;
   -webkit-transition-property: opacity, -webkit-filter;
   transition-property: opacity, -webkit-filter;
   transition-property: opacity, filter;
