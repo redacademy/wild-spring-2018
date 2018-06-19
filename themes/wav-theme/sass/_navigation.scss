@@ -99,6 +99,10 @@ a {
 	// }
 }
 
+.social-nav {
+	display: none;
+}
+
 /* Small menu. */
 
 .main-navigation.toggled {
@@ -107,8 +111,24 @@ a {
 	top: 3.55rem;
 	width: 50%;
 	height: 100vh;
+	font-family: 'Tofino';
 	background: $color__blue__menu__background;
+	
+		a {
+			color: #fff;
+			border-bottom: 1px solid #fff;
+			padding: 1rem;
+		}
+
+		.social-nav {
+			display: inline;
+			color: #fff;
+			padding: 1rem;
+			position: absolute;
+			margin: 0;
+		}
 }
+
 
 .menu-toggle,
 .main-navigation.toggled ul {
