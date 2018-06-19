@@ -74,6 +74,12 @@ get_header(); ?>
                <p><?php echo sprintf( '<a href="%1s">%2s</a>', esc_url( wp_login_url() ), 'Click here to login.' ); ?></p>
 
             <?php endif; ?>
+
+            <?php while ( have_posts() ) : the_post(); ?>
+
+            <?php get_template_part( 'template-parts/content', 'page' ); ?>
+
+            <?php endwhile; // End of the loop. ?>
          </section>
 
 		</main><!-- #main -->
