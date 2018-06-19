@@ -69,31 +69,31 @@ get_header(); ?>
                     <div class="teamMembers carousel" data-flickity='{ "watchCSS": true }'>
 
                         <?php
-                            $args = array( 'post_type' => 'person', 'category_name' => 'team', 'order' => 'ASC', 'numberposts'=>-1);
+                            $args = array( 'post_type' => 'person', 'category_name' => 'team', 'order' => 'ASC', 'posts_per_page' => 4,);
                             $team_posts = get_posts( $args ); // returns an array of posts
                         ?>
 
                         <?php foreach ( $team_posts as $post ) : setup_postdata( $post ); ?>
                             <div class="teamMember carousel-cell">
-                                <header class="entry-header">
+                                <!-- <header class="entry-header"> -->
                                     <?php if ( has_post_thumbnail() ) : ?>
                                     <a href="<?php echo esc_url( get_permalink()) ?>" alt="Team Image"><?php the_post_thumbnail( 'large' ); ?></a>
                                     <?php endif; ?>
 
                                     <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-                                </header>
+                                <!-- </header> -->
 
                             </div><!--end of teamMember-->
                             <?php endforeach; wp_reset_postdata(); ?>
                     </div><!--end of teamMembers-->
-                    <a class="hidden-mobile">See More</a>
+                    <a class="hidden-mobile" href=<?php echo get_post_type_archive_link( 'person' ) ?>>See More</a>
                 </section>
 
                 <div class="anchor" id="collaboratorsJump"></div>
     
                     <section class="collaborators">
                         <h1>Collaborators</h1>
-                        <div class="collaborators carousel">
+                        <div class="collaborators carousel" data-flickity='{ "watchCSS": true }'>
 
                         <?php
                             $args = array( 'post_type' => 'person', 'category_name' => 'collaborator', 'order' => 'ASC', 'numberposts'=>-1);
