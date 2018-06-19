@@ -6,6 +6,37 @@ console.log('Hello World')
    * Ajax-based front-end post submissions
    */
 
+   var $eventSubmitForm = $('#event-submission-form');
+
+   
+  var allTags = [];
+
+   if ($eventSubmitForm.length){
+     getTags();
+     console.log('im here')
+   }
+
+   function getTags() {
+    $.ajax({
+      method: 'get',
+      url: api_vars.root_url + 'wp/v2/tags'
+    })
+      .done(function(data) {
+        // get all tags and push
+        $.each(data, function(index, value) {
+          allTags.push({
+            id: value.id,
+            name: value.name
+          });
+        });
+
+        console.log(data)
+      })
+      .fail(function(err) {
+        console.log(err);
+      });
+  }
+
    $('#event-submission-form').submit(function(event){
     event.preventDefault();
     
