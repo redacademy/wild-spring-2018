@@ -58,34 +58,42 @@
    
     
 }
-
-.teamMember, .collaborator{
+.teamMembers{
     &.carousel:after {
         content: 'flickity';
         display: none;
       }
     @include tablet{
-        display: block;
-        .button {
-            display: inline;
-        }
+        // display: block;
         /* disable Flickity for large devices */
         &.carousel:after {
                 content: '';
                  }
          &.carousel{
-             display:flex;
+             display:grid;
+             grid-template-columns: 1fr 1fr 1fr 1fr;
                  }
     }
-    @include desktop{
-        a{
-            display: none;
+    .carousel-cell {
+        margin: 0 1rem;
+        width: 100%;
+        @include tablet{
+            margin: 0 1rem;
+            width: 90%;
         }
-        &:hover a{
-            display: block;
-        }
-    }
+      }
 }
+
+// .teamMember, .collaborator{
+//     @include desktop{
+//         a{
+//             display: none;
+//         }
+//         &:hover a{
+//             display: block;
+//         }
+//     }
+// }
 
 .teamMember, .collaborator, .festival, .schoolItem, .pressItem{
     width: 45%;
