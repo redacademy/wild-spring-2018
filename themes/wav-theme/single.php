@@ -45,15 +45,14 @@ get_header(); ?>
 
 			</article><!-- #post-## -->
 
-
-			<?php the_post_navigation(); ?>
-
-
+			<?php the_post_navigation( array(
+            'prev_text'                  => __( 'Back' ),
+            'next_text'                  => __( 'Next' ),
+       		 ) ); ?>
 
 		<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
