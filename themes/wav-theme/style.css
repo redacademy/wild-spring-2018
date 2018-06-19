@@ -1029,9 +1029,6 @@ object {
   max-width: 1200px;
   margin: 0 auto; }
   .tribe-clearfix .tribe-events-page-title {
-    -webkit-transform: translateY(-250px);
-            transform: translateY(-250px);
-    color: white;
     font-family: 'Oswald';
     font-size: 48px;
     font-weight: bolder;

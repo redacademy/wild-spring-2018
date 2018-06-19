@@ -2,7 +2,7 @@
 # stylesheet for events archive view
 --------------------------------------------------------------*/
 #tribe-bar-form{
-    background-color: red;
+    background-color: #efefef;
     // display: grid;
     // grid-template-columns: 1fr 1fr;
     // grid-gap: 1rem;
@@ -16,8 +16,8 @@
     max-width: 1200px;
     margin: 0 auto;
     .tribe-events-page-title{
-    transform: translateY(-250px);
-    color: white;
+    // transform: translateY(-250px);
+    // color: white;
     font-family: 'Oswald';
     font-size: 48px;
     font-weight: bolder;
