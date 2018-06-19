@@ -1415,6 +1415,16 @@ object {
 .answer {
   display: none; }
 
+.site-header {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid #e1e1e1;
+  padding: 1rem;
+  position: fixed;
+  -webkit-transition: top .5s linear;
+  transition: top .5s linear;
+  width: 100%;
+  z-index: 3; }
+
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
@@ -1426,6 +1436,9 @@ object {
   padding: 15px 15px;
   display: inline-block;
   cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: .05rem;
   -webkit-transition-property: opacity, -webkit-filter;
   transition-property: opacity, -webkit-filter;
   transition-property: opacity, filter;

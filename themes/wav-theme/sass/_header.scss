@@ -1,0 +1,9 @@
+.site-header {
+        background-color: hsla(0,0%,100%,.85);
+        border-bottom: 1px solid #e1e1e1;
+        padding: 1rem;
+		position: fixed;
+		transition: top .5s linear;
+		width: 100%;
+		z-index: 3;
+}
