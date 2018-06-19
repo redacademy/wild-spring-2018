@@ -37,6 +37,14 @@ console.log('Hello World')
       });
   }
 
+  
+  /**
+   * Check Tags
+   * @param {*} tags
+   */
+
+   
+
    $('#event-submission-form').submit(function(event){
     event.preventDefault();
     
@@ -44,18 +52,21 @@ console.log('Hello World')
     authorName = $('#event-author-firstName').val() + ' ' + $('#event-author-lastName').val();
   
     // var userSubmittedTags=[];
-    var userSubmittedTags = $('#event-tags').val().replace(/\s+/g, '').split(',')
-    var eventType = $('input[name="eventType"]:checked').val();
+    userSubmittedTags = $('#event-tags').val();
+    // .val().replace(/\s+/g, '').split(',')
+    // var eventType = $('input[name="eventType"]:checked').val();
 
-    userSubmittedTags1.push(eventType)
+    // userSubmittedTags1.push(eventType)
     // console.log(userSubmittedTags2, "user submited tags2");
-    console.log(userSubmittedTags1, eventType)
+    console.log(userSubmittedTags1)
     
     startTime= $('#event_startDate').val() + ' ' +  $('#event_startTime').val();
     endTime = $('#event_endDate').val() + ' ' +  $('#event_endTime').val();
 
     description = $('#event-description').val() + ' &nbsp; User suggested tags: ' + userSubmittedTags1;
     console.log(description);
+
+    // console.log(tags,'whatami');
 
     $.ajax({
       method: 'POST',
