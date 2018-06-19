@@ -215,56 +215,7 @@ get_header(); ?>
 		</main><!-- #main -->
     </div><!-- #primary -->
     
-    <section class="events">
-                <h2>Upcoming Events</h2>
-                <!-- <div class="tribe_event-container"> -->
-                <div class="events-container carousel">
-                <!-- // the loop for events as per documentation -->
-           <?php
-           $args = array(//array to get the upcoming events, only three of them
-			'posts_per_page' => -1,
-			'orderby' => 'date',
-            'order' => 'ASC'
-        
-        );
-
-        $tagArgs = array(
-            'label' => '',
-            'separator' =>', '
-        );
-            $events = tribe_get_events($args);
-            $tags = tribe_meta_event_tags($tagArgs);
-
-            // $tags = tribe_meta_event_tags ($label = null, $separator = ’, ’, $echo = true );
-
-            if ( empty( $events ) ) {
-                echo('Sorry, nothing found.');
-            }
-            
-            else foreach( $events as $event ) {
-                // print_r($event);
-                var_dump($tags);
-
-              
-                echo ('<p>' . tribe_meta_event_tags(sprintf(__('%s Tags:', 'the-events-calendar'), tribe_get_event_label_singular()), ', ', false) . 'HIPPOCATS</p>');
-                
-               
-                echo('<article class="event-post-single carousel-cell">');
-                echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_post_thumbnail( $event, 'large').'</a></div>');
-                echo('<h3 class="entry-title"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_title( $event).'</a></h3>' );
-                echo('<p>'.$event->post_content.'</p>');
-                echo('<p>'.tribe_get_start_date( $event).'<p>');
-                echo('</article>');
-            }
-            ?>
-				</div><!-- events-container -->
-                 <div class="button yellow-button">
-                        <a href="#">create events</a>
-                </div>
-                 <div class="button blue-button">
-          				<a href=<?php echo get_post_type_archive_link( 'tribe_event' ) ?>>find events &rsaquo;</a>
-				</div>
-    </section><!--end of events section-->
+  
 
         
 <?php get_footer(); ?>
