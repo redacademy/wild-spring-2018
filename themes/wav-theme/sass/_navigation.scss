@@ -103,6 +103,8 @@ a {
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	background: $color__blue;
+	text-align: right;
 }
 
 @media screen and (min-width: 768px) {
