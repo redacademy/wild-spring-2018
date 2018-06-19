@@ -1150,24 +1150,24 @@ object {
     border-radius: 50px;
     margin: 0 auto; }
 
-.teamMembers.carousel:after {
+.teamMembers.carousel:after, .collaborators.carousel:after {
   content: 'flickity';
   display: none; }
 
 @media (min-width: 620px) {
-  .teamMembers {
+  .teamMembers, .collaborators {
     /* disable Flickity for large devices */ }
-    .teamMembers.carousel:after {
+    .teamMembers.carousel:after, .collaborators.carousel:after {
       content: ''; }
-    .teamMembers.carousel {
+    .teamMembers.carousel, .collaborators.carousel {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
-.teamMembers .carousel-cell {
+.teamMembers .carousel-cell, .collaborators .carousel-cell {
   margin: 0 1rem;
   width: 100%; }
   @media (min-width: 620px) {
-    .teamMembers .carousel-cell {
+    .teamMembers .carousel-cell, .collaborators .carousel-cell {
       margin: 0 1rem;
       width: 90%; } }
 
@@ -1245,10 +1245,9 @@ object {
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row; } }
-  .videoAboutWav iframe {
-    width: 50%; }
-  .videoAboutWav p {
-    width: 50%; }
+
+.flickity-page-dots {
+  visibility: hidden; }
 
 .page-id-81 img {
   display: none; }
@@ -1425,12 +1424,27 @@ object {
   width: 100%;
   z-index: 4; }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 802e415f29685c4688f7fd005cf8296432b07c05
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
  * @author Jonathan Suh @jonsuh
  * @site https://jonsuh.com/hamburgers
  * @link https://github.com/jonsuh/hamburgers
+<<<<<<< HEAD
+=======
+=======
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+>>>>>>> a1c53c971095e3228793058016a64b1584af0a28
+>>>>>>> 802e415f29685c4688f7fd005cf8296432b07c05
  */
 .hamburger {
   padding: 15px 15px;

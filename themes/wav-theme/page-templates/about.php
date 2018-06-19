@@ -59,7 +59,7 @@ get_header(); ?>
                 <p><?php echo CFS()->get( 'our_festival' ); ?></p>
 
                 <div class="center-button">
-                    <a href="#" class="green-button">More Information</a>
+                    <a href="<?php echo get_post_type_archive_link( 'festival' ) ?>" class="green-button">More Information</a>
                 </div>  
             </section>
 
@@ -86,7 +86,7 @@ get_header(); ?>
                             </div><!--end of teamMember-->
                             <?php endforeach; wp_reset_postdata(); ?>
                     </div><!--end of teamMembers-->
-                    <a class="hidden-mobile" href=<?php echo get_post_type_archive_link( 'person' ) ?>>See More</a>
+                    <a class="hidden-mobile green-button" href=<?php echo get_post_type_archive_link( 'person' ) ?>>See More</a>
                 </section>
 
                 <div class="anchor" id="collaboratorsJump"></div>
