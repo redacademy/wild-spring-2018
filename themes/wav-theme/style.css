@@ -619,6 +619,7 @@ a {
   float: left;
   width: 100%; }
   .main-navigation ul {
+    display: none;
     list-style: none;
     margin: 0;
     padding-left: 0; }
@@ -1425,7 +1426,6 @@ object {
   padding: 15px 15px;
   display: inline-block;
   cursor: pointer;
-  position: absolute;
   -webkit-transition-property: opacity, -webkit-filter;
   transition-property: opacity, -webkit-filter;
   transition-property: opacity, filter;
