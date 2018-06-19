@@ -100,12 +100,21 @@ a {
 }
 
 /* Small menu. */
+
+.main-navigation.toggled {
+	position: absolute;
+    right: 0;
+	top: 3.55rem;
+	width: 50%;
+	height: 100vh;
+	background: $color__blue;
+}
+
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
-	background: $color__blue;
-	text-align: right;
 }
+
 
 @media screen and (min-width: 768px) {
 	.menu-toggle {
