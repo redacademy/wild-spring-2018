@@ -15,11 +15,15 @@
         h2{
         font-size: 48px;
         font-family: 'Tofino';
-        font-weight: lighter;
+        font-weight: 400;
         }
     }
     section{
         &.front-page-banner{
+            max-height:300px;
+            @include tablet{
+                max-height: 100%;
+            }
             .banner-text{
                 transform: translateY(-200px);
                 color: white;
@@ -71,6 +75,9 @@
         article{
             padding: 0 1rem;
             border: 1px solid green;
+            img{
+                margin-top: 1rem;
+            }
          }
         .activities-container{
             &.carousel:after {
@@ -142,6 +149,11 @@
             .tags-list{
                 display: flex;
                 justify-content: center;
+                padding-left: 0;
+                margin: 0 auto;
+                @include tablet{
+                    max-width: 80%;
+                }
                 li{
                     border:1px solid $color__blue;
                     border-radius: 30%;
