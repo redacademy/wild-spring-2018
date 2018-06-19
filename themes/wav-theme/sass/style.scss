@@ -68,5 +68,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "about";
 @import "abdullah";
 @import "contact";
+@import "activity";
+@import "faq";
+$hamburger-types     : (collapse);
+@import "hamburgers/hamburgers.scss"
 
 

@@ -39,10 +39,8 @@ get_header(); ?>
                 
                 <div class="videoAboutWav"> <!--Container for a video-->
 
-                <h1><?php echo CFS()->get( 'video_about' ); ?></h1>
+                <div><?php echo CFS()->get('video_about_test');?></div>
 
-                <iframe width="560" height="315" src="<?php echo CFS()->get( 'video_about' ); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                
                     <p><?php echo CFS()->get( 'text_about_video' ); ?></p>
 
                  <div></div>   
