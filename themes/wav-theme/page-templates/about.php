@@ -87,62 +87,54 @@ get_header(); ?>
                             <?php endforeach; wp_reset_postdata(); ?>
                     </div><!--end of teamMembers-->
                     <a class="hidden-mobile green-button" href=<?php echo get_post_type_archive_link( 'person' ) ?>>See More</a>
-                </section>
+            </section>
 
                 <div class="anchor" id="collaboratorsJump"></div>
-    
-                    <section class="collaborators">
-                        <h1>Collaborators</h1>
-                        <div class="collaborators carousel" data-flickity='{ "watchCSS": true }'>
+            <section class="collaborators">
+                <h1>Collaborators</h1>
+                <div class="collaborators carousel" data-flickity='{ "watchCSS": true }'>
 
-                        <?php
-                            $args = array( 'post_type' => 'person', 'category_name' => 'collaborator', 'order' => 'ASC', 'numberposts'=>-1);
-                            $collaborators_posts = get_posts( $args ); // returns an array of posts
-                        ?>
+                 <?php
+                    $args = array( 'post_type' => 'person', 'category_name' => 'collaborator', 'order' => 'ASC', 'posts_per_page' => 3,);
+                    $collaborators_posts = get_posts( $args ); // returns an array of posts
+                ?>
 
-                        <?php foreach ( $collaborators_posts as $post ) : setup_postdata( $post ); ?>
-                    
-                            <div class="collaborator carousel-cell">
-                                <header class="entry-header">
-                                    <?php if ( has_post_thumbnail() ) : ?>
+                <?php foreach ( $collaborators_posts as $post ) : setup_postdata( $post ); ?>
+                    <div class="collaborator carousel-cell">
+                                <!-- <header class="entry-header"> -->
+                        <?php if ( has_post_thumbnail() ) : ?>
                                     <a href="<?php echo esc_url( get_permalink()) ?>" alt="Team Image"><?php the_post_thumbnail( 'large' ); ?></a>
                                     <?php endif; ?>
 
                                     <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-                                </header>
-                                
-     
+                                <!-- </header> -->
                             </div><!--end of collaborator-->
                             <?php endforeach; wp_reset_postdata(); ?>
                     </div><!--end of collaborators-->
 
-                </section>
+            </section>
 
                 <div class="anchor" id="workJump"></div>
                     <h1>Work</h1>
-                        
 
                         <section class="festivals">
                         <h2>Festival History</h2>
-                        <div class="festivals carousel">
+                        <div class="festivals carousel" data-flickity='{ "watchCSS": true }'>
 
                         <?php
-                            $args = array( 'post_type' => 'festival', 'order' => 'ASC', 'numberposts'=>-1);
+                            $args = array( 'post_type' => 'festival', 'order' => 'ASC', 'posts_per_page' => 4);
                             $festival_posts = get_posts( $args ); // returns an array of posts
                         ?>
 
                         <?php foreach ( $festival_posts as $post ) : setup_postdata( $post ); ?>
-                    
                             <div class="festival carousel-cell">
-                                <header class="entry-header">
+                                <!-- <header class="entry-header"> -->
                                     <?php if ( has_post_thumbnail() ) : ?>
                                     <a href="<?php echo esc_url( get_permalink()) ?>" alt="Festival Image"><?php the_post_thumbnail( 'large' ); ?></a>
                                     <?php endif; ?>
 
                                     <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-                                </header>
-                                
-     
+                                <!-- </header> -->
                             </div><!--end of collaborator-->
                             <?php endforeach; wp_reset_postdata(); ?>
                     </div><!--end of collaborators-->
@@ -151,15 +143,14 @@ get_header(); ?>
 
                   <section class="schoolOutreach">
                         <h2>School Outreach</h2>
-                        <div class="schoolOutreach">
+                        <div class="schoolOutreach-container">
 
                         <?php
-                            $args = array( 'post_type' => 'post', 'category'=>'school-outreach', 'order' => 'ASC', 'numberposts'=>-1);
+                            $args = array( 'post_type' => 'post', 'category'=>'school-outreach', 'order' => 'ASC', 'posts_per_page' => 2);
                             $school_posts = get_posts( $args ); // returns an array of posts
                         ?>
 
                         <?php foreach ( $school_posts as $post ) : setup_postdata( $post ); ?>
-                    
                             <div class="schoolItem">
                                 <header class="entry-header">
                                     <?php if ( has_post_thumbnail() ) : ?>
@@ -168,8 +159,7 @@ get_header(); ?>
 
                                     <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
                                 </header>
-                                
-     
+
                             </div><!--end of collaborator-->
                             <?php endforeach; wp_reset_postdata(); ?>
                     </div><!--end of collaborators-->
@@ -180,15 +170,14 @@ get_header(); ?>
 
                  <section class="press">
                         <h1>Press</h1>
-                        <div class="press carousel">
+                        <div class="press carousel" data-flickity='{ "watchCSS": true }'>
 
                         <?php
-                            $args = array( 'post_type' => 'press-item', 'order' => 'ASC', 'numberposts'=>-1);
+                            $args = array( 'post_type' => 'press-item', 'order' => 'ASC', 'posts_per_page' => 4);
                             $press_posts = get_posts( $args ); // returns an array of posts
                         ?>
 
                         <?php foreach ( $press_posts as $post ) : setup_postdata( $post ); ?>
-                    
                             <div class="pressItem carousel-cell">
                                 <header class="entry-header">
                                     <?php if ( has_post_thumbnail() ) : ?>
@@ -201,15 +190,12 @@ get_header(); ?>
                                     <p><?php echo CFS()->get( 'source' ); ?></p>
                                     <p><?php echo CFS()->get( 'date' ); ?></p>
                                 </div>
-                                
-     
                             </div><!--end of pressItem-->
                             <?php endforeach; wp_reset_postdata(); ?>
                     </div><!--end of press-->
-
+                    <a class="green-button" href=<?php echo get_post_type_archive_link( 'press' ) ?>>See More</a>
                 </section>
 
-                   
 		</main><!-- #main -->
     </div><!-- #primary -->
     
