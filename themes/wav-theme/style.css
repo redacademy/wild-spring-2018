@@ -658,7 +658,11 @@ a {
   .menu-toggle {
     display: none; }
   .main-navigation ul {
-    display: block; } }
+    display: block;
+    opacity: 1;
+    height: auto;
+    overflow: auto;
+    position: static; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -669,13 +673,11 @@ a {
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
-  float: left;
   width: 50%; }
 
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
-  float: right;
   text-align: right;
   width: 50%; }
 
@@ -1016,6 +1018,9 @@ object {
 /*--------------------------------------------------------------
 # stylesheet for events archive view
 --------------------------------------------------------------*/
+#tribe-bar-form {
+  background-color: red; }
+
 #tribe-events-pg-template.tribe-events-pg-template {
   margin: 0 auto;
   max-width: 100%; }
