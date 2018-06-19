@@ -1243,10 +1243,9 @@ object {
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row; } }
-  .videoAboutWav iframe {
-    width: 50%; }
-  .videoAboutWav p {
-    width: 50%; }
+
+.flickity-page-dots {
+  visibility: hidden; }
 
 .page-id-81 img {
   display: none; }
@@ -1413,9 +1412,6 @@ object {
 .answer {
   display: none; }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 .site-header {
   background-color: rgba(255, 255, 255, 0.85);
   border-bottom: 1px solid #e1e1e1;
@@ -1424,26 +1420,14 @@ object {
   -webkit-transition: top .5s linear;
   transition: top .5s linear;
   width: 100%;
-  z-index: 3; }
+  z-index: 4; }
 
->>>>>>> 6c0f9eac60d115041f746fb4077106deb8eadb21
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
  * @author Jonathan Suh @jonsuh
  * @site https://jonsuh.com/hamburgers
  * @link https://github.com/jonsuh/hamburgers
-<<<<<<< HEAD
-=======
-=======
-/*!
- * Hamburgers
- * @description Tasty CSS-animated hamburgers
- * @author Jonathan Suh @jonsuh
- * @site https://jonsuh.com/hamburgers
- * @link https://github.com/jonsuh/hamburgers
->>>>>>> cccf5ed6ba4335a494c689fc6ca3f2edc3c346d8
->>>>>>> 6c0f9eac60d115041f746fb4077106deb8eadb21
  */
 .hamburger {
   padding: 15px 15px;
