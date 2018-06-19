@@ -35,7 +35,7 @@ plugins/*
 # ====================================================== #
 themes/*
 !themes/wav-theme/
-themes/wav-theme/style.css
+
 
 # Ignore npm packages #
 # =================== #
@@ -45,6 +45,7 @@ themes/wav-theme/node_modules/*
 # ================== #
 themes/wav-theme/gulpfile.js
 themes/wav-theme/build/*
+themes/wav-theme/style.css
 
 package-lock.json
 
