@@ -1019,7 +1019,7 @@ object {
 # stylesheet for events archive view
 --------------------------------------------------------------*/
 #tribe-bar-form {
-  background-color: red; }
+  background-color: #efefef; }
 
 #tribe-events-pg-template.tribe-events-pg-template {
   margin: 0 auto;
@@ -1033,6 +1033,34 @@ object {
     font-size: 48px;
     font-weight: bolder;
     text-align: left; }
+
+.tribe_events-template-default.single-tribe_events .tribe-events-before-html {
+  display: none; }
+
+.tribe_events-template-default.single-tribe_events .events-container {
+  text-align: center; }
+  .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-event-title {
+    font-family: 'Oswald'; }
+  .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-event-description.tribe-events-content {
+    text-align: left;
+    padding: 0 4%; }
+  .tribe_events-template-default.single-tribe_events .events-container .single-event-details-title {
+    display: none; }
+    @media (min-width: 1080px) {
+      .tribe_events-template-default.single-tribe_events .events-container .single-event-details-title {
+        display: inline; } }
+  .tribe_events-template-default.single-tribe_events .events-container .tribe-events-event-meta {
+    background: white;
+    border: none; }
+  .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-section-title {
+    display: none; }
+
+.tribe-events-meta-group.tribe-events-meta-group-details, .tribe-events-meta-group.tribe-events-meta-group-gmap {
+  padding: 0;
+  margin: 0; }
+
+.tribe-events-ical.tribe-events-button {
+  visibility: hidden; }
 
 .aboutNavigation {
   background-color: #72CB7E;
