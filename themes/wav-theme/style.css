@@ -950,12 +950,7 @@ object {
   .home section .events-container .flickity-page-dots {
     visibility: hidden; }
   .home section .events-container .carousel-cell {
-    margin: 0 1rem;
-    width: 100%; }
-    @media (min-width: 620px) {
-      .home section .events-container .carousel-cell {
-        margin: 0 1rem;
-        width: 50%; } }
+    width: 66%; }
   @media (min-width: 620px) {
     .home section .about-container {
       margin: 0 auto;

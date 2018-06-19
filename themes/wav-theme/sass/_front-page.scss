@@ -114,12 +114,13 @@
             visibility: hidden;
             }
             .carousel-cell {
-                margin: 0 1rem;
-                width: 100%;
-                @include tablet{
-                    margin: 0 1rem;
-                    width: 50%;
-                }
+                width: 66%;
+                // margin: 0 1rem;
+                // width: 100%;
+                // @include tablet{
+                //     margin: 0 1rem;
+                //     width: 50%;
+                // }
               }
         }
          .about-container{
