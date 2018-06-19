@@ -5,6 +5,9 @@
   display: inline-block;
   cursor: pointer;
   position: absolute;
+  right: 0;
+  bottom: .05rem;
+ 
 
   transition-property: opacity, filter;
   transition-duration: $hamburger-hover-transition-duration;

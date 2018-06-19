@@ -619,6 +619,7 @@ a {
   float: left;
   width: 100%; }
   .main-navigation ul {
+    display: none;
     list-style: none;
     margin: 0;
     padding-left: 0; }
@@ -1412,18 +1413,45 @@ object {
 .answer {
   display: none; }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+.site-header {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid #e1e1e1;
+  padding: 1rem;
+  position: fixed;
+  -webkit-transition: top .5s linear;
+  transition: top .5s linear;
+  width: 100%;
+  z-index: 3; }
+
+>>>>>>> 6c0f9eac60d115041f746fb4077106deb8eadb21
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
  * @author Jonathan Suh @jonsuh
  * @site https://jonsuh.com/hamburgers
  * @link https://github.com/jonsuh/hamburgers
+<<<<<<< HEAD
+=======
+=======
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+>>>>>>> cccf5ed6ba4335a494c689fc6ca3f2edc3c346d8
+>>>>>>> 6c0f9eac60d115041f746fb4077106deb8eadb21
  */
 .hamburger {
   padding: 15px 15px;
   display: inline-block;
   cursor: pointer;
   position: absolute;
+  right: 0;
+  bottom: .05rem;
   -webkit-transition-property: opacity, -webkit-filter;
   transition-property: opacity, -webkit-filter;
   transition-property: opacity, filter;

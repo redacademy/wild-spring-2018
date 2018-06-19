@@ -12,16 +12,43 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
+
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<header class="entry-header">
+					<?php if ( has_post_thumbnail() ) : ?>
+						<?php the_post_thumbnail( 'large' ); ?>
+					<?php endif; ?>
+
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+					<div class="entry-meta">
+						<?php WAV_Starter_posted_on(); ?>
+					</div><!-- .entry-meta -->
+					<?php									
+                 	$tags_list = get_the_tag_list( '', esc_html( ', ' ) );
+                	if ( $tags_list ) {
+               	 	printf( '<span class="tags-links">' . esc_html( 'Tagged &rarr; %1$s' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+                	}
+                	?>
+				</header><!-- .entry-header -->
+
+				<div class="entry-content">
+					<?php the_content(); ?>
+					<?php
+						wp_link_pages( array(
+							'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+							'after'  => '</div>',
+						) );
+					?>
+				</div><!-- .entry-content -->
+
+
+			</article><!-- #post-## -->
+
 
 			<?php the_post_navigation(); ?>
 
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
+
 
 		<?php endwhile; // End of the loop. ?>
 
