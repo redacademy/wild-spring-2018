@@ -58,7 +58,7 @@
    
     
 }
-.teamMembers{
+.teamMembers , .collaborators{
     &.carousel:after {
         content: 'flickity';
         display: none;
