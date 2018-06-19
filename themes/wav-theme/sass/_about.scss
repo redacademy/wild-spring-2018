@@ -199,7 +199,32 @@
     background-color: $color__yellow;
     opacity: 0.9;
 }
+.press{
+    &.carousel:after {
+        content: 'flickity';
+        display: none;
+      }
+    @include tablet{
+        // display: block;
+        /* disable Flickity for large devices */
+        &.carousel:after {
+                content: '';
+                 }
+         &.carousel{
+             display:grid;
+             grid-template-columns: 1fr 1fr 1fr 1fr;
+                 }
+    }
+    .carousel-cell {
+        margin: 0 1rem;
+        width: 100%;
+        @include tablet{
+            margin: 0 1rem;
+            width: 90%;
+        }
+      }
 
+}
 .pressItem a{
     background-color: $color__blue;
 }

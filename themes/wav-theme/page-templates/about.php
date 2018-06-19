@@ -146,7 +146,7 @@ get_header(); ?>
                         <div class="schoolOutreach-container">
 
                         <?php
-                            $args = array( 'post_type' => 'post', 'category'=>'school-outreach', 'order' => 'ASC', 'numberposts'=>-1);
+                            $args = array( 'post_type' => 'post', 'category'=>'school-outreach', 'order' => 'ASC', 'posts_per_page' => 2);
                             $school_posts = get_posts( $args ); // returns an array of posts
                         ?>
 
@@ -170,15 +170,14 @@ get_header(); ?>
 
                  <section class="press">
                         <h1>Press</h1>
-                        <div class="press carousel">
+                        <div class="press carousel" data-flickity='{ "watchCSS": true }'>
 
                         <?php
-                            $args = array( 'post_type' => 'press-item', 'order' => 'ASC', 'numberposts'=>-1);
+                            $args = array( 'post_type' => 'press-item', 'order' => 'ASC', 'posts_per_page' => 4);
                             $press_posts = get_posts( $args ); // returns an array of posts
                         ?>
 
                         <?php foreach ( $press_posts as $post ) : setup_postdata( $post ); ?>
-                    
                             <div class="pressItem carousel-cell">
                                 <header class="entry-header">
                                     <?php if ( has_post_thumbnail() ) : ?>
@@ -191,15 +190,12 @@ get_header(); ?>
                                     <p><?php echo CFS()->get( 'source' ); ?></p>
                                     <p><?php echo CFS()->get( 'date' ); ?></p>
                                 </div>
-                                
-     
                             </div><!--end of pressItem-->
                             <?php endforeach; wp_reset_postdata(); ?>
                     </div><!--end of press-->
-
+                    <a class="green-button" href=<?php echo get_post_type_archive_link( 'press' ) ?>>See More</a>
                 </section>
 
-                   
 		</main><!-- #main -->
     </div><!-- #primary -->
     
