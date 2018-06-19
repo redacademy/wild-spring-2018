@@ -63,7 +63,7 @@ get_header(); ?>
     <section class="events">
                 <h2>Upcoming Events</h2>
                 <!-- <div class="tribe_event-container"> -->
-                <div class="events-container carousel">
+                <div class="events-container carousel" data-flickity='{ "watchCSS": true }'>
                 <!-- // the loop for events as per documentation -->
            <?php
            $args = array(//array to get the upcoming events, only three of them

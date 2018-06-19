@@ -67,7 +67,6 @@
              font-size: 24px;
              color:$color__green;
             }
-            
           }
         article{
             padding: 0 1rem;
@@ -80,7 +79,7 @@
             .carousel-cell {
                 margin: 0 1rem;
                 width: 100%;
-                &.carousell-tablet{
+                @include tablet{
                     margin: 0 1rem;
                     width: 50%;
                 }
@@ -94,11 +93,22 @@
             max-width: 80%;
         }
         .events-container{
+            &.carousel:after {
+                content: 'flickity';
+                display: none;
+              }
             @include tablet{
                 display: block;
                 .button {
                     display: inline;
                 }
+                /* disable Flickity for large devices */
+                &.carousel:after {
+                        content: '';
+                         }
+                 &.carousel{
+                     display:flex;
+                         }
             }
             .flickity-page-dots{
             visibility: hidden;

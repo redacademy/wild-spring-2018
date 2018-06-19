@@ -923,19 +923,30 @@ object {
   .home section .activities-container .carousel-cell {
     margin: 0 1rem;
     width: 100%; }
-    .home section .activities-container .carousel-cell.carousell-tablet {
-      margin: 0 1rem;
-      width: 50%; }
+    @media (min-width: 620px) {
+      .home section .activities-container .carousel-cell {
+        margin: 0 1rem;
+        width: 50%; } }
   .home section .activities-container .activities-posts-single {
     border: 1px solid #72CB7E; }
   .home section .button.yellow-button.activities-button {
     margin: 2rem auto;
     max-width: 80%; }
+  .home section .events-container.carousel:after {
+    content: 'flickity';
+    display: none; }
   @media (min-width: 620px) {
     .home section .events-container {
-      display: block; }
+      display: block;
+      /* disable Flickity for large devices */ }
       .home section .events-container .button {
-        display: inline; } }
+        display: inline; }
+      .home section .events-container.carousel:after {
+        content: ''; }
+      .home section .events-container.carousel {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
   .home section .events-container .flickity-page-dots {
     visibility: hidden; }
   .home section .events-container .carousel-cell {
