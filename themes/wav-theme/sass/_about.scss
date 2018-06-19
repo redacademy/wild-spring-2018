@@ -28,7 +28,6 @@
         }
         img{
             object-fit: cover;
-            
         }
     }
 
@@ -61,6 +60,23 @@
 }
 
 .teamMember, .collaborator{
+    &.carousel:after {
+        content: 'flickity';
+        display: none;
+      }
+    @include tablet{
+        display: block;
+        .button {
+            display: inline;
+        }
+        /* disable Flickity for large devices */
+        &.carousel:after {
+                content: '';
+                 }
+         &.carousel{
+             display:flex;
+                 }
+    }
     @include desktop{
         a{
             display: none;

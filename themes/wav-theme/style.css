@@ -918,6 +918,21 @@ object {
   .home section article {
     padding: 0 1rem;
     border: 1px solid green; }
+  .home section .activities-container.carousel:after {
+    content: 'flickity';
+    display: none; }
+  @media (min-width: 620px) {
+    .home section .activities-container {
+      display: block;
+      /* disable Flickity for large devices */ }
+      .home section .activities-container .button {
+        display: inline; }
+      .home section .activities-container.carousel:after {
+        content: ''; }
+      .home section .activities-container.carousel {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
   .home section .activities-container .flickity-page-dots {
     visibility: hidden; }
   .home section .activities-container .carousel-cell {
@@ -950,7 +965,13 @@ object {
   .home section .events-container .flickity-page-dots {
     visibility: hidden; }
   .home section .events-container .carousel-cell {
-    width: 66%; }
+    width: 66%;
+    margin: 0 1rem;
+    width: 100%; }
+    @media (min-width: 620px) {
+      .home section .events-container .carousel-cell {
+        margin: 0 1rem;
+        width: 50%; } }
   @media (min-width: 620px) {
     .home section .about-container {
       margin: 0 auto;
@@ -1126,6 +1147,23 @@ object {
     text-decoration: none;
     border-radius: 50px;
     margin: 0 auto; }
+
+.teamMember.carousel:after, .collaborator.carousel:after {
+  content: 'flickity';
+  display: none; }
+
+@media (min-width: 620px) {
+  .teamMember, .collaborator {
+    display: block;
+    /* disable Flickity for large devices */ }
+    .teamMember .button, .collaborator .button {
+      display: inline; }
+    .teamMember.carousel:after, .collaborator.carousel:after {
+      content: ''; }
+    .teamMember.carousel, .collaborator.carousel {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 @media (min-width: 1080px) {
   .teamMember a, .collaborator a {

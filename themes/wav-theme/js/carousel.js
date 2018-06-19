@@ -14,25 +14,25 @@
 //         $carouselCell.removeClass('.carousel-tablet');
 //     }).trigger('resize');
 
-$('.carousel').flickity({
-//   contain: true,
-//   freeScroll: true,
-//   wrapAround: true,
-//   groupCells: 1,
-//   autoPlay: true
+// $('.carousel').flickity({
+// //   contain: true,
+// //   freeScroll: true,
+// //   wrapAround: true,
+// //   groupCells: 1,
+// //   autoPlay: true
 
-    //for mobile version:
-    wrapAround: true,
-    groupCells: 1,
-    autoPlay: true
+//     //for mobile version:
+//     wrapAround: true,
+//     groupCells: 1,
+//     autoPlay: true
 
-    //  cellAlign: 'center',
-    // contain: true,
-    //
-    // autoPlay: true,
-    // prevNextButtons: false,
-    // groupCells: 1,
+//     //  cellAlign: 'center',
+//     // contain: true,
+//     //
+//     // autoPlay: true,
+//     // prevNextButtons: false,
+//     // groupCells: 1,
 
-})
+// })
 
 })(jQuery);

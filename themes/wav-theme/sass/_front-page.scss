@@ -73,6 +73,23 @@
             border: 1px solid green;
          }
         .activities-container{
+            &.carousel:after {
+                content: 'flickity';
+                display: none;
+              }
+            @include tablet{
+                display: block;
+                .button {
+                    display: inline;
+                }
+                /* disable Flickity for large devices */
+                &.carousel:after {
+                        content: '';
+                         }
+                 &.carousel{
+                     display:flex;
+                         }
+            }
             .flickity-page-dots{
                 visibility: hidden;
             }
@@ -115,12 +132,12 @@
             }
             .carousel-cell {
                 width: 66%;
-                // margin: 0 1rem;
-                // width: 100%;
-                // @include tablet{
-                //     margin: 0 1rem;
-                //     width: 50%;
-                // }
+                margin: 0 1rem;
+                width: 100%;
+                @include tablet{
+                    margin: 0 1rem;
+                    width: 50%;
+                }
               }
         }
          .about-container{

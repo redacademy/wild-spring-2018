@@ -21,7 +21,7 @@ get_header(); ?>
 <section class="activities">
 			<h2>Seasonal Activity Ideas</h2>
 
-				<div class="activities-container carousel">
+				<div class="activities-container carousel" data-flickity='{ "watchCSS": true }'>
 					<?php
 					$args = array(
 						'post_type' => 'activity',

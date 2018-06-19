@@ -66,7 +66,7 @@ get_header(); ?>
             <div class="anchor" id="teamJump"></div>
             <section class="theTeam">
                 <h1>The Team</h1>
-                    <div class="teamMembers carousel">
+                    <div class="teamMembers carousel" data-flickity='{ "watchCSS": true }'>
 
                         <?php
                             $args = array( 'post_type' => 'person', 'category_name' => 'team', 'order' => 'ASC', 'numberposts'=>-1);
@@ -74,7 +74,6 @@ get_header(); ?>
                         ?>
 
                         <?php foreach ( $team_posts as $post ) : setup_postdata( $post ); ?>
-                    
                             <div class="teamMember carousel-cell">
                                 <header class="entry-header">
                                     <?php if ( has_post_thumbnail() ) : ?>
@@ -83,8 +82,7 @@ get_header(); ?>
 
                                     <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
                                 </header>
-                                
-     
+
                             </div><!--end of teamMember-->
                             <?php endforeach; wp_reset_postdata(); ?>
                     </div><!--end of teamMembers-->
