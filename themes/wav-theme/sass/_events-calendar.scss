@@ -11,6 +11,20 @@
 #tribe-events-pg-template.tribe-events-pg-template {
     margin: 0 auto;
     max-width: 100%;
+    .tribe-events-loop{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 1rem;
+        .type-tribe_events{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border:1px solid $color__green;
+        }
+    }
+    .tribe-events-list-separator-month{
+        display: none;
+    }
 }
 .tribe-clearfix{
     max-width: 1200px;
@@ -32,6 +46,7 @@
         display: none;
     }
     .events-container{
+        margin-top: 6rem;
         text-align: center;
         .tribe-events-single-event-title{
             font-family: 'Oswald';
