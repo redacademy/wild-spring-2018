@@ -24,7 +24,7 @@
   function getTags() {
     $.ajax({
       method: 'get',
-      url: api_vars.root_url + 'wp/v2/tags'
+      url: api_vars.root_url + 'wp/v2/tags?per_page=99'
     })
       .done(function(data) {
         // get all tags and push
@@ -33,7 +33,9 @@
             id: value.id,
             name: value.name
           });
+          console.log(value, 'values')
         });
+        console.log(allTags, 'wpv2');
       })
       .fail(function(err) {
         console.log(err);
@@ -51,34 +53,43 @@
 
     // search filter tags
     $.each(tag, function(index, value) {
-      console.log(value);
-      var trimTag = tag[index].trim();
+      
+      var trimTag = tag[index].trim().toLowerCase();
 
+      console.log(trimTag)
       var tagFilter = allTags.filter(function(obj) {
+        console.log(obj.name.toLowerCase(), trimTag, 'matching??');
         return obj.name.toLowerCase().indexOf(trimTag) > -1;
       });
       if (!tagFilter.length) {
         createNewTag(trimTag);
       }
       filteredTags.push(tagFilter);
+      
     });
+
+    console.log(filteredTags);
 
     $.each(filteredTags, function(index, value) {
       if (value[0] != 'undefined' && value[0] != null) {
         tagIds.push(value[0].id);
+       
       }
     });
+
+    console.log(tagIds, 'these are tags');
   }
 
   /**
    * Post Content, page-post-tags.php
    */
   function submitEventBtn() {
-    $('#submit-event-button').on('click', function(evt) {
+    $('#event-submission-form').on('submit', function(evt) {
       evt.preventDefault();
 
+      var eventType = $('input[name="eventType"]:checked').val();
       var eventTitle = $('#event-name').val();
-      var eventTags = $('#event-tags').val();
+      var eventTags = $('#event-tags').val() + ' ,' + eventType;
       var eventDescription = $('#event-description').val();
       var minVal = 5;
 
@@ -94,7 +105,7 @@
         } else {
           $('#event-submission-form').append('<p>More characters please</p>');
         }
-      }, 2000);
+      }, 7000);
     });
 
     /**
@@ -104,8 +115,8 @@
      * @param {*} tagIds
      */
     function postAjax(eventTitle, eventDescription, tagIds) {
-     
-     var authorName = $('#event-authorFirstName').val() + ' ' + $('#event-author-lastName').val();
+     console.log(tagIds, 'preAJAX');
+     var authorName = $('#event-author-firstName').val() + ' ' + $('#event-author-lastName').val();
      var startTime= $('#event_startDate').val() + ' ' +  $('#event_startTime').val();
      var endTime = $('#event_endDate').val() + ' ' +  $('#event_endTime').val();
  
@@ -171,10 +182,12 @@
     })
       .done(function(response) {
         tagIds.push(response.id);
+        console.log(response.id,'whtthis');
       })
       .fail(function(err) {
         // alert(api_vars.failure);
         console.log(err);
+        console.log(tag);
       });
   }
 })(jQuery);
