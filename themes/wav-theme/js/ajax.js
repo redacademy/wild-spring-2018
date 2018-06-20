@@ -15,7 +15,7 @@
    */
   if ($eventForm.length) {
     getTags();
-    sumbitPostBtn();
+    submitEventBtn();
   }
 
   /**
@@ -73,7 +73,7 @@
   /**
    * Post Content, page-post-tags.php
    */
-  function sumbitEventBtn() {
+  function submitEventBtn() {
     $('#submit-event-button').on('click', function(evt) {
       evt.preventDefault();
 
