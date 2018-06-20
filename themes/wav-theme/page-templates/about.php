@@ -33,9 +33,7 @@ get_header(); ?>
                     <img class="header-img" src="<?php echo CFS()->get( 'about_wav_img' ); ?>"> 
                 </div>
 
-                <p><?php echo CFS()->get( 'about_wav' ); ?></p>
-
-                <a href="#">Read about Wild About Vancouver's Goals</a>
+                <p><?php echo esc_html(CFS()->get( 'about_wav' )); ?></p>
 
                 <div class="videoAboutWav"> <!--Container for a video-->
 
@@ -75,7 +73,7 @@ get_header(); ?>
                             <div class="teamMember carousel-cell">
                                 <!-- <header class="entry-header"> -->
                                     <?php if ( has_post_thumbnail() ) : ?>
-                                    <a href="<?php echo esc_url( get_permalink()) ?>" alt="Team Image"><?php the_post_thumbnail( 'large' ); ?></a>
+                                    <a href="<?php echo esc_url( CFS()->get( 'personal_webpage' )) ?>" alt="Team Image"><?php the_post_thumbnail( 'large' ); ?></a>
                                     <?php endif; ?>
 
                                     <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
@@ -101,7 +99,7 @@ get_header(); ?>
                     <div class="collaborator carousel-cell">
                                 <!-- <header class="entry-header"> -->
                         <?php if ( has_post_thumbnail() ) : ?>
-                                    <a href="<?php echo esc_url( get_permalink()) ?>" alt="Team Image"><?php the_post_thumbnail( 'large' ); ?></a>
+                                    <a href="<?php echo CFS()->get( 'personal_webpage' ); ?>" alt="Team Image"><?php the_post_thumbnail( 'large' ); ?></a>
                                     <?php endif; ?>
 
                                     <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
@@ -179,7 +177,7 @@ get_header(); ?>
                             <div class="pressItem carousel-cell">
                                 <header class="entry-header">
                                     <?php if ( has_post_thumbnail() ) : ?>
-                                    <a href="<?php echo esc_url( get_permalink()) ?>" alt="Press Image"><?php the_post_thumbnail( 'large' ); ?></a>
+                                    <a href="<?php echo esc_url( CFS()->get( 'external_hyperlink' )); ?>" alt="Press Image"><?php the_post_thumbnail( 'large' ); ?></a>
                                     <?php endif; ?>
 
                                     <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
