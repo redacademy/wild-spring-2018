@@ -45,50 +45,21 @@ $organizer = tribe_get_organizer();
 		<div class="tribe-event-schedule-details">
 			<?php echo tribe_events_event_schedule_details() ?>
 		</div>
-
-		<?php if ( $venue_details ) : ?>
-			<!-- Venue Display Info -->
-			<div class="tribe-events-venue-details">
-			<?php
-				$address_delimiter = empty( $venue_address ) ? ' ' : ', ';
-
-				// These details are already escaped in various ways earlier in the process.
-				echo implode( $address_delimiter, $venue_details );
-
-				if ( tribe_show_google_map_link() ) {
-					echo tribe_get_map_link_html();
-				}
-			?>
-			</div> <!-- .tribe-events-venue-details -->
-		<?php endif; ?>
-
 	</div>
 </div><!-- .tribe-events-event-meta -->
 
-<!-- Event Cost -->
-<?php if ( tribe_get_cost() ) : ?>
-	<div class="tribe-events-event-cost">
-		<span class="ticket-cost"><?php echo tribe_get_cost( null, true ); ?></span>
-		<?php
-		/**
-		 * Runs after cost is displayed in list style views
-		 *
-		 * @since 4.5
-		 */
-		do_action( 'tribe_events_inside_cost' )
-		?>
-	</div>
-<?php endif; ?>
-
 <?php do_action( 'tribe_events_after_the_meta' ) ?>
-
-
 
 <!-- Event Content -->
 <?php do_action( 'tribe_events_before_the_content' ); ?>
 <div class="tribe-events-list-event-description tribe-events-content description entry-summary">
 	<?php echo tribe_events_get_the_excerpt( null, wp_kses_allowed_html( 'post' ) ); ?>
-	<a href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="tribe-events-read-more" rel="bookmark"><?php esc_html_e( 'Find out more', 'the-events-calendar' ) ?> &raquo;</a>
+	<?php 
+	echo wav_tribe_meta_event_tags('');
+	 ?>
+
+	<a href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="tribe-events-read-more" rel="bookmark"><?php esc_html_e( 'See details', 'the-events-calendar' ) ?>  &rsaquo;</a>
 </div><!-- .tribe-events-list-event-description -->
+
 <?php
 do_action( 'tribe_events_after_the_content' );
