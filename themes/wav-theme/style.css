@@ -683,7 +683,8 @@ a {
 
 .menu-toggle,
 .main-navigation.toggled ul {
-  display: block; }
+  display: block;
+  position: inherit; }
 
 @media screen and (min-width: 768px) {
   .menu-toggle {
@@ -1620,16 +1621,40 @@ object {
 
 .site-header {
   background-color: rgba(255, 255, 255, 0.85);
-  border-bottom: 1px solid #e1e1e1;
   padding: 1rem;
   position: fixed;
   -webkit-transition: top .5s linear;
   transition: top .5s linear;
   width: 100%;
-  z-index: 4; }
+  z-index: 4;
+  height: 3.55rem; }
+  @media (min-width: 1080px) {
+    .site-header {
+      height: 5rem; }
+      .site-header a {
+        padding-left: .5rem;
+        padding-right: .5rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        color: black;
+        font-family: 'Tofino';
+        font-size: 1.25rem; } }
 
-.head2 {
-  max-height: 4rem; }
+.header-container {
+  position: relative; }
+
+.main-navigation ul {
+  position: absolute;
+  right: 0;
+  bottom: 1.5rem; }
+
+.logo img {
+  height: 33px;
+  width: 55px; }
+
+.logo-tent2 {
+  display: none; }
 
 .widget-area a {
   border-radius: 8rem;
