@@ -651,6 +651,9 @@ a {
   .main-navigation a {
     display: block;
     text-decoration: none; }
+    @media (min-width: 1080px) {
+      .main-navigation a:hover {
+        border-bottom: 2px solid black; } }
 
 /* Small menu. */
 .social-nav {
