@@ -1,81 +1,192 @@
-// //this is a js file for ajax request for events, tribe_events
+(function($) {
+
+//JS for Front-end Submission of Events. Original code by J.B, instructor @RED.
+  /**
+   * DOM Selectors
+   */
+  var $eventForm = $('#event-submission-form');
+
+  var allTags = [];
+  var filteredTags = [];
+  var tagIds = [];
+
+  /**
+   * Check if post form exists before running scripts
+   */
+  if ($eventForm.length) {
+    getTags();
+    sumbitPostBtn();
+  }
+
+  /**
+   * Get Tags
+   */
+  function getTags() {
+    $.ajax({
+      method: 'get',
+      url: api_vars.root_url + 'wp/v2/tags'
+    })
+      .done(function(data) {
+        // get all tags and push
+        $.each(data, function(index, value) {
+          allTags.push({
+            id: value.id,
+            name: value.name
+          });
+        });
+      })
+      .fail(function(err) {
+        console.log(err);
+      });
+  }
+
+  /**
+   * Check Tags
+   * @param {*} tags
+   */
+  function checkTags(tags) {
+    tags = tags.toString();
+    tags = tags.trim();
+    var tag = tags.split(',');
+
+    // search filter tags
+    $.each(tag, function(index, value) {
+      console.log(value);
+      var trimTag = tag[index].trim();
+
+      var tagFilter = allTags.filter(function(obj) {
+        return obj.name.toLowerCase().indexOf(trimTag) > -1;
+      });
+      if (!tagFilter.length) {
+        createNewTag(trimTag);
+      }
+      filteredTags.push(tagFilter);
+    });
+
+    $.each(filteredTags, function(index, value) {
+      if (value[0] != 'undefined' && value[0] != null) {
+        tagIds.push(value[0].id);
+      }
+    });
+  }
+
+  /**
+   * Post Content, page-post-tags.php
+   */
+  function sumbitEventBtn() {
+    $('#submit-event-button').on('click', function(evt) {
+      evt.preventDefault();
+
+      var eventTitle = $('#event-name').val();
+      var eventTags = $('#event-tags').val();
+      var eventDescription = $('#event-description').val();
+      var minVal = 5;
+
+      checkTags(eventTags);
+
+      // timeout to help avoid posting before creating a new tag
+      setTimeout(function() {
+        if (eventDescription.length >= minVal) {
+          if (!eventTags.length) {
+            eventTags = 1;
+          }
+          postAjax(eventTitle, eventDescription, tagIds);
+        } else {
+          $('#event-submission-form').append('<p>More characters please</p>');
+        }
+      }, 2000);
+    });
+
+    /**
+     * Post Content
+     * @param {*} eventTitle
+     * @param {*} eventDescription
+     * @param {*} tagIds
+     */
+    function postAjax(eventTitle, eventDescription, tagIds) {
+     
+     var authorName = $('#event-authorFirstName').val() + ' ' + $('#event-author-lastName').val();
+     var startTime= $('#event_startDate').val() + ' ' +  $('#event_startTime').val();
+     var endTime = $('#event_endDate').val() + ' ' +  $('#event_endTime').val();
+ 
+     var description = $('#event-description').val();
+      var phoneNumber = $('#event-author-phoneNumber').val()
+      var email = $('#event-author-email').val();
+      var venue = $('#event_location').val();
+
+      var data = {
+        title: eventTitle,
+        content: eventDescription,
+        tags: tagIds,
+        start_date: startTime,
+        end_date: endTime,
+        organizer: [{
+          organizer: authorName,
+          phone: phoneNumber,
+          email: email
+        }],
+        venue: {venue},
+        description: description,
+        status: 'pending'
+
+      };
+
+      $.ajax({
+        method: 'post',
+        url: api_vars.root_url + 'tribe/events/v1/events',
+        data: data,
+        beforeSend: function(xhr) {
+          xhr.setRequestHeader('X-WP-Nonce', api_vars.nonce);
+        }
+      })
+        .done(function() {
+          $('#event-submission-form').slideUp();
+          $('#event-submission-form').after(
+            '<p>Thanks for your event submission! Stay tuned while a moderator adds your event! </p>'
+          );
+        })
+        .fail(function(err) {
+          // alert(api_vars.failure);
+          console.log(err);
+        });
+    }
+  }
+
+  /**
+   * Create New Tag
+   * @param {*} tag
+   */
+  function createNewTag(tag) {
+    $.ajax({
+      method: 'post',
+      url: api_vars.root_url + 'wp/v2/tags',
+      data: {
+        name: tag
+      },
+      beforeSend: function(xhr) {
+        xhr.setRequestHeader('X-WP-Nonce', api_vars.nonce);
+      }
+    })
+      .done(function(response) {
+        tagIds.push(response.id);
+      })
+      .fail(function(err) {
+        // alert(api_vars.failure);
+        console.log(err);
+      });
+  }
+})(jQuery);
+
+
+
+
+//this is a js file for ajax request for events, tribe_events
 
 // (function ($){
 //   console.log('Hello World')
 //        /**
 //      * Ajax-based front-end post submissions
 //      */
-
-//      $eventForm = $('#event-submission-form');
-
-//      var allTags =[];
-//      var tagIds = [];
-     
-
-//      if($eventForm.length) {
-//        getTags();
-//      }
-
-     
-//   /**
-//    * Get Tags
-//    */
-//   function getTags() {
-//     $.ajax({
-//       method: 'get',
-//       url: api_vars.root_url + 'wp/v2/tags'
-//     })
-//       .done(function(data) {
-//         // get all tags and push
-//         $.each(data, function(index, value) {
-//           allTags.push({
-//             id: value.id,
-//             name: value.name
-//           });
-//         });
-//         // console.log(data);
-//       })
-//       .fail(function(err) {
-//         console.log(err);
-//       });
-//   }
-
-//   /**
-//    * Check Tags
-//    * @param {*} tags
-//    */
-
-//  function checkTags(tags){
-//     tags = tags.toString();
-//    var tag = tags.split(',')
-//   //  console.log(tags, 'helllllooo its meeee');
-
-//        // search filter tags
-//        $.each(tag, function(index, value) {
-//         console.log(index,value,'im one');
-//         var trimTag = tag[index].trim();
-//         console.log(trimTag, 'chimchim');
-//         var tagFilter = allTags.filter(function(obj) {
-//           return obj.name.toLowerCase().indexOf(trimTag) > -1;
-        
-//       });
-
-//       if (!tagFilter.length) {
-//         createNewTag(trimTag);
-//       }
-//       filteredTags.push(tagFilter);
-//     });
-
-//     $.each(filteredTags, function(index, value) {
-//       if (value[0] != 'undefined' && value[0] != null) {
-//         tagIds.push(value[0].id);
-//       }
-//     });
-      
-//  }
-  
-  
-     
   
 //      $('#event-submission-form').submit(function(event){
 //       event.preventDefault();
@@ -89,35 +200,14 @@
   
 //       userSubmittedTags1.push(eventType)
 //       // console.log(userSubmittedTags2, "user submited tags2");
-//       console.log(userSubmittedTags1);
-//       // 
-
+//       console.log(userSubmittedTags1, eventType)
+      
 //       startTime= $('#event_startDate').val() + ' ' +  $('#event_startTime').val();
 //       endTime = $('#event_endDate').val() + ' ' +  $('#event_endTime').val();
   
 //       description = $('#event-description').val() + ' &nbsp; User suggested tags: ' + userSubmittedTags1;
-//       // console.log(description);
-
-//       checkTags(userSubmittedTags1);
-
-//        // timeout to help avoid posting before creating a new tag
-//        setTimeout(function() {
-//         if (postContent.length >= minVal) {
-//           if (!postTags.length) {
-//             postTags = 1;
-//           }
-//           postAjax(postTitle, postContent, tagIds);
-//         } else {
-//           $('#post-content-form').append('<p>More characters please</p>');
-//         }
-//       }, 2000);
-//     });
+//       console.log(description);
   
-//        /**
-//      * Post Content
-//      * @param {*} tagIds
-//      */
-
 //       $.ajax({
 //         method: 'POST',
 //         url: api_vars.root_url+'tribe/events/v1/events',
@@ -139,7 +229,6 @@
 //             venue: $('#event_location').val()
 //             // venue: 'Vancouver'
 //           },
-//           tags: tagIDs,
     
           
 //           start_date: startTime,
@@ -192,4 +281,4 @@
 //           window.location.replace(lastPage);
 //       })
   
-//       })(jQuery);
+      // })(jQuery);
