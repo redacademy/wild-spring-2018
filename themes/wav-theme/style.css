@@ -1024,9 +1024,10 @@ object {
         max-width: 80%; } }
     .home section .events-container .tags-list li {
       border: 1px solid #40B2C4;
-      border-radius: 30%;
+      border-radius: 25%;
       margin: auto;
-      padding: 0.5rem; }
+      padding: 0.5rem;
+      min-width: 100px; }
   @media (min-width: 620px) {
     .home section .about-container {
       margin: 0 auto;
@@ -1134,6 +1135,9 @@ object {
   #tribe-events-pg-template.tribe-events-pg-template .tribe-events-list-separator-month, #tribe-events-pg-template.tribe-events-pg-template .tribe-events-sub-nav {
     display: none; }
 
+.tribe-events-list-event-title {
+  font-family: 'Oswald'; }
+
 .tribe-clearfix {
   max-width: 1200px;
   margin: 0 auto; }
@@ -1150,6 +1154,22 @@ object {
       .tribe-clearfix .tribe-events-page-title {
         -webkit-transform: translateY(-250px);
                 transform: translateY(-250px); } }
+
+.button {
+  color: white;
+  padding: 10px 30px;
+  border-radius: 50px;
+  margin: 1rem; }
+  .button a {
+    color: white;
+    text-transform: capitalize;
+    font-size: 1.5rem; }
+  .button.green-button {
+    background-color: #72CB7E; }
+  .button.yellow-button {
+    background-color: #F9D169; }
+  .button.blue-button {
+    background-color: #40B2C4; }
 
 #tribe-bar-form {
   background-color: white; }
