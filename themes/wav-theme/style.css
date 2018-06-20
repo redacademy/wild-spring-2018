@@ -651,6 +651,9 @@ a {
   .main-navigation a {
     display: block;
     text-decoration: none; }
+    @media (min-width: 1080px) {
+      .main-navigation a:hover {
+        border-bottom: 2px solid black; } }
 
 /* Small menu. */
 .social-nav {
@@ -1124,7 +1127,7 @@ object {
     color: white; }
 
 .page-template-about .site-content {
-  padding-top: 3.7rem; }
+  padding-top: 3.5rem; }
   @media (min-width: 1080px) {
     .page-template-about .site-content {
       padding-top: 5rem; } }
@@ -1166,6 +1169,9 @@ object {
     text-decoration: none;
     border-radius: 50px;
     margin: 0 auto; }
+
+.page-template-about .aboutWav {
+  padding-top: 1.5rem; }
 
 .teamMembers.carousel:after {
   content: 'flickity';
@@ -1494,11 +1500,33 @@ object {
         margin-right: 2rem; } }
 
 .single-activity .carousel-cell, .single-tribe_events .carousel-cell {
-  width: 25%;
-  height: auto; }
+  width: 100%;
+  height: 200px; }
 
-.carousel-nav .carousel-cell.is-nav-selected {
+.single-activity .carousel-nav, .single-tribe_events .carousel-nav {
+  display: none; }
+
+.single-activity .carousel-main, .single-tribe_events .carousel-main {
+  padding-top: 4rem; }
+
+.single-activity .flickity-page-dots, .single-tribe_events .flickity-page-dots {
+  visibility: visible; }
+
+.single-activity .carousel-nav .carousel-cell.is-nav-selected, .single-tribe_events .carousel-nav .carousel-cell.is-nav-selected {
   background: #ED2; }
+
+.single-activity .flickity-page-dots .dot, .single-tribe_events .flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 1px solid #72CB7E; }
+
+.single-activity .flickity-page-dots .dot.is-selected, .single-tribe_events .flickity-page-dots .dot.is-selected {
+  background: #72CB7E; }
+
+.single-activity .tags-links a::before, .single-tribe_events .tags-links a::before {
+  content: "#"; }
 
 .answer {
   display: none; }

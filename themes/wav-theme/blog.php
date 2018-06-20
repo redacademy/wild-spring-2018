@@ -57,8 +57,6 @@ get_header(); ?>
 									
 									?>
 
-
-
 									<a href="<?php the_permalink(); ?>"class="journal-button">See Details</a>
 
 								</li>						

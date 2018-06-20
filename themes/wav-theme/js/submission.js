@@ -1,5 +1,6 @@
 (function($) {
-    $('.wpcf7-form').on('submit', function() {
+    $('.wpcf7-form').on('submit', function(event) {
+        event.preventDefault();
 
         setTimeout(function(){
             if( $('.wpcf7-form').hasClass('invalid')){

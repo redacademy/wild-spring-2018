@@ -19,7 +19,7 @@
 
 .page-template-about{
     .site-content {
-        padding-top: 3.7rem;
+        padding-top: 3.5rem;
         @include desktop {
             padding-top: 5rem;
         }
@@ -63,6 +63,10 @@
             border-radius: 50px;
             margin: 0 auto;
         }
+    }
+
+    .aboutWav {
+        padding-top: 1.5rem;
     }
 
    
