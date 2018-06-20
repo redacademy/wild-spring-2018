@@ -22,7 +22,6 @@ get_header();
 	<?php tribe_events_before_html(); ?>
 	<div class="container">
 	<?php tribe_get_view(); ?>
-	</div>
 	<?php tribe_events_after_html(); ?>
 </div> <!-- #tribe-events-pg-template -->
 
