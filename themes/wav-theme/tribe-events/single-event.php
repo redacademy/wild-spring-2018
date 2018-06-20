@@ -37,6 +37,24 @@ $event_id = get_the_ID();
 			</div>
 			<!-- .tribe-events-single-event-description -->
 
+			<section>
+    	<div class="carousel carousel-main" data-flickity>
+        <?php $loop = CFS()->get( 'events_loop' );
+        foreach ( $loop as $row ) {?>
+            <div class="carousel-cell">
+                 <img src="<?php echo $row['event_image']; ?>">
+            </div>
+        <?php } ?>
+    </div>
+    <div class="carousel carousel-nav" data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false }'>
+        <?php $loop = CFS()->get( 'events_loop' );
+            foreach ( $loop as $row ) {?>
+                <div class="carousel-cell">
+                    <img src="<?php echo $row['event_image']; ?>">
+                </div>
+        <?php } ?>
+    </div>
+
 			<!-- Event meta -->
 			<span class="single-event-details-title"><h3>Details</h3></span>
 			<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
