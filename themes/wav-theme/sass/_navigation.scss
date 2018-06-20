@@ -1,3 +1,4 @@
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -85,6 +86,7 @@ a {
 		// &:hover > a,
 		// &.focus > a {
 		// }
+
 			@include desktop {
 				float: left;
 			}
@@ -92,6 +94,12 @@ a {
 	a {
 		display: block;
 		text-decoration: none;
+
+			@include desktop {
+				&:hover {
+					border-bottom: 2px solid black;
+				}
+			}
 	}
 
 	// .current_page_item > a,
@@ -142,10 +150,10 @@ a {
 		}
 }
 
-
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	position: inherit;
 }
 
 

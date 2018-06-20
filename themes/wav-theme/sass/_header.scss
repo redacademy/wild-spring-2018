@@ -1,13 +1,46 @@
 .site-header {
         background-color: hsla(0,0%,100%,.85);
-        border-bottom: 1px solid #e1e1e1;
+        // border-bottom: 1px solid #e1e1e1;
         padding: 1rem;
 		position: fixed;
 		transition: top .5s linear;
 		width: 100%;
         z-index: 4;
+        height: 3.55rem;
+
+        @include desktop {
+            height: 5rem;
+            a {
+                padding-left: .5rem;
+                padding-right: .5rem;
+                display: flex;
+                color: black;
+                font-family: 'Tofino';
+                font-size: 1.25rem;
+            }
+        }
 }
 
-.head2 {
-    max-height: 4rem;
+.header-container {
+    position: relative;
+}
+
+.main-navigation ul {
+    position: absolute;
+    right: 0;
+    bottom: 1.5rem;
+}
+
+.logo {
+
+	img {
+		height: 33px;
+		width: 55px;
+
+	}
+
+}
+
+.logo-tent2 {
+    display: none;
 }

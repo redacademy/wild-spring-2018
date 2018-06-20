@@ -8,6 +8,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
  
     a{
         color: white;
@@ -15,6 +18,13 @@
 }
 
 .page-template-about{
+    .site-content {
+        padding-top: 3.5rem;
+        @include desktop {
+            padding-top: 5rem;
+        }
+    }
+
     h1, h2{
         text-align: center;
     }
@@ -53,6 +63,10 @@
             border-radius: 50px;
             margin: 0 auto;
         }
+    }
+
+    .aboutWav {
+        padding-top: 1.5rem;
     }
 
    
