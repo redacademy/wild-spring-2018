@@ -84,17 +84,14 @@ get_header(); ?>
                 // echo('<p>'.$event->post_content.'</p>');
                 echo('<p>'.get_the_excerpt($event).'</p>');
                 echo('<p>'.tribe_get_start_date($event).'<p>');
+                //tribe_meta_event_tags( sprintf( esc_html__( '%s Tags:', 'the-events-calendar' ), tribe_get_event_label_singular() ), ', ');
 
                     $tags = wp_get_post_tags($event->ID);
                     echo('<ul class="tags-list">');
                          foreach ( $tags as $tag ) {
-                            echo('<li> #'.$tag->name.'</li>');
+                            echo('<a href="tag/'.$tag->slug.'"><li> #'.$tag->name.'</li></a>');
                          }
                     echo('</ul>');
-
-
-
-                    // echo('<span class="tags-links">' .tribe_get_the_tag_list($event) . '</span>');
 
                 echo('<div class="read-more"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">See details &rsaquo;</a></div>');
                 echo('</article>');
