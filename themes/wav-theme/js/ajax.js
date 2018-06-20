@@ -125,7 +125,9 @@
           phone: phoneNumber,
           email: email
         }],
-        venue: {venue},
+        venue: {
+          venue: venue
+        },
         description: description,
         status: 'pending'
 
