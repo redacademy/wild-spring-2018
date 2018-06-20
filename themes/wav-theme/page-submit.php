@@ -61,7 +61,7 @@ get_header(); ?>
                         <input type="hyperlink" name="event_tickets" placeholder="Link" id="event-tickets">
                      </div>
 
-                     <input type="submit" value="Submit" class="pamclicky">
+                     <input type="submit" value="Submit" class="submit-event-button">
                   </form>
 
                   <p class="submit-success-message" style="display:none;"></p>

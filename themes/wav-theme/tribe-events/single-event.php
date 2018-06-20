@@ -25,7 +25,24 @@ $event_id = get_the_ID();
 <div id="tribe-events-content" class="tribe-events-single">
 	<?php while ( have_posts() ) :  the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<?php echo tribe_event_featured_image( $event_id, 'full', false ); ?>
+			<?php 
+			// echo tribe_event_featured_image( $event_id, 'full', false ); ?>
+			<div class="carousel carousel-main" data-flickity>
+       			<?php $loop = CFS()->get( 'events_loop' );
+        			foreach ( $loop as $row ) {?>
+				<div class="carousel-cell">
+							<img src="<?php echo $row['event_image']; ?>">
+						</div>
+					<?php } ?>
+				</div>
+				<div class="carousel carousel-nav" data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false }'>
+					<?php $loop = CFS()->get( 'events_loop' );
+						foreach ( $loop as $row ) {?>
+							<div class="carousel-cell">
+								<img src="<?php echo $row['event_image']; ?>">
+							</div>
+					<?php } ?>
+				</div>
 			<div class="events-container">
 			<?php the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' ); ?>
 			<?php echo('<p>'.tribe_get_start_date($event).'<p>');?>
@@ -36,6 +53,7 @@ $event_id = get_the_ID();
 				<?php the_content(); ?>
 			</div>
 			<!-- .tribe-events-single-event-description -->
+
 
 			<!-- Event meta -->
 			<span class="single-event-details-title"><h3>Details</h3></span>

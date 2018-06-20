@@ -1024,9 +1024,10 @@ object {
         max-width: 80%; } }
     .home section .events-container .tags-list li {
       border: 1px solid #40B2C4;
-      border-radius: 30%;
+      border-radius: 25%;
       margin: auto;
-      padding: 0.5rem; }
+      padding: 0.5rem;
+      min-width: 100px; }
   @media (min-width: 620px) {
     .home section .about-container {
       margin: 0 auto;
@@ -1098,28 +1099,106 @@ object {
     overflow: hidden; }
 
 /*--------------------------------------------------------------
-# stylesheet for events archive view
+# stylesheet for events calendar view and single calendar view
 --------------------------------------------------------------*/
-#tribe-bar-form {
-  background-color: #efefef; }
-
 #tribe-events-pg-template.tribe-events-pg-template {
   margin: 0 auto;
   max-width: 100%; }
+  #tribe-events-pg-template.tribe-events-pg-template a {
+    color: black; }
+    #tribe-events-pg-template.tribe-events-pg-template a:hover:visited {
+      color: black; }
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-events-button {
+    display: none; }
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 1rem; }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .tribe-events-list-event-description a {
+      margin-top: auto;
+      color: #72CB7E; }
+      #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .tribe-events-list-event-description a:hover:visited {
+        color: #72CB7E; }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .type-tribe_events {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      border: 1px solid #72CB7E;
+      padding: 1rem; }
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-events-list-separator-month, #tribe-events-pg-template.tribe-events-pg-template .tribe-events-sub-nav {
+    display: none; }
+
+.tribe-events-list-event-title {
+  font-family: 'Oswald'; }
 
 .tribe-clearfix {
   max-width: 1200px;
   margin: 0 auto; }
   .tribe-clearfix .tribe-events-page-title {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+    margin-left: 1rem;
+    color: white;
     font-family: 'Oswald';
     font-size: 48px;
     font-weight: bolder;
     text-align: left; }
+    @media (min-width: 1080px) {
+      .tribe-clearfix .tribe-events-page-title {
+        -webkit-transform: translateY(-250px);
+                transform: translateY(-250px); } }
+
+.button {
+  color: white;
+  padding: 10px 30px;
+  border-radius: 50px;
+  margin: 1rem; }
+  .button a {
+    color: white;
+    text-transform: capitalize;
+    font-size: 1.5rem; }
+  .button.green-button {
+    background-color: #72CB7E; }
+  .button.yellow-button {
+    background-color: #F9D169; }
+  .button.blue-button {
+    background-color: #40B2C4; }
+
+#tribe-bar-form {
+  background-color: white; }
+
+.tribe-bar-date-filter {
+  display: none; }
+
+.tribe-bar-search-filter {
+  margin-left: 1rem;
+  border: 1px solid green;
+  border-radius: 25px; }
+
+#tribe-bar-collapse-toggle {
+  background-color: white; }
+  #tribe-bar-collapse-toggle .tribe-bar-toggle-arrow {
+    color: #72CB7E; }
+
+#tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option a {
+  background: none;
+  border: none; }
+
+.tribe-bar-views-inner {
+  background-color: white; }
 
 .tribe_events-template-default.single-tribe_events .tribe-events-before-html {
   display: none; }
 
 .tribe_events-template-default.single-tribe_events .events-container {
+  margin-top: 6rem;
   text-align: center; }
   .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-event-title {
     font-family: 'Oswald'; }
@@ -1529,7 +1608,7 @@ object {
         margin-left: 2rem;
         margin-right: 2rem; } }
 
-.single-activity .carousel-cell {
+.single-activity .carousel-cell, .single-tribe_events .carousel-cell {
   width: 25%;
   height: auto; }
 
@@ -2197,13 +2276,13 @@ object {
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
   opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -2278,8 +2357,8 @@ object {
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2296,8 +2375,8 @@ object {
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -2316,8 +2395,8 @@ object {
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2334,8 +2413,8 @@ object {
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -2526,8 +2605,8 @@ object {
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2544,8 +2623,8 @@ object {
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
