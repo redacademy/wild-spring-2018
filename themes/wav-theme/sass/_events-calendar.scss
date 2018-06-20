@@ -1,28 +1,38 @@
 /*--------------------------------------------------------------
-# stylesheet for events archive view
+# stylesheet for events calendar view and single calendar view
 --------------------------------------------------------------*/
-#tribe-bar-form{
-    background-color: #efefef;
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
-    // grid-gap: 1rem;
-}
-
 #tribe-events-pg-template.tribe-events-pg-template {
     margin: 0 auto;
     max-width: 100%;
+    a{
+        color:black;
+        &:hover:visited{
+            color:black;
+        }
+    }
+    .tribe-events-button{
+        display: none;
+    }
     .tribe-events-loop{
         display: grid;
         grid-template-columns: 50% 50%;
         grid-gap: 1rem;
+            .tribe-events-list-event-description a{
+                margin-top: auto;
+                color:$color__green;
+                &:hover:visited{
+                    color:$color__green;;
+                }
+        }
         .type-tribe_events{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             border:1px solid $color__green;
+            padding: 1rem;
         }
     }
-    .tribe-events-list-separator-month{
+    .tribe-events-list-separator-month, .tribe-events-sub-nav{
         display: none;
     }
 }
@@ -30,14 +40,46 @@
     max-width: 1200px;
     margin: 0 auto;
     .tribe-events-page-title{
-    // transform: translateY(-250px);
-    // color: white;
+    transform: translateY(-300px);
+    margin-left: 1rem;
+    @include desktop{
+        transform: translateY(-250px);
+    }
+    color: white;
     font-family: 'Oswald';
     font-size: 48px;
     font-weight: bolder;
     text-align:  left;
     }
 }
+#tribe-bar-form{
+    background-color:white;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // grid-gap: 1rem;
+}
+.tribe-bar-date-filter{
+    display:none;
+}
+.tribe-bar-search-filter{
+    margin-left:  1rem;
+    border: 1px solid green;
+    border-radius:  25px;
+}
+#tribe-bar-collapse-toggle{
+    background-color: white;
+    .tribe-bar-toggle-arrow{
+        color:$color__green;
+    }
+}
+#tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option a{
+    background:none;
+    border:none;
+}
+.tribe-bar-views-inner{
+    background-color: white;
+}
+
 
 //style for single event page:
 
