@@ -1241,9 +1241,18 @@ object {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 10px; }
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 3; }
   .aboutNavigation a {
     color: white; }
+
+.page-template-about .site-content {
+  padding-top: 3.7rem; }
+  @media (min-width: 1080px) {
+    .page-template-about .site-content {
+      padding-top: 5rem; } }
 
 .page-template-about h1, .page-template-about h2 {
   text-align: center; }
@@ -1454,8 +1463,8 @@ object {
 .flickity-page-dots {
   visibility: hidden; }
 
-.page-id-81 img {
-  display: none; }
+.page-id-81 .main-navigation ul {
+  bottom: 0; }
 
 .page-id-81 .post-81 {
   padding: 3%; }
