@@ -8,7 +8,7 @@
 get_header(); ?>
 
 <section class="carousel-container">
-    <div class="carousel carousel-main">
+    <div class="carousel double-carousel carousel-main">
         <?php $loop = CFS()->get( 'activity_image_loop' );
         foreach ( $loop as $row ) {?>
             <div class="carousel-cell">
