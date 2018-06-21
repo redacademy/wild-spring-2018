@@ -31,36 +31,64 @@
     bottom: 3rem;
 }
 
-.logo-wav img {
-    display: none;
-}
-
 .logo {
 
-	img {
-		height: 4rem;
+    width: 5rem;
+
+    img {
+        height: 4rem;
         width: 4rem;
         padding: .5rem;
         position: relative;
-        bottom: .5rem;
+        bottom: 1.25rem;
 
-	}
+    }
 
 }
 
-.home, .post-type-archive-tribe_events, .page-id-81, .page-template-contact, {
+.logo-wav1 {
+    display: none;
+}
 
-    .site-header {
-        background-color: transparent;
-        @include desktop {
-        a {
-            color: white;
+@include desktop {
+
+    .logo img {
+        bottom: .5rem;
+    }
+
+    .home, .post-type-archive-tribe_events, .page-id-81, .page-template-contact, {
+
+        .site-header {
+            background-color: transparent;
+            a {
+                color: white;
+            }
+
+            .menu a:hover {
+                border-bottom: 2px solid white;
+            }
+        }
+
+        }
+        .logo-wav1 {
+            display: inline;
+            background: transparent;
+        }
+
+        .logo-wav2 {
+            display: none;
+        }
+
+
+    .blog, .page-template-about, .post-type-archive-activity {
+
+        .logo-wav2 {
+            display: inline;
+        }
+
+        .logo-wav1 {
+            display: none;
         }
     }
 
-    }
-    .logo-wav2{
-        display: none;
-        background: transparent;
-    }
 }

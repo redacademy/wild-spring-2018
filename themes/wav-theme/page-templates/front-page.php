@@ -21,7 +21,7 @@ get_header(); ?>
 <section class="activities">
 			<h2>Seasonal Activity Ideas</h2>
 
-				<div class="activities-container carousel" data-flickity='{ "watchCSS": true }'>
+				<div class="activities-container carousel-front-page" data-flickity='{ "watchCSS": true }'>
 					<?php
 					$args = array(
 						'post_type' => 'activity',
@@ -34,7 +34,7 @@ get_header(); ?>
 
 					<?php foreach ( $latest_activity_posts as $post ) : setup_postdata( $post ); ?>
 
-						<article class="activities-posts-single carousel-cell">
+						<article class="activities-posts-single carousel-front-page-cell">
 							<div class="activities-posts-single-text">
 								<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 								<?php if ( has_post_thumbnail() ) : ?>
@@ -63,7 +63,7 @@ get_header(); ?>
     <section class="events">
                 <h2>Upcoming Events</h2>
                 <!-- <div class="tribe_event-container"> -->
-                <div class="events-container carousel" data-flickity='{ "watchCSS": true }'>
+                <div class="events-container carousel-front-page" data-flickity='{ "watchCSS": true }'>
                 <!-- // the loop for events as per documentation -->
            <?php
            $args = array(//array to get the upcoming events, only three of them
@@ -78,7 +78,7 @@ get_header(); ?>
                 echo('Sorry, nothing found.');
             }
             else foreach( $events as $event ) {
-                echo('<article class="event-post-single carousel-cell">');
+                echo('<article class="event-post-single carousel-front-page-cell">');
                 echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_post_thumbnail( $event, 'large').'</a></div>');
                 echo('<h3 class="entry-title"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_title( $event).'</a></h3>' );
                 // echo('<p>'.$event->post_content.'</p>');

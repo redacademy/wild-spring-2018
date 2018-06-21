@@ -146,13 +146,13 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * Change the display of tribe event tags
  */
-function wav_tribe_meta_event_tags( $label = null, $separator = ', ', $echo = true ) {
+function wav_tribe_meta_event_tags( $label = null, $separator = ' ', $echo = true ) {
 	// if ( ! $label ) {
 	// 	$label = esc_html__( 'Tags:', 'the-events-calendar' );
 	// }
 
 	$tribe_ecp = Tribe__Events__Main::instance();
-	$list      = get_the_term_list( get_the_ID(), 'post_tag', '<dt>' . $label . '</dt><dd class="tribe-event-tags">', $separator, '</dd>' );
+	$list      = get_the_term_list( get_the_ID(), 'post_tag', '<dt>'. $label . '</dt><dd class="tribe-event-tags">', $separator, '</dd>' );
 	$list      = apply_filters( 'tribe_meta_event_tags', $list, $label, $separator, $echo );
 	if ( $echo ) {
 		echo $list;
