@@ -111,7 +111,6 @@ function wav_starter_scripts() {
 	wp_enqueue_script('smoothscroll_script', get_template_directory_uri() . '/build/js/smoothscroll.min.js', array('jquery'),'20180615', true);
 	wp_enqueue_script( 'carousel', get_template_directory_uri() . '/build/js/carousel.min.js', array('jquery'), '20180613', true );
 	wp_enqueue_script( 'front-page-tab', get_template_directory_uri() . '/build/js/front-page-tab.min.js', array('jquery'), '20180615', true );
-	wp_enqueue_script( 'pamweekend', get_template_directory_uri() . '/build/js/pamweekend.min.js', array('jquery'), '20180615', true );
 	wp_enqueue_script( 'activity', get_template_directory_uri() . '/build/js/activity.min.js', array('jquery'), '20180616', true );
 	wp_enqueue_script( 'hamburger-script', get_template_directory_uri() . '/build/js/hamburger.min.js', array('jquery'), '20180618', true );
 	wp_enqueue_script( 'submission', get_template_directory_uri() . '/build/js/submission.min.js', array('jquery'), '20180619', true );

@@ -15,7 +15,7 @@
     }
     .tribe-events-loop{
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 1rem;
             .tribe-events-list-event-description a{
                 margin-top: auto;
@@ -32,9 +32,9 @@
             padding: 1rem;
         }
     }
-    .tribe-events-list-separator-month, .tribe-events-sub-nav{
-        display: none;
-    }
+    // .tribe-events-list-separator-month, .tribe-events-sub-nav{
+    //     display: none;
+    // }
 }
 .tribe-events-list-event-title{
     font-family: 'Oswald';
@@ -104,42 +104,42 @@
 }
 
 
-// //style for single event page:
+//style for single event page:
 
-// .tribe_events-template-default.single-tribe_events{
-//     .tribe-events-before-html{
-//         display: none;
-//     }
-//     .events-container{
-//         margin-top: 6rem;
-//         text-align: center;
-//         .tribe-events-single-event-title{
-//             font-family: 'Oswald';
-//         }
-//         .tribe-events-single-event-description.tribe-events-content{
-//             text-align: left;
-//             padding: 0 4%;
+.tribe_events-template-default.single-tribe_events{
+    .tribe-events-before-html{
+        display: none;
+    }
+    .events-container{
+        margin-top: 6rem;
+        text-align: center;
+        .tribe-events-single-event-title{
+            font-family: 'Oswald';
+        }
+        .tribe-events-single-event-description.tribe-events-content{
+            text-align: left;
+            padding: 0 4%;
 
-//         }
-//         .single-event-details-title{
-//             display: none;
-//             @include desktop{
-//                 display:inline; 
-//             }
-//         }
-//         .tribe-events-event-meta{
-//             background: white;
-//             border:none;
-//         }
-//         .tribe-events-single-section-title{
-//             display:none;
-//         }
-//     }
-// }
-// .tribe-events-meta-group.tribe-events-meta-group-details, .tribe-events-meta-group.tribe-events-meta-group-gmap{
-//     padding: 0;
-//     margin: 0;
-// }
-// .tribe-events-ical.tribe-events-button{
-//     visibility:hidden;
-// }
+        }
+        .single-event-details-title{
+            display: none;
+            @include desktop{
+                display:inline; 
+            }
+        }
+        .tribe-events-event-meta{
+            background: white;
+            border:none;
+        }
+        .tribe-events-single-section-title{
+            display:none;
+        }
+    }
+}
+.tribe-events-meta-group.tribe-events-meta-group-details, .tribe-events-meta-group.tribe-events-meta-group-gmap{
+    padding: 0;
+    margin: 0;
+}
+.tribe-events-ical.tribe-events-button{
+    visibility:hidden;
+}
