@@ -10,8 +10,6 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			
-
             <nav>
                 <ul class="aboutNavigation">
                     <li><a href="#aboutJump">About Wav</a></li>
@@ -30,18 +28,17 @@ get_header(); ?>
                 <h1>About WAV</h1>
 
                 <div class="header-img-container">
-                    <img class="header-img" src="<?php echo CFS()->get( 'about_wav_img' ); ?>"> 
+                    <img class="header-img" src="<?php echo esc_url(CFS()->get( 'about_wav_img' )); ?>"> 
                 </div>
 
                 <p><?php echo esc_html(CFS()->get( 'about_wav' )); ?></p>
 
                 <div class="videoAboutWav"> <!--Container for a video-->
 
-                <div><?php echo CFS()->get('video_about_test');?></div>
+                    <div><?php echo esc_url(CFS()->get( 'video_about_test' ));?></div>
 
-                    <p><?php echo CFS()->get( 'text_about_video' ); ?></p>
+                    <p><?php echo esc_html(CFS()->get( 'text_about_video' )); ?></p>
 
-                 <div></div>
                 </div>
 
             </section><!--end of aboutWav-->
@@ -50,9 +47,9 @@ get_header(); ?>
             <section class="ourFestival">
                 <h1>Our Festival</h1>
                 <div class="header-img-container">
-                    <img class="header-img" src="<?php echo CFS()->get( 'our_festival_img' ); ?>">
+                    <img class="header-img" src="<?php echo esc_url(CFS()->get( 'our_festival_img' )); ?>">
                 </div>
-                <p><?php echo CFS()->get( 'our_festival' ); ?></p>
+                <p><?php echo esc_html(CFS()->get( 'our_festival' )); ?></p>
 
                 <div class="center-button">
                     <a href="<?php echo get_post_type_archive_link( 'festival' ) ?>" class="green-button">More Information</a>
@@ -99,7 +96,7 @@ get_header(); ?>
                     <div class="collaborator carousel-cell">
                                 <!-- <header class="entry-header"> -->
                         <?php if ( has_post_thumbnail() ) : ?>
-                                    <a href="<?php echo CFS()->get( 'personal_webpage' ); ?>" alt="Team Image"><?php the_post_thumbnail( 'large' ); ?></a>
+                                    <a href="<?php echo esc_url(CFS()->get( 'personal_webpage' )); ?>" alt="Collaborator Image"><?php the_post_thumbnail( 'large' ); ?></a>
                                     <?php endif; ?>
 
                                     <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
@@ -183,8 +180,8 @@ get_header(); ?>
                                     <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
                                 </header>
                                 <div class="hidden-mobile">
-                                    <p><?php echo CFS()->get( 'source' ); ?></p>
-                                    <p><?php echo CFS()->get( 'date' ); ?></p>
+                                    <p><?php echo esc_html(CFS()->get( 'source' )) ; ?></p>
+                                    <p><?php echo esc_html(CFS()->get( 'date' )) ; ?></p>
                                 </div>
                             </div><!--end of pressItem-->
                             <?php endforeach; wp_reset_postdata(); ?>
