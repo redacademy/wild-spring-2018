@@ -32,7 +32,9 @@ get_header(); ?>
 <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 </header><!-- .entry-header -->
 
+<p class="activity-location">
 <?php echo CFS()->get('activity_location') ?>
+</p>
 
 <h2>
     <?php
