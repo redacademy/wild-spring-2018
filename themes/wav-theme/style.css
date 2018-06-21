@@ -366,14 +366,14 @@ th {
   font-style: italic; }
 
 @font-face {
-  font-family: 'Tofino';
+  font-family: 'Tofino Semi Bold';
   src: url("../../assets/fonts/Tofino/TofinoProPersonal-Semibold.eot");
   src: url("../../assets/fonts/Tofino/TofinoProPersonal-Semibold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Tofino/TofinoProPersonal-Semibold.woff2") format("woff2"), url("../../assets/fonts/Tofino/TofinoProPersonal-Semibold.woff") format("woff"), url("../../assets/fonts/Tofino/TofinoProPersonal-Semibold.ttf") format("truetype"), url("../../assets/fonts/Tofino/TofinoProPersonal-Semibold.svg#TofinoProPersonal-Semibold") format("svg");
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Tofino';
+  font-family: 'Tofino Bold';
   src: url("../../assets/fonts/Tofino/TofinoProPersonal-Bold.eot");
   src: url("../../assets/fonts/Tofino/TofinoProPersonal-Bold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Tofino/TofinoProPersonal-Bold.woff2") format("woff2"), url("../../assets/fonts/Tofino/TofinoProPersonal-Bold.woff") format("woff"), url("../../assets/fonts/Tofino/TofinoProPersonal-Bold.ttf") format("truetype"), url("../../assets/fonts/Tofino/TofinoProPersonal-Bold.svg#TofinoProPersonal-Bold") format("svg");
   font-weight: 500;
@@ -421,9 +421,50 @@ textarea {
   font-size: 1rem;
   line-height: 1.5; }
 
+body {
+  font-size: 12px;
+  font-family: "Tofino", sans-serif; }
+  @media (min-width: 1080px) {
+    body {
+      font-size: 18px;
+      font-family: "Tofino-Text", sans-serif; } }
+
+button {
+  font-size: 20px;
+  font-family: "Tofino", sans-serif; }
+
+@media (min-width: 1080px) {
+  .calendar h1 {
+    font-size: 2rem;
+    font-family: "Tofino", sans-serif; } }
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
+
+h1 {
+  font-size: 1.5rem;
+  font-family: "Oswald Bold", sans-serif; }
+  @media (min-width: 1080px) {
+    h1 {
+      font-size: 2.67rem;
+      font-family: "Oswald Bold", sans-serif; } }
+
+h2 {
+  font-size: 1.5rem;
+  font-family: "Tofino Semi Bold", sans-serif; }
+  @media (min-width: 1080px) {
+    h2 {
+      font-size: 2.67rem;
+      font-family: "Tofino Bold", sans-serif; } }
+
+h3 {
+  font-size: 1.5rem;
+  font-family: "Oswald Regular", sans-serif; }
+  @media (min-width: 1080px) {
+    h3 {
+      font-size: 2rem;
+      font-family: "Oswald Regular", sans-serif; } }
 
 /* Copy */
 p {
@@ -1119,8 +1160,13 @@ object {
     overflow: hidden; }
 
 /*--------------------------------------------------------------
-# stylesheet for events calendar view and single calendar view
+# stylesheet for events calendar view and single calendar view.
+Please check the Skeleton style from Events/Setting/Display in dashboard and then this stylesheet will work.
 --------------------------------------------------------------*/
+.tribe-events-before-html p {
+  margin-top: 0;
+  padding-top: 0; }
+
 #tribe-events-pg-template.tribe-events-pg-template {
   margin: 0 auto;
   max-width: 100%; }
@@ -1130,10 +1176,11 @@ object {
       color: black; }
   #tribe-events-pg-template.tribe-events-pg-template .tribe-events-button {
     display: none; }
-  #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+  @media (min-width: 620px) {
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
   #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .tribe-events-list-event-description a {
     margin-top: auto;
     color: #72CB7E; }
@@ -1152,7 +1199,10 @@ object {
             justify-content: space-between;
     border: 1px solid #72CB7E;
     padding: 1rem;
-    width: 33%; }
+    margin-top: auto; }
+    @media (min-width: 620px) {
+      #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .type-tribe_events {
+        width: 33%; } }
   #tribe-events-pg-template.tribe-events-pg-template .tribe-events-sub-nav {
     display: none; }
 
@@ -1175,6 +1225,47 @@ object {
       .tribe-clearfix .tribe-events-page-title {
         -webkit-transform: translateY(-250px);
                 transform: translateY(-250px); } }
+  .tribe-clearfix.tribe-bar-filters-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .tribe-clearfix #tribe-events-bar #tribe-bar-views {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
+    .tribe-clearfix #tribe-events-bar #tribe-bar-views ul {
+      padding-left: 0;
+      margin-left: 0; }
+  .tribe-clearfix #tribe-events-bar .tribe-bar-filters {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1; }
+    .tribe-clearfix #tribe-events-bar .tribe-bar-filters .label-tribe-bar-date, .tribe-clearfix #tribe-events-bar .tribe-bar-filters .label-tribe-bar-search {
+      display: none; }
+  .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter, .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter {
+    border: 1px solid #72CB7E; }
+    .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=email], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=password], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=search], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=text], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=url], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=email], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=password], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=search], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=text], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=url] {
+      border: 0.1px solid white;
+      margin: 0.5rem 0;
+      padding: 5px; }
+  .tribe-clearfix .tribe-bar-views-option.tribe-bar-views-option-day {
+    display: none; }
+
+/*style for icons*/
+.tribe-select2-results-views span[class^='tribe-icon-'],
+.tribe-bar-views-list span[class^='tribe-icon-'],
+.tribe-bar-view-list a[class*='tribe-icon-'] {
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  display: block;
+  min-height: 16px;
+  padding-left: 24px; }
+
+.tribe-select2-results-views span[class^='tribe-icon-'] {
+  display: inline-block;
+  min-height: 16px; }
 
 .button {
   color: white;
@@ -1193,22 +1284,18 @@ object {
     background-color: #40B2C4; }
 
 #tribe-bar-form {
-  background-color: white; }
-
-.tribe-bar-search-filter {
-  margin-left: 1rem;
-  border: 1px solid green;
-  border-radius: 25px; }
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 #tribe-bar-collapse-toggle {
   display: none; }
-
-#tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option a {
-  background: none;
-  border: none; }
-
-.tribe-bar-views-inner {
-  background-color: white; }
 
 .tribe_events-template-default.single-tribe_events .tribe-events-before-html {
   display: none; }
@@ -1805,9 +1892,9 @@ object {
     background: transparent; }
   .logo-wav2 {
     display: none; }
-  .blog .logo-wav2, .page-template-about .logo-wav2, .post-type-archive-activity .logo-wav2 {
+  .blog .logo-wav2, .page-template-about .logo-wav2, .post-type-archive-activity .logo-wav2, .single-activity .logo-wav2 {
     display: inline; }
-  .blog .logo-wav1, .page-template-about .logo-wav1, .post-type-archive-activity .logo-wav1 {
+  .blog .logo-wav1, .page-template-about .logo-wav1, .post-type-archive-activity .logo-wav1, .single-activity .logo-wav1 {
     display: none; } }
 
 .widget-area a {

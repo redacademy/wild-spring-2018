@@ -1,10 +1,9 @@
 <?php
 /**
  * Single Event Template
- * A single event. This displays the event title, description, meta, and
- * optionally, the Google map for the event.
+ * A single event. This displays the carousel, event title, description, meta the Google map for the event.
  *
- * Override this template in your own theme by creating a file at [your-theme]/tribe-events/single-event.php - This is overriden template
+ * This is an overriden template from  wav-theme/tribe-events/single-event.php
  *
  * @package TribeEventsCalendar
  * @version 4.6.3
@@ -25,7 +24,7 @@ $event_id = get_the_ID();
 <div id="tribe-events-content" class="tribe-events-single">
 	<?php while ( have_posts() ) :  the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<?php 
+			<?php
 			// echo tribe_event_featured_image( $event_id, 'full', false ); ?>
 			<div class="carousel carousel-main" data-flickity>
        			<?php $loop = CFS()->get( 'events_loop' );

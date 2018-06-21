@@ -1,6 +1,13 @@
 /*--------------------------------------------------------------
-# stylesheet for events calendar view and single calendar view
+# stylesheet for events calendar view and single calendar view.
+Please check the Skeleton style from Events/Setting/Display in dashboard and then this stylesheet will work.
 --------------------------------------------------------------*/
+.tribe-events-before-html{
+    p{
+        margin-top: 0;
+        padding-top:0;
+    }
+}
 #tribe-events-pg-template.tribe-events-pg-template {
     margin: 0 auto;
     max-width: 100%;
@@ -14,13 +21,12 @@
         display: none;
     }
     .tribe-events-loop{
-        // display: grid;
-        // grid-template-columns: 1fr 1fr 1fr;
-        // grid-gap: 1rem;
         .same-date-events-container{
-            display:flex;
+            @include tablet{
+                display:flex;
+            }
         }
-            .tribe-events-list-event-description a{
+        .tribe-events-list-event-description a{
                 margin-top: auto;
                 color:$color__green;
                 &:hover:visited{
@@ -33,7 +39,11 @@
             justify-content: space-between;
             border:1px solid $color__green;
             padding: 1rem;
-            width: 33%;
+            margin-top: auto;
+            @include tablet{
+                width: 33%;
+            }
+
         }
     }
     .tribe-events-sub-nav{
@@ -58,6 +68,62 @@
     font-weight: bolder;
     text-align:  left;
     }
+    &.tribe-bar-filters-inner{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #tribe-events-bar{
+        // display: flex;
+        // justify-content: space-between;
+        // width: 100%;
+        #tribe-bar-views{
+            order:1;
+            ul{
+                padding-left: 0;
+                margin-left:0;
+            }
+        }
+        .tribe-bar-filters{
+            order:-1;
+            .label-tribe-bar-date, .label-tribe-bar-search{
+                display:none;
+            }
+        }
+        .tribe-bar-search-filter, .tribe-bar-date-filter{
+            border:1px solid $color__green;
+            input[type=email], input[type=password], input[type=search], input[type=text], input[type=url]{
+                // border:1px solid $color__green;
+                // border-radius: 25%;
+                border:0.1px solid white;
+                margin: 0.5rem 0;
+                padding: 5px;
+                // @include tablet{
+                //     width:300px;
+                // }
+            }
+
+        }
+    }
+    .tribe-bar-views-option.tribe-bar-views-option-day{
+        display: none;
+    }
+
+}
+
+/*style for icons*/
+.tribe-select2-results-views span[class^='tribe-icon-'],
+.tribe-bar-views-list span[class^='tribe-icon-'],
+.tribe-bar-view-list a[class*='tribe-icon-'] {
+	background-position: 0 50%;
+	background-repeat: no-repeat;
+	display: block;
+	min-height: 16px;
+	padding-left: 24px;
+}
+
+.tribe-select2-results-views span[class^='tribe-icon-'] {
+	display: inline-block;
+	min-height: 16px;
 }
 .button{
     color: white;
@@ -81,18 +147,13 @@
 }
 #tribe-bar-form{
     background-color:white;
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
-    // grid-gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 // .tribe-bar-date-filter{
 //     display:none;
 // }
-.tribe-bar-search-filter{
-    margin-left:  1rem;
-    border: 1px solid green;
-    border-radius:  25px;
-}
 #tribe-bar-collapse-toggle{
     display:none;
     // background-color: white;
@@ -100,51 +161,10 @@
     //     color:$color__green;
     // }
 }
-#tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option a{
-    background:none;
-    border:none;
-}
-.tribe-bar-views-inner{
-    background-color: white;
-}
-
-
-//style for single event page:
-
-.tribe_events-template-default.single-tribe_events{
-    .tribe-events-before-html{
-        display: none;
-    }
-    .events-container{
-        margin-top: 6rem;
-        text-align: center;
-        .tribe-events-single-event-title{
-            font-family: 'Oswald';
-        }
-        .tribe-events-single-event-description.tribe-events-content{
-            text-align: left;
-            padding: 0 4%;
-
-        }
-        .single-event-details-title{
-            display: none;
-            @include desktop{
-                display:inline; 
-            }
-        }
-        .tribe-events-event-meta{
-            background: white;
-            border:none;
-        }
-        .tribe-events-single-section-title{
-            display:none;
-        }
-    }
-}
-.tribe-events-meta-group.tribe-events-meta-group-details, .tribe-events-meta-group.tribe-events-meta-group-gmap{
-    padding: 0;
-    margin: 0;
-}
-.tribe-events-ical.tribe-events-button{
-    visibility:hidden;
-}
+// #tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option a{
+//     background:none;
+//     border:none;
+// }
+// .tribe-bar-views-inner{
+//     background-color: white;
+// }

@@ -7,7 +7,12 @@
             } 
             else {
                 $('.wpcf7-form').slideUp();
-                $('.form-wrapper').prepend('Success ! Thank you for submission');
+                $('.entry-title').after(
+                    '<img src="./../../wav/wp-content/themes/wav-theme/assets/images/Checkmark.svg"/>',
+                    '<h3> Thank you! </h3>',
+                    '<p> A representative will be in contact with you shortly. ',
+                    '<a href="../events");">Browse Events</a>'
+                );
             }
 
         }, 1000);

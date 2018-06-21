@@ -13,15 +13,67 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
+body{
+	font-size: $font-size__base-size;
+	font-family: $font-family__base-font, $font__main;
+	@include desktop{
+		font-size: $font-size__desktop__base-size;
+		font-family: $font-family__desktop__base-font, $font__main;
+	}
+}
+
+//NTS: Probably need to include a button class identifier instead
+button{
+	font-size: $font-size__button;
+	font-family: $font-family__button, $font__main;
+}
+
+//NTS: WHAT IS THE CALENDAR TITLE CLASS??
+.calendar h1{
+	@include desktop{
+		font-size: $font-size__desktop__calendar;
+		font-family: $font-family__desktop__calendar, $font__main;
+	}
+	
+}
+
+
+
 /* Headings */
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 }
 
-// h1{
-// 	font-size: 
-// }
+h1{
+	font-size: $font-size__h1;
+	font-family: $font-family__h1, $font__main;
+	@include desktop{
+		font-size: $font-size__desktop__h1;
+		font-family: $font-family__desktop__h1, $font__main;
+	}
+}
+
+h2{
+	font-size: $font-size__h2;
+	font-family: $font-family__h2, $font__main;
+	@include desktop{
+		font-size: $font-size__desktop__h2;
+		font-family: $font-family__desktop__h2, $font__main;
+	}
+}
+
+h3{
+	font-size: $font-size__h3;
+	font-family: $font-family__h3, $font__main;
+	@include desktop{
+		font-size: $font-size__desktop__h3;
+		font-family: $font-family__desktop__h3, $font__main;
+
+	}
+}
+
+
 
 /* Copy */
 

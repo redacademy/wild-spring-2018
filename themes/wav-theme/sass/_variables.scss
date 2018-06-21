@@ -37,7 +37,44 @@ $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
 
-// $font-size__p: 
+//Mobile font family
+$font-family__base-font:  'Tofino';
+$font-family__body: 'Tofino';
+$font-family__body2: 'Tofino-Text';
+$font-family__menu: 'Tofino';
+$font-family__button: 'Tofino';
+$font-family__h1: 'Oswald Bold';
+$font-family__h2: 'Tofino Semi Bold';
+$font-family__h3: 'Oswald Regular';
+
+//Desktop font family
+$font-family__desktop__base-font:  'Tofino-Text';
+$font-family__desktop__body: 'Tofino-Text';
+$font-family__desktop__body2: 'Tofino-Text';
+$font-family__desktop__calendar: 'Tofino';
+$font-family__desktop__h1: 'Oswald Bold';
+$font-family__desktop__h2: 'Tofino Bold';
+$font-family__desktop__h3: 'Oswald Regular';
+
+//Mobile font sizes
+$font-size__base-size: 12px;
+$font-size__body: 1.0rem;
+$font-size__body2: 0.833rem;
+$font-size__menu: 1.16rem;
+$font-size__button: 20px;
+$font-size__h1: 1.5rem;
+$font-size__h2: 1.5rem;
+$font-size__h3: 1.5rem;
+
+//Desktop font sizes
+$font-size__desktop__base-size: 18px;
+$font-size__desktop__body: 1.0rem;
+$font-size__desktop__body2: 0.78rem;
+$font-size__desktop__calendar: 2.0rem; //Calendar Title
+$font-size__desktop__h1: 2.67rem;
+$font-size__desktop__h2: 2.67rem;
+$font-size__desktop__h3: 2.0rem;
+
 
 // Media Query - tablet and desktop breakpoints
 
