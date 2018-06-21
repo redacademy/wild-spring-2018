@@ -28,14 +28,17 @@
 .main-navigation ul {
     position: absolute;
     right: 0;
-    bottom: 1.5rem;
+    bottom: 3rem;
 }
 
 .logo {
 
 	img {
-		height: 33px;
-		width: 55px;
+		height: 4rem;
+        width: 4rem;
+        padding: .5rem;
+        position: relative;
+        bottom: .5rem;
 
 	}
 

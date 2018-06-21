@@ -52,7 +52,7 @@ get_header(); ?>
 
 				</div><!-- activities-container -->
 
-					 <div class="button yellow-button activities-button">
+					 <div class="button contact-button1 activities-button">
           				<a  href=<?php echo get_post_type_archive_link( 'activity' ) ?>>see activities</a>
 					</div>
 
@@ -99,7 +99,7 @@ get_header(); ?>
             ?>
                 </div><!-- events-container -->
                 <div class="events-buttons-container">
-                    <div class="button yellow-button">
+                    <div class="button contact-button1">
                     <a href=<?php echo get_post_type_archive_link( 'tribe_event' ) ?>>create events</a>
                     </div>
                     <div class="button blue-button">
@@ -138,7 +138,7 @@ get_header(); ?>
                             <a class="read-more" href="#">learn more &rsaquo; </a>
                         </div>
                 </div>
-                <div class="button yellow-button">
+                <div class="button contact-button1">
                         <a href="#">find more</a>
                 </div>
             </section><!--end of what is WAV section-->

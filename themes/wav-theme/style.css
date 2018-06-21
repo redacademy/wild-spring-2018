@@ -483,7 +483,8 @@ html {
 
 body {
   background: #fff;
-  /* Fallback for when there is no custom background color defined. */ }
+  /* Fallback for when there is no custom background color defined. */
+  font-family: 'Tofino'; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -666,7 +667,8 @@ a {
   width: 50%;
   height: 100vh;
   font-family: 'Tofino';
-  background: #B4E1E8; }
+  background: #B4E1E8;
+  z-index: 10; }
   .main-navigation.toggled a {
     color: #fff;
     border-bottom: 1px solid #fff;
@@ -986,7 +988,7 @@ object {
         width: 50%; } }
   .home section .activities-container .activities-posts-single {
     border: 1px solid #72CB7E; }
-  .home section .button.yellow-button.activities-button {
+  .home section .button.contact-button1.activities-button {
     margin: 2rem auto;
     max-width: 80%; }
   .home section .events-container.carousel:after {
@@ -1078,7 +1080,7 @@ object {
       font-size: 1.5rem; }
     .home .button.green-button {
       background-color: #72CB7E; }
-    .home .button.yellow-button {
+    .home .button.contact-button1 {
       background-color: #F9D169; }
     .home .button.blue-button {
       background-color: #40B2C4; }
@@ -1170,7 +1172,7 @@ object {
     font-size: 1.5rem; }
   .button.green-button {
     background-color: #72CB7E; }
-  .button.yellow-button {
+  .button.contact-button1 {
     background-color: #F9D169; }
   .button.blue-button {
     background-color: #40B2C4; }
@@ -1470,7 +1472,7 @@ object {
   visibility: hidden; }
 
 .page-id-81 .main-navigation ul {
-  bottom: 0; }
+  bottom: 1.5rem; }
 
 .page-id-81 .post-81 {
   padding: 3%; }
@@ -1634,6 +1636,22 @@ object {
 .answer {
   display: none; }
 
+.faq-item {
+  border: 2px solid #72CB7E;
+  border-radius: 5px;
+  padding: .5rem;
+  border-spacing: 1rem;
+  margin-bottom: 1rem;
+  width: 40vw; }
+  .faq-item a {
+    color: black; }
+
+.answer {
+  border-top: 1px solid #72CB7E; }
+
+.faq-container h1 {
+  text-transform: uppercase; }
+
 .site-header {
   background-color: rgba(255, 255, 255, 0.85);
   padding: 1rem;
@@ -1662,11 +1680,14 @@ object {
 .main-navigation ul {
   position: absolute;
   right: 0;
-  bottom: 1.5rem; }
+  bottom: 3rem; }
 
 .logo img {
-  height: 33px;
-  width: 55px; }
+  height: 4rem;
+  width: 4rem;
+  padding: .5rem;
+  position: relative;
+  bottom: .5rem; }
 
 .logo-tent2 {
   display: none; }
