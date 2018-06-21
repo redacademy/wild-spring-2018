@@ -1675,6 +1675,9 @@ object {
   right: 0;
   bottom: 3rem; }
 
+.logo-wav img {
+  display: none; }
+
 .logo img {
   height: 4rem;
   width: 4rem;
@@ -1682,7 +1685,13 @@ object {
   position: relative;
   bottom: .5rem; }
 
-.home .logo-wav2, .archive .logo-wav2, .page-id-81 .logo-wav2, .page-template-contact .logo-wav2 {
+.home .site-header, .post-type-archive-tribe_events .site-header, .page-id-81 .site-header, .page-template-contact .site-header {
+  background-color: transparent; }
+  @media (min-width: 1080px) {
+    .home .site-header a, .post-type-archive-tribe_events .site-header a, .page-id-81 .site-header a, .page-template-contact .site-header a {
+      color: white; } }
+
+.home .logo-wav2, .post-type-archive-tribe_events .logo-wav2, .page-id-81 .logo-wav2, .page-template-contact .logo-wav2 {
   display: none;
   background: transparent; }
 

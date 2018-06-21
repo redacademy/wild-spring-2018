@@ -31,6 +31,10 @@
     bottom: 3rem;
 }
 
+.logo-wav img {
+    display: none;
+}
+
 .logo {
 
 	img {
@@ -44,7 +48,17 @@
 
 }
 
-.home, .archive, .page-id-81, .page-template-contact, {
+.home, .post-type-archive-tribe_events, .page-id-81, .page-template-contact, {
+
+    .site-header {
+        background-color: transparent;
+        @include desktop {
+        a {
+            color: white;
+        }
+    }
+
+    }
     .logo-wav2{
         display: none;
         background: transparent;
