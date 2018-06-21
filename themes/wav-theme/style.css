@@ -366,14 +366,14 @@ th {
   font-style: italic; }
 
 @font-face {
-  font-family: 'Tofino';
+  font-family: 'Tofino Semi Bold';
   src: url("../../assets/fonts/Tofino/TofinoProPersonal-Semibold.eot");
   src: url("../../assets/fonts/Tofino/TofinoProPersonal-Semibold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Tofino/TofinoProPersonal-Semibold.woff2") format("woff2"), url("../../assets/fonts/Tofino/TofinoProPersonal-Semibold.woff") format("woff"), url("../../assets/fonts/Tofino/TofinoProPersonal-Semibold.ttf") format("truetype"), url("../../assets/fonts/Tofino/TofinoProPersonal-Semibold.svg#TofinoProPersonal-Semibold") format("svg");
   font-weight: 600;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Tofino';
+  font-family: 'Tofino Bold';
   src: url("../../assets/fonts/Tofino/TofinoProPersonal-Bold.eot");
   src: url("../../assets/fonts/Tofino/TofinoProPersonal-Bold.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Tofino/TofinoProPersonal-Bold.woff2") format("woff2"), url("../../assets/fonts/Tofino/TofinoProPersonal-Bold.woff") format("woff"), url("../../assets/fonts/Tofino/TofinoProPersonal-Bold.ttf") format("truetype"), url("../../assets/fonts/Tofino/TofinoProPersonal-Bold.svg#TofinoProPersonal-Bold") format("svg");
   font-weight: 500;
@@ -421,9 +421,50 @@ textarea {
   font-size: 1rem;
   line-height: 1.5; }
 
+body {
+  font-size: 12px;
+  font-family: "Tofino", sans-serif; }
+  @media (min-width: 1080px) {
+    body {
+      font-size: 18px;
+      font-family: "Tofino-Text", sans-serif; } }
+
+button {
+  font-size: 20px;
+  font-family: "Tofino", sans-serif; }
+
+@media (min-width: 1080px) {
+  .calendar h1 {
+    font-size: 2rem;
+    font-family: "Tofino", sans-serif; } }
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   clear: both; }
+
+h1 {
+  font-size: 1.5rem;
+  font-family: "Oswald Bold", sans-serif; }
+  @media (min-width: 1080px) {
+    h1 {
+      font-size: 2.67rem;
+      font-family: "Oswald Bold", sans-serif; } }
+
+h2 {
+  font-size: 1.5rem;
+  font-family: "Tofino Semi Bold", sans-serif; }
+  @media (min-width: 1080px) {
+    h2 {
+      font-size: 2.67rem;
+      font-family: "Tofino Bold", sans-serif; } }
+
+h3 {
+  font-size: 1.5rem;
+  font-family: "Oswald Regular", sans-serif; }
+  @media (min-width: 1080px) {
+    h3 {
+      font-size: 2rem;
+      font-family: "Oswald Regular", sans-serif; } }
 
 /* Copy */
 p {
