@@ -25,7 +25,7 @@ $event_id = get_the_ID();
 <div id="tribe-events-content" class="tribe-events-single">
 	<?php while ( have_posts() ) :  the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<?php 
+			<?php
 			// echo tribe_event_featured_image( $event_id, 'full', false ); ?>
 			<div class="carousel carousel-main" data-flickity>
        			<?php $loop = CFS()->get( 'events_loop' );
