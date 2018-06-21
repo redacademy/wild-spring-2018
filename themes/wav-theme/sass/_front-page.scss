@@ -80,7 +80,7 @@
             }
          }
         .activities-container{
-            &.carousel:after {
+            &.carousel-front-page:after {
                 content: 'flickity';
                 display: none;
               }
@@ -90,17 +90,17 @@
                     display: inline;
                 }
                 /* disable Flickity for large devices */
-                &.carousel:after {
+                &.carousel-front-page:after {
                         content: '';
                          }
-                 &.carousel{
+                 &.carousel-front-page{
                      display:flex;
                          }
             }
             .flickity-page-dots{
                 visibility: hidden;
             }
-            .carousel-cell {
+            .carousel-front-page-cell {
                 margin: 0 1rem;
                 width: 100%;
                 @include tablet{
@@ -126,7 +126,7 @@
             max-width: 80%;
         }
         .events-container{
-            &.carousel:after {
+            &.carousel-front-page:after {
                 content: 'flickity';
                 display: none;
               }
@@ -136,17 +136,17 @@
                     display: inline;
                 }
                 /* disable Flickity for large devices */
-                &.carousel:after {
+                &.carousel-front-page:after {
                         content: '';
                          }
-                 &.carousel{
+                 &.carousel-front-page{
                      display:flex;
                          }
             }
             .flickity-page-dots{
             visibility: hidden;
             }
-            .carousel-cell {
+            .carousel-front-page-cell {
                 width: 66%;
                 margin: 0 1rem;
                 width: 100%;
