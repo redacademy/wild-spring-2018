@@ -28,19 +28,39 @@
 .main-navigation ul {
     position: absolute;
     right: 0;
-    bottom: 1.5rem;
+    bottom: 3rem;
+}
+
+.logo-wav img {
+    display: none;
 }
 
 .logo {
 
 	img {
-		height: 33px;
-		width: 55px;
+		height: 4rem;
+        width: 4rem;
+        padding: .5rem;
+        position: relative;
+        bottom: .5rem;
 
 	}
 
 }
 
-.logo-tent2 {
-    display: none;
+.home, .post-type-archive-tribe_events, .page-id-81, .page-template-contact, {
+
+    .site-header {
+        background-color: transparent;
+        @include desktop {
+        a {
+            color: white;
+        }
+    }
+
+    }
+    .logo-wav2{
+        display: none;
+        background: transparent;
+    }
 }

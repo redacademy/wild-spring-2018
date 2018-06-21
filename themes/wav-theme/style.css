@@ -483,7 +483,8 @@ html {
 
 body {
   background: #fff;
-  /* Fallback for when there is no custom background color defined. */ }
+  /* Fallback for when there is no custom background color defined. */
+  font-family: 'Tofino'; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -666,7 +667,8 @@ a {
   width: 50%;
   height: 100vh;
   font-family: 'Tofino';
-  background: #B4E1E8; }
+  background: #B4E1E8;
+  z-index: 10; }
   .main-navigation.toggled a {
     color: #fff;
     border-bottom: 1px solid #fff;
@@ -986,7 +988,21 @@ object {
         width: 50%; } }
   .home section .activities-container .activities-posts-single {
     border: 1px solid #72CB7E; }
-  .home section .button.yellow-button.activities-button {
+    .home section .activities-container .activities-posts-single .activities-posts-single-text {
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      margin-top: auto; }
+      .home section .activities-container .activities-posts-single .activities-posts-single-text p {
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1; }
+  .home section .button.contact-button1.activities-button {
     margin: 2rem auto;
     max-width: 80%; }
   .home section .events-container.carousel:after {
@@ -1078,7 +1094,7 @@ object {
       font-size: 1.5rem; }
     .home .button.green-button {
       background-color: #72CB7E; }
-    .home .button.yellow-button {
+    .home .button.contact-button1 {
       background-color: #F9D169; }
     .home .button.blue-button {
       background-color: #40B2C4; }
@@ -1116,7 +1132,7 @@ object {
     display: none; }
   #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem; }
     #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .tribe-events-list-event-description a {
       margin-top: auto;
@@ -1136,8 +1152,6 @@ object {
               justify-content: space-between;
       border: 1px solid #72CB7E;
       padding: 1rem; }
-  #tribe-events-pg-template.tribe-events-pg-template .tribe-events-list-separator-month, #tribe-events-pg-template.tribe-events-pg-template .tribe-events-sub-nav {
-    display: none; }
 
 .tribe-events-list-event-title {
   font-family: 'Oswald'; }
@@ -1170,7 +1184,7 @@ object {
     font-size: 1.5rem; }
   .button.green-button {
     background-color: #72CB7E; }
-  .button.yellow-button {
+  .button.contact-button1 {
     background-color: #F9D169; }
   .button.blue-button {
     background-color: #40B2C4; }
@@ -1470,7 +1484,7 @@ object {
   visibility: hidden; }
 
 .page-id-81 .main-navigation ul {
-  bottom: 0; }
+  bottom: 1.5rem; }
 
 .page-id-81 .post-81 {
   padding: 3%; }
@@ -1663,6 +1677,22 @@ object {
 .answer {
   display: none; }
 
+.faq-item {
+  border: 2px solid #72CB7E;
+  border-radius: 5px;
+  padding: .5rem;
+  border-spacing: 1rem;
+  margin-bottom: 1rem;
+  width: 40vw; }
+  .faq-item a {
+    color: black; }
+
+.answer {
+  border-top: 1px solid #72CB7E; }
+
+.faq-container h1 {
+  text-transform: uppercase; }
+
 .site-header {
   background-color: rgba(255, 255, 255, 0.85);
   padding: 1rem;
@@ -1691,14 +1721,27 @@ object {
 .main-navigation ul {
   position: absolute;
   right: 0;
-  bottom: 1.5rem; }
+  bottom: 3rem; }
+
+.logo-wav img {
+  display: none; }
 
 .logo img {
-  height: 33px;
-  width: 55px; }
+  height: 4rem;
+  width: 4rem;
+  padding: .5rem;
+  position: relative;
+  bottom: .5rem; }
 
-.logo-tent2 {
-  display: none; }
+.home .site-header, .post-type-archive-tribe_events .site-header, .page-id-81 .site-header, .page-template-contact .site-header {
+  background-color: transparent; }
+  @media (min-width: 1080px) {
+    .home .site-header a, .post-type-archive-tribe_events .site-header a, .page-id-81 .site-header a, .page-template-contact .site-header a {
+      color: white; } }
+
+.home .logo-wav2, .post-type-archive-tribe_events .logo-wav2, .page-id-81 .logo-wav2, .page-template-contact .logo-wav2 {
+  display: none;
+  background: transparent; }
 
 .widget-area a {
   border-radius: 8rem;
@@ -2345,13 +2388,13 @@ object {
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
   opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -2426,8 +2469,8 @@ object {
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2444,8 +2487,8 @@ object {
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -2464,8 +2507,8 @@ object {
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2482,8 +2525,8 @@ object {
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -2674,8 +2717,8 @@ object {
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2692,8 +2735,8 @@ object {
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);

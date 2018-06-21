@@ -15,7 +15,7 @@
     }
     .tribe-events-loop{
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 1rem;
             .tribe-events-list-event-description a{
                 margin-top: auto;
@@ -32,9 +32,9 @@
             padding: 1rem;
         }
     }
-    .tribe-events-list-separator-month, .tribe-events-sub-nav{
-        display: none;
-    }
+    // .tribe-events-list-separator-month, .tribe-events-sub-nav{
+    //     display: none;
+    // }
 }
 .tribe-events-list-event-title{
     font-family: 'Oswald';
@@ -68,7 +68,7 @@
     &.green-button{
         background-color: $color__green;
     }
-    &.yellow-button{
+    &.contact-button1{
         background-color: $color__yellow;
         }
     &.blue-button{

@@ -1,3 +1,24 @@
 .answer { 
 	display: none; 
 }
+
+.faq-item {
+	border: 2px solid $color__green;
+	border-radius: 5px;
+	padding: .5rem;
+	border-spacing: 1rem;
+	margin-bottom: 1rem;
+	width: 40vw;
+
+		a {
+			color: black;
+		}
+}
+
+.answer {
+	border-top: 1px solid $color__green;
+}
+
+.faq-container h1 {
+	text-transform: uppercase;
+}
