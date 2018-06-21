@@ -36,13 +36,16 @@ get_header(); ?>
 <?php echo CFS()->get('activity_location') ?>
 </p>
 
-<h2>
+<h2 class="description">
     <?php
         $description_props = CFS()->get_field_info('description');
         echo $description_props['label'];
     ?>
 </h2>
-<?php echo CFS()->get('description') ?>
+
+<p class="description-paragraph">
+    <?php echo CFS()->get('description') ?>
+</p>
 
 <h2>
     <?php
@@ -51,7 +54,9 @@ get_header(); ?>
     ?>
 </h2>
 
+<p class="location">
 <?php echo CFS()->get('location') ?>
+</p>
 
 <div class="tags">
     <?php

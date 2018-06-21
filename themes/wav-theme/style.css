@@ -444,7 +444,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 1.5rem;
-  font-family: "Oswald Bold", sans-serif; }
+  font-family: "Oswald", sans-serif; }
   @media (min-width: 1080px) {
     h1 {
       font-size: 2.67rem;
@@ -1743,7 +1743,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   background: #72CB7E; }
 
 .single-activity .carousel-container, .single-tribe_events .carousel-container {
-  padding-top: 10rem; }
+  padding-top: 8rem; }
   @media (min-width: 1080px) {
     .single-activity .carousel-container, .single-tribe_events .carousel-container {
       display: -webkit-box;
@@ -1766,11 +1766,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       height: 600px;
       margin-right: 10px; } }
 
-.single-activity img, .single-tribe_events img {
+.single-activity .carousel-cell img, .single-tribe_events .carousel-cell img {
   width: 100%;
-  height: auto; }
+  height: auto;
+  min-height: 300px;
+  min-width: 400px; }
   @media (min-width: 1080px) {
-    .single-activity img, .single-tribe_events img {
+    .single-activity .carousel-cell img, .single-tribe_events .carousel-cell img {
       width: 100%;
       height: auto; } }
 
@@ -1811,11 +1813,18 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   padding: 2%; }
 
 .single-activity .entry-title, .single-tribe_events .entry-title {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-family: "Oswald";
   text-align: center; }
 
 .single-activity .activity-location, .single-tribe_events .activity-location {
-  text-align: center; }
+  text-align: center;
+  font-family: "Tofino";
+  font-size: 1rem; }
+
+.single-activity .description-paragraph, .single-tribe_events .description-paragraph {
+  font-family: "Tofino-Text";
+  font-size: 0.833rem; }
 
 .answer {
   display: none; }

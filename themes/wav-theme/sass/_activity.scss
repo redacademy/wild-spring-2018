@@ -24,7 +24,7 @@
       }
     
     .carousel-container {
-        padding-top: 10rem;
+        padding-top: 8rem;
         @include desktop {
             display: flex;
         }
@@ -46,9 +46,11 @@
         }
     }
 
-    img {
+    .carousel-cell img {
         width: 100%;
         height: auto;
+        min-height: 300px;
+        min-width: 400px;
         @include desktop {
             width: 100%;
             height: auto;
@@ -99,13 +101,28 @@
     }
 
     .entry-title {
-        font-size: 1rem;
+        font-size: $font-size__h1;
+        font-family: $font-family__h1;
         text-align: center;
     }
 
     .activity-location {
         text-align: center;
+        font-family: $font-family__body;
+        font-size: $font-size__body;
     }
+
+    // .description {
+    //     font-size: $font-size__h2;
+    //     font-family: $font-family__h2;
+    // }
+
+    .description-paragraph {
+        font-family: $font-family__body2;
+        font-size: $font-size__body2;
+    }
+
+
    
 }
 
