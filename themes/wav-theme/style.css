@@ -1253,7 +1253,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .tribe-clearfix .tribe-bar-views-option.tribe-bar-views-option-day {
     display: none; }
 
-/*style for icons*/
+/*style for icons copied from tribe-events-full.css*/
 .tribe-select2-results-views span[class^='tribe-icon-'],
 .tribe-bar-views-list span[class^='tribe-icon-'],
 .tribe-bar-view-list a[class*='tribe-icon-'] {
@@ -1266,6 +1266,29 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .tribe-select2-results-views span[class^='tribe-icon-'] {
   display: inline-block;
   min-height: 16px; }
+
+/* Default icon */
+.tribe-select2-results-views span[class^='tribe-icon-'],
+.tribe-bar-views-list span[class^='tribe-icon-'] {
+  background-image: url(../../assets/images/events-bar/icon_calendar_view.svg);
+  background-size: 15px 16px; }
+
+.tribe-select2-results-views span.tribe-icon-list,
+.tribe-bar-views-list span.tribe-icon-list,
+.tribe-bar-view-list span[class^='tribe-icon-'] {
+  background-image: url(../../assets/images/events-bar/icon-list.png);
+  background-size: 15px 10px; }
+
+.tribe-bar-view-list a.tribe-icon-list,
+.tribe-bar-view-list a.tribe-icon-month {
+  background-position: 10px 50%;
+  padding-left: 30px; }
+
+.tribe-select2-results-views .tribe-icon-month,
+.tribe-bar-views-list span.tribe-icon-month,
+.tribe-bar-view-list a.tribe-icon-month {
+  background-image: url(../../assets/images/events-bar/icon_calendar_view.svg);
+  background-size: 15px 16px; }
 
 .button {
   color: white;
@@ -1904,7 +1927,11 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .blog .logo-wav2, .page-template-about .logo-wav2, .post-type-archive-activity .logo-wav2, .single-activity .logo-wav2 {
     display: inline; }
   .blog .logo-wav1, .page-template-about .logo-wav1, .post-type-archive-activity .logo-wav1, .single-activity .logo-wav1 {
-    display: none; } }
+    display: none; }
+  .site-header.dark-header .menu a {
+    color: black; }
+  .site-header.dark-header .menu a:hover {
+    border-bottom: 2px solid black; } }
 
 .widget-area a {
   border-radius: 8rem;

@@ -114,6 +114,7 @@ function wav_starter_scripts() {
 	wp_enqueue_script( 'activity', get_template_directory_uri() . '/build/js/activity.min.js', array('jquery'), '20180616', true );
 	wp_enqueue_script( 'hamburger-script', get_template_directory_uri() . '/build/js/hamburger.min.js', array('jquery'), '20180618', true );
 	wp_enqueue_script( 'submission', get_template_directory_uri() . '/build/js/submission.min.js', array('jquery'), '20180619', true );
+	wp_enqueue_script( 'header-script', get_template_directory_uri() . '/build/js/header.min.js', array('jquery'), '20180621', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

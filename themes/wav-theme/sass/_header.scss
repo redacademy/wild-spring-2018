@@ -56,6 +56,7 @@
         bottom: .5rem;
     }
 
+
     .home, .post-type-archive-tribe_events, .page-id-81, .page-template-contact, {
 
         .site-header {
@@ -88,6 +89,16 @@
 
         .logo-wav1 {
             display: none;
+        }
+    }
+
+    .site-header.dark-header {
+            .menu a {
+                color: black;
+        }
+
+        .menu a:hover {   
+            border-bottom: 2px solid black;
         }
     }
 

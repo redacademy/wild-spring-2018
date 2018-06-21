@@ -10,6 +10,7 @@
       $hamburgerMenu.toggleClass('is-active');
     //   $siteheader.addClass('head2');
     });
+    
   
   })(jQuery);
   
