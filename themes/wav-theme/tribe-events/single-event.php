@@ -1,10 +1,9 @@
 <?php
 /**
  * Single Event Template
- * A single event. This displays the event title, description, meta, and
- * optionally, the Google map for the event.
+ * A single event. This displays the carousel, event title, description, meta the Google map for the event.
  *
- * Override this template in your own theme by creating a file at [your-theme]/tribe-events/single-event.php - This is overriden template
+ * This is an overriden template from  wav-theme/tribe-events/single-event.php
  *
  * @package TribeEventsCalendar
  * @version 4.6.3
