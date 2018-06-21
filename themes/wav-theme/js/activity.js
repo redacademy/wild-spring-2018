@@ -15,7 +15,6 @@
 // external js: flickity.pkgd.js
 
 var $carousel = $('.carousel').flickity({
-  wrapAround: true
 });
 
 var $carouselNav = $('.carousel-nav');

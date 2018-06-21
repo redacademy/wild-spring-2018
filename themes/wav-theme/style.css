@@ -444,7 +444,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 1.5rem;
-  font-family: "Oswald Bold", sans-serif; }
+  font-family: "Oswald", sans-serif; }
   @media (min-width: 1080px) {
     h1 {
       font-size: 2.67rem;
@@ -1253,7 +1253,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .tribe-clearfix .tribe-bar-views-option.tribe-bar-views-option-day {
     display: none; }
 
-/*style for icons*/
+/*style for icons copied from tribe-events-full.css*/
 .tribe-select2-results-views span[class^='tribe-icon-'],
 .tribe-bar-views-list span[class^='tribe-icon-'],
 .tribe-bar-view-list a[class*='tribe-icon-'] {
@@ -1266,6 +1266,29 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .tribe-select2-results-views span[class^='tribe-icon-'] {
   display: inline-block;
   min-height: 16px; }
+
+/* Default icon */
+.tribe-select2-results-views span[class^='tribe-icon-'],
+.tribe-bar-views-list span[class^='tribe-icon-'] {
+  background-image: url(../../assets/images/events-bar/icon_calendar_view.svg);
+  background-size: 15px 16px; }
+
+.tribe-select2-results-views span.tribe-icon-list,
+.tribe-bar-views-list span.tribe-icon-list,
+.tribe-bar-view-list span[class^='tribe-icon-'] {
+  background-image: url(../../assets/images/events-bar/icon-list.png);
+  background-size: 15px 10px; }
+
+.tribe-bar-view-list a.tribe-icon-list,
+.tribe-bar-view-list a.tribe-icon-month {
+  background-position: 10px 50%;
+  padding-left: 30px; }
+
+.tribe-select2-results-views .tribe-icon-month,
+.tribe-bar-views-list span.tribe-icon-month,
+.tribe-bar-view-list a.tribe-icon-month {
+  background-image: url(../../assets/images/events-bar/icon_calendar_view.svg);
+  background-size: 15px 16px; }
 
 .button {
   color: white;
@@ -1723,29 +1746,69 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         margin-left: 2rem;
         margin-right: 2rem; } }
 
+.single-activity .flickity-button, .single-tribe_events .flickity-button {
+  display: none; }
+
+.single-activity .flickity-page-dots, .single-tribe_events .flickity-page-dots {
+  visibility: visible; }
+  @media (min-width: 1080px) {
+    .single-activity .flickity-page-dots, .single-tribe_events .flickity-page-dots {
+      visibility: hidden; } }
+
+.single-activity .flickity-page-dots .dot, .single-tribe_events .flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 1px solid #72CB7E; }
+
+.single-activity .flickity-page-dots .dot.is-selected, .single-tribe_events .flickity-page-dots .dot.is-selected {
+  background: #72CB7E; }
+
 .single-activity .carousel-container, .single-tribe_events .carousel-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 10rem; }
+  padding-top: 8rem; }
+  @media (min-width: 1080px) {
+    .single-activity .carousel-container, .single-tribe_events .carousel-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 .single-activity .double-carousel, .single-tribe_events .double-carousel {
   margin-bottom: 40px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
-          flex-grow: 1; }
+          flex-grow: 1;
+  width: 100%; }
 
 .single-activity .carousel-cell, .single-tribe_events .carousel-cell {
+  height: 300px;
+  width: 100%; }
+  @media (min-width: 1080px) {
+    .single-activity .carousel-cell, .single-tribe_events .carousel-cell {
+      width: 100%;
+      height: 600px;
+      margin-right: 10px; } }
+
+.single-activity .carousel-cell img, .single-tribe_events .carousel-cell img {
   width: 100%;
-  height: 600px;
-  margin-right: 10px; }
+  height: auto;
+  min-height: 300px;
+  min-width: 400px; }
+  @media (min-width: 1080px) {
+    .single-activity .carousel-cell img, .single-tribe_events .carousel-cell img {
+      width: 100%;
+      height: auto; } }
 
 .single-activity .carousel-nav, .single-tribe_events .carousel-nav {
+  display: none;
   height: 100%;
   width: 120px;
   margin-left: 10px;
   max-height: 600px;
   overflow-y: scroll; }
+  @media (min-width: 1080px) {
+    .single-activity .carousel-nav, .single-tribe_events .carousel-nav {
+      display: block; } }
 
 .single-activity .carousel-nav .carousel-cell, .single-tribe_events .carousel-nav .carousel-cell {
   height: auto;
@@ -1755,9 +1818,36 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .single-activity .carousel-nav .carousel-cell.is-nav-selected, .single-tribe_events .carousel-nav .carousel-cell.is-nav-selected {
   background: #f7f7f5; }
 
-.single-activity img, .single-tribe_events img {
-  width: 100%;
-  height: auto; }
+.single-activity .tags-links a::before, .single-tribe_events .tags-links a::before {
+  content: "#"; }
+
+.single-activity .creat-events-button, .single-tribe_events .creat-events-button {
+  background-color: #F9D169;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  text-shadow: none; }
+
+.single-activity .site-content, .single-tribe_events .site-content {
+  padding: 2%; }
+
+.single-activity .entry-title, .single-tribe_events .entry-title {
+  font-size: 1.5rem;
+  font-family: "Oswald";
+  text-align: center; }
+
+.single-activity .activity-location, .single-tribe_events .activity-location {
+  text-align: center;
+  font-family: "Tofino";
+  font-size: 1rem; }
+
+.single-activity .description-paragraph, .single-tribe_events .description-paragraph {
+  font-family: "Tofino-Text";
+  font-size: 0.833rem; }
 
 .answer {
   display: none; }
@@ -1837,7 +1927,11 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .blog .logo-wav2, .page-template-about .logo-wav2, .post-type-archive-activity .logo-wav2, .single-activity .logo-wav2 {
     display: inline; }
   .blog .logo-wav1, .page-template-about .logo-wav1, .post-type-archive-activity .logo-wav1, .single-activity .logo-wav1 {
-    display: none; } }
+    display: none; }
+  .site-header.dark-header .menu a {
+    color: black; }
+  .site-header.dark-header .menu a:hover {
+    border-bottom: 2px solid black; } }
 
 .widget-area a {
   border-radius: 8rem;
