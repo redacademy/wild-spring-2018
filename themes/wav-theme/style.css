@@ -1788,9 +1788,9 @@ object {
     background: transparent; }
   .logo-wav2 {
     display: none; }
-  .blog .logo-wav2, .page-template-about .logo-wav2, .post-type-archive-activity .logo-wav2 {
+  .blog .logo-wav2, .page-template-about .logo-wav2, .post-type-archive-activity .logo-wav2, .single-activity .logo-wav2 {
     display: inline; }
-  .blog .logo-wav1, .page-template-about .logo-wav1, .post-type-archive-activity .logo-wav1 {
+  .blog .logo-wav1, .page-template-about .logo-wav1, .post-type-archive-activity .logo-wav1, .single-activity .logo-wav1 {
     display: none; } }
 
 .widget-area a {
