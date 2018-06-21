@@ -1744,9 +1744,9 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     background: transparent; }
   .logo-wav2 {
     display: none; }
-  .blog .logo-wav2, .page-template-about .logo-wav2, .post-type-archive-activity .logo-wav2 {
+  .blog .logo-wav2, .page-template-about .logo-wav2, .post-type-archive-activity .logo-wav2, .single-activity .logo-wav2 {
     display: inline; }
-  .blog .logo-wav1, .page-template-about .logo-wav1, .post-type-archive-activity .logo-wav1 {
+  .blog .logo-wav1, .page-template-about .logo-wav1, .post-type-archive-activity .logo-wav1, .single-activity .logo-wav1 {
     display: none; } }
 
 .widget-area a {
@@ -2394,13 +2394,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
   opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -2475,8 +2475,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2493,8 +2493,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -2513,8 +2513,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2531,8 +2531,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -2723,8 +2723,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2741,8 +2741,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
