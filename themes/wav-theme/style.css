@@ -1746,29 +1746,67 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         margin-left: 2rem;
         margin-right: 2rem; } }
 
+.single-activity .flickity-button, .single-tribe_events .flickity-button {
+  display: none; }
+
+.single-activity .flickity-page-dots, .single-tribe_events .flickity-page-dots {
+  visibility: visible; }
+  @media (min-width: 1080px) {
+    .single-activity .flickity-page-dots, .single-tribe_events .flickity-page-dots {
+      visibility: hidden; } }
+
+.single-activity .flickity-page-dots .dot, .single-tribe_events .flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 1px solid #72CB7E; }
+
+.single-activity .flickity-page-dots .dot.is-selected, .single-tribe_events .flickity-page-dots .dot.is-selected {
+  background: #72CB7E; }
+
 .single-activity .carousel-container, .single-tribe_events .carousel-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding-top: 10rem; }
+  @media (min-width: 1080px) {
+    .single-activity .carousel-container, .single-tribe_events .carousel-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 .single-activity .double-carousel, .single-tribe_events .double-carousel {
   margin-bottom: 40px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
-          flex-grow: 1; }
+          flex-grow: 1;
+  width: 100%; }
 
 .single-activity .carousel-cell, .single-tribe_events .carousel-cell {
+  height: 300px;
+  width: 100%; }
+  @media (min-width: 1080px) {
+    .single-activity .carousel-cell, .single-tribe_events .carousel-cell {
+      width: 100%;
+      height: 600px;
+      margin-right: 10px; } }
+
+.single-activity img, .single-tribe_events img {
   width: 100%;
-  height: 600px;
-  margin-right: 10px; }
+  height: auto; }
+  @media (min-width: 1080px) {
+    .single-activity img, .single-tribe_events img {
+      width: 100%;
+      height: auto; } }
 
 .single-activity .carousel-nav, .single-tribe_events .carousel-nav {
+  display: none;
   height: 100%;
   width: 120px;
   margin-left: 10px;
   max-height: 600px;
   overflow-y: scroll; }
+  @media (min-width: 1080px) {
+    .single-activity .carousel-nav, .single-tribe_events .carousel-nav {
+      display: block; } }
 
 .single-activity .carousel-nav .carousel-cell, .single-tribe_events .carousel-nav .carousel-cell {
   height: auto;
@@ -1778,9 +1816,29 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .single-activity .carousel-nav .carousel-cell.is-nav-selected, .single-tribe_events .carousel-nav .carousel-cell.is-nav-selected {
   background: #f7f7f5; }
 
-.single-activity img, .single-tribe_events img {
-  width: 100%;
-  height: auto; }
+.single-activity .tags-links a::before, .single-tribe_events .tags-links a::before {
+  content: "#"; }
+
+.single-activity .creat-events-button, .single-tribe_events .creat-events-button {
+  background-color: #F9D169;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  text-shadow: none; }
+
+.single-activity .site-content, .single-tribe_events .site-content {
+  padding: 2%; }
+
+.single-activity .entry-title, .single-tribe_events .entry-title {
+  font-size: 1rem;
+  text-align: center; }
+
+.single-activity .activity-location, .single-tribe_events .activity-location {
+  text-align: center; }
 
 .answer {
   display: none; }
