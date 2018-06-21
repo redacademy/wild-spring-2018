@@ -1918,7 +1918,11 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .blog .logo-wav2, .page-template-about .logo-wav2, .post-type-archive-activity .logo-wav2, .single-activity .logo-wav2 {
     display: inline; }
   .blog .logo-wav1, .page-template-about .logo-wav1, .post-type-archive-activity .logo-wav1, .single-activity .logo-wav1 {
-    display: none; } }
+    display: none; }
+  .site-header.dark-header .menu a {
+    color: black; }
+  .site-header.dark-header .menu a:hover {
+    border-bottom: 2px solid black; } }
 
 .widget-area a {
   border-radius: 8rem;
