@@ -21,6 +21,7 @@ get_header();
 <div id="tribe-events-pg-template" class="tribe-events-pg-template">
 	<?php tribe_events_before_html(); ?>
 	<div class="container">
+		<button>create an event</button>
 	<?php tribe_get_view(); ?>
 	<?php tribe_events_after_html(); ?>
 </div> <!-- #tribe-events-pg-template -->
