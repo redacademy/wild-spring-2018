@@ -33,6 +33,7 @@ get_header(); ?>
 					<?php endwhile; // End of the loop. ?>
 
 					<section class="faq" id="faq">
+					
 					</section>
 
 					<div class="contact-button2">

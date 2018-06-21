@@ -68,7 +68,7 @@
     &.green-button{
         background-color: $color__green;
     }
-    &.yellow-button{
+    &.contact-button1{
         background-color: $color__yellow;
         }
     &.blue-button{
@@ -81,9 +81,9 @@
     // grid-template-columns: 1fr 1fr;
     // grid-gap: 1rem;
 }
-// .tribe-bar-date-filter{
-//     display:none;
-// }
+.tribe-bar-date-filter{
+    display:none;
+}
 .tribe-bar-search-filter{
     margin-left:  1rem;
     border: 1px solid green;
