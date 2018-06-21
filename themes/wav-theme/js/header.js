@@ -7,8 +7,9 @@ if($('body').hasClass('home') || $('body').hasClass('page-template-contact')||$(
 
 $(window).scroll(function(){
     var yPos=$(window).scrollTop();
+    var width = $('body').width();
 
-    if (yPos<bannerHeight, width>1060){
+    if (yPos<bannerHeight && width > 1060){
         $('.site-header').addClass('light-header').removeClass('dark-header');
         $('.logo-wav2').css('display','none');
         $('.logo-wav1').css('display','block');
