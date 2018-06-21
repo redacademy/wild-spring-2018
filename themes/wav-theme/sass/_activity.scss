@@ -1,16 +1,49 @@
 .single-activity, .single-tribe_events  {
+
     .carousel-cell {
-        width: 25%;
-        height: auto;
-        
+        width: 100%;
+        height: 200px;
     }
 
+    .carousel-nav {
+        display: none;
+    }
+
+    .carousel-main {
+        padding-top: 4rem;
+    }
+
+    .flickity-page-dots {
+        visibility: visible;
+    }
+
+    .carousel-nav .carousel-cell.is-nav-selected {
+        background: #ED2;
+    }
+
+    .flickity-page-dots .dot {
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+        background: transparent;
+        border: 1px solid $color__green;
+    }
+
+    .flickity-page-dots .dot.is-selected {
+        background: $color__green;
+      }
+
+    .tags-links {
+        a::before {
+            content: "#"
+        }
+    }
+
+    
 }
+    
+    
 
 
 
 
-
-.carousel-nav .carousel-cell.is-nav-selected {
-    background: #ED2;
-  }
