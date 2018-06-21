@@ -4,7 +4,6 @@
  *
  * @package WAV_Starter_Theme
  */
-
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
@@ -25,7 +24,7 @@
 				<div class="site-branding">
 				<div class="logo">
 						<a href="<?php echo home_url(); ?>">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/wav-logo-white.svg'; ?>" class="logo-wav" alt="Wav Logo" />
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/wav-logo-white.svg'; ?>" class="logo-wav1" alt="Wav Logo" />
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/wav-logo.svg'; ?>" class="logo-wav2" alt="Wav Logo" />
 						</a>	
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

@@ -7,8 +7,8 @@
 
 get_header(); ?>
 
-<section>
-    <div class="carousel-main">
+<section class="carousel-container">
+    <div class="carousel double-carousel carousel-main">
         <?php $loop = CFS()->get( 'activity_image_loop' );
         foreach ( $loop as $row ) {?>
             <div class="carousel-cell">
@@ -51,18 +51,19 @@ get_header(); ?>
 
 <?php echo CFS()->get('location') ?>
 
-<footer class="entry-footer">
+<div class="tags">
     <?php
     $tags_list = get_the_tag_list( '', esc_html( ' ' ) );
     if ( $tags_list ) {
     printf( '<span class="tags-links">' . esc_html( 'Tags  %1$s' ) . '</span>', $tags_list ); // WPCS: XSS OK.
     }                                
     ?>
-</footer><!-- .entry-footer -->
+</div>
 
+<?php echo CFS()->get('maps') ?>
 
-
-
-
+<p>
+<input type="submit" value="Creat Events" class="creat-events-button">
+</p>
 
 <?php get_footer(); ?>
