@@ -110,9 +110,18 @@
               }
             .activities-posts-single{
                 border: 1px solid $color__green;
+                .activities-posts-single-text{
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: auto;
+                    p{
+                        flex-grow: 1;
+                    }
+                }
             }
         }
-        .button.yellow-button.activities-button{
+        .button.contact-button1.activities-button{
             margin: 2rem auto;
             max-width: 80%;
         }
@@ -214,7 +223,7 @@
             &.green-button{
                 background-color: $color__green;
             }
-            &.yellow-button{
+            &.contact-button1{
                 background-color: $color__yellow;
                 }
             &.blue-button{

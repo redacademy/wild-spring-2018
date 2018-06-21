@@ -21,15 +21,24 @@ $more = false;
 ?>
 
 <div class="tribe-events-loop">
+	<?php
+	$lastDate = '';
+	while ( have_posts() ) : the_post();
+		do_action( 'tribe_events_inside_before_loop' );
 
-	<?php while ( have_posts() ) : the_post(); ?>
-		<?php do_action( 'tribe_events_inside_before_loop' ); ?>
+		/// Get the day header ///
+		$date = DateTime::createFromFormat("Y-m-d H:i:s", $post->EventStartDate);
+		$currentDate = $date->format("M d, Y");
+		if ($currentDate != $lastDate)
+		{
+			if ($lastDate != '') echo('</div>');
+			echo('<h2 class="tribe-events-list-separator-month"><span>'.$date->format("M d, Y").'</span></h2>');
+			echo('<div class="same-date-events-container">');
+			$lastDate = $currentDate;
+		}
+		//tribe_events_list_the_date_headers();
 
-		<!-- Month / Year Headers -->
-		<?php tribe_events_list_the_date_headers(); ?>
-
-		<!-- Event  -->
-		<?php
+		/// Event  ///
 		$post_parent = '';
 		if ( $post->post_parent ) {
 			$post_parent = ' data-parent-post-id="' . absint( $post->post_parent ) . '"';
@@ -52,6 +61,8 @@ $more = false;
 
 
 		<?php do_action( 'tribe_events_inside_after_loop' ); ?>
-	<?php endwhile; ?>
+	<?php endwhile;
+	if ($lastDate != '') echo('</div>');
+	?>
 
 </div><!-- .tribe-events-loop -->
