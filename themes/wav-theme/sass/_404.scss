@@ -1,0 +1,13 @@
+.error404 {
+    .not-found{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .page-content div{
+        width: 800px;
+        border: 2px solid $color__green;
+        
+    }
+
+}

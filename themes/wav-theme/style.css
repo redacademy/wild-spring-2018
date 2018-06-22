@@ -3110,3 +3110,17 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         margin: 0px 30px; }
       .site-footer i:before {
         font-size: 1.5rem; } }
+
+.error404 .not-found {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto; }
+
+.error404 .page-content div {
+  width: 800px;
+  border: 2px solid #72CB7E; }
