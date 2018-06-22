@@ -10,7 +10,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-            <h1 class="entry-title">Our Blog hello</h1>
+            <h1 class="entry-title">Our Blog</h1>
 
             <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
                 <fieldset>
@@ -63,7 +63,7 @@ get_header(); ?>
                 printf( '<span class="tags-links">' . esc_html( 'Tagged &rarr; %1$s' ) . '</span>', $tags_list ); // WPCS: XSS OK.
                 }
                 ?>
-                <a href="<?php the_permalink(); ?>"class="journal-button">See Details</a>            
+                <a href="<?php the_permalink(); ?>"class="blog-button">See Details</a>            
 
 			<?php endwhile; ?>
 
