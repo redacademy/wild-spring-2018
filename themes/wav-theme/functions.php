@@ -170,8 +170,8 @@ function wav_tribe_meta_event_tags( $label = null, $separator = ' ', $echo = tru
 function tribe_custom_theme_text ( $translation, $text, $domain ) {
 
 	$custom_text = array(
-		'Keyword' => 'search by tags',
-		'Date' => 'date'
+		'Keyword' => 'Search by tags',
+		'Date' => 'Date'
 	);
 	// If this text domain starts with "tribe-", "the-events-", or "event-" and we have replacement text
     	if( (strpos($domain, 'tribe-') === 0 || strpos($domain, 'the-events-') === 0 || strpos($domain, 'event-') === 0) && array_key_exists($translation, $custom_text) ) {
