@@ -1,0 +1,33 @@
+.site-footer{
+    display: none;
+    
+    @include desktop{
+        background-color: $color__green;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        padding: 50px;
+        .site-info, .widget-area{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+        .widget{
+            margin: 0;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-size: 1.8rem;
+        }
+        a{
+            color: $color__green;
+            background-color: white;
+            padding: 35px;
+        }
+    }
+
+
+}
