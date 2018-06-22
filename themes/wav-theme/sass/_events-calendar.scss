@@ -3,9 +3,13 @@
 Please check the Skeleton style from Events/Setting/Display in dashboard and then this stylesheet will work.
 --------------------------------------------------------------*/
 .tribe-events-before-html{
-    p{
-        margin-top: 0;
-        padding-top:0;
+    display: none;
+    @include tablet{
+        display: block;
+        p{
+            margin-top: 0;
+            padding-top:0;
+        }
     }
 }
 #tribe-events-pg-template.tribe-events-pg-template {
@@ -20,10 +24,12 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     .tribe-events-button{
         display: none;
     }
-    .tribe-events-loop{
+    .tribe-events-loop {
+        margin: 0 1rem;
         .same-date-events-container{
             @include tablet{
                 display:flex;
+                flex-wrap: wrap;
             }
         }
         .tribe-events-list-event-description a{
@@ -57,16 +63,24 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     max-width: 1200px;
     margin: 0 auto;
     .tribe-events-page-title{
+    text-align: center;
+    @include tablet{
+    text-align:  left;
     transform: translateY(-300px);
     margin-left: 1rem;
-    @include desktop{
-        transform: translateY(-250px);
     }
-    color: white;
+    @include desktop{
+        text-align:  left;
+        transform: translateY(-250px);
+        margin-left: 1rem;
+    }
+    color:black;
+    @include tablet{
+        color: white;
+    }
     font-family: 'Oswald';
     font-size: 48px;
     font-weight: bolder;
-    text-align:  left;
     }
     &.tribe-bar-filters-inner{
         display: flex;
@@ -77,7 +91,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         // justify-content: space-between;
         // width: 100%;
         #tribe-bar-views{
-            order:1;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            order:-1;
+            @include tablet{
+                order:1;
+            }
+            margin: 0 1rem;
             ul{
                 padding-left: 0;
                 margin-left:0;
@@ -85,12 +105,15 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         }
         .tribe-bar-filters{
             order:-1;
+            margin: 0 1rem;
             .label-tribe-bar-date, .label-tribe-bar-search{
                 display:none;
             }
         }
         .tribe-bar-search-filter, .tribe-bar-date-filter{
             border:1px solid $color__green;
+            border-radius: 10px;
+            margin: 0.5rem 1rem;
             input[type=email], input[type=password], input[type=search], input[type=text], input[type=url]{
                 // border:1px solid $color__green;
                 // border-radius: 25%;
@@ -137,7 +160,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .tribe-select2-results-views span.tribe-icon-list,
 .tribe-bar-views-list span.tribe-icon-list,
 .tribe-bar-view-list span[class^='tribe-icon-'] {
-	background-image: url(../../assets/images/events-bar/icon-list.png);
+	background-image: url(../../assets/images/events-bar/icon_unselected_list_wiew.svg);
 	background-size: 15px 10px;
 }
 
@@ -154,26 +177,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 	background-size: 15px 16px;
 }
 
-// .tribe-select2-results-views span.tribe-icon-week, .tribe-bar-views-list span.tribe-icon-week {
-// 	background-image: url(../../assets/images/events-bar/icon-week.png);
-// 	background-size: 15px 16px;
-// }
-
-// .tribe-select2-results-views span.tribe-icon-day, .tribe-bar-views-list span.tribe-icon-day {
-// 	background-image: url(../../assets/images/events-bar/icon-day.png);
-// 	background-size: 15px 16px;
-// }
-
-// .tribe-select2-results-views span.tribe-icon-photo, .tribe-bar-views-list span.tribe-icon-photo {
-// 	background-image: url(../../assets/images/events-bar/icon-photo.png);
-// 	background-size: 15px 14px;
-// }
-
-// .tribe-select2-results-views span.tribe-icon-map, .tribe-bar-views-list span.tribe-icon-map {
-// 	background-image: url(../../assets/images/events-bar/icon-map.png);
-// 	background-position: 2px 50%;
-// 	background-size: 12px 16px;
-// }
 .button{
     color: white;
     padding: 10px 30px;
@@ -216,4 +219,4 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 // }
 // .tribe-bar-views-inner{
 //     background-color: white;
-// }
+// }s

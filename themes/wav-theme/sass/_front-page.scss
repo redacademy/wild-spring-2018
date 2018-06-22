@@ -157,6 +157,7 @@
               }
             .tags-list{
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: center;
                 padding-left: 0;
                 margin: 0 auto;
@@ -166,9 +167,18 @@
                 li{
                     border:1px solid $color__blue;
                     border-radius: 25%;
-                    margin: auto;
+                    margin: 0.5rem;
                     padding: 0.5rem;
                     min-width: 100px;
+                    a{
+                        color:black;
+                        &:visited{
+                            color:black;
+                        }
+                        &:hover{
+                            color:black;
+                        }
+                    }
                 }
             }
         }

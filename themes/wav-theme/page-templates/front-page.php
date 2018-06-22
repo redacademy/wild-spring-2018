@@ -82,14 +82,14 @@ get_header(); ?>
                 echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_post_thumbnail( $event, 'large').'</a></div>');
                 echo('<h3 class="entry-title"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_title( $event).'</a></h3>' );
                 // echo('<p>'.$event->post_content.'</p>');
-                echo('<p>'.get_the_excerpt($event).'</p>');
                 echo('<p>'.tribe_get_start_date($event).'<p>');
+                echo('<p>'.get_the_excerpt($event).'</p>');
                 //tribe_meta_event_tags( sprintf( esc_html__( '%s Tags:', 'the-events-calendar' ), tribe_get_event_label_singular() ), ', ');
 
                     $tags = wp_get_post_tags($event->ID);
                     echo('<ul class="tags-list">');
                          foreach ( $tags as $tag ) {
-                            echo('<a href="tag/'.$tag->slug.'"><li> #'.$tag->name.'</li></a>');
+                            echo('<li><a href="tag/'.$tag->slug.'"> #'.$tag->name.'</a></li>');
                          }
                     echo('</ul>');
 
@@ -103,7 +103,7 @@ get_header(); ?>
                     <a href=<?php echo get_post_type_archive_link( 'tribe_event' ) ?>>create events</a>
                     </div>
                     <div class="button blue-button">
-                            <a href=<?php echo get_post_type_archive_link( 'tribe_event' ) ?>>find events</a>
+                            <a href=<?php echo get_post_type_archive_link( 'tribe_events' ) ?>>find events</a>
                     </div>
                 </div>
 
@@ -123,23 +123,23 @@ get_header(); ?>
                             <h3><?php echo CFS()->get('front_page_wav_what_is_wav_about_header')?></h3>
 							<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_about_img')?>">
                             <p><?php echo CFS()->get('front_page_wav_what_is_wav_about_text')?></p>
-                            <a div="read-more" href="#">learn more &rsaquo; </a>
+                            <a div="read-more" href="<?php echo get_permalink( get_page_by_title( 'About' ) ) ?>">learn more &rsaquo; </a>
                         </div>
                         <div id="tab-2" class="single-festival-container tab-content">
                             <h3><?php echo CFS()->get('front_page_wav_what_is_wav_festival_header')?></h3>
 							<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_festival_img')?>">
 							<p><?php echo CFS()->get('front_page_wav_what_is_wav_festival_text')?></p>
-                            <a class="read-more" href="#">learn more &rsaquo; </a>
+                            <a class="read-more" href="<?php echo get_post_type_archive_link( 'festivals' ) ?>">learn more &rsaquo; </a>
                         </div>
                         <div id="tab-3" class="single-school-container tab-content">
 						<h3><?php echo CFS()->get('front_page_wav_what_is_wav_school_header')?></h3>
 						<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_school_img')?>">
 						<p><?php echo CFS()->get('front_page_wav_what_is_wav_school_text')?></p>
-                            <a class="read-more" href="#">learn more &rsaquo; </a>
+                        <a href="<?php echo get_post_type_archive_link( 'posts' ) ?>">learn more &rsaquo; </a>
                         </div>
                 </div>
                 <div class="button contact-button1">
-                        <a href="#">find more</a>
+                        <a href="<?php echo get_permalink( get_page_by_title( 'About' ) ) ?>">find more</a>
                 </div>
             </section><!--end of what is WAV section-->
             <!--social media feeds-->
