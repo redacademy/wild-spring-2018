@@ -35,7 +35,7 @@ get_header(); ?>
 
                 <div class="videoAboutWav"> <!--Container for a video-->
 
-                    <div><?php echo esc_url(CFS()->get( 'video_about_test' ));?></div>
+                    <div><?php echo wp_kses(CFS()->get( 'video_about_test' ));?></div>
 
                     <p><?php echo esc_url(CFS()->get( 'text_about_video' )); ?></p>
 
