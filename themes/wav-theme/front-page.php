@@ -42,7 +42,7 @@ get_header(); ?>
                                 <p><?php echo CFS()->get('description')?></p>
 
                                 <div class="read-more">
-                            <a href="<?php echo esc_url(get_permalink())?>" class="button-green">see details &rsaquo;</a>
+                            <a href="<?php echo esc_url(get_permalink())?>" class="button-green">See details &rsaquo;</a>
                         </div>
 							</div><!-- .activities-posts-single-text-->
                         </article><!-- activities-posts-single -->
