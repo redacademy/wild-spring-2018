@@ -1281,7 +1281,10 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter, .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter {
     border: 1px solid #72CB7E;
     border-radius: 10px;
-    margin: 0.5rem 1rem; }
+    margin: 0.5rem 1rem;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
     .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=email], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=password], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=search], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=text], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=url], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=email], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=password], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=search], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=text], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=url] {
       border: 0.1px solid white;
       margin: 0.5rem 0;
@@ -1353,8 +1356,17 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
+.tribe-bar-date-filter {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
 #tribe-bar-collapse-toggle {
   display: none; }
+
+@media (min-width: 620px) {
+  .number-of-events-day {
+    display: none; } }
 
 .tribe_events-template-default.single-tribe_events .tribe-events-before-html {
   display: none; }
