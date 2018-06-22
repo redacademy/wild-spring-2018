@@ -63,7 +63,7 @@ get_header(); ?>
                 printf( '<span class="tags-links">' . esc_html( 'Tagged &rarr; %1$s' ) . '</span>', $tags_list ); // WPCS: XSS OK.
                 }
                 ?>
-                <a href="<?php the_permalink(); ?>"class="journal-button">See Details</a>            
+                <a href="<?php the_permalink(); ?>"class="blog-button">See Details</a>            
 
 			<?php endwhile; ?>
 
