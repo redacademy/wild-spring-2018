@@ -19,7 +19,8 @@ get_header(); ?>
 	</section><!--end of banner-->
 <!--activity ideas-->
 <section class="activities">
-			<h2>Seasonal Activity Ideas</h2>
+            <h2>Seasonal Activity Ideas</h2>
+            
 
 				<div class="activities-container carousel-front-page" data-flickity='{ "watchCSS": true }'>
 					<?php

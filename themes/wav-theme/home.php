@@ -10,7 +10,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-            <h1 class="entry-title">Our Blog</h1>
+            <h1 class="entry-title">Our Blog hello</h1>
 
             <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
                 <fieldset>
