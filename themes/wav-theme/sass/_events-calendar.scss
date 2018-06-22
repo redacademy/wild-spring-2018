@@ -114,6 +114,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
             border:1px solid $color__green;
             border-radius: 10px;
             margin: 0.5rem 1rem;
+            flex-grow: 1;
             input[type=email], input[type=password], input[type=search], input[type=text], input[type=url]{
                 // border:1px solid $color__green;
                 // border-radius: 25%;
@@ -203,9 +204,9 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     justify-content: space-between;
     flex-wrap: wrap;
 }
-// .tribe-bar-date-filter{
-//     display:none;
-// }
+.tribe-bar-date-filter{
+    flex-grow: 1;
+}
 #tribe-bar-collapse-toggle{
     display:none;
     // background-color: white;
