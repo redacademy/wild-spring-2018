@@ -1197,29 +1197,36 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         display: -ms-flexbox;
         display: flex;
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap; } }
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      border: 1px solid #72CB7E;
+      padding: 1rem; }
+      @media (min-width: 620px) {
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item {
+          width: 33.33%; } }
+      #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin-top: auto; }
     #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .tribe-events-list-event-description a {
       margin-top: auto;
       color: #72CB7E; }
       #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .tribe-events-list-event-description a:hover:visited {
         color: #72CB7E; }
-    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .type-tribe_events {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      border: 1px solid #72CB7E;
-      padding: 1rem;
-      margin-top: auto; }
-      @media (min-width: 620px) {
-        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .type-tribe_events {
-          width: 33%; } }
   #tribe-events-pg-template.tribe-events-pg-template .tribe-events-sub-nav {
     display: none; }
 
