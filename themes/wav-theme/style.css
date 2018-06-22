@@ -994,6 +994,7 @@ object {
       .home section h3 a:visited, .home section h3 a:hover {
         color: black; }
   .home section .read-more {
+    margin-top: auto;
     text-align: right; }
     .home section .read-more a {
       font-size: 24px;
@@ -1022,7 +1023,14 @@ object {
     visibility: hidden; }
   .home section .activities-container .carousel-front-page-cell {
     margin: 0 1rem;
-    width: 100%; }
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
     @media (min-width: 620px) {
       .home section .activities-container .carousel-front-page-cell {
         margin: 0 1rem;
@@ -1064,9 +1072,15 @@ object {
   .home section .events-container .flickity-page-dots {
     visibility: hidden; }
   .home section .events-container .carousel-front-page-cell {
-    width: 66%;
     margin: 0 1rem;
-    width: 100%; }
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
     @media (min-width: 620px) {
       .home section .events-container .carousel-front-page-cell {
         margin: 0 1rem;
@@ -1197,29 +1211,36 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         display: -ms-flexbox;
         display: flex;
         -ms-flex-wrap: wrap;
-            flex-wrap: wrap; } }
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      border: 1px solid #72CB7E;
+      padding: 1rem; }
+      @media (min-width: 620px) {
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item {
+          width: 33.33%; } }
+      #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin-top: auto; }
     #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .tribe-events-list-event-description a {
       margin-top: auto;
       color: #72CB7E; }
       #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .tribe-events-list-event-description a:hover:visited {
         color: #72CB7E; }
-    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .type-tribe_events {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      border: 1px solid #72CB7E;
-      padding: 1rem;
-      margin-top: auto; }
-      @media (min-width: 620px) {
-        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .type-tribe_events {
-          width: 33%; } }
   #tribe-events-pg-template.tribe-events-pg-template .tribe-events-sub-nav {
     display: none; }
 
@@ -3111,6 +3132,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       .site-footer i:before {
         font-size: 1.5rem; } }
 
+<<<<<<< HEAD
 .post-type-archive-activity .flickity-page-dots {
   visibility: visible; }
   @media (min-width: 1080px) {
@@ -3155,3 +3177,18 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 
 .post-type-archive-activity .site-content {
   padding: 2%; }
+=======
+.error404 .not-found {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto; }
+
+.error404 .page-content div {
+  width: 800px;
+  border: 2px solid #72CB7E; }
+>>>>>>> 3cd6d49fcde5cf0ea8b97dd3a7028189a36313c9

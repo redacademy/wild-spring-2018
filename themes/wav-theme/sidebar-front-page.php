@@ -10,6 +10,6 @@ if ( ! is_active_sidebar( 'sidebar-front-page' ) ) {
 }
 ?>
 
-<div id="secondary" class="widget-aa" role="complementary">
+<div id="secondary" class="widget-area" role="complementary">
 	<?php dynamic_sidebar( 'sidebar-front-page' ); ?>
 </div><!-- #secondary -->

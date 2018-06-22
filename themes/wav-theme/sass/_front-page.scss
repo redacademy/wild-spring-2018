@@ -66,6 +66,7 @@
               }
           }
           .read-more{
+            margin-top: auto;
             text-align: right;
             a{
              font-size: 24px;
@@ -103,6 +104,8 @@
             .carousel-front-page-cell {
                 margin: 0 1rem;
                 width: 100%;
+                display: flex;
+                flex-direction: column;
                 @include tablet{
                     margin: 0 1rem;
                     width: 50%;
@@ -147,9 +150,11 @@
             visibility: hidden;
             }
             .carousel-front-page-cell {
-                width: 66%;
+                // width: 66%;
                 margin: 0 1rem;
                 width: 100%;
+                display: flex;
+                flex-direction: column;
                 @include tablet{
                     margin: 0 1rem;
                     width: 50%;

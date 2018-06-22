@@ -30,27 +30,33 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
             @include tablet{
                 display:flex;
                 flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .event-item{
+                display: flex;
+                // flex-direction: column;
+                // justify-content: space-between;
+                border:1px solid $color__green;
+                padding: 1rem;
+                // margin-top: auto;
+                @include tablet{
+                    width: 33.33%;
+                }
+                .type-tribe_events{
+                    display:flex;
+                    flex-direction:column;
+                    justify-content: center;
+                    margin-top: auto;
+                }
             }
         }
         .tribe-events-list-event-description a{
-                margin-top: auto;
-                color:$color__green;
-                &:hover:visited{
-                    color:$color__green;;
-                }
-        }
-        .type-tribe_events{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            border:1px solid $color__green;
-            padding: 1rem;
             margin-top: auto;
-            @include tablet{
-                width: 33%;
+            color:$color__green;
+            &:hover:visited{
+                color:$color__green;;
             }
-
-        }
+    }
     }
     .tribe-events-sub-nav{
         display: none;
