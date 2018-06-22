@@ -37,7 +37,7 @@ get_header(); ?>
 
                     <div><?php echo esc_url(CFS()->get( 'video_about_test' ));?></div>
 
-                    <p><?php echo esc_html(CFS()->get( 'text_about_video' )); ?></p>
+                    <p><?php echo esc_url(CFS()->get( 'text_about_video' )); ?></p>
 
                 </div>
 
