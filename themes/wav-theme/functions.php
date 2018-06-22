@@ -12,6 +12,8 @@ if ( ! function_exists( 'wav_starter_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  */
+
+
 function wav_starter_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -161,3 +163,20 @@ function wav_tribe_meta_event_tags( $label = null, $separator = ' ', $echo = tru
 		return $list;
 	}
 }
+
+/*
+* Change the value of the placeholder in the tribe event bar. src:https://theeventscalendar.com/knowledgebase/change-the-wording-of-any-bit-of-text-or-string/
+*/
+function tribe_custom_theme_text ( $translation, $text, $domain ) {
+
+	$custom_text = array(
+		'Keyword' => 'search by tags',
+		'Date' => 'date'
+	);
+	// If this text domain starts with "tribe-", "the-events-", or "event-" and we have replacement text
+    	if( (strpos($domain, 'tribe-') === 0 || strpos($domain, 'the-events-') === 0 || strpos($domain, 'event-') === 0) && array_key_exists($translation, $custom_text) ) {
+		$translation = $custom_text[$translation];
+	}
+    return $translation;
+}
+add_filter('gettext', 'tribe_custom_theme_text', 20, 3);

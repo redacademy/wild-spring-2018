@@ -21,10 +21,6 @@ class FAQs {
 		
 	}
 	
-	protected static function enqueue_files() {
-		wp_enqueue_script('jquery');
-			
-		
-	}
+	protected static function enqueue_files() {}
 }
 ?>

@@ -1075,6 +1075,8 @@ object {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1086,9 +1088,15 @@ object {
     .home section .events-container .tags-list li {
       border: 1px solid #40B2C4;
       border-radius: 25%;
-      margin: auto;
+      margin: 0.5rem;
       padding: 0.5rem;
       min-width: 100px; }
+      .home section .events-container .tags-list li a {
+        color: black; }
+        .home section .events-container .tags-list li a:visited {
+          color: black; }
+        .home section .events-container .tags-list li a:hover {
+          color: black; }
   @media (min-width: 620px) {
     .home section .about-container {
       margin: 0 auto;
@@ -1163,9 +1171,14 @@ object {
 # stylesheet for events calendar view and single calendar view.
 Please check the Skeleton style from Events/Setting/Display in dashboard and then this stylesheet will work.
 --------------------------------------------------------------*/
-.tribe-events-before-html p {
-  margin-top: 0;
-  padding-top: 0; }
+.tribe-events-before-html {
+  display: none; }
+  @media (min-width: 620px) {
+    .tribe-events-before-html {
+      display: block; }
+      .tribe-events-before-html p {
+        margin-top: 0;
+        padding-top: 0; } }
 
 #tribe-events-pg-template.tribe-events-pg-template {
   margin: 0 auto;
@@ -1176,33 +1189,37 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       color: black; }
   #tribe-events-pg-template.tribe-events-pg-template .tribe-events-button {
     display: none; }
-  @media (min-width: 620px) {
-    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container {
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop {
+    margin: 0 1rem; }
+    @media (min-width: 620px) {
+      #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .tribe-events-list-event-description a {
+      margin-top: auto;
+      color: #72CB7E; }
+      #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .tribe-events-list-event-description a:hover:visited {
+        color: #72CB7E; }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .type-tribe_events {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; } }
-  #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .tribe-events-list-event-description a {
-    margin-top: auto;
-    color: #72CB7E; }
-    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .tribe-events-list-event-description a:hover:visited {
-      color: #72CB7E; }
-  #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .type-tribe_events {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    border: 1px solid #72CB7E;
-    padding: 1rem;
-    margin-top: auto; }
-    @media (min-width: 620px) {
-      #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .type-tribe_events {
-        width: 33%; } }
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      border: 1px solid #72CB7E;
+      padding: 1rem;
+      margin-top: auto; }
+      @media (min-width: 620px) {
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .type-tribe_events {
+          width: 33%; } }
   #tribe-events-pg-template.tribe-events-pg-template .tribe-events-sub-nav {
     display: none; }
 
@@ -1213,18 +1230,26 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   max-width: 1200px;
   margin: 0 auto; }
   .tribe-clearfix .tribe-events-page-title {
-    -webkit-transform: translateY(-300px);
-            transform: translateY(-300px);
-    margin-left: 1rem;
-    color: white;
+    text-align: center;
+    color: black;
     font-family: 'Oswald';
     font-size: 48px;
-    font-weight: bolder;
-    text-align: left; }
+    font-weight: bolder; }
+    @media (min-width: 620px) {
+      .tribe-clearfix .tribe-events-page-title {
+        text-align: left;
+        -webkit-transform: translateY(-300px);
+                transform: translateY(-300px);
+        margin-left: 1rem; } }
     @media (min-width: 1080px) {
       .tribe-clearfix .tribe-events-page-title {
+        text-align: left;
         -webkit-transform: translateY(-250px);
-                transform: translateY(-250px); } }
+                transform: translateY(-250px);
+        margin-left: 1rem; } }
+    @media (min-width: 620px) {
+      .tribe-clearfix .tribe-events-page-title {
+        color: white; } }
   .tribe-clearfix.tribe-bar-filters-inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1232,20 +1257,34 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
   .tribe-clearfix #tribe-events-bar #tribe-bar-views {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1; }
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin: 0 1rem; }
+    @media (min-width: 620px) {
+      .tribe-clearfix #tribe-events-bar #tribe-bar-views {
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1; } }
     .tribe-clearfix #tribe-events-bar #tribe-bar-views ul {
       padding-left: 0;
       margin-left: 0; }
   .tribe-clearfix #tribe-events-bar .tribe-bar-filters {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
-            order: -1; }
+            order: -1;
+    margin: 0 1rem; }
     .tribe-clearfix #tribe-events-bar .tribe-bar-filters .label-tribe-bar-date, .tribe-clearfix #tribe-events-bar .tribe-bar-filters .label-tribe-bar-search {
       display: none; }
   .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter, .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter {
-    border: 1px solid #72CB7E; }
+    border: 1px solid #72CB7E;
+    border-radius: 10px;
+    margin: 0.5rem 1rem;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
     .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=email], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=password], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=search], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=text], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=url], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=email], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=password], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=search], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=text], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=url] {
       border: 0.1px solid white;
       margin: 0.5rem 0;
@@ -1276,7 +1315,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .tribe-select2-results-views span.tribe-icon-list,
 .tribe-bar-views-list span.tribe-icon-list,
 .tribe-bar-view-list span[class^='tribe-icon-'] {
-  background-image: url(../../assets/images/events-bar/icon-list.png);
+  background-image: url(../../assets/images/events-bar/icon_unselected_list_wiew.svg);
   background-size: 15px 10px; }
 
 .tribe-bar-view-list a.tribe-icon-list,
@@ -1317,8 +1356,17 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
+.tribe-bar-date-filter {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
 #tribe-bar-collapse-toggle {
   display: none; }
+
+@media (min-width: 620px) {
+  .number-of-events-day {
+    display: none; } }
 
 .tribe_events-template-default.single-tribe_events .tribe-events-before-html {
   display: none; }
@@ -1331,6 +1379,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-event-description.tribe-events-content {
     text-align: left;
     padding: 0 4%; }
+    .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-event-description.tribe-events-content a {
+      text-align: right; }
   .tribe_events-template-default.single-tribe_events .events-container .single-event-details-title {
     display: none; }
     @media (min-width: 1080px) {
@@ -1420,45 +1470,45 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .page-template-about .aboutWav {
   padding-top: 1.5rem; }
 
-.teamMembers.carousel:after {
+.teamMembers.about-carousel:after {
   content: 'flickity';
   display: none; }
 
 @media (min-width: 620px) {
   .teamMembers {
     /* disable Flickity for large devices */ }
-    .teamMembers.carousel:after {
+    .teamMembers.about-carousel:after {
       content: ''; }
-    .teamMembers.carousel {
+    .teamMembers.about-carousel {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
-.teamMembers .carousel-cell {
+.teamMembers .about-carousel-cell {
   margin: 0 1rem;
   width: 100%; }
   @media (min-width: 620px) {
-    .teamMembers .carousel-cell {
+    .teamMembers .about-carousel-cell {
       margin: 0 1rem;
       width: 90%; } }
 
-.collaborators.carousel:after {
+.collaborators.about-carousel:after {
   content: 'flickity';
   display: none; }
 
 @media (min-width: 620px) {
   .collaborators {
     /* disable Flickity for large devices */ }
-    .collaborators.carousel:after {
+    .collaborators.about-carousel:after {
       content: ''; }
-    .collaborators.carousel {
+    .collaborators.about-carousel {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr; } }
 
-.collaborators .carousel-cell {
+.collaborators .about-carousel-cell {
   margin: 0 1rem;
   width: 100%; }
   @media (min-width: 620px) {
-    .collaborators .carousel-cell {
+    .collaborators .about-carousel-cell {
       margin: 0 1rem;
       width: 90%; } }
 
@@ -1507,24 +1557,24 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .teamMember a, .collaborator a {
   background-color: #72CB7E; }
 
-.festivals.carousel:after {
+.festivals.about-carousel:after {
   content: 'flickity';
   display: none; }
 
 @media (min-width: 620px) {
   .festivals {
     /* disable Flickity for large devices */ }
-    .festivals.carousel:after {
+    .festivals.about-carousel:after {
       content: ''; }
-    .festivals.carousel {
+    .festivals.about-carousel {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
-.festivals .carousel-cell {
+.festivals .about-carousel-cell {
   margin: 0 1rem;
   width: 100%; }
   @media (min-width: 620px) {
-    .festivals .carousel-cell {
+    .festivals .about-carousel-cell {
       margin: 0 1rem;
       width: 90%; } }
 
@@ -1532,24 +1582,24 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   background-color: #F9D169;
   opacity: 0.9; }
 
-.press.carousel:after {
+.press.about-carousel:after {
   content: 'flickity';
   display: none; }
 
 @media (min-width: 620px) {
   .press {
     /* disable Flickity for large devices */ }
-    .press.carousel:after {
+    .press.about-carousel:after {
       content: ''; }
-    .press.carousel {
+    .press.about-carousel {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
-.press .carousel-cell {
+.press .about-carousel-cell {
   margin: 0 1rem;
   width: 100%; }
   @media (min-width: 620px) {
-    .press .carousel-cell {
+    .press .about-carousel-cell {
       margin: 0 1rem;
       width: 90%; } }
 
@@ -3015,3 +3065,48 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     bottom: 0;
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg); }
+
+.site-footer {
+  display: none;
+  margin-top: 100px; }
+  @media (min-width: 1080px) {
+    .site-footer {
+      background-color: #72CB7E;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -ms-flex-line-pack: center;
+          align-content: center;
+      padding: 30px 50px; }
+      .site-footer .site-info, .site-footer .widget-area {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row; }
+      .site-footer .widget {
+        margin: 0; }
+      .site-footer p {
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-size: 1.5rem; }
+      .site-footer a {
+        color: #72CB7E;
+        background-color: white;
+        padding: 20px;
+        margin: 0px 30px; }
+      .site-footer i:before {
+        font-size: 1.5rem; } }
