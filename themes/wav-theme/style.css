@@ -1364,6 +1364,10 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 #tribe-bar-collapse-toggle {
   display: none; }
 
+@media (min-width: 620px) {
+  .number-of-events-day {
+    display: none; } }
+
 .tribe_events-template-default.single-tribe_events .tribe-events-before-html {
   display: none; }
 

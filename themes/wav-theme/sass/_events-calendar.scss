@@ -214,6 +214,11 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     //     color:$color__green;
     // }
 }
+.number-of-events-day{
+    @include tablet{
+        display:none;
+    }
+}
 // #tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option a{
 //     background:none;
 //     border:none;
