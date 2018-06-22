@@ -3017,7 +3017,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
             transform: rotate(-90deg); }
 
 .site-footer {
-  display: none; }
+  display: none;
+  margin-top: 100px; }
   @media (min-width: 1080px) {
     .site-footer {
       background-color: #72CB7E;
@@ -3033,7 +3034,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
               justify-content: space-between;
       -ms-flex-line-pack: center;
           align-content: center;
-      padding: 50px; }
+      padding: 30px 50px; }
       .site-footer .site-info, .site-footer .widget-area {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -3051,8 +3052,11 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         margin: 0;
         padding: 0;
         color: white;
-        font-size: 1.8rem; }
+        font-size: 1.5rem; }
       .site-footer a {
         color: #72CB7E;
         background-color: white;
-        padding: 35px; } }
+        padding: 20px;
+        margin: 0px 30px; }
+      .site-footer i:before {
+        font-size: 1.5rem; } }

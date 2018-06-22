@@ -1,5 +1,6 @@
 .site-footer{
     display: none;
+    margin-top: 100px;
     
     @include desktop{
         background-color: $color__green;
@@ -7,7 +8,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-content: center;
-        padding: 50px;
+        padding: 30px 50px;
         .site-info, .widget-area{
             display: flex;
             align-items: center;
@@ -20,12 +21,18 @@
             margin: 0;
             padding: 0;
             color: white;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
         }
         a{
             color: $color__green;
             background-color: white;
-            padding: 35px;
+            padding: 20px;
+            margin: 0px 30px;
+            
+        }
+        i:before{
+            font-size: 1.5rem;
+           
         }
     }
 
