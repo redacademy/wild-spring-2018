@@ -59,7 +59,7 @@ get_header(); ?>
             <div class="anchor" id="teamJump"></div>
             <section class="theTeam">
                 <h1>The Team</h1>
-                    <div class="teamMembers carousel" data-flickity='{ "watchCSS": true }'>
+                    <div class="teamMembers about-carousel" data-flickity='{ "watchCSS": true }'>
 
                         <?php
                             $args = array( 'post_type' => 'person', 'category_name' => 'team', 'order' => 'ASC', 'posts_per_page' => 4,);
@@ -67,7 +67,7 @@ get_header(); ?>
                         ?>
 
                         <?php foreach ( $team_posts as $post ) : setup_postdata( $post ); ?>
-                            <div class="teamMember carousel-cell">
+                            <div class="teamMember about-carousel-cell">
                                 <!-- <header class="entry-header"> -->
                                     <?php if ( has_post_thumbnail() ) : ?>
                                     <a href="<?php echo esc_url( CFS()->get( 'personal_webpage' )) ?>" alt="Team Image"><?php the_post_thumbnail( 'large' ); ?></a>
@@ -85,7 +85,7 @@ get_header(); ?>
                 <div class="anchor" id="collaboratorsJump"></div>
             <section class="collaborators">
                 <h1>Collaborators</h1>
-                <div class="collaborators carousel" data-flickity='{ "watchCSS": true }'>
+                <div class="collaborators about-carousel" data-flickity='{ "watchCSS": true }'>
 
                  <?php
                     $args = array( 'post_type' => 'person', 'category_name' => 'collaborator', 'order' => 'ASC', 'posts_per_page' => 3,);
@@ -93,7 +93,7 @@ get_header(); ?>
                 ?>
 
                 <?php foreach ( $collaborators_posts as $post ) : setup_postdata( $post ); ?>
-                    <div class="collaborator carousel-cell">
+                    <div class="collaborator about-carousel-cell">
                                 <!-- <header class="entry-header"> -->
                         <?php if ( has_post_thumbnail() ) : ?>
                                     <a href="<?php echo esc_url(CFS()->get( 'personal_webpage' )); ?>" alt="Collaborator Image"><?php the_post_thumbnail( 'large' ); ?></a>
@@ -112,7 +112,7 @@ get_header(); ?>
 
                         <section class="festivals">
                         <h2>Festival History</h2>
-                        <div class="festivals carousel" data-flickity='{ "watchCSS": true }'>
+                        <div class="festivals about-carousel" data-flickity='{ "watchCSS": true }'>
 
                         <?php
                             $args = array( 'post_type' => 'festival', 'order' => 'ASC', 'posts_per_page' => 4);
@@ -120,7 +120,7 @@ get_header(); ?>
                         ?>
 
                         <?php foreach ( $festival_posts as $post ) : setup_postdata( $post ); ?>
-                            <div class="festival carousel-cell">
+                            <div class="festival about-carousel-cell">
                                 <!-- <header class="entry-header"> -->
                                     <?php if ( has_post_thumbnail() ) : ?>
                                     <a href="<?php echo esc_url( get_permalink()) ?>" alt="Festival Image"><?php the_post_thumbnail( 'large' ); ?></a>
@@ -163,7 +163,7 @@ get_header(); ?>
 
                  <section class="press">
                         <h1>Press</h1>
-                        <div class="press carousel" data-flickity='{ "watchCSS": true }'>
+                        <div class="press about-carousel" data-flickity='{ "watchCSS": true }'>
 
                         <?php
                             $args = array( 'post_type' => 'press-item', 'order' => 'ASC', 'posts_per_page' => 4);
@@ -171,7 +171,7 @@ get_header(); ?>
                         ?>
 
                         <?php foreach ( $press_posts as $post ) : setup_postdata( $post ); ?>
-                            <div class="pressItem carousel-cell">
+                            <div class="pressItem about-carousel-cell">
                                 <header class="entry-header">
                                     <?php if ( has_post_thumbnail() ) : ?>
                                     <a href="<?php echo esc_url( CFS()->get( 'external_hyperlink' )); ?>" alt="Press Image"><?php the_post_thumbnail( 'large' ); ?></a>
