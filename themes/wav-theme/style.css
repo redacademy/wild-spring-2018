@@ -1223,7 +1223,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       padding: 1rem; }
       @media (min-width: 620px) {
         #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item {
-          width: 33.33%; } }
+          width: 30%; } }
       #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1231,16 +1231,29 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
-                flex-direction: column;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        margin-top: auto; }
-    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .tribe-events-list-event-description a {
-      margin-top: auto;
-      color: #72CB7E; }
-      #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .tribe-events-list-event-description a:hover:visited {
-        color: #72CB7E; }
+                flex-direction: column; }
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description {
+          margin-top: auto; }
+          #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description .tribe-event-tags {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; }
+            #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description .tribe-event-tags a {
+              border: 1px solid #40B2C4;
+              border-radius: 15px;
+              padding: 0.5rem;
+              margin: 0.2rem; }
+          #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description a {
+            color: black; }
+            #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description a:hover:visited {
+              color: black; }
+            #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description a.tribe-events-read-more {
+              text-align: right;
+              color: #72CB7E; }
+              #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description a.tribe-events-read-more:hover:visited {
+                color: #72CB7E; }
   #tribe-events-pg-template.tribe-events-pg-template .tribe-events-sub-nav {
     display: none; }
 
@@ -1388,6 +1401,10 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 @media (min-width: 620px) {
   .number-of-events-day {
     display: none; } }
+
+.tribe-mobile-container .tribe-mobile-day {
+  border: 1px solid #72CB7E;
+  padding: 1rem; }
 
 .tribe_events-template-default.single-tribe_events .tribe-events-before-html {
   display: none; }
@@ -3132,7 +3149,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       .site-footer i:before {
         font-size: 1.5rem; } }
 
-<<<<<<< HEAD
 .post-type-archive-activity .flickity-page-dots {
   visibility: visible; }
   @media (min-width: 1080px) {
@@ -3177,7 +3193,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 
 .post-type-archive-activity .site-content {
   padding: 2%; }
-=======
+
 .error404 .not-found {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3191,4 +3207,3 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .error404 .page-content div {
   width: 800px;
   border: 2px solid #72CB7E; }
->>>>>>> 3cd6d49fcde5cf0ea8b97dd3a7028189a36313c9

@@ -40,23 +40,44 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
                 padding: 1rem;
                 // margin-top: auto;
                 @include tablet{
-                    width: 33.33%;
+                    width: 30%;
                 }
                 .type-tribe_events{
                     display:flex;
                     flex-direction:column;
-                    justify-content: center;
-                    margin-top: auto;
+                    // justify-content: center;
+                    // margin-top: auto;
+                    .tribe-events-list-event-description{
+                        margin-top: auto;
+                        .tribe-event-tags{ 
+                            display: flex;
+                            flex-wrap: wrap;
+                        a{
+                            border: 1px solid $color__blue;
+                            border-radius: 15px;
+                            padding: 0.5rem;
+                            margin: 0.2rem;
+                        }
+                    }
+                        a{
+                            color:black;
+                            &:hover:visited{
+                                color:black;;
+                            }
+
+                            &.tribe-events-read-more{
+                                text-align: right;
+                                color:$color__green;
+                                &:hover:visited{
+                                    color:$color__green;
+                                }
+                            }
+                    }
+
+                    }
                 }
             }
         }
-        .tribe-events-list-event-description a{
-            margin-top: auto;
-            color:$color__green;
-            &:hover:visited{
-                color:$color__green;;
-            }
-    }
     }
     .tribe-events-sub-nav{
         display: none;
@@ -232,3 +253,10 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 // .tribe-bar-views-inner{
 //     background-color: white;
 // }s
+.tribe-mobile-container{
+    // display:none;
+    .tribe-mobile-day{
+        border: 1px solid $color__green;
+        padding: 1rem;
+    }
+}

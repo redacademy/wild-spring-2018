@@ -95,14 +95,7 @@ add_filter( 'stylesheet_uri', 'wav_starter_minified_css', 10, 2 );
 /**
  * Enqueue scripts and styles.
  */
-add_action( 'wp_enqueue_scripts', 'wptuts_enqueue' );
-function wptuts_enqueue() {
-    wp_register_style('wptuts-jquery-ui-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/south-street/jquery-ui.css');
-    wp_enqueue_style('wptuts-jquery-ui-style');
- 
-    wp_register_script('wptuts-custom-js', get_template_directory_uri() . '/faq/faq.js', 'jquery-ui-accordion', '', true);
-    wp_enqueue_script('wptuts-custom-js');
-}
+
 function wav_starter_scripts() {
 	wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Oswald', false );
 	wp_enqueue_style( 'font-awesome-cdn', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css', array(), '5.0.6' );
@@ -172,7 +165,7 @@ function wav_tribe_meta_event_tags( $label = null, $separator = ' ', $echo = tru
 function tribe_custom_theme_text ( $translation, $text, $domain ) {
 
 	$custom_text = array(
-		'Keyword' => 'Search by tags',
+		'Keyword' => 'Search',
 		'Date' => 'Date'
 	);
 	// If this text domain starts with "tribe-", "the-events-", or "event-" and we have replacement text
