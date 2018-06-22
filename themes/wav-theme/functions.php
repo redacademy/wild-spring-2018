@@ -52,18 +52,18 @@ add_action( 'after_setup_theme', 'wav_starter_content_width', 0 );
  */
 function wav_starter_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html( 'Sidebar' ),
+		'name'          => esc_html( 'Social media icons' ),
 		'id'            => 'sidebar-1',
-		'description'   => '',
+		'description'   => 'Widget area for social media icons in the footer',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
-		'name'          => esc_html( 'Sidebar social media' ),
+		'name'          => esc_html( 'Social media feeds' ),
 		'id'            => 'sidebar-front-page',
-		'description'   => 'widget area for social media feed',
+		'description'   => 'Widget area for social media feeds on the front-page',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h2 class="widget-title">',
