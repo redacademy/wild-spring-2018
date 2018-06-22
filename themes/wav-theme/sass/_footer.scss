@@ -1,0 +1,40 @@
+.site-footer{
+    display: none;
+    margin-top: 100px;
+    
+    @include desktop{
+        background-color: $color__green;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        padding: 30px 50px;
+        .site-info, .widget-area{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+        .widget{
+            margin: 0;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-size: 1.5rem;
+        }
+        a{
+            color: $color__green;
+            background-color: white;
+            padding: 20px;
+            margin: 0px 30px;
+            
+        }
+        i:before{
+            font-size: 1.5rem;
+           
+        }
+    }
+
+
+}
