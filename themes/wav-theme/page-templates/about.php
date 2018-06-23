@@ -21,6 +21,11 @@ get_header(); ?>
                 </ul>
             </nav>
 
+<!-- this is a register widet area for navigation with custom links. TODO, when time permits -->
+            <div id="sidebar-about-nav" class="about-navigation">
+				        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-about-nav') ) ?>
+            </div><!-- end of secondary navigation widget area -->
+
             <div class="anchor" id="aboutJump"></div>
            
             <section class="aboutWav">
