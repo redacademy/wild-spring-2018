@@ -1586,6 +1586,11 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
       width: 25%;
       height: 25vw; } }
+  @media (min-width: 620px) {
+    .teamMember img, .collaborator img, .festival img, .schoolItem img, .pressItem img {
+      height: auto;
+      width: 450px;
+      max-width: none; } }
   .teamMember .entry-title a, .collaborator .entry-title a, .festival .entry-title a, .schoolItem .entry-title a, .pressItem .entry-title a {
     position: absolute;
     bottom: 0;
@@ -1607,8 +1612,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       height: 100%; }
       @media (min-width: 620px) {
         .teamMember .entry-header img, .collaborator .entry-header img, .festival .entry-header img, .schoolItem .entry-header img, .pressItem .entry-header img {
-          height: 400px;
-          width: 400px; } }
+          height: auto;
+          width: 450px; } }
 
 .schoolItem {
   width: 100%;

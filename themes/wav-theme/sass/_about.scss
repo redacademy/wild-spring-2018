@@ -177,6 +177,15 @@
         height: 25vw;
     }
 
+    img{
+        @include tablet{
+            height: auto;
+            width: 450px;
+            max-width: none;
+        }
+        
+    }
+
     & .entry-title a {
         position: absolute;
         bottom: 0;
@@ -202,8 +211,8 @@
         //    height: 300px;
         //    width: 300px;
            @include tablet{
-               height: 400px;
-               width: 400px;
+               height: auto;
+               width: 450px;
            }
         }
     }
