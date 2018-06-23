@@ -1481,21 +1481,21 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     -o-object-fit: cover;
        object-fit: cover; }
 
-.page-template-about .aboutWav, .page-template-about .ourFestival {
+.page-template-about .aboutWav, .page-template-about .ourFestival, .page-template-about .theTeam, .page-template-about .press {
   padding: 10px; }
-  .page-template-about .aboutWav a, .page-template-about .ourFestival a {
+  .page-template-about .aboutWav a, .page-template-about .ourFestival a, .page-template-about .theTeam a, .page-template-about .press a {
     text-align: right;
-    text-decoration: underline;
+    text-decoration: none;
     color: #40B2C4;
     display: block; }
-  .page-template-about .aboutWav .center-button, .page-template-about .ourFestival .center-button {
+  .page-template-about .aboutWav .center-button, .page-template-about .ourFestival .center-button, .page-template-about .theTeam .center-button, .page-template-about .press .center-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .page-template-about .aboutWav .green-button, .page-template-about .ourFestival .green-button {
+  .page-template-about .aboutWav .green-button, .page-template-about .ourFestival .green-button, .page-template-about .theTeam .green-button, .page-template-about .press .green-button {
     background-color: #72CB7E;
     color: white;
     padding: 10px 30px;
@@ -1503,7 +1503,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     text-align: center;
     text-decoration: none;
     border-radius: 50px;
-    margin: 0 auto; }
+    margin: 20px auto; }
 
 .page-template-about .aboutWav {
   padding-top: 1.5rem; }
@@ -1551,8 +1551,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       width: 90%; } }
 
 .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
-  width: 45%;
-  height: 45vw;
+  height: 300px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1586,11 +1585,16 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     .teamMember .entry-header img, .collaborator .entry-header img, .festival .entry-header img, .schoolItem .entry-header img, .pressItem .entry-header img {
       -o-object-fit: cover;
          object-fit: cover;
-      position: absolute; }
+      position: absolute;
+      height: 100%; }
       @media (min-width: 620px) {
         .teamMember .entry-header img, .collaborator .entry-header img, .festival .entry-header img, .schoolItem .entry-header img, .pressItem .entry-header img {
           height: 400px;
           width: 400px; } }
+
+.schoolItem {
+  width: 100%;
+  height: 45vw; }
 
 .teamMember a, .collaborator a {
   background-color: #72CB7E; }

@@ -80,7 +80,12 @@ get_header(); ?>
                             </div><!--end of teamMember-->
                             <?php endforeach; wp_reset_postdata(); ?>
                     </div><!--end of teamMembers-->
-                    <a class="hidden-mobile green-button" href=<?php echo get_post_type_archive_link( 'person' ) ?>>See More</a>
+
+                    <div class="center-button">
+                        <a href="<?php echo get_post_type_archive_link( 'person' ) ?>" class="green-button">See More</a>
+                    </div>
+
+                    <!-- <a class="hidden-mobile green-button" href=<?php echo get_post_type_archive_link( 'person' ) ?>>See More</a> -->
             </section>
 
                 <div class="anchor" id="collaboratorsJump"></div>
@@ -187,7 +192,12 @@ get_header(); ?>
                             </div><!--end of pressItem-->
                             <?php endforeach; wp_reset_postdata(); ?>
                     </div><!--end of press-->
-                    <a class="green-button" href=<?php echo get_post_type_archive_link( 'press-items' ) ?>>See More</a>
+
+                    <div class="center-button">
+                        <a href="<?php echo get_post_type_archive_link( 'press-items' ) ?>" class="green-button">See More</a>
+                    </div>
+
+                    <!-- <a class="green-button" href=<?php echo get_post_type_archive_link( 'press-items' ) ?>>See More</a> -->
                 </section>
 
 		</main><!-- #main -->
