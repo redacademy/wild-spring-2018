@@ -45,7 +45,7 @@ add_filter( 'body_class', 'WAV_Starter_body_classes' );
 function tribe_custom_theme_text ( $translation, $text, $domain ) { 
  
 	$custom_text = array( 
-		'Keyword' => 'Search by tags', 
+		'Keyword' => 'Search', 
 		'Date' => 'Date' 
 	); 
 	// If this text domain starts with "tribe-", "the-events-", or "event-" and we have replacement text 
