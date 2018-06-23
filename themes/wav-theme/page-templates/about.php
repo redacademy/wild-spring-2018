@@ -13,27 +13,23 @@ get_header(); ?>
             <nav>
                 <ul class="aboutNavigation">
                     <li><a href="#aboutJump">About Wav</a></li>
-                    <li><a href="#festivalJump">Festival</a></li> 
-                    <li><a href="#teamJump">Team</a></li> 
+                    <li><a href="#festivalJump">Festival</a></li>
+                    <li><a href="#teamJump">Team</a></li>
                     <li><a href="#collaboratorsJump">Collaborators</a></li>
-                    <li><a href="#workJump">Work</a></li> 
+                    <li><a href="#workJump">Work</a></li>
                     <li><a href="#pressJump">Press</a></li>
                 </ul>
             </nav>
-
-<!-- this is a register widet area for navigation with custom links. TODO, when time permits -->
-            <div id="sidebar-about-nav" class="about-navigation">
-				        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-about-nav') ) ?>
-            </div><!-- end of secondary navigation widget area -->
+<!-- the abouv nav should be replaced with registered wigdet area for navigation with custom links. TODO, when time permits -->
 
             <div class="anchor" id="aboutJump"></div>
-           
+
             <section class="aboutWav">
 
                 <h1>About WAV</h1>
 
                 <div class="header-img-container">
-                    <img class="header-img" src="<?php echo esc_url(CFS()->get( 'about_wav_img' )); ?>"> 
+                    <img class="header-img" src="<?php echo esc_url(CFS()->get( 'about_wav_img' )); ?>">
                 </div>
 
                 <p><?php echo esc_html(CFS()->get( 'about_wav' )); ?></p>
@@ -42,7 +38,7 @@ get_header(); ?>
 
                     <div><?php echo CFS()->get( 'video_about_test' );?></div>
 
-                    <p><?php echo esc_url(CFS()->get( 'text_about_video' )); ?></p>
+                    <p><?php echo esc_html(CFS()->get( 'text_about_video' )); ?></p>
 
                 </div>
 
