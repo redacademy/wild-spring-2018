@@ -17,6 +17,12 @@
     }
 }
 
+.videoAboutWav p{
+    width: 80%;
+        margin: 0 50px;
+        line-height: 2.0
+}
+
 .page-template-about{
     .site-content {
         padding-top: 3.5rem;
@@ -27,6 +33,19 @@
 
     h1, h2{
         text-align: center;
+        @include tablet{
+            font-size: $font-size__desktop__h1;
+        }
+    }
+
+    p{
+        // @include tablet{
+            line-height: 2.0;
+            margin: 20px 50px;
+        // }
+        // @include tablet{
+        //     font-size: $font-size__desktop__base-size;
+        // }
     }
 
     .header-img-container{
@@ -78,7 +97,7 @@
         content: 'flickity';
         display: none;
       }
-    @include tablet{
+    @include desktop{
         // display: block;
         /* disable Flickity for large devices */
         &.about-carousel:after {
@@ -92,7 +111,10 @@
     .about-carousel-cell {
         margin: 0 1rem;
         width: 100%;
-        @include tablet{
+       @include tablet{
+           width: 45%;
+       }
+        @include desktop{
             margin: 0 1rem;
             width: 90%;
         }
@@ -103,7 +125,7 @@
         content: 'flickity';
         display: none;
       }
-    @include tablet{
+    @include desktop{
         // display: block;
         /* disable Flickity for large devices */
         &.about-carousel:after {
@@ -118,6 +140,9 @@
         margin: 0 1rem;
         width: 100%;
         @include tablet{
+            width: 45%;
+        }
+        @include desktop{
             margin: 0 1rem;
             width: 90%;
         }
@@ -197,7 +222,7 @@
         content: 'flickity';
         display: none;
       }
-    @include tablet{
+    @include desktop{
         // display: block;
         /* disable Flickity for large devices */
         &.about-carousel:after {
@@ -212,6 +237,9 @@
         margin: 0 1rem;
         width: 100%;
         @include tablet{
+            width: 45%;
+        }
+        @include desktop{
             margin: 0 1rem;
             width: 90%;
         }
@@ -226,7 +254,7 @@
         content: 'flickity';
         display: none;
       }
-    @include tablet{
+    @include desktop{
         // display: block;
         /* disable Flickity for large devices */
         &.about-carousel:after {
@@ -241,6 +269,9 @@
         margin: 0 1rem;
         width: 100%;
         @include tablet{
+            width: 45%;
+        }
+        @include desktop{
             margin: 0 1rem;
             width: 90%;
         }
@@ -305,5 +336,11 @@
         margin: 0;
         padding: 0;
         font-size: $font-size__h1;
+        @include tablet{
+            font-size: $font-size__desktop__base-size;
+            line-height: 1.5;
+        }
+
+        
     }
 }

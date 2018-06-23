@@ -1461,6 +1461,11 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .aboutNavigation a {
     color: white; }
 
+.videoAboutWav p {
+  width: 80%;
+  margin: 0 50px;
+  line-height: 2.0; }
+
 .page-template-about .site-content {
   padding-top: 3.5rem; }
   @media (min-width: 1080px) {
@@ -1469,6 +1474,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 
 .page-template-about h1, .page-template-about h2 {
   text-align: center; }
+  @media (min-width: 620px) {
+    .page-template-about h1, .page-template-about h2 {
+      font-size: 2.67rem; } }
+
+.page-template-about p {
+  line-height: 2.0;
+  margin: 20px 50px; }
 
 .page-template-about .header-img-container {
   height: 200px;
@@ -1512,7 +1524,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   content: 'flickity';
   display: none; }
 
-@media (min-width: 620px) {
+@media (min-width: 1080px) {
   .teamMembers {
     /* disable Flickity for large devices */ }
     .teamMembers.about-carousel:after {
@@ -1526,6 +1538,9 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   width: 100%; }
   @media (min-width: 620px) {
     .teamMembers .about-carousel-cell {
+      width: 45%; } }
+  @media (min-width: 1080px) {
+    .teamMembers .about-carousel-cell {
       margin: 0 1rem;
       width: 90%; } }
 
@@ -1533,7 +1548,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   content: 'flickity';
   display: none; }
 
-@media (min-width: 620px) {
+@media (min-width: 1080px) {
   .collaborators {
     /* disable Flickity for large devices */ }
     .collaborators.about-carousel:after {
@@ -1546,6 +1561,9 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   margin: 0 1rem;
   width: 100%; }
   @media (min-width: 620px) {
+    .collaborators .about-carousel-cell {
+      width: 45%; } }
+  @media (min-width: 1080px) {
     .collaborators .about-carousel-cell {
       margin: 0 1rem;
       width: 90%; } }
@@ -1603,7 +1621,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   content: 'flickity';
   display: none; }
 
-@media (min-width: 620px) {
+@media (min-width: 1080px) {
   .festivals {
     /* disable Flickity for large devices */ }
     .festivals.about-carousel:after {
@@ -1617,6 +1635,9 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   width: 100%; }
   @media (min-width: 620px) {
     .festivals .about-carousel-cell {
+      width: 45%; } }
+  @media (min-width: 1080px) {
+    .festivals .about-carousel-cell {
       margin: 0 1rem;
       width: 90%; } }
 
@@ -1628,7 +1649,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   content: 'flickity';
   display: none; }
 
-@media (min-width: 620px) {
+@media (min-width: 1080px) {
   .press {
     /* disable Flickity for large devices */ }
     .press.about-carousel:after {
@@ -1641,6 +1662,9 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   margin: 0 1rem;
   width: 100%; }
   @media (min-width: 620px) {
+    .press .about-carousel-cell {
+      width: 45%; } }
+  @media (min-width: 1080px) {
     .press .about-carousel-cell {
       margin: 0 1rem;
       width: 90%; } }
@@ -1698,6 +1722,10 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     margin: 0;
     padding: 0;
     font-size: 1.5rem; }
+    @media (min-width: 620px) {
+      .pressItem p {
+        font-size: 18px;
+        line-height: 1.5; } }
 
 .page-id-81 .main-navigation ul {
   bottom: 1.5rem; }

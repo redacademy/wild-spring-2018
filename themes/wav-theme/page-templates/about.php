@@ -60,7 +60,7 @@ get_header(); ?>
             <div class="anchor" id="teamJump"></div>
             <section class="theTeam">
                 <h1>The Team</h1>
-                    <div class="teamMembers about-carousel" data-flickity='{ "watchCSS": true }'>
+                    <div class="teamMembers about-carousel" data-flickity='{ "watchCSS": true, "groupCells": true, "freeScroll": false  }'>
 
                         <?php
                             $args = array( 'post_type' => 'person', 'category_name' => 'team', 'order' => 'ASC', 'posts_per_page' => 4,);
@@ -91,7 +91,7 @@ get_header(); ?>
                 <div class="anchor" id="collaboratorsJump"></div>
             <section class="collaborators">
                 <h1>Collaborators</h1>
-                <div class="collaborators about-carousel" data-flickity='{ "watchCSS": true }'>
+                <div class="collaborators about-carousel" data-flickity='{ "watchCSS": true , "groupCells": true, "freeScroll": false }'>
 
                  <?php
                     $args = array( 'post_type' => 'person', 'category_name' => 'collaborator', 'order' => 'ASC', 'posts_per_page' => 3,);
@@ -118,7 +118,7 @@ get_header(); ?>
 
                         <section class="festivals">
                         <h2>Festival History</h2>
-                        <div class="festivals about-carousel" data-flickity='{ "watchCSS": true }'>
+                        <div class="festivals about-carousel" data-flickity='{ "watchCSS": true, "groupCells": true, "freeScroll": false  }'>
 
                         <?php
                             $args = array( 'post_type' => 'festival', 'order' => 'ASC', 'posts_per_page' => 4);
@@ -169,7 +169,7 @@ get_header(); ?>
 
                  <section class="press">
                         <h1>Press</h1>
-                        <div class="press about-carousel" data-flickity='{ "watchCSS": true }'>
+                        <div class="press about-carousel" data-flickity='{ "watchCSS": true , "groupCells": true, "freeScroll": false }'>
 
                         <?php
                             $args = array( 'post_type' => 'press-item', 'order' => 'ASC', 'posts_per_page' => 4);
