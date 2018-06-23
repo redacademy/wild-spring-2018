@@ -26,7 +26,8 @@ $organizer = tribe_get_organizer();
 
 ?>
 <!-- Event Image -->
-<?php echo tribe_event_featured_image( null, 'medium' ); ?>
+<!-- <div class="list-item"> -->
+<?php echo tribe_event_featured_image( null, 'large' ); ?>
 <!-- Event Title -->
 <?php do_action( 'tribe_events_before_the_event_title' ) ?>
 <h2 class="tribe-events-list-event-title">
@@ -60,6 +61,7 @@ $organizer = tribe_get_organizer();
 
 	<a href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="tribe-events-read-more" rel="bookmark"><?php esc_html_e( 'See details', 'the-events-calendar' ) ?>  &rsaquo;</a>
 </div><!-- .tribe-events-list-event-description -->
+<!-- </div> -->
 
 <?php
 do_action( 'tribe_events_after_the_content' );

@@ -66,6 +66,7 @@
               }
           }
           .read-more{
+            margin-top: auto;
             text-align: right;
             a{
              font-size: 24px;
@@ -103,6 +104,8 @@
             .carousel-front-page-cell {
                 margin: 0 1rem;
                 width: 100%;
+                display: flex;
+                flex-direction: column;
                 @include tablet{
                     margin: 0 1rem;
                     width: 50%;
@@ -147,9 +150,11 @@
             visibility: hidden;
             }
             .carousel-front-page-cell {
-                width: 66%;
+                // width: 66%;
                 margin: 0 1rem;
                 width: 100%;
+                display: flex;
+                flex-direction: column;
                 @include tablet{
                     margin: 0 1rem;
                     width: 50%;
@@ -157,6 +162,7 @@
               }
             .tags-list{
                 display: flex;
+                flex-wrap: wrap;
                 justify-content: center;
                 padding-left: 0;
                 margin: 0 auto;
@@ -166,9 +172,18 @@
                 li{
                     border:1px solid $color__blue;
                     border-radius: 25%;
-                    margin: auto;
+                    margin: 0.5rem;
                     padding: 0.5rem;
                     min-width: 100px;
+                    a{
+                        color:black;
+                        &:visited{
+                            color:black;
+                        }
+                        &:hover{
+                            color:black;
+                        }
+                    }
                 }
             }
         }

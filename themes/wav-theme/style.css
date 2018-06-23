@@ -994,6 +994,7 @@ object {
       .home section h3 a:visited, .home section h3 a:hover {
         color: black; }
   .home section .read-more {
+    margin-top: auto;
     text-align: right; }
     .home section .read-more a {
       font-size: 24px;
@@ -1022,7 +1023,14 @@ object {
     visibility: hidden; }
   .home section .activities-container .carousel-front-page-cell {
     margin: 0 1rem;
-    width: 100%; }
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
     @media (min-width: 620px) {
       .home section .activities-container .carousel-front-page-cell {
         margin: 0 1rem;
@@ -1064,9 +1072,15 @@ object {
   .home section .events-container .flickity-page-dots {
     visibility: hidden; }
   .home section .events-container .carousel-front-page-cell {
-    width: 66%;
     margin: 0 1rem;
-    width: 100%; }
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
     @media (min-width: 620px) {
       .home section .events-container .carousel-front-page-cell {
         margin: 0 1rem;
@@ -1075,6 +1089,8 @@ object {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1086,9 +1102,15 @@ object {
     .home section .events-container .tags-list li {
       border: 1px solid #40B2C4;
       border-radius: 25%;
-      margin: auto;
+      margin: 0.5rem;
       padding: 0.5rem;
       min-width: 100px; }
+      .home section .events-container .tags-list li a {
+        color: black; }
+        .home section .events-container .tags-list li a:visited {
+          color: black; }
+        .home section .events-container .tags-list li a:hover {
+          color: black; }
   @media (min-width: 620px) {
     .home section .about-container {
       margin: 0 auto;
@@ -1163,9 +1185,14 @@ object {
 # stylesheet for events calendar view and single calendar view.
 Please check the Skeleton style from Events/Setting/Display in dashboard and then this stylesheet will work.
 --------------------------------------------------------------*/
-.tribe-events-before-html p {
-  margin-top: 0;
-  padding-top: 0; }
+.tribe-events-before-html {
+  display: none; }
+  @media (min-width: 620px) {
+    .tribe-events-before-html {
+      display: block; }
+      .tribe-events-before-html p {
+        margin-top: 0;
+        padding-top: 0; } }
 
 #tribe-events-pg-template.tribe-events-pg-template {
   margin: 0 auto;
@@ -1176,33 +1203,57 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       color: black; }
   #tribe-events-pg-template.tribe-events-pg-template .tribe-events-button {
     display: none; }
-  @media (min-width: 620px) {
-    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container {
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop {
+    margin: 0 1rem; }
+    @media (min-width: 620px) {
+      #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; } }
-  #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .tribe-events-list-event-description a {
-    margin-top: auto;
-    color: #72CB7E; }
-    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .tribe-events-list-event-description a:hover:visited {
-      color: #72CB7E; }
-  #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .type-tribe_events {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    border: 1px solid #72CB7E;
-    padding: 1rem;
-    margin-top: auto; }
-    @media (min-width: 620px) {
-      #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .type-tribe_events {
-        width: 33%; } }
+      display: flex;
+      border: 1px solid #72CB7E;
+      padding: 1rem; }
+      @media (min-width: 620px) {
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item {
+          width: 30%; } }
+      #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description {
+          margin-top: auto; }
+          #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description .tribe-event-tags {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; }
+            #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description .tribe-event-tags a {
+              border: 1px solid #40B2C4;
+              border-radius: 15px;
+              padding: 0.5rem;
+              margin: 0.2rem; }
+          #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description a {
+            color: black; }
+            #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description a:hover:visited {
+              color: black; }
+            #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description a.tribe-events-read-more {
+              text-align: right;
+              color: #72CB7E; }
+              #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description a.tribe-events-read-more:hover:visited {
+                color: #72CB7E; }
   #tribe-events-pg-template.tribe-events-pg-template .tribe-events-sub-nav {
     display: none; }
 
@@ -1213,18 +1264,26 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   max-width: 1200px;
   margin: 0 auto; }
   .tribe-clearfix .tribe-events-page-title {
-    -webkit-transform: translateY(-300px);
-            transform: translateY(-300px);
-    margin-left: 1rem;
-    color: white;
+    text-align: center;
+    color: black;
     font-family: 'Oswald';
     font-size: 48px;
-    font-weight: bolder;
-    text-align: left; }
+    font-weight: bolder; }
+    @media (min-width: 620px) {
+      .tribe-clearfix .tribe-events-page-title {
+        text-align: left;
+        -webkit-transform: translateY(-300px);
+                transform: translateY(-300px);
+        margin-left: 1rem; } }
     @media (min-width: 1080px) {
       .tribe-clearfix .tribe-events-page-title {
+        text-align: left;
         -webkit-transform: translateY(-250px);
-                transform: translateY(-250px); } }
+                transform: translateY(-250px);
+        margin-left: 1rem; } }
+    @media (min-width: 620px) {
+      .tribe-clearfix .tribe-events-page-title {
+        color: white; } }
   .tribe-clearfix.tribe-bar-filters-inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1232,20 +1291,34 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
   .tribe-clearfix #tribe-events-bar #tribe-bar-views {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1; }
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin: 0 1rem; }
+    @media (min-width: 620px) {
+      .tribe-clearfix #tribe-events-bar #tribe-bar-views {
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1; } }
     .tribe-clearfix #tribe-events-bar #tribe-bar-views ul {
       padding-left: 0;
       margin-left: 0; }
   .tribe-clearfix #tribe-events-bar .tribe-bar-filters {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
-            order: -1; }
+            order: -1;
+    margin: 0 1rem; }
     .tribe-clearfix #tribe-events-bar .tribe-bar-filters .label-tribe-bar-date, .tribe-clearfix #tribe-events-bar .tribe-bar-filters .label-tribe-bar-search {
       display: none; }
   .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter, .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter {
-    border: 1px solid #72CB7E; }
+    border: 1px solid #72CB7E;
+    border-radius: 10px;
+    margin: 0.5rem 1rem;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
     .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=email], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=password], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=search], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=text], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=url], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=email], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=password], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=search], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=text], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=url] {
       border: 0.1px solid white;
       margin: 0.5rem 0;
@@ -1276,7 +1349,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .tribe-select2-results-views span.tribe-icon-list,
 .tribe-bar-views-list span.tribe-icon-list,
 .tribe-bar-view-list span[class^='tribe-icon-'] {
-  background-image: url(../../assets/images/events-bar/icon-list.png);
+  background-image: url(../../assets/images/events-bar/icon_unselected_list_wiew.svg);
   background-size: 15px 10px; }
 
 .tribe-bar-view-list a.tribe-icon-list,
@@ -1317,8 +1390,21 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
+.tribe-bar-date-filter {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
 #tribe-bar-collapse-toggle {
   display: none; }
+
+@media (min-width: 620px) {
+  .number-of-events-day {
+    display: none; } }
+
+.tribe-mobile-container .tribe-mobile-day {
+  border: 1px solid #72CB7E;
+  padding: 1rem; }
 
 .tribe_events-template-default.single-tribe_events .tribe-events-before-html {
   display: none; }
@@ -1331,6 +1417,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-event-description.tribe-events-content {
     text-align: left;
     padding: 0 4%; }
+    .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-event-description.tribe-events-content a {
+      text-align: right; }
   .tribe_events-template-default.single-tribe_events .events-container .single-event-details-title {
     display: none; }
     @media (min-width: 1080px) {
@@ -1420,45 +1508,45 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .page-template-about .aboutWav {
   padding-top: 1.5rem; }
 
-.teamMembers.carousel:after {
+.teamMembers.about-carousel:after {
   content: 'flickity';
   display: none; }
 
 @media (min-width: 620px) {
   .teamMembers {
     /* disable Flickity for large devices */ }
-    .teamMembers.carousel:after {
+    .teamMembers.about-carousel:after {
       content: ''; }
-    .teamMembers.carousel {
+    .teamMembers.about-carousel {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
-.teamMembers .carousel-cell {
+.teamMembers .about-carousel-cell {
   margin: 0 1rem;
   width: 100%; }
   @media (min-width: 620px) {
-    .teamMembers .carousel-cell {
+    .teamMembers .about-carousel-cell {
       margin: 0 1rem;
       width: 90%; } }
 
-.collaborators.carousel:after {
+.collaborators.about-carousel:after {
   content: 'flickity';
   display: none; }
 
 @media (min-width: 620px) {
   .collaborators {
     /* disable Flickity for large devices */ }
-    .collaborators.carousel:after {
+    .collaborators.about-carousel:after {
       content: ''; }
-    .collaborators.carousel {
+    .collaborators.about-carousel {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr; } }
 
-.collaborators .carousel-cell {
+.collaborators .about-carousel-cell {
   margin: 0 1rem;
   width: 100%; }
   @media (min-width: 620px) {
-    .collaborators .carousel-cell {
+    .collaborators .about-carousel-cell {
       margin: 0 1rem;
       width: 90%; } }
 
@@ -1507,24 +1595,24 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .teamMember a, .collaborator a {
   background-color: #72CB7E; }
 
-.festivals.carousel:after {
+.festivals.about-carousel:after {
   content: 'flickity';
   display: none; }
 
 @media (min-width: 620px) {
   .festivals {
     /* disable Flickity for large devices */ }
-    .festivals.carousel:after {
+    .festivals.about-carousel:after {
       content: ''; }
-    .festivals.carousel {
+    .festivals.about-carousel {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
-.festivals .carousel-cell {
+.festivals .about-carousel-cell {
   margin: 0 1rem;
   width: 100%; }
   @media (min-width: 620px) {
-    .festivals .carousel-cell {
+    .festivals .about-carousel-cell {
       margin: 0 1rem;
       width: 90%; } }
 
@@ -1532,24 +1620,24 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   background-color: #F9D169;
   opacity: 0.9; }
 
-.press.carousel:after {
+.press.about-carousel:after {
   content: 'flickity';
   display: none; }
 
 @media (min-width: 620px) {
   .press {
     /* disable Flickity for large devices */ }
-    .press.carousel:after {
+    .press.about-carousel:after {
       content: ''; }
-    .press.carousel {
+    .press.about-carousel {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
-.press .carousel-cell {
+.press .about-carousel-cell {
   margin: 0 1rem;
   width: 100%; }
   @media (min-width: 620px) {
-    .press .carousel-cell {
+    .press .about-carousel-cell {
       margin: 0 1rem;
       width: 90%; } }
 
@@ -2578,13 +2666,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
   opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -2659,8 +2747,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2677,8 +2765,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -2697,8 +2785,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2715,8 +2803,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -2907,8 +2995,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2925,8 +3013,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3015,3 +3103,107 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     bottom: 0;
     -webkit-transform: rotate(-90deg);
             transform: rotate(-90deg); }
+
+.site-footer {
+  display: none;
+  margin-top: 100px; }
+  @media (min-width: 1080px) {
+    .site-footer {
+      background-color: #72CB7E;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -ms-flex-line-pack: center;
+          align-content: center;
+      padding: 30px 50px; }
+      .site-footer .site-info, .site-footer .widget-area {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row; }
+      .site-footer .widget {
+        margin: 0; }
+      .site-footer p {
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-size: 1.5rem; }
+      .site-footer a {
+        color: #72CB7E;
+        background-color: white;
+        padding: 20px;
+        margin: 0px 30px; }
+      .site-footer i:before {
+        font-size: 1.5rem; } }
+
+.post-type-archive-activity .flickity-page-dots {
+  visibility: visible; }
+  @media (min-width: 1080px) {
+    .post-type-archive-activity .flickity-page-dots {
+      visibility: hidden; } }
+
+.post-type-archive-activity .flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 1px solid #72CB7E; }
+
+.post-type-archive-activity .flickity-page-dots .dot.is-selected {
+  background: #72CB7E; }
+
+.post-type-archive-activity .carousel-cell {
+  height: 200px;
+  width: 100%; }
+
+.post-type-archive-activity .carousel-cell img {
+  width: 100%;
+  height: auto;
+  min-height: 200px; }
+  @media (min-width: 1080px) {
+    .post-type-archive-activity .carousel-cell img {
+      width: 100%;
+      height: auto; } }
+
+.post-type-archive-activity .tags-links a::before {
+  content: "#"; }
+
+.post-type-archive-activity .see-detail-button::after {
+  content: " >"; }
+
+.post-type-archive-activity .activities-wrapper {
+  text-align: center; }
+
+.post-type-archive-activity .activity-item {
+  border: 1px solid #72CB7E;
+  margin: 2rem; }
+
+.post-type-archive-activity .site-content {
+  padding: 2%; }
+
+.error404 .not-found {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto; }
+
+.error404 .page-content div {
+  width: 800px;
+  border: 2px solid #72CB7E; }

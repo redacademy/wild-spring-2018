@@ -10,6 +10,22 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+            <h1 class="entry-title">Our Blog</h1>
+
+            <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+                <fieldset>
+                    <label>
+                        <input type="search" class="search-field" placeholder="SEARCH ..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
+                    </label>
+                    <button class="search-submit">
+                        <span class="icon-search" aria-hidden="true">
+                            <i class="fa fa-search"></i>
+                        </span>
+                        <span class="screen-reader-text"><?php echo esc_html( 'Search' ); ?></span>
+                    </button>
+                </fieldset>
+            </form>
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
@@ -47,7 +63,7 @@ get_header(); ?>
                 printf( '<span class="tags-links">' . esc_html( 'Tagged &rarr; %1$s' ) . '</span>', $tags_list ); // WPCS: XSS OK.
                 }
                 ?>
-                <a href="<?php the_permalink(); ?>"class="journal-button">See Details</a>            
+                <a href="<?php the_permalink(); ?>"class="blog-button">See Details</a>            
 
 			<?php endwhile; ?>
 

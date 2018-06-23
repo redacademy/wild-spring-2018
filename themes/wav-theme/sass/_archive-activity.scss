@@ -1,0 +1,60 @@
+.post-type-archive-activity {
+
+    .flickity-page-dots {
+        visibility: visible;
+        @include desktop {
+            visibility: hidden;
+        }
+    }
+
+    .flickity-page-dots .dot {
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+        background: transparent;
+        border: 1px solid $color__green;
+    }
+
+    .flickity-page-dots .dot.is-selected {
+        background: $color__green;
+      }
+
+    .carousel-cell {
+        height: 200px;
+        width: 100%;
+    }
+
+    .carousel-cell img {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        @include desktop {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .tags-links {
+        a::before {
+            content: "#"
+        }
+    }
+
+    .see-detail-button::after {
+        content: " >"
+    }
+
+    .activities-wrapper {
+        text-align: center;
+
+    }
+
+    .activity-item {
+        border: 1px solid $color__green;
+        margin: 2rem;
+    }
+
+    .site-content {
+        padding: 2%;
+    }
+}
