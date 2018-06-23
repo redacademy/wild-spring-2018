@@ -1683,6 +1683,22 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .flickity-page-dots {
   visibility: hidden; }
 
+.pressItem {
+  display: block;
+  height: 400px; }
+  .pressItem .entry-header {
+    height: 300px;
+    overflow: hidden;
+    position: relative; }
+  .pressItem .entry-header img {
+    position: static; }
+  .pressItem p {
+    z-index: 1;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem; }
+
 .page-id-81 .main-navigation ul {
   bottom: 1.5rem; }
 

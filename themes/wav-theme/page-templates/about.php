@@ -185,7 +185,7 @@ get_header(); ?>
 
                                     <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
                                 </header>
-                                <div class="hidden-mobile">
+                                <div>
                                     <p><?php echo esc_html(CFS()->get( 'source' )) ; ?></p>
                                     <p><?php echo esc_html(CFS()->get( 'date' )) ; ?></p>
                                 </div>
