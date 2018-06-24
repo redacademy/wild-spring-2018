@@ -1403,7 +1403,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
               color: black; }
             #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description a.tribe-events-read-more {
               text-align: right;
-              color: #72CB7E; }
+              color: #72CB7E;
+              font-size: 24px; }
               #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description a.tribe-events-read-more:hover:visited {
                 color: #72CB7E; }
   #tribe-events-pg-template.tribe-events-pg-template .tribe-events-sub-nav {
