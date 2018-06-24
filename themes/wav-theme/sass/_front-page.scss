@@ -75,7 +75,7 @@
           }
         article{
             padding: 0 1rem;
-            border: 1px solid green;
+            border: 1px solid $color__green;
             img{
                 margin-top: 1rem;
             }
@@ -171,10 +171,11 @@
                 }
                 li{
                     border:1px solid $color__blue;
-                    border-radius: 25%;
+                    border-radius: 15px;
                     margin: 0.5rem;
                     padding: 0.5rem;
-                    min-width: 100px;
+                    min-width: 5rem;
+                    text-align: center;
                     a{
                         color:black;
                         &:visited{
