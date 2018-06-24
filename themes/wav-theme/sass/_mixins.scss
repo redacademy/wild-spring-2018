@@ -24,3 +24,9 @@
     @content;
   }
 }
+
+@mixin large-desktop{
+  @media (min-width: #{screen-width}){
+    @content;
+  }
+}

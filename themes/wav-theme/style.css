@@ -1536,6 +1536,11 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .aboutNavigation a {
     color: white; }
 
+.videoAboutWav p {
+  width: 80%;
+  margin: 0 50px;
+  line-height: 2.0; }
+
 .page-template-about .site-content {
   padding-top: 3.5rem; }
   @media (min-width: 1080px) {
@@ -1544,6 +1549,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 
 .page-template-about h1, .page-template-about h2 {
   text-align: center; }
+  @media (min-width: 620px) {
+    .page-template-about h1, .page-template-about h2 {
+      font-size: 2.67rem; } }
+
+.page-template-about p {
+  line-height: 2.0;
+  margin: 20px 50px; }
 
 .page-template-about .header-img-container {
   height: 200px;
@@ -1556,21 +1568,21 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     -o-object-fit: cover;
        object-fit: cover; }
 
-.page-template-about .aboutWav, .page-template-about .ourFestival {
+.page-template-about .aboutWav, .page-template-about .ourFestival, .page-template-about .theTeam, .page-template-about .press {
   padding: 10px; }
-  .page-template-about .aboutWav a, .page-template-about .ourFestival a {
+  .page-template-about .aboutWav a, .page-template-about .ourFestival a, .page-template-about .theTeam a, .page-template-about .press a {
     text-align: right;
-    text-decoration: underline;
+    text-decoration: none;
     color: #40B2C4;
     display: block; }
-  .page-template-about .aboutWav .center-button, .page-template-about .ourFestival .center-button {
+  .page-template-about .aboutWav .center-button, .page-template-about .ourFestival .center-button, .page-template-about .theTeam .center-button, .page-template-about .press .center-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .page-template-about .aboutWav .green-button, .page-template-about .ourFestival .green-button {
+  .page-template-about .aboutWav .green-button, .page-template-about .ourFestival .green-button, .page-template-about .theTeam .green-button, .page-template-about .press .green-button {
     background-color: #72CB7E;
     color: white;
     padding: 10px 30px;
@@ -1578,7 +1590,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     text-align: center;
     text-decoration: none;
     border-radius: 50px;
-    margin: 0 auto; }
+    margin: 20px auto; }
 
 .page-template-about .aboutWav {
   padding-top: 1.5rem; }
@@ -1587,7 +1599,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   content: 'flickity';
   display: none; }
 
-@media (min-width: 620px) {
+@media (min-width: 1080px) {
   .teamMembers {
     /* disable Flickity for large devices */ }
     .teamMembers.about-carousel:after {
@@ -1601,14 +1613,17 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   width: 100%; }
   @media (min-width: 620px) {
     .teamMembers .about-carousel-cell {
+      width: 45%; } }
+  @media (min-width: 1080px) {
+    .teamMembers .about-carousel-cell {
       margin: 0 1rem;
-      width: 90%; } }
+      width: auto; } }
 
 .collaborators.about-carousel:after {
   content: 'flickity';
   display: none; }
 
-@media (min-width: 620px) {
+@media (min-width: 1080px) {
   .collaborators {
     /* disable Flickity for large devices */ }
     .collaborators.about-carousel:after {
@@ -1622,12 +1637,15 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   width: 100%; }
   @media (min-width: 620px) {
     .collaborators .about-carousel-cell {
+      width: 45%; } }
+  @media (min-width: 1080px) {
+    .collaborators .about-carousel-cell {
       margin: 0 1rem;
-      width: 90%; } }
+      width: auto; } }
 
 .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
   width: 45%;
-  height: 45vw;
+  height: 350px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1644,6 +1662,11 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
       width: 25%;
       height: 25vw; } }
+  @media (min-width: 620px) {
+    .teamMember img, .collaborator img, .festival img, .schoolItem img, .pressItem img {
+      height: auto;
+      width: 450px;
+      max-width: none; } }
   .teamMember .entry-title a, .collaborator .entry-title a, .festival .entry-title a, .schoolItem .entry-title a, .pressItem .entry-title a {
     position: absolute;
     bottom: 0;
@@ -1661,11 +1684,17 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     .teamMember .entry-header img, .collaborator .entry-header img, .festival .entry-header img, .schoolItem .entry-header img, .pressItem .entry-header img {
       -o-object-fit: cover;
          object-fit: cover;
-      position: absolute; }
+      position: absolute;
+      height: 100%; }
       @media (min-width: 620px) {
         .teamMember .entry-header img, .collaborator .entry-header img, .festival .entry-header img, .schoolItem .entry-header img, .pressItem .entry-header img {
-          height: 400px;
-          width: 400px; } }
+          height: auto;
+          width: 450px; } }
+
+.schoolItem {
+  width: 100%;
+  height: 45vw;
+  max-height: 300px; }
 
 .teamMember a, .collaborator a {
   background-color: #72CB7E; }
@@ -1674,7 +1703,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   content: 'flickity';
   display: none; }
 
-@media (min-width: 620px) {
+@media (min-width: 1080px) {
   .festivals {
     /* disable Flickity for large devices */ }
     .festivals.about-carousel:after {
@@ -1688,8 +1717,11 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   width: 100%; }
   @media (min-width: 620px) {
     .festivals .about-carousel-cell {
+      width: 45%; } }
+  @media (min-width: 1080px) {
+    .festivals .about-carousel-cell {
       margin: 0 1rem;
-      width: 90%; } }
+      width: auto; } }
 
 .festival a, .schoolItem a {
   background-color: #F9D169;
@@ -1699,7 +1731,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   content: 'flickity';
   display: none; }
 
-@media (min-width: 620px) {
+@media (min-width: 1080px) {
   .press {
     /* disable Flickity for large devices */ }
     .press.about-carousel:after {
@@ -1713,8 +1745,11 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   width: 100%; }
   @media (min-width: 620px) {
     .press .about-carousel-cell {
+      width: 45%; } }
+  @media (min-width: 1080px) {
+    .press .about-carousel-cell {
       margin: 0 1rem;
-      width: 90%; } }
+      width: auto; } }
 
 .pressItem a {
   background-color: #40B2C4; }
@@ -1753,6 +1788,26 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 
 .flickity-page-dots {
   visibility: hidden; }
+
+.pressItem {
+  display: block;
+  height: 400px; }
+  .pressItem .entry-header {
+    height: 300px;
+    overflow: hidden;
+    position: relative; }
+  .pressItem .entry-header img {
+    position: static; }
+  .pressItem p {
+    z-index: 1;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem; }
+    @media (min-width: 620px) {
+      .pressItem p {
+        font-size: 18px;
+        line-height: 1.5; } }
 
 .page-id-81 .main-navigation ul {
   bottom: 1.5rem; }
@@ -2741,13 +2796,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
   opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -2822,8 +2877,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2840,8 +2895,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -2860,8 +2915,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2878,8 +2933,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -3070,8 +3125,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3088,8 +3143,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
