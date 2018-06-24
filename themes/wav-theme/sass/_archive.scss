@@ -1,0 +1,56 @@
+/*
+* This is stylesheet for pages using archive.php template: categories, tags. by kate
+*
+*/
+
+.archive {
+    .site-content{
+        padding-top: 6rem;
+        .content-area{
+            .site-main{
+                padding: 0 4%;
+                .page-title{
+                    font-family: 'Oswald';
+                }
+                .article-container{
+                    article{
+                        padding: 0.5rem;
+                        margin: 0.5rem;
+                        border: 1px solid $color__green;
+                        display: flex;
+                        flex-wrap:wrap;
+                        flex-direction: column;
+                        .entry-header{
+                            img{
+                                height: 200px;
+                                object-fit: cover;
+                            }
+                            .entry-title{
+                                font-family: 'Oswald';
+                                font-weight: 500;
+                                a{
+                                    color:$color__green;
+                                    &:visited{
+                                        color: $color__green;
+                                    }
+                                    &:hover{
+                                        color:darken($color__green, $amount: 0)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    @include tablet{
+                        display:grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-gap: 1rem;
+                        margin:0;
+                    }
+
+                }
+
+            }
+        }
+    }
+
+}
