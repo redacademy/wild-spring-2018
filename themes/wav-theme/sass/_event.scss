@@ -10,9 +10,13 @@
         .tribe-events-single-event-title{
             font-family: 'Oswald';
         }
+        .tribe-events-single-section.tribe-events-event-meta{
+            text-align: left;
+            // padding: 0 4%;
+        }
         .tribe-events-single-event-description.tribe-events-content{
             text-align: left;
-            padding: 0 4%;
+            // padding: 0 4%;
             a{
                 text-align: right;
             }
@@ -23,13 +27,6 @@
             @include desktop{
                 display:inline; 
             }
-        }
-        .tribe-events-event-meta{
-            background: white;
-            border:none;
-        }
-        .tribe-events-single-section-title{
-            display:none;
         }
     }
 }

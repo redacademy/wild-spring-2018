@@ -187,8 +187,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
             color:black;
         }
     }
-    .tribe-events-button{
-        display: none;
+    .tribe-events-button.tribe-no-param{
+        visibility: hidden;
     }
     //style for displaying events in a list view
     .tribe-events-loop{
@@ -239,6 +239,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
                             &.tribe-events-read-more{
                                 text-align: right;
                                 color:$color__green;
+                                font-size: 24px;
                                 &:hover:visited{
                                     color:$color__green;
                                 }
