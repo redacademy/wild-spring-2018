@@ -31,6 +31,7 @@ $event_id = get_the_ID();
 			<?php echo('<p>'.tribe_get_start_date($event).'<p>');?>
 			<!-- Event content -->
 			<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
+			<div class="event-info-container">
 			<div class="tribe-events-single-event-description tribe-events-content">
 				<h3 class="single-event-title">Description</h3>
 				<?php the_content(); ?>
@@ -38,10 +39,13 @@ $event_id = get_the_ID();
 			<!-- .tribe-events-single-event-description -->
 
 			<!-- Event meta -->
-			<span class="single-event-details-title"><h3>Details</h3></span>
+			<div class="tribe-events-single-event-description tribe-events-content">
+				<h3 class="single-event-details-title">Details</h3>
+			</div>
 			<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
 			<?php tribe_get_template_part( 'modules/meta' ); ?>
 			<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
+			</div><!--end of event-info-container-->
 
 			<?php echo tribe_meta_event_tags( sprintf( esc_html__( 'Tags', 'the-events-calendar' ), tribe_get_event_label_singular() ), ' ', false ) ?>
 			

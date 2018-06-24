@@ -12,11 +12,9 @@
         }
         .tribe-events-single-section.tribe-events-event-meta{
             text-align: left;
-            // padding: 0 4%;
         }
         .tribe-events-single-event-description.tribe-events-content{
             text-align: left;
-            // padding: 0 4%;
             a{
                 text-align: right;
             }
@@ -35,5 +33,5 @@
     margin: 0;
 }
 .tribe-events-ical.tribe-events-button{
-    visibility:hidden;
+    display: none;
 }

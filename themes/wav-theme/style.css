@@ -1506,7 +1506,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   margin: 0; }
 
 .tribe-events-ical.tribe-events-button {
-  visibility: hidden; }
+  display: none; }
 
 .aboutNavigation {
   background-color: #72CB7E;
