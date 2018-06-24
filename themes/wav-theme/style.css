@@ -1353,6 +1353,9 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     visibility: hidden; }
   #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop {
     margin: 0 1rem; }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container.carousel-front-page:after {
+      content: 'flickity';
+      display: none; }
     @media (min-width: 620px) {
       #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container {
         display: -webkit-box;
@@ -1361,18 +1364,26 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
         -ms-flex-pack: distribute;
-            justify-content: space-around; } }
-    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item {
+            justify-content: space-around;
+        /* disable Flickity for large devices */ }
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container.carousel-front-page:after {
+          content: ''; }
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container.carousel-front-page {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; } }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       margin: 0.5rem;
       border: 1px solid #72CB7E;
-      padding: 1rem; }
+      padding: 1rem;
+      width: 100%; }
       @media (min-width: 620px) {
-        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item {
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell {
           width: 30%; } }
-      #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events {
+      #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1380,32 +1391,32 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; }
-        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description {
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description {
           margin-top: auto; }
-          #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description .tribe-event-tags {
+          #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description .tribe-event-tags {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap; }
-            #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description .tribe-event-tags a {
+            #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description .tribe-event-tags a {
               border: 1px solid #40B2C4;
               border-radius: 15px;
               padding: 0.5rem;
               margin: 0.2rem;
               min-width: 5rem;
               text-align: center; }
-              #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description .tribe-event-tags a::before {
+              #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description .tribe-event-tags a::before {
                 content: '#'; }
-          #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description a {
+          #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description a {
             color: black; }
-            #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description a:hover:visited {
+            #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description a:hover:visited {
               color: black; }
-            #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description a.tribe-events-read-more {
+            #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description a.tribe-events-read-more {
               text-align: right;
               color: #72CB7E;
               font-size: 24px; }
-              #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events .tribe-events-list-event-description a.tribe-events-read-more:hover:visited {
+              #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description a.tribe-events-read-more:hover:visited {
                 color: #72CB7E; }
   #tribe-events-pg-template.tribe-events-pg-template .tribe-events-sub-nav {
     display: none; }
@@ -2792,13 +2803,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
   opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -2873,8 +2884,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2891,8 +2902,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -2911,8 +2922,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2929,8 +2940,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -3121,8 +3132,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3139,8 +3150,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
