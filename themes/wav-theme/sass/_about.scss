@@ -116,7 +116,7 @@
        }
         @include desktop{
             margin: 0 1rem;
-            width: 90%;
+            width: auto;
         }
       }
 }
@@ -144,7 +144,7 @@
         }
         @include desktop{
             margin: 0 1rem;
-            width: 90%;
+            width: auto;
         }
       }
 }
@@ -161,8 +161,8 @@
 // }
 
 .teamMember, .collaborator, .festival, .schoolItem, .pressItem{
-    // width: 45%;
-    height: 300px;
+    width: 45%;
+    height: 350px;
     // padding: 10px;
     // border: 3px solid skyblue;
     position: relative;
@@ -175,16 +175,23 @@
     @include desktop{
         width: 25%;
         height: 25vw;
+      
     }
 
     img{
+    
         @include tablet{
             height: auto;
             width: 450px;
             max-width: none;
         }
+        // @include large-desktop{
+        //     width: 600px;
+        //     // display: none;
+        // }
         
     }
+    
 
     & .entry-title a {
         position: absolute;
@@ -197,7 +204,15 @@
         padding: 10px;
         text-align: center;
         opacity: 0.9;
+       
     }
+
+    // .entry-title a{
+    //     @include desktop{
+    //         display: none;
+    //     }
+    // }
+
 
 
 
@@ -214,6 +229,11 @@
                height: auto;
                width: 450px;
            }
+        //    @include desktop{
+        //     width: 550px;
+        //     // display: none;
+        // }
+          
         }
     }
 }
@@ -221,10 +241,12 @@
 .schoolItem{
     width: 100%;
     height: 45vw;
+    max-height: 300px;
 }
 
 .teamMember a, .collaborator a{
     background-color: $color__green;
+    // display: none;
 }
 .festivals{
     &.about-carousel:after {
@@ -250,7 +272,7 @@
         }
         @include desktop{
             margin: 0 1rem;
-            width: 90%;
+            width: auto;
         }
       }
 }
@@ -282,7 +304,7 @@
         }
         @include desktop{
             margin: 0 1rem;
-            width: 90%;
+            width: auto;
         }
       }
 
