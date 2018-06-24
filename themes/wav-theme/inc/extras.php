@@ -46,7 +46,11 @@ function tribe_custom_theme_text ( $translation, $text, $domain ) {
  
 	$custom_text = array( 
 		'Keyword' => 'Search', 
-		'Date' => 'Date' 
+		'Date' => 'Date',
+		'Find out more'=>'See details',
+		'View As'=>'View as',
+		'Month'=>'',
+		'List'=>''
 	); 
 	// If this text domain starts with "tribe-", "the-events-", or "event-" and we have replacement text 
 		if( (strpos($domain, 'tribe-') === 0 || strpos($domain, 'the-events-') === 0 || strpos($domain, 'event-') === 0) && array_key_exists($translation, $custom_text) ) { 
