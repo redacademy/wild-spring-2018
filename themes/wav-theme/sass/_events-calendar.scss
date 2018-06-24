@@ -194,17 +194,29 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     .tribe-events-loop{
         margin: 0 1rem;
         .same-date-events-container{
+            &.carousel-front-page:after {
+                content: 'flickity';
+                display: none;
+              }
             @include tablet{
                 display:flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
+            /* disable Flickity for large devices */
+            &.carousel-front-page:after {
+                content: '';
+                 }
+             &.carousel-front-page{
+             display:flex;
+                 }
             }
-            .event-item{
+            .event-item.carousel-front-page-cell{
                 display: flex;
                 margin: 0.5rem;
                 border:1px solid $color__green;
                 padding: 1rem;
-                // margin-top: auto;
+                // margin-top: auto;    
+                width:100%;
                 @include tablet{
                     width: 30%;
                 }
