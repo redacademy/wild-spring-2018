@@ -3391,9 +3391,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   width: 800px;
   border: 2px solid #72CB7E; }
 
-.tribe-section-cost {
-  display: none; }
-
 .tribe_community_edit .tribe-community-events input.events-community-submit {
   color: black;
   border: 2px solid #F9D169;
@@ -3403,7 +3400,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-box-shadow: none;
           box-shadow: none;
   background: white;
-  padding: 10px 30px; }
+  padding: 10px 30px;
+  font-family: "Tofino"; }
   .tribe_community_edit .tribe-community-events input.events-community-submit:hover {
     background: #F9D169;
     color: white; }
@@ -3413,19 +3411,22 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   border: 2px solid #72CB7E;
   color: black;
   border-radius: 50px;
-  text-transform: none; }
+  text-transform: none;
+  font-family: "Tofino"; }
   .tribe-section-organizer a.tribe-button:hover, .tribe-section-content div.form-controls div:hover, .tribe-section-content div.form-controls input:hover {
     color: white;
     background: 2px solid #72CB7E; }
 
-#tribe-events-pg-template.tribe-events-pg-template a.tribe-button {
+#tribe-events-pg-template.tribe-events-pg-template a.tribe-button, .event-submission-faq {
   background: white;
   text-transform: none;
   border: 2px solid #72CB7E;
   font-size: 20px;
   border-radius: 50px;
-  padding: 10px 30px; }
-  #tribe-events-pg-template.tribe-events-pg-template a.tribe-button:hover {
+  padding: 10px 30px;
+  display: inline-block;
+  font-family: "Tofino"; }
+  #tribe-events-pg-template.tribe-events-pg-template a.tribe-button:hover, .event-submission-faq:hover {
     background: #72CB7E;
     color: white; }
 
@@ -3433,7 +3434,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   text-transform: none;
   font-size: 20px;
   padding: 10px 30px;
-  border: 2px solid #72CB7E; }
+  border: 2px solid #72CB7E;
+  font-family: "Tofino"; }
   .tribe-community-events .tribe-section.tribe-section-image-uploader .tribe-image-upload-area div.choose-file:hover {
     background: #72CB7E;
     color: white; }
@@ -3447,7 +3449,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   color: white; }
 
 .tribe-community-events div.tribe-section, .events-community-post-content #post_content, .events-community-post-title #post_title {
-  border: 2px solid #72CB7E; }
+  border: 2px solid #72CB7E;
+  font-family: "Tofino"; }
 
 #tribe-community-events {
   background: white;
@@ -3456,5 +3459,42 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 header.my-events-header, .tribe-community-events .tribe-section div.tribe-section-header {
   border-bottom: none; }
 
-.tribe-section-content .tribe-dropdown-created, .tribe-section-content .venue input[type=text], .tribe-section-content .organizer input[type=text], .tribe-section-website input#EventURLs {
+.tribe-section-content .tribe-dropdown-created, .tribe-section-content .venue input[type=text], .tribe-section-content .organizer input[type=text], .tribe-section-website input#EventURL {
   border: 2px solid #72CB7E; }
+
+a.event-submission-faq {
+  font-size: 20px;
+  border: 2px solid #40B2C4;
+  margin: 0 0 30px 0;
+  line-height: 20px;
+  text-align: center; }
+  a.event-submission-faq:hover {
+    color: white !important;
+    background: #40B2C4; }
+
+header.my-events-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  header.my-events-header h2.my-events {
+    font-size: 2.67rem;
+    margin: 30px 0px;
+    font-family: 'Oswald'; }
+
+.tribe-events-after-html {
+  margin: 0 auto; }
+  .tribe-events-after-html .faq-item {
+    width: 90%; }
+    @media (min-width: 620px) {
+      .tribe-events-after-html .faq-item {
+        width: 100%; } }
+  @media (min-width: 620px) {
+    .tribe-events-after-html {
+      padding: 60px; } }
