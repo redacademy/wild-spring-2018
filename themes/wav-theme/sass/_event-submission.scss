@@ -68,7 +68,7 @@
     }
 }
 
-.tribe-community-events .tribe-section, .events-community-post-content #post_content, .events-community-post-title #post_title{
+.tribe-community-events div.tribe-section, .events-community-post-content #post_content, .events-community-post-title #post_title{
     border: 2px solid $color__green;
 }
 
@@ -79,4 +79,12 @@
 
 header.my-events-header, .tribe-community-events .tribe-section div.tribe-section-header{
     border-bottom: none;
+}
+
+// .events-community-post-content div.tribe-section{
+//     border: 2px solid $color__green;
+// }
+
+.tribe-section-content .tribe-dropdown-created, .tribe-section-content .venue input[type=text], .tribe-section-content .organizer input[type=text], .tribe-section-website input#EventURLs{
+    border: 2px solid $color__green;
 }
