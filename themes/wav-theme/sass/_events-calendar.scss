@@ -12,6 +12,10 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         }
     }
 }
+.tribe-events-after-html{
+    display:none;
+}
+
 #tribe-events-pg-template.tribe-events-pg-template {
     margin: 0 auto;
     max-width: 100%;
@@ -361,3 +365,5 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         padding: 1rem;
     }
 }
+
+

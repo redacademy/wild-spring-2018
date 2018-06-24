@@ -29,7 +29,7 @@ get_header(); ?>
 			<?php endwhile; ?>
 			</div>
 
-			<?php the_posts_navigation(); ?>
+			<?php WAV_Starter_numbered_pagination(); ?>
 
 		<?php else : ?>
 

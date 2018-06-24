@@ -1195,6 +1195,9 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         margin-top: 0;
         padding-top: 0; } }
 
+.tribe-events-after-html {
+  display: none; }
+
 #tribe-events-pg-template.tribe-events-pg-template {
   margin: 0 auto;
   max-width: 100%;
