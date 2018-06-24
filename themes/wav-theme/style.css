@@ -3336,3 +3336,68 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .error404 .page-content div {
   width: 800px;
   border: 2px solid #72CB7E; }
+
+.tribe-section-cost {
+  display: none; }
+
+.tribe_community_edit .tribe-community-events input.events-community-submit {
+  color: black;
+  border: 2px solid #F9D169;
+  text-transform: none;
+  font-size: 20px;
+  border-radius: 50px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: white;
+  padding: 10px 30px; }
+  .tribe_community_edit .tribe-community-events input.events-community-submit:hover {
+    background: #F9D169;
+    color: white; }
+
+.tribe-section-organizer a.tribe-button, .tribe-section-content div.form-controls div, .tribe-section-content div.form-controls input {
+  background: white;
+  border: 2px solid #72CB7E;
+  color: black;
+  border-radius: 50px;
+  text-transform: none; }
+  .tribe-section-organizer a.tribe-button:hover, .tribe-section-content div.form-controls div:hover, .tribe-section-content div.form-controls input:hover {
+    color: white;
+    background: 2px solid #72CB7E; }
+
+#tribe-events-pg-template.tribe-events-pg-template a.tribe-button {
+  background: white;
+  text-transform: none;
+  border: 2px solid #72CB7E;
+  font-size: 20px;
+  border-radius: 50px;
+  padding: 10px 30px; }
+  #tribe-events-pg-template.tribe-events-pg-template a.tribe-button:hover {
+    background: #72CB7E;
+    color: white; }
+
+.tribe-community-events .tribe-section.tribe-section-image-uploader .tribe-image-upload-area div.choose-file {
+  text-transform: none;
+  font-size: 20px;
+  padding: 10px 30px;
+  border: 2px solid #72CB7E; }
+  .tribe-community-events .tribe-section.tribe-section-image-uploader .tribe-image-upload-area div.choose-file:hover {
+    background: #72CB7E;
+    color: white; }
+
+.tribe-section-content div.form-controls input[name=event_image]:hover {
+  background: #F9D169;
+  color: white; }
+
+.tribe-section-content div.form-controls input:hover:hover {
+  background: #F9D169;
+  color: white; }
+
+.tribe-community-events .tribe-section, .events-community-post-content #post_content, .events-community-post-title #post_title {
+  border: 2px solid #72CB7E; }
+
+#tribe-community-events {
+  background: white;
+  border: none; }
+
+header.my-events-header, .tribe-community-events .tribe-section div.tribe-section-header {
+  border-bottom: none; }
