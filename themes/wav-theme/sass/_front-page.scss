@@ -19,7 +19,9 @@
         }
     }
     section{
+        padding: 0 4%;;
         &.front-page-banner{
+            padding: 0;
             max-height:300px;
             @include tablet{
                 max-height: 100%;
@@ -191,15 +193,12 @@
          .about-container{
             @include tablet{
             display: grid;
-            grid-template-columns: 33% 33% 33%;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
             margin:0 auto;
             //width:50%;
             }
         }
-
-
-
-
 
             ul.tabs{
                 margin: 0;
