@@ -1899,10 +1899,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         line-height: 1.5; } }
 
 .page-id-81 .main-navigation ul {
-  bottom: 1.5rem; }
-
-.page-id-81 .post-81 {
-  padding: 3%; }
+  top: 3rem; }
 
 .page-id-81 input[type=text],
 .page-id-81 input[type=tel],
@@ -2311,6 +2308,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 @media (min-width: 1080px) {
   .logo img {
     bottom: .5rem; }
+  .sub-menu {
+    width: 120px; }
   .home .site-header, .post-type-archive-tribe_events .site-header, .page-id-81 .site-header, .page-template-contact .site-header {
     background-color: transparent; }
     .home .site-header a, .post-type-archive-tribe_events .site-header a, .page-id-81 .site-header a, .page-template-contact .site-header a {

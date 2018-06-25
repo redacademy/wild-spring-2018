@@ -37,13 +37,19 @@ else{
   
 };
 
-$(".main-navigation ul:has(ul)").on({
+$(".main-navigation ul").on({
     mouseover: function (event) {
+        var width = $('body').width();
         event.preventDefault();
-        $('.main-navigation ul').show('.sub-menu');
+        if (width > 1060){
+            $('.main-navigation ul').show('.sub-menu');
+        }
     },
     mouseleave: function (event) {
-        $('.main-navigation ul ul').hide();
+        var width = $('body').width();
+        if (width > 1060){
+            $('.main-navigation ul ul').hide();
+        }
     }
 });
 
