@@ -7,6 +7,7 @@
 
 get_header(); ?>
 
+<div class="heading-carousel">
 <section class="carousel-container">
     <div class="double-carousel carousel-main">
         <?php $loop = CFS()->get( 'activity_image_loop' );
@@ -32,9 +33,13 @@ get_header(); ?>
 <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 </header><!-- .entry-header -->
 
+
+
 <p class="activity-location">
 <?php echo CFS()->get('activity_location') ?>
 </p>
+
+</div>
 
 <div class="flex-container">
 

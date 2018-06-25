@@ -1,4 +1,4 @@
-.single-activity, .single-festival{
+.single-activity, .single-festival, .tribe-events-single{
 
     .flickity-button {
         display: none;
@@ -27,6 +27,8 @@
         padding-top: 8rem;
         @include desktop {
             display: flex;
+            order: 2;
+            padding-top: 0;
         }
     }
 
@@ -43,7 +45,7 @@
         width: 100%;
         @include desktop {
             width: 100%;
-            height: 600px;
+            height: 500px;
             margin-right: 10px;
         }
     }
@@ -59,7 +61,7 @@
         min-width: 400px;
         @include desktop {
             width: 100%;
-            height: 100%;
+            height: auto;
         }
     }
 
@@ -68,7 +70,7 @@
     height: 100%;
     width: 120px;
     margin-left: 20px;
-    max-height: 600px;
+    max-height: 500px;
     overflow-y: scroll;
     @include desktop {
         display: block;
@@ -110,6 +112,7 @@
         border-radius: 20px;
         padding: 2px 20px;
         text-align: center;
+        
         }
 
     .creat-events-button {
@@ -126,6 +129,7 @@
 
     .creat-event-button {
         text-align: center;
+        padding-top: 5rem;
     }
 
     .site-content {
@@ -136,28 +140,50 @@
         font-size: $font-size__h1;
         font-family: $font-family__h1;
         text-align: center;
+        @include desktop {
+            font-size: $font-size__desktop__h1;
+            font-family: $font-family__desktop__h1;
+            text-align: start;
+            margin: 0;
+            padding-top: 5rem;
+            
+        }
     }
 
     .activity-location {
         text-align: center;
-        font-family: $font-family__body;
-        font-size: $font-size__body;
+        @include desktop {
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-align: start;
+            margin-top: 0;
+            margin-bottom: 3rem;
+        }
     }
 
-    // .description {
-    //     font-size: $font-size__h2;
-    //     font-family: $font-family__h2;
-    // }
+    .description {
+        @include desktop {
+        font-size: $font-size__desktop__h2;
+        font-family: $font-family__desktop__h2;
+        }
+    }
 
     .description-paragraph {
-        font-family: $font-family__body2;
-        font-size: $font-size__body2;
-        position: relative;
+        font-family: $font-family__body;
+        font-size: $font-size__body;
+        @include desktop {
+            width: 80%;
+            font-family: $font-family__desktop__body;
+            font-size: $font-size__desktop__body;
+        }
     }
 
     iframe {
         border: 1.5px solid $color__green !important;
         margin-top: 2rem;
+        @include desktop {
+            margin-top: 7rem;
+        }
     }
 
     .flex-container {
@@ -165,6 +191,27 @@
             display: flex;
         }
     }
+
+    .left-side {
+        @include desktop {
+        width: 50%;
+        }
+    }
+
+    .right-side {
+        @include desktop {
+        width: 50%;
+        text-align: center;
+        align-items: center;
+        }
+    }
+
+    .heading-carousel {
+        display: flex;
+        flex-direction: column;
+    }
+
+
 
 
    

@@ -448,7 +448,7 @@ h1 {
   @media (min-width: 1080px) {
     h1 {
       font-size: 2.67rem;
-      font-family: "Oswald Bold", sans-serif; } }
+      font-family: "Oswald", sans-serif; } }
 
 h2 {
   font-size: 1.5rem;
@@ -1050,6 +1050,12 @@ object {
           width: 50%; } }
     .home section .activities-container .activities-posts-single {
       border: 1px solid #72CB7E; }
+      @media (min-width: 620px) {
+        .home section .activities-container .activities-posts-single img {
+          height: 20rem; } }
+      @media (min-width: 1080px) {
+        .home section .activities-container .activities-posts-single img {
+          height: 25rem; } }
       .home section .activities-container .activities-posts-single .activities-posts-single-text {
         height: 100%;
         display: -webkit-box;
@@ -1156,8 +1162,16 @@ object {
         .home section ul.tabs {
           display: none; } }
     .home section .tab-content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
       border: 1px solid #72CB7E;
-      padding: 1rem; }
+      padding: 1rem;
+      margin: 0 1rem; }
       .home section .tab-content .read-more {
         font-size: 24px;
         color: #72CB7E; }
@@ -1228,6 +1242,9 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       .tribe-events-before-html p {
         margin-top: 0;
         padding-top: 0; } }
+
+.container {
+  padding: 2%; }
 
 #tribe-events-pg-template.tribe-events-pg-template {
   margin: 0 auto;
@@ -1530,8 +1547,11 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   display: none; }
 
 .tribe_events-template-default.single-tribe_events .events-container {
-  margin-top: 6rem;
-  text-align: center; }
+  text-align: center;
+  max-width: 1200px;
+  margin: 6rem auto 1rem; }
+  .tribe_events-template-default.single-tribe_events .events-container .event-info-container {
+    margin-bottom: 2rem; }
   .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-event-title {
     font-family: 'Oswald'; }
   .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-section.tribe-events-event-meta {
@@ -1545,6 +1565,30 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     @media (min-width: 1080px) {
       .tribe_events-template-default.single-tribe_events .events-container .single-event-details-title {
         display: inline; } }
+  .tribe_events-template-default.single-tribe_events .events-container .tribe-event-tags {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 0 3rem 0;
+    padding: 0; }
+    .tribe_events-template-default.single-tribe_events .events-container .tribe-event-tags a {
+      border: 1px solid #40B2C4;
+      border-radius: 15px;
+      padding: 0.5rem;
+      margin: 0.2rem;
+      min-width: 5rem;
+      text-align: center; }
+      .tribe_events-template-default.single-tribe_events .events-container .tribe-event-tags a::before {
+        content: '#'; }
+  .tribe_events-template-default.single-tribe_events .events-container .tribe-events-cal-links a {
+    background-color: #F9D169 !important;
+    border-radius: 25px;
+    border: none;
+    color: white !important;
+    padding: 1rem 3rem;
+    font-size: 1.5rem; }
 
 .tribe-events-meta-group.tribe-events-meta-group-details, .tribe-events-meta-group.tribe-events-meta-group-gmap {
   padding: 0;
@@ -2005,50 +2049,54 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         margin-left: 2rem;
         margin-right: 2rem; } }
 
-.single-activity .flickity-button, .single-festival .flickity-button {
+.single-activity .flickity-button, .single-festival .flickity-button, .tribe-events-single .flickity-button {
   display: none; }
 
-.single-activity .flickity-page-dots, .single-festival .flickity-page-dots {
+.single-activity .flickity-page-dots, .single-festival .flickity-page-dots, .tribe-events-single .flickity-page-dots {
   visibility: visible; }
   @media (min-width: 1080px) {
-    .single-activity .flickity-page-dots, .single-festival .flickity-page-dots {
+    .single-activity .flickity-page-dots, .single-festival .flickity-page-dots, .tribe-events-single .flickity-page-dots {
       visibility: hidden; } }
 
-.single-activity .flickity-page-dots .dot, .single-festival .flickity-page-dots .dot {
+.single-activity .flickity-page-dots .dot, .single-festival .flickity-page-dots .dot, .tribe-events-single .flickity-page-dots .dot {
   width: 12px;
   height: 12px;
   opacity: 1;
   background: transparent;
   border: 1px solid #72CB7E; }
 
-.single-activity .flickity-page-dots .dot.is-selected, .single-festival .flickity-page-dots .dot.is-selected {
+.single-activity .flickity-page-dots .dot.is-selected, .single-festival .flickity-page-dots .dot.is-selected, .tribe-events-single .flickity-page-dots .dot.is-selected {
   background: #72CB7E; }
 
-.single-activity .carousel-container, .single-festival .carousel-container {
+.single-activity .carousel-container, .single-festival .carousel-container, .tribe-events-single .carousel-container {
   padding-top: 8rem; }
   @media (min-width: 1080px) {
-    .single-activity .carousel-container, .single-festival .carousel-container {
+    .single-activity .carousel-container, .single-festival .carousel-container, .tribe-events-single .carousel-container {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex;
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      padding-top: 0; } }
 
-.single-activity .double-carousel, .single-festival .double-carousel {
+.single-activity .double-carousel, .single-festival .double-carousel, .tribe-events-single .double-carousel {
   margin-bottom: 40px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   width: 100%; }
 
-.single-activity .carousel-cell, .single-festival .carousel-cell {
+.single-activity .carousel-cell, .single-festival .carousel-cell, .tribe-events-single .carousel-cell {
   height: 300px;
   width: 100%; }
   @media (min-width: 1080px) {
-    .single-activity .carousel-cell, .single-festival .carousel-cell {
+    .single-activity .carousel-cell, .single-festival .carousel-cell, .tribe-events-single .carousel-cell {
       width: 100%;
-      height: 600px;
+      height: 500px;
       margin-right: 10px; } }
 
-.single-activity .double-carousel .carousel-cell img, .single-festival .double-carousel .carousel-cell img {
+.single-activity .double-carousel .carousel-cell img, .single-festival .double-carousel .carousel-cell img, .tribe-events-single .double-carousel .carousel-cell img {
   width: 100%;
   height: auto;
   position: absolute;
@@ -2059,28 +2107,28 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   min-height: 300px;
   min-width: 400px; }
   @media (min-width: 1080px) {
-    .single-activity .double-carousel .carousel-cell img, .single-festival .double-carousel .carousel-cell img {
+    .single-activity .double-carousel .carousel-cell img, .single-festival .double-carousel .carousel-cell img, .tribe-events-single .double-carousel .carousel-cell img {
       width: 100%;
-      height: 100%; } }
+      height: auto; } }
 
-.single-activity .carousel-nav, .single-festival .carousel-nav {
+.single-activity .carousel-nav, .single-festival .carousel-nav, .tribe-events-single .carousel-nav {
   display: none;
   height: 100%;
   width: 120px;
   margin-left: 20px;
-  max-height: 600px;
+  max-height: 500px;
   overflow-y: scroll; }
   @media (min-width: 1080px) {
-    .single-activity .carousel-nav, .single-festival .carousel-nav {
+    .single-activity .carousel-nav, .single-festival .carousel-nav, .tribe-events-single .carousel-nav {
       display: block; } }
 
-.single-activity .carousel-nav .carousel-cell, .single-festival .carousel-nav .carousel-cell {
+.single-activity .carousel-nav .carousel-cell, .single-festival .carousel-nav .carousel-cell, .tribe-events-single .carousel-nav .carousel-cell {
   height: 100px;
   width: 100%;
   margin-bottom: 1rem;
   position: relative; }
 
-.single-activity .carousel-nav .carousel-cell img, .single-festival .carousel-nav .carousel-cell img {
+.single-activity .carousel-nav .carousel-cell img, .single-festival .carousel-nav .carousel-cell img, .tribe-events-single .carousel-nav .carousel-cell img {
   height: auto;
   width: 100%;
   position: absolute;
@@ -2090,20 +2138,20 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
           transform: translateY(-50%) translateX(-50%);
   min-height: 100px; }
 
-.single-activity .carousel-nav .carousel-cell.is-nav-selected, .single-festival .carousel-nav .carousel-cell.is-nav-selected {
+.single-activity .carousel-nav .carousel-cell.is-nav-selected, .single-festival .carousel-nav .carousel-cell.is-nav-selected, .tribe-events-single .carousel-nav .carousel-cell.is-nav-selected {
   background: #f7f7f5; }
 
-.single-activity .tags-links a::before, .single-festival .tags-links a::before {
+.single-activity .tags-links a::before, .single-festival .tags-links a::before, .tribe-events-single .tags-links a::before {
   content: "#"; }
 
-.single-activity .tags-links a, .single-festival .tags-links a {
+.single-activity .tags-links a, .single-festival .tags-links a, .tribe-events-single .tags-links a {
   color: black;
   border: 1px solid #40B2C4;
   border-radius: 20px;
   padding: 2px 20px;
   text-align: center; }
 
-.single-activity .creat-events-button, .single-festival .creat-events-button {
+.single-activity .creat-events-button, .single-festival .creat-events-button, .tribe-events-single .creat-events-button {
   background-color: #F9D169;
   border-radius: 25px;
   border: none;
@@ -2114,36 +2162,82 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   font-size: 1.5rem;
   text-shadow: none; }
 
-.single-activity .creat-event-button, .single-festival .creat-event-button {
-  text-align: center; }
+.single-activity .creat-event-button, .single-festival .creat-event-button, .tribe-events-single .creat-event-button {
+  text-align: center;
+  padding-top: 5rem; }
 
-.single-activity .site-content, .single-festival .site-content {
+.single-activity .site-content, .single-festival .site-content, .tribe-events-single .site-content {
   padding: 2%; }
 
-.single-activity .entry-title, .single-festival .entry-title {
+.single-activity .entry-title, .single-festival .entry-title, .tribe-events-single .entry-title {
   font-size: 1.5rem;
   font-family: "Oswald";
   text-align: center; }
+  @media (min-width: 1080px) {
+    .single-activity .entry-title, .single-festival .entry-title, .tribe-events-single .entry-title {
+      font-size: 2.67rem;
+      font-family: "Oswald";
+      text-align: start;
+      margin: 0;
+      padding-top: 5rem; } }
 
-.single-activity .activity-location, .single-festival .activity-location {
-  text-align: center;
-  font-family: "Tofino";
-  font-size: 1rem; }
-
-.single-activity .description-paragraph, .single-festival .description-paragraph {
-  font-family: "Tofino-Text";
-  font-size: 0.833rem;
-  position: relative; }
-
-.single-activity iframe, .single-festival iframe {
-  border: 1.5px solid #72CB7E !important;
-  margin-top: 2rem; }
+.single-activity .activity-location, .single-festival .activity-location, .tribe-events-single .activity-location {
+  text-align: center; }
+  @media (min-width: 1080px) {
+    .single-activity .activity-location, .single-festival .activity-location, .tribe-events-single .activity-location {
+      font-size: 1.5rem;
+      font-weight: 500;
+      text-align: start;
+      margin-top: 0;
+      margin-bottom: 3rem; } }
 
 @media (min-width: 1080px) {
-  .single-activity .flex-container, .single-festival .flex-container {
+  .single-activity .description, .single-festival .description, .tribe-events-single .description {
+    font-size: 2.67rem;
+    font-family: "Tofino Bold"; } }
+
+.single-activity .description-paragraph, .single-festival .description-paragraph, .tribe-events-single .description-paragraph {
+  font-family: "Tofino";
+  font-size: 1rem; }
+  @media (min-width: 1080px) {
+    .single-activity .description-paragraph, .single-festival .description-paragraph, .tribe-events-single .description-paragraph {
+      width: 80%;
+      font-family: "Tofino-Text";
+      font-size: 1rem; } }
+
+.single-activity iframe, .single-festival iframe, .tribe-events-single iframe {
+  border: 1.5px solid #72CB7E !important;
+  margin-top: 2rem; }
+  @media (min-width: 1080px) {
+    .single-activity iframe, .single-festival iframe, .tribe-events-single iframe {
+      margin-top: 7rem; } }
+
+@media (min-width: 1080px) {
+  .single-activity .flex-container, .single-festival .flex-container, .tribe-events-single .flex-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; } }
+
+@media (min-width: 1080px) {
+  .single-activity .left-side, .single-festival .left-side, .tribe-events-single .left-side {
+    width: 50%; } }
+
+@media (min-width: 1080px) {
+  .single-activity .right-side, .single-festival .right-side, .tribe-events-single .right-side {
+    width: 50%;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
+
+.single-activity .heading-carousel, .single-festival .heading-carousel, .tribe-events-single .heading-carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 .answer {
   display: none; }
