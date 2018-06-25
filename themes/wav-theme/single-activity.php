@@ -36,6 +36,10 @@ get_header(); ?>
 <?php echo CFS()->get('activity_location') ?>
 </p>
 
+<div class="flex-container">
+
+<div class="left-side">
+
 <h2 class="description">
     <?php
         $description_props = CFS()->get_field_info('description');
@@ -58,19 +62,29 @@ get_header(); ?>
 <?php echo CFS()->get('location') ?>
 </p>
 
+<h2 class="tags">Tags</h2>
+
 <div class="tags">
     <?php
     $tags_list = get_the_tag_list( '', esc_html( ' ' ) );
     if ( $tags_list ) {
-    printf( '<span class="tags-links">' . esc_html( 'Tags  %1$s' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+    printf( '<span class="tags-links">' . esc_html( '%1$s' ) . '</span>', $tags_list ); // WPCS: XSS OK.
     }                                
     ?>
 </div>
 
+</div>
+
+<div class="right-side">
+
 <?php echo CFS()->get('maps') ?>
 
-<p>
-<input type="submit" value="Creat Events" class="creat-events-button">
+</div>
+
+</div>
+
+<p class="creat-event-button">
+<input type="submit" value="Create Event" class="creat-events-button">
 </p>
 
 <?php get_footer(); ?>
