@@ -2069,18 +2069,14 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .single-activity .tags-links a::before, .single-festival .tags-links a::before {
   content: "#"; }
 
-<<<<<<< HEAD
-.single-activity .creat-events-button, .single-festival .creat-events-button {
-=======
-.single-activity .tags-links a {
+.single-activity .tags-links a, .single-festival .tags-links a {
   color: black;
   border: 1px solid #40B2C4;
   border-radius: 20px;
   padding: 2px 20px;
   text-align: center; }
 
-.single-activity .creat-events-button {
->>>>>>> fbd32094c553df4ea24a8c95fd962d1a28525737
+.single-activity .creat-events-button, .single-festival .creat-events-button {
   background-color: #F9D169;
   border-radius: 25px;
   border: none;
@@ -2091,14 +2087,10 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   font-size: 1.5rem;
   text-shadow: none; }
 
-<<<<<<< HEAD
-.single-activity .site-content, .single-festival .site-content {
-=======
-.single-activity .creat-event-button {
+.single-activity .creat-event-button, .single-festival .creat-event-button {
   text-align: center; }
 
-.single-activity .site-content {
->>>>>>> fbd32094c553df4ea24a8c95fd962d1a28525737
+.single-activity .site-content, .single-festival .site-content {
   padding: 2%; }
 
 .single-activity .entry-title, .single-festival .entry-title {
@@ -2116,12 +2108,12 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   font-size: 0.833rem;
   position: relative; }
 
-.single-activity iframe {
+.single-activity iframe, .single-festival iframe {
   border: 1.5px solid #72CB7E !important;
   margin-top: 2rem; }
 
 @media (min-width: 1080px) {
-  .single-activity .flex-container {
+  .single-activity .flex-container, .single-festival .flex-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; } }
