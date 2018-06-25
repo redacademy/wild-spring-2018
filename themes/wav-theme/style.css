@@ -1114,8 +1114,9 @@ object {
           color: black; }
   @media (min-width: 620px) {
     .home section .about-container {
-      margin: 0 auto;
-      width: 50%; } }
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      margin: 0 auto; } }
   .home section ul.tabs {
     margin: 0;
     padding: 0;
@@ -1138,12 +1139,11 @@ object {
       .home section ul.tabs li.current {
         background: #ededed;
         color: #222; }
-  .home section .tab-content {
-    display: none;
-    background: #ededed;
-    padding: 15px; }
-    .home section .tab-content.current {
-      display: inherit; }
+  @media (min-width: 620px) {
+    .home section .tab-content {
+      display: inherit; } }
+  .home section .tab-content.current {
+    display: block; }
   .home .button {
     color: white;
     padding: 10px 30px;
@@ -3335,44 +3335,57 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 * This is stylesheet for pages using archive.php template: categories, tags. by kate
 *
 */
-.archive .site-content {
+.archive .site-content, .search .site-content, .search-result .site-content, .error404 .site-content {
   padding-top: 6rem; }
-  .archive .site-content .content-area .site-main {
+  .archive .site-content .content-area .site-main, .search .site-content .content-area .site-main, .search-result .site-content .content-area .site-main, .error404 .site-content .content-area .site-main {
     padding: 0 4%; }
-    .archive .site-content .content-area .site-main .page-title {
+    .archive .site-content .content-area .site-main .page-title, .search .site-content .content-area .site-main .page-title, .search-result .site-content .content-area .site-main .page-title, .error404 .site-content .content-area .site-main .page-title {
       font-family: 'Oswald'; }
-    .archive .site-content .content-area .site-main .article-container article {
-      padding: 0.5rem;
-      margin: 0.5rem;
-      border: 1px solid #72CB7E;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; }
-      .archive .site-content .content-area .site-main .article-container article .entry-header img {
-        height: 200px;
-        -o-object-fit: cover;
-           object-fit: cover; }
-      .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title {
-        font-family: 'Oswald';
-        font-weight: 500; }
-        .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a {
-          color: #72CB7E; }
-          .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited {
+    .archive .site-content .content-area .site-main .article-container, .search .site-content .content-area .site-main .article-container, .search-result .site-content .content-area .site-main .article-container, .error404 .site-content .content-area .site-main .article-container {
+      margin-bottom: 2rem; }
+      .archive .site-content .content-area .site-main .article-container article, .search .site-content .content-area .site-main .article-container article, .search-result .site-content .content-area .site-main .article-container article, .error404 .site-content .content-area .site-main .article-container article {
+        padding: 0.5rem;
+        margin: 0.5rem 0.5rem 3rem 0.5rem;
+        border: 1px solid #72CB7E;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .archive .site-content .content-area .site-main .article-container article .entry-header img, .search .site-content .content-area .site-main .article-container article .entry-header img, .search-result .site-content .content-area .site-main .article-container article .entry-header img, .error404 .site-content .content-area .site-main .article-container article .entry-header img {
+          height: 200px;
+          -o-object-fit: cover;
+             object-fit: cover; }
+        .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title {
+          font-family: 'Oswald';
+          font-weight: 500; }
+          .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a {
             color: #72CB7E; }
-          .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover {
-            color: #72cb7e; }
-    @media (min-width: 620px) {
-      .archive .site-content .content-area .site-main .article-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 1rem;
-        margin: 0; } }
+            .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited {
+              color: #72CB7E; }
+            .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover {
+              color: #72cb7e; }
+      @media (min-width: 620px) {
+        .archive .site-content .content-area .site-main .article-container, .search .site-content .content-area .site-main .article-container, .search-result .site-content .content-area .site-main .article-container, .error404 .site-content .content-area .site-main .article-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 1rem;
+          margin: 0; } }
+    .archive .site-content .content-area .site-main .search-pagination, .search .site-content .content-area .site-main .search-pagination, .search-result .site-content .content-area .site-main .search-pagination, .error404 .site-content .content-area .site-main .search-pagination {
+      text-align: center; }
+      .archive .site-content .content-area .site-main .search-pagination .page-numbers, .search .site-content .content-area .site-main .search-pagination .page-numbers, .search-result .site-content .content-area .site-main .search-pagination .page-numbers, .error404 .site-content .content-area .site-main .search-pagination .page-numbers {
+        padding: 0.5rem 0.8rem;
+        background-color: #40B2C4;
+        color: white;
+        border: 1px solid #40B2C4;
+        border-radius: 20%;
+        margin: 1rem 0.5rem; }
+        .archive .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .search .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .search-result .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .error404 .site-content .content-area .site-main .search-pagination .page-numbers a:visited {
+          color: white; }
 
 .error404 .not-found {
   display: -webkit-box;
