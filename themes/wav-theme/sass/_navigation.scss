@@ -34,6 +34,9 @@ a {
 	float: left;
 	width: 100%;
 	position: relative;
+		@include desktop {
+			top: -6rem;
+		}
 
 	ul {
 		display: none;
@@ -123,6 +126,7 @@ a {
 	font-family: 'Tofino';
 	background: $color__blue__menu__background;
 	z-index: 10;
+    bottom: 3rem;
 	
 		a {
 			color: #fff;

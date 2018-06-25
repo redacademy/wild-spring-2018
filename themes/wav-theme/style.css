@@ -661,6 +661,9 @@ a {
   float: left;
   width: 100%;
   position: relative; }
+  @media (min-width: 1080px) {
+    .main-navigation {
+      top: -6rem; } }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -709,7 +712,8 @@ a {
   height: 100vh;
   font-family: 'Tofino';
   background: #B4E1E8;
-  z-index: 10; }
+  z-index: 10;
+  bottom: 3rem; }
   .main-navigation.toggled a {
     color: #fff;
     border-bottom: 1px solid #fff;
@@ -2284,8 +2288,9 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   position: relative; }
 
 .main-navigation ul {
+  position: absolute;
   right: 0;
-  bottom: 3rem; }
+  top: 1rem; }
 
 .main-navigation ul ul {
   position: initial;

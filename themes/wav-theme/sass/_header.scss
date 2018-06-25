@@ -26,9 +26,10 @@
 }
 
 .main-navigation ul {
-    // position: absolute;
+    position: absolute;
     right: 0;
-    bottom: 3rem;
+    top: 1rem;
+    
 }
 
 .main-navigation ul ul {
@@ -60,6 +61,8 @@
     .logo img {
         bottom: .5rem;
     }
+
+    
 
 
     .home, .post-type-archive-tribe_events, .page-id-81, .page-template-contact, {
