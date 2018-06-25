@@ -101,7 +101,7 @@ function wav_register_press_item() {
 	);
 	$args = array(
 		'label'                 => 'Press item',
-		'description'           => 'Custom post type to display press articles',
+		'description'           => 'In this section you will find all press related articles',
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
