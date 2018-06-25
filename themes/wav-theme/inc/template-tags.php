@@ -183,8 +183,8 @@
  				'format' => '?paged=%#%',
  				'current' => max( 1, get_query_var('paged') ),
  				'total' => $wp_query->max_num_pages,
- 				'prev_text' => esc_html( '&larr; Previous' ),
- 				'next_text' => esc_html( 'Next &rarr;' ),
+ 				'prev_text' => esc_html( ' &#8249;' ),
+ 				'next_text' => esc_html( ' &#8250; ' ),
  			)
  		);
  		echo '</nav>';

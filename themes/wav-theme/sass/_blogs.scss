@@ -1,0 +1,109 @@
+.blog {
+    .entry-title {
+        padding-top: 2rem;
+        font-size: $font-size__h1;
+        text-align: center;
+        margin-bottom: 0;
+        a:visited {
+            color: black;
+        }
+    }
+
+    fieldset {
+        border: none;
+        position: relative;
+        input[type=search]{
+            width: 100%;
+            border-radius: 7px;
+            border: 1px solid $color__green;
+        }
+        .search-submit {
+            background: none;
+            border: none;
+            box-shadow: none;
+            position: absolute;
+            top: 7px;
+            height: 1rem;
+        }
+    }
+
+    .blogs-wrapper {
+        text-align: center;
+
+    }
+
+    .blogs-item {
+        border: 1px solid $color__green;
+        margin: 2rem;
+        padding: 0.8rem;
+    }
+
+    .site-content {
+        padding: 2%;
+    }
+
+    .tags-links a {
+        color: black;
+        border: 1px solid $color__blue;
+        border-radius: 20px;
+        padding: 2px 20px;
+    }
+
+    .see-details {
+        text-align: end;
+        margin-bottom: 0;
+        a {
+        color: $color__green;
+        }
+    }
+
+    .navigation-arrow {
+        color: $color__green;
+    }
+
+    .nav-links a {
+        color: $color__green;
+    }
+
+    .image-wrapper {
+        height: 200px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+    }
+
+    .tags-links {
+        a::before {
+            content: "#"
+        }
+    }
+
+    .page-numbers{        
+        color: white;
+        border-radius: 10px;
+        background-color: $color__blue;
+        padding: 10px 20px;
+        margin-right: 8px;
+;
+    }
+
+     .prev,  .next  {
+        background: none;
+        color: black;
+        font-size: 4rem;
+        position: relative;
+        top: 0.8rem;        
+    }
+
+
+}

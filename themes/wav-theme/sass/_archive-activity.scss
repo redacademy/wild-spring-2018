@@ -28,6 +28,10 @@
         width: 100%;
         height: auto;
         min-height: 200px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateY(-50%) translateX(-50%);
         @include desktop {
             width: 100%;
             height: auto;
@@ -52,9 +56,67 @@
     .activity-item {
         border: 1px solid $color__green;
         margin: 2rem;
+        padding: 0.8rem;
     }
 
     .site-content {
         padding: 2%;
     }
+
+    fieldset {
+        border: none;
+        position: relative;
+        input[type=search]{
+            width: 100%;
+            border-radius: 7px;
+            border: 1px solid $color__green;
+        }
+        .search-submit {
+            background: none;
+            border: none;
+            box-shadow: none;
+            position: absolute;
+            top: 7px;
+            height: 1rem;
+        }
+    }
+
+    .entry-title {
+        padding-top: 2rem;
+        font-size: $font-size__h1;
+    }
+
+    .activity-location {
+        text-align: center;
+        font-family: $font-family__body;
+        font-size: $font-size__body;
+    }
+
+    .description-paragraph {
+        font-family: $font-family__body2;
+        font-size: $font-size__body2;
+    }
+
+    .tags-links a {
+        color: black;
+        border: 1px solid $color__blue;
+        border-radius: 20px;
+        padding: 2px 20px;
+
+    }
+
+    .see-details {
+        text-align: end;
+        margin-bottom: 0;
+        a {
+        color: $color__green;
+        }
+    }
+
+    .navigation-arrow {
+        color: $color__green;
+    }
+
+
+
 }

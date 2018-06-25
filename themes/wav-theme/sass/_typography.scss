@@ -13,7 +13,7 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
-body{
+html {
 	font-size: $font-size__base-size;
 	font-family: $font-family__base-font, $font__main;
 	@include desktop{

@@ -12,14 +12,14 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">				
+			<header class="page-header" id="1">				
                 <h1 class="entry-title">Outdoor Activity Ideas</h1>
 			</header>
 
 			<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
                 <fieldset>
                     <label>
-                        <input type="search" class="search-field" placeholder="SEARCH ..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
+                        <input type="search" class="search-field" placeholder="       Search ..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
                     </label>
                     <button class="search-submit">
                         <span class="icon-search" aria-hidden="true">
@@ -68,17 +68,24 @@ get_header(); ?>
 						<?php
 						$tags_list = get_the_tag_list( '', esc_html( ' ' ) );
 						if ( $tags_list ) {
-						printf( '<span class="tags-links">' . esc_html( 'Tags  %1$s' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+						printf( '<span class="tags-links">' . esc_html( '%1$s' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 						}                                
 						?>
 					</div>
-
-					<a href="<?php the_permalink(); ?>"class="see-detail-button">See Details</a>
 					
+					<p class="see-details">
+						<a href="<?php the_permalink(); ?>"class="see-detail-button">See details</a>
+					</p>
 				</div>
 
 
 					<?php endwhile; ?>
+
+					<p class="navigation-up-arrow">
+						<a href="#1" class="navigation-arrow">▲</a>
+					</p>
+
+
 
 					<?php else : ?>
 

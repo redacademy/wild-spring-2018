@@ -14,23 +14,28 @@ get_header(); ?>
 
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<header class="entry-header">
-					<?php if ( has_post_thumbnail() ) : ?>
-						<?php the_post_thumbnail( 'large' ); ?>
-					<?php endif; ?>
 
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				<div class="image-wrapper">
+                    <?php if ( has_post_thumbnail() ) : ?>
+                    <?php the_post_thumbnail( 'large' ); ?>
+                    <?php endif; ?>
+                </div>
 
-					<div class="entry-meta">
-						<?php WAV_Starter_posted_on(); ?>
-					</div><!-- .entry-meta -->
-					<?php									
-                 	$tags_list = get_the_tag_list( '', esc_html( ', ' ) );
-                	if ( $tags_list ) {
-               	 	printf( '<span class="tags-links">' . esc_html( 'Tagged &rarr; %1$s' ) . '</span>', $tags_list ); // WPCS: XSS OK.
-                	}
-                	?>
-				</header><!-- .entry-header -->
+				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+				<div class="entry-meta">
+					<p> posted on <?php  the_time('F j, Y / h:i A') ?> </p>
+				</div><!-- .entry-meta -->
+
+                <div class="tags">
+                    <?php
+                    $tags_list = get_the_tag_list( '', esc_html( ' ' ) );
+                    if ( $tags_list ) {
+                    printf( '<span class="tags-links">' . esc_html( '%1$s' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+                    }                                
+                    ?>
+                </div>
+					
 
 				<div class="entry-content">
 					<?php the_content(); ?>
@@ -46,8 +51,8 @@ get_header(); ?>
 			</article><!-- #post-## -->
 
 			<?php the_post_navigation( array(
-            'prev_text'                  => __( 'Back' ),
-            'next_text'                  => __( 'Next' ),
+            'prev_text'                  => __( '&#8249; Prev Post' ),
+            'next_text'                  => __( 'Next Post &#8250;' ),
        		 ) ); ?>
 
 		<?php endwhile; // End of the loop. ?>
