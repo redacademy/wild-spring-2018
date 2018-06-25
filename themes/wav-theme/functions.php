@@ -69,6 +69,15 @@ function wav_starter_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html( 'Secondary menu on about page' ),
+		'id'            => 'sidebar-about-nav',
+		'description'   => 'Widget area for custom links in secondary navigation on about us page',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'wav_starter_widgets_init' );
 add_action( 'widgets_init', 'child_register_sidebar' );
@@ -95,14 +104,7 @@ add_filter( 'stylesheet_uri', 'wav_starter_minified_css', 10, 2 );
 /**
  * Enqueue scripts and styles.
  */
-add_action( 'wp_enqueue_scripts', 'wptuts_enqueue' );
-function wptuts_enqueue() {
-    wp_register_style('wptuts-jquery-ui-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/themes/south-street/jquery-ui.css');
-    wp_enqueue_style('wptuts-jquery-ui-style');
- 
-    wp_register_script('wptuts-custom-js', get_template_directory_uri() . '/faq/faq.js', 'jquery-ui-accordion', '', true);
-    wp_enqueue_script('wptuts-custom-js');
-}
+
 function wav_starter_scripts() {
 	wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Oswald', false );
 	wp_enqueue_style( 'font-awesome-cdn', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css', array(), '5.0.6' );
@@ -148,37 +150,4 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/extras.php';
 
-/**
- * Change the display of tribe event tags
- */
-function wav_tribe_meta_event_tags( $label = null, $separator = ' ', $echo = true ) {
-	// if ( ! $label ) {
-	// 	$label = esc_html__( 'Tags:', 'the-events-calendar' );
-	// }
 
-	$tribe_ecp = Tribe__Events__Main::instance();
-	$list      = get_the_term_list( get_the_ID(), 'post_tag', '<dt>'. $label . '</dt><dd class="tribe-event-tags">', $separator, '</dd>' );
-	$list      = apply_filters( 'tribe_meta_event_tags', $list, $label, $separator, $echo );
-	if ( $echo ) {
-		echo $list;
-	} else {
-		return $list;
-	}
-}
-
-/*
-* Change the value of the placeholder in the tribe event bar. src:https://theeventscalendar.com/knowledgebase/change-the-wording-of-any-bit-of-text-or-string/
-*/
-function tribe_custom_theme_text ( $translation, $text, $domain ) {
-
-	$custom_text = array(
-		'Keyword' => 'Search by tags',
-		'Date' => 'Date'
-	);
-	// If this text domain starts with "tribe-", "the-events-", or "event-" and we have replacement text
-    	if( (strpos($domain, 'tribe-') === 0 || strpos($domain, 'the-events-') === 0 || strpos($domain, 'event-') === 0) && array_key_exists($translation, $custom_text) ) {
-		$translation = $custom_text[$translation];
-	}
-    return $translation;
-}
-add_filter('gettext', 'tribe_custom_theme_text', 20, 3);

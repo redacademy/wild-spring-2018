@@ -1,7 +1,7 @@
 (function($){ //tells wordpress that we are taking '$' and it means 'jQuery
 
 //Function to add dark-banner once user has scrolled past hero-banner
-var bannerHeight= $('.banner').height();
+var bannerHeight= $('.hero-banner').height();
 
 if($('body').hasClass('home') || $('body').hasClass('page-template-contact')||$('body').hasClass('page-template-involved')){
 

@@ -17,6 +17,12 @@
     }
 }
 
+.videoAboutWav p{
+    width: 80%;
+        margin: 0 50px;
+        line-height: 2.0
+}
+
 .page-template-about{
     .site-content {
         padding-top: 3.5rem;
@@ -27,6 +33,19 @@
 
     h1, h2{
         text-align: center;
+        @include tablet{
+            font-size: $font-size__desktop__h1;
+        }
+    }
+
+    p{
+        // @include tablet{
+            line-height: 2.0;
+            margin: 20px 50px;
+        // }
+        // @include tablet{
+        //     font-size: $font-size__desktop__base-size;
+        // }
     }
 
     .header-img-container{
@@ -41,17 +60,18 @@
         }
     }
 
-    .aboutWav, .ourFestival{
+    .aboutWav, .ourFestival, .theTeam, .press{
         padding: 10px;
         a{
             text-align: right;
-            text-decoration: underline;
+            text-decoration: none;
             color: $color__blue;
             display: block;
         }
         .center-button{
             display: flex;
             justify-content: center;
+        
         }
         .green-button{
             background-color: $color__green;
@@ -61,7 +81,7 @@
             text-align: center;
             text-decoration: none;
             border-radius: 50px;
-            margin: 0 auto;
+            margin: 20px auto;
         }
     }
 
@@ -77,7 +97,7 @@
         content: 'flickity';
         display: none;
       }
-    @include tablet{
+    @include desktop{
         // display: block;
         /* disable Flickity for large devices */
         &.about-carousel:after {
@@ -91,9 +111,12 @@
     .about-carousel-cell {
         margin: 0 1rem;
         width: 100%;
-        @include tablet{
+       @include tablet{
+           width: 45%;
+       }
+        @include desktop{
             margin: 0 1rem;
-            width: 90%;
+            width: auto;
         }
       }
 }
@@ -102,7 +125,7 @@
         content: 'flickity';
         display: none;
       }
-    @include tablet{
+    @include desktop{
         // display: block;
         /* disable Flickity for large devices */
         &.about-carousel:after {
@@ -117,8 +140,11 @@
         margin: 0 1rem;
         width: 100%;
         @include tablet{
+            width: 45%;
+        }
+        @include desktop{
             margin: 0 1rem;
-            width: 90%;
+            width: auto;
         }
       }
 }
@@ -136,7 +162,7 @@
 
 .teamMember, .collaborator, .festival, .schoolItem, .pressItem{
     width: 45%;
-    height: 45vw;
+    height: 350px;
     // padding: 10px;
     // border: 3px solid skyblue;
     position: relative;
@@ -145,10 +171,27 @@
     align-items: center;
     overflow: hidden;
     margin: 5px;
+    // border: 3px solid blue;
     @include desktop{
         width: 25%;
         height: 25vw;
+      
     }
+
+    img{
+    
+        @include tablet{
+            height: auto;
+            width: 450px;
+            max-width: none;
+        }
+        // @include large-desktop{
+        //     width: 600px;
+        //     // display: none;
+        // }
+        
+    }
+    
 
     & .entry-title a {
         position: absolute;
@@ -161,7 +204,15 @@
         padding: 10px;
         text-align: center;
         opacity: 0.9;
+       
     }
+
+    // .entry-title a{
+    //     @include desktop{
+    //         display: none;
+    //     }
+    // }
+
 
 
 
@@ -171,25 +222,38 @@
         img{
             object-fit: cover;
             position: absolute;
+            height: 100%;
         //    height: 300px;
         //    width: 300px;
            @include tablet{
-               height: 400px;
-               width: 400px;
+               height: auto;
+               width: 450px;
            }
+        //    @include desktop{
+        //     width: 550px;
+        //     // display: none;
+        // }
+          
         }
     }
 }
 
+.schoolItem{
+    width: 100%;
+    height: 45vw;
+    max-height: 300px;
+}
+
 .teamMember a, .collaborator a{
     background-color: $color__green;
+    // display: none;
 }
 .festivals{
     &.about-carousel:after {
         content: 'flickity';
         display: none;
       }
-    @include tablet{
+    @include desktop{
         // display: block;
         /* disable Flickity for large devices */
         &.about-carousel:after {
@@ -204,8 +268,11 @@
         margin: 0 1rem;
         width: 100%;
         @include tablet{
+            width: 45%;
+        }
+        @include desktop{
             margin: 0 1rem;
-            width: 90%;
+            width: auto;
         }
       }
 }
@@ -218,7 +285,7 @@
         content: 'flickity';
         display: none;
       }
-    @include tablet{
+    @include desktop{
         // display: block;
         /* disable Flickity for large devices */
         &.about-carousel:after {
@@ -233,8 +300,11 @@
         margin: 0 1rem;
         width: 100%;
         @include tablet{
+            width: 45%;
+        }
+        @include desktop{
             margin: 0 1rem;
-            width: 90%;
+            width: auto;
         }
       }
 
@@ -278,4 +348,30 @@
 }
 .flickity-page-dots{
     visibility: hidden;
+}
+
+.pressItem{
+    display: block;
+    height: 400px;
+    .entry-header{
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+    }
+    .entry-header img{
+        position: static;
+    }
+    p{
+        z-index: 1;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        font-size: $font-size__h1;
+        @include tablet{
+            font-size: $font-size__desktop__base-size;
+            line-height: 1.5;
+        }
+
+        
+    }
 }

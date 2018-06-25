@@ -12,7 +12,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-            <div class="get-involved banner">
+            <div class="get-involved hero-banner">
                 <img src="<?php echo CFS()->get( 'get_involved_image' ); ?>">
             </div>
 

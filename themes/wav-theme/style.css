@@ -1001,7 +1001,7 @@ object {
       color: #72CB7E; }
   .home section article {
     padding: 0 1rem;
-    border: 1px solid green; }
+    border: 1px solid #72CB7E; }
     .home section article img {
       margin-top: 1rem; }
   .home section .activities-container.carousel-front-page:after {
@@ -1101,10 +1101,11 @@ object {
         max-width: 80%; } }
     .home section .events-container .tags-list li {
       border: 1px solid #40B2C4;
-      border-radius: 25%;
+      border-radius: 15px;
       margin: 0.5rem;
       padding: 0.5rem;
-      min-width: 100px; }
+      min-width: 5rem;
+      text-align: center; }
       .home section .events-container .tags-list li a {
         color: black; }
         .home section .events-container .tags-list li a:visited {
@@ -1113,8 +1114,9 @@ object {
           color: black; }
   @media (min-width: 620px) {
     .home section .about-container {
-      margin: 0 auto;
-      width: 50%; } }
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      margin: 0 auto; } }
   .home section ul.tabs {
     margin: 0;
     padding: 0;
@@ -1137,12 +1139,14 @@ object {
       .home section ul.tabs li.current {
         background: #ededed;
         color: #222; }
-  .home section .tab-content {
-    display: none;
-    background: #ededed;
-    padding: 15px; }
-    .home section .tab-content.current {
-      display: inherit; }
+    @media (min-width: 620px) {
+      .home section ul.tabs {
+        display: none; } }
+  @media (min-width: 620px) {
+    .home section .tab-content {
+      display: inherit; } }
+  .home section .tab-content.current {
+    display: block; }
   .home .button {
     color: white;
     padding: 10px 30px;
@@ -1196,15 +1200,165 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 
 #tribe-events-pg-template.tribe-events-pg-template {
   margin: 0 auto;
-  max-width: 100%; }
+  max-width: 100%;
+  /*style for icons copied from tribe-events-full.css*/
+  /* Default icon */ }
   #tribe-events-pg-template.tribe-events-pg-template a {
     color: black; }
     #tribe-events-pg-template.tribe-events-pg-template a:hover:visited {
       color: black; }
-  #tribe-events-pg-template.tribe-events-pg-template .tribe-events-button {
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix {
+    max-width: 1200px;
+    margin: 0 auto; }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix .tribe-events-page-title {
+      text-align: center;
+      color: black;
+      font-family: 'Oswald';
+      font-size: 48px;
+      font-weight: bolder; }
+      @media (min-width: 620px) {
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix .tribe-events-page-title {
+          text-align: left;
+          -webkit-transform: translateY(-300px);
+                  transform: translateY(-300px);
+          margin-left: 1rem; } }
+      @media (min-width: 1080px) {
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix .tribe-events-page-title {
+          text-align: left;
+          -webkit-transform: translateY(-250px);
+                  transform: translateY(-250px);
+          margin-left: 1rem; } }
+      @media (min-width: 620px) {
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix .tribe-events-page-title {
+          color: white; } }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix.tribe-bar-filters-inner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+    @media (min-width: 620px) {
+      #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar {
+        margin-top: -5rem; } }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar #tribe-bar-views {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      margin-top: auto;
+      -webkit-box-ordinal-group: 0;
+          -ms-flex-order: -1;
+              order: -1;
+      margin: 0 1rem; }
+      @media (min-width: 620px) {
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar #tribe-bar-views {
+          -webkit-box-ordinal-group: 2;
+              -ms-flex-order: 1;
+                  order: 1;
+          margin-top: auto; } }
+      #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar #tribe-bar-views .tribe-bar-views-inner {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+      #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar #tribe-bar-views label {
+        margin: 0.5rem; }
+      #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar #tribe-bar-views ul {
+        padding-left: 0;
+        margin-left: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar #tribe-bar-views ul li {
+          margin: 0.5rem; }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-filters {
+      -webkit-box-ordinal-group: 0;
+          -ms-flex-order: -1;
+              order: -1;
+      margin: 0 1rem; }
+      #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-filters .label-tribe-bar-date, #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-filters .label-tribe-bar-search {
+        display: none; }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter, #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter {
+      border: 1px solid #72CB7E;
+      border-radius: 10px;
+      margin: 0.5rem 1rem;
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; }
+      #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=email], #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=password], #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=search], #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=text], #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=url], #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=email], #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=password], #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=search], #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=text], #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=url] {
+        border: 0.1px solid white;
+        margin: 0.5rem 0;
+        padding: 5px; }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix .tribe-bar-views-option.tribe-bar-views-option-day {
+      display: none; }
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-select2-results-views span[class^='tribe-icon-'],
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-bar-views-list span[class^='tribe-icon-'],
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-bar-view-list a[class*='tribe-icon-'] {
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    display: block;
+    min-height: 30px;
+    padding-left: 24px; }
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-select2-results-views span[class^='tribe-icon-'] {
+    display: inline-block;
+    min-height: 30px; }
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-select2-results-views span[class^='tribe-icon-'],
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-bar-views-list span[class^='tribe-icon-'] {
+    background-image: url(../../assets/images/events-bar/icon_calendar_view.svg);
+    background-size: 20px 30px; }
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-select2-results-views span.tribe-icon-list,
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-bar-views-list span.tribe-icon-list,
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-bar-view-list span[class^='tribe-icon-'] {
+    background-image: url(../../assets/images/events-bar/icon_unselected_list_wiew.svg);
+    background-size: 15px 10px; }
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-bar-view-list a.tribe-icon-list,
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-bar-view-list a.tribe-icon-month {
+    background-position: 10px 50%;
+    padding-left: 30px; }
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-select2-results-views .tribe-icon-month,
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-bar-views-list span.tribe-icon-month,
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-bar-view-list a.tribe-icon-month {
+    background-image: url(../../assets/images/events-bar/icon_calendar_view.svg);
+    background-size: 20px 30px; }
+  #tribe-events-pg-template.tribe-events-pg-template .button {
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    margin: 1rem; }
+    #tribe-events-pg-template.tribe-events-pg-template .button a {
+      color: white;
+      text-transform: capitalize;
+      font-size: 1.5rem; }
+    #tribe-events-pg-template.tribe-events-pg-template .button.green-button {
+      background-color: #72CB7E; }
+    #tribe-events-pg-template.tribe-events-pg-template .button.contact-button1 {
+      background-color: #F9D169; }
+    #tribe-events-pg-template.tribe-events-pg-template .button.blue-button {
+      background-color: #40B2C4; }
+  #tribe-events-pg-template.tribe-events-pg-template #tribe-bar-form {
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-bar-date-filter {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+  #tribe-events-pg-template.tribe-events-pg-template #tribe-bar-collapse-toggle {
     display: none; }
+  #tribe-events-pg-template.tribe-events-pg-template a {
+    color: black; }
+    #tribe-events-pg-template.tribe-events-pg-template a:hover:visited {
+      color: black; }
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-events-button.tribe-no-param {
+    visibility: hidden; }
   #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop {
     margin: 0 1rem; }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container.carousel-front-page:after {
+      content: 'flickity';
+      display: none; }
     @media (min-width: 620px) {
       #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container {
         display: -webkit-box;
@@ -1212,182 +1366,134 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         display: flex;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between; } }
-    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item {
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        /* disable Flickity for large devices */ }
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container.carousel-front-page:after {
+          content: ''; }
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container.carousel-front-page {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; } }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      margin: 0.5rem;
       border: 1px solid #72CB7E;
-      padding: 1rem; }
+      padding: 1rem;
+      width: 100%; }
       @media (min-width: 620px) {
-        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item {
-          width: 33.33%; } }
-      #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item .type-tribe_events {
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell {
+          width: 30%; } }
+      #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
-                flex-direction: column;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        margin-top: auto; }
-    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .tribe-events-list-event-description a {
-      margin-top: auto;
-      color: #72CB7E; }
-      #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .tribe-events-list-event-description a:hover:visited {
-        color: #72CB7E; }
+                flex-direction: column; }
+        #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description {
+          margin-top: auto; }
+          #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description .tribe-event-tags {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap; }
+            #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description .tribe-event-tags a {
+              border: 1px solid #40B2C4;
+              border-radius: 15px;
+              padding: 0.5rem;
+              margin: 0.2rem;
+              min-width: 5rem;
+              text-align: center; }
+              #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description .tribe-event-tags a::before {
+                content: '#'; }
+          #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description a {
+            color: black; }
+            #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description a:hover:visited {
+              color: black; }
+            #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description a.tribe-events-read-more {
+              text-align: right;
+              color: #72CB7E;
+              font-size: 24px; }
+              #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description a.tribe-events-read-more:hover:visited {
+                color: #72CB7E; }
   #tribe-events-pg-template.tribe-events-pg-template .tribe-events-sub-nav {
     display: none; }
 
 .tribe-events-list-event-title {
   font-family: 'Oswald'; }
 
-.tribe-clearfix {
-  max-width: 1200px;
-  margin: 0 auto; }
-  .tribe-clearfix .tribe-events-page-title {
-    text-align: center;
-    color: black;
-    font-family: 'Oswald';
-    font-size: 48px;
-    font-weight: bolder; }
-    @media (min-width: 620px) {
-      .tribe-clearfix .tribe-events-page-title {
-        text-align: left;
-        -webkit-transform: translateY(-300px);
-                transform: translateY(-300px);
-        margin-left: 1rem; } }
-    @media (min-width: 1080px) {
-      .tribe-clearfix .tribe-events-page-title {
-        text-align: left;
-        -webkit-transform: translateY(-250px);
-                transform: translateY(-250px);
-        margin-left: 1rem; } }
-    @media (min-width: 620px) {
-      .tribe-clearfix .tribe-events-page-title {
-        color: white; } }
-  .tribe-clearfix.tribe-bar-filters-inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-  .tribe-clearfix #tribe-events-bar #tribe-bar-views {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-    margin: 0 1rem; }
-    @media (min-width: 620px) {
-      .tribe-clearfix #tribe-events-bar #tribe-bar-views {
-        -webkit-box-ordinal-group: 2;
-            -ms-flex-order: 1;
-                order: 1; } }
-    .tribe-clearfix #tribe-events-bar #tribe-bar-views ul {
-      padding-left: 0;
-      margin-left: 0; }
-  .tribe-clearfix #tribe-events-bar .tribe-bar-filters {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-    margin: 0 1rem; }
-    .tribe-clearfix #tribe-events-bar .tribe-bar-filters .label-tribe-bar-date, .tribe-clearfix #tribe-events-bar .tribe-bar-filters .label-tribe-bar-search {
-      display: none; }
-  .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter, .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter {
-    border: 1px solid #72CB7E;
-    border-radius: 10px;
-    margin: 0.5rem 1rem;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1; }
-    .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=email], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=password], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=search], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=text], .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=url], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=email], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=password], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=search], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=text], .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=url] {
-      border: 0.1px solid white;
-      margin: 0.5rem 0;
-      padding: 5px; }
-  .tribe-clearfix .tribe-bar-views-option.tribe-bar-views-option-day {
-    display: none; }
-
-/*style for icons copied from tribe-events-full.css*/
-.tribe-select2-results-views span[class^='tribe-icon-'],
-.tribe-bar-views-list span[class^='tribe-icon-'],
-.tribe-bar-view-list a[class*='tribe-icon-'] {
-  background-position: 0 50%;
-  background-repeat: no-repeat;
-  display: block;
-  min-height: 16px;
-  padding-left: 24px; }
-
-.tribe-select2-results-views span[class^='tribe-icon-'] {
-  display: inline-block;
-  min-height: 16px; }
-
-/* Default icon */
-.tribe-select2-results-views span[class^='tribe-icon-'],
-.tribe-bar-views-list span[class^='tribe-icon-'] {
-  background-image: url(../../assets/images/events-bar/icon_calendar_view.svg);
-  background-size: 15px 16px; }
-
-.tribe-select2-results-views span.tribe-icon-list,
-.tribe-bar-views-list span.tribe-icon-list,
-.tribe-bar-view-list span[class^='tribe-icon-'] {
-  background-image: url(../../assets/images/events-bar/icon_unselected_list_wiew.svg);
-  background-size: 15px 10px; }
-
-.tribe-bar-view-list a.tribe-icon-list,
-.tribe-bar-view-list a.tribe-icon-month {
-  background-position: 10px 50%;
-  padding-left: 30px; }
-
-.tribe-select2-results-views .tribe-icon-month,
-.tribe-bar-views-list span.tribe-icon-month,
-.tribe-bar-view-list a.tribe-icon-month {
-  background-image: url(../../assets/images/events-bar/icon_calendar_view.svg);
-  background-size: 15px 16px; }
-
-.button {
-  color: white;
-  padding: 10px 30px;
-  border-radius: 50px;
-  margin: 1rem; }
-  .button a {
-    color: white;
-    text-transform: capitalize;
-    font-size: 1.5rem; }
-  .button.green-button {
-    background-color: #72CB7E; }
-  .button.contact-button1 {
-    background-color: #F9D169; }
-  .button.blue-button {
-    background-color: #40B2C4; }
-
-#tribe-bar-form {
-  background-color: white;
+.tribe-events-list.tribe-events-day {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .tribe-events-list.tribe-events-day .tribe-events-day-time-slot {
+    margin: 0 auto; }
+    @media (min-width: 620px) {
+      .tribe-events-list.tribe-events-day .tribe-events-day-time-slot {
+        width: 50%; } }
+    @media (min-width: 1080px) {
+      .tribe-events-list.tribe-events-day .tribe-events-day-time-slot {
+        width: 30%; } }
+    .tribe-events-list.tribe-events-day .tribe-events-day-time-slot .type-tribe_events {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      border: 1px solid #72CB7E;
+      padding: 1rem;
+      margin-top: 1rem; }
+      .tribe-events-list.tribe-events-day .tribe-events-day-time-slot .type-tribe_events .tribe-events-venue-details, .tribe-events-list.tribe-events-day .tribe-events-day-time-slot .type-tribe_events .tribe-events-event-cost {
+        display: none; }
+      .tribe-events-list.tribe-events-day .tribe-events-day-time-slot .type-tribe_events a.tribe-events-read-more {
+        text-align: right;
+        color: #72CB7E; }
+        .tribe-events-list.tribe-events-day .tribe-events-day-time-slot .type-tribe_events a.tribe-events-read-more:hover:visited {
+          color: #72CB7E; }
 
-.tribe-bar-date-filter {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1; }
+.tribe-events-calendar .tribe-events-month-event-title {
+  font-size: 0.5rem;
+  font-weight: lighter; }
+  @media (min-width: 620px) {
+    .tribe-events-calendar .tribe-events-month-event-title {
+      font-size: 1rem; } }
 
-#tribe-bar-collapse-toggle {
-  display: none; }
+.tribe-events-calendar td div[id*=tribe-events-daynum-] {
+  font-weight: 500; }
+
+.tribe-events-calendar td {
+  font-weight: 500; }
+
+.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] {
+  color: #72CB7E !important; }
+
+.tribe-events-calendar #tribe-events-monday, .tribe-events-calendar #tribe-events-tuesday, .tribe-events-calendar #tribe-events-wednesday, .tribe-events-calendar #tribe-events-thursday, .tribe-events-calendar #tribe-events-friday {
+  font-weight: 500; }
+
+.tribe-events-calendar #tribe-events-sunday, .tribe-events-calendar #tribe-events-saturday {
+  color: #72CB7E;
+  font-weight: 500; }
 
 @media (min-width: 620px) {
   .number-of-events-day {
     display: none; } }
+
+.tribe-mobile-container .tribe-mobile-day {
+  border: 1px solid #72CB7E;
+  padding: 1rem; }
 
 .tribe_events-template-default.single-tribe_events .tribe-events-before-html {
   display: none; }
@@ -1397,9 +1503,10 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   text-align: center; }
   .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-event-title {
     font-family: 'Oswald'; }
+  .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-section.tribe-events-event-meta {
+    text-align: left; }
   .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-event-description.tribe-events-content {
-    text-align: left;
-    padding: 0 4%; }
+    text-align: left; }
     .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-event-description.tribe-events-content a {
       text-align: right; }
   .tribe_events-template-default.single-tribe_events .events-container .single-event-details-title {
@@ -1407,18 +1514,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     @media (min-width: 1080px) {
       .tribe_events-template-default.single-tribe_events .events-container .single-event-details-title {
         display: inline; } }
-  .tribe_events-template-default.single-tribe_events .events-container .tribe-events-event-meta {
-    background: white;
-    border: none; }
-  .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-section-title {
-    display: none; }
 
 .tribe-events-meta-group.tribe-events-meta-group-details, .tribe-events-meta-group.tribe-events-meta-group-gmap {
   padding: 0;
   margin: 0; }
 
 .tribe-events-ical.tribe-events-button {
-  visibility: hidden; }
+  display: none; }
 
 .aboutNavigation {
   background-color: #72CB7E;
@@ -1444,6 +1546,11 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .aboutNavigation a {
     color: white; }
 
+.videoAboutWav p {
+  width: 80%;
+  margin: 0 50px;
+  line-height: 2.0; }
+
 .page-template-about .site-content {
   padding-top: 3.5rem; }
   @media (min-width: 1080px) {
@@ -1452,6 +1559,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 
 .page-template-about h1, .page-template-about h2 {
   text-align: center; }
+  @media (min-width: 620px) {
+    .page-template-about h1, .page-template-about h2 {
+      font-size: 2.67rem; } }
+
+.page-template-about p {
+  line-height: 2.0;
+  margin: 20px 50px; }
 
 .page-template-about .header-img-container {
   height: 200px;
@@ -1464,21 +1578,21 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     -o-object-fit: cover;
        object-fit: cover; }
 
-.page-template-about .aboutWav, .page-template-about .ourFestival {
+.page-template-about .aboutWav, .page-template-about .ourFestival, .page-template-about .theTeam, .page-template-about .press {
   padding: 10px; }
-  .page-template-about .aboutWav a, .page-template-about .ourFestival a {
+  .page-template-about .aboutWav a, .page-template-about .ourFestival a, .page-template-about .theTeam a, .page-template-about .press a {
     text-align: right;
-    text-decoration: underline;
+    text-decoration: none;
     color: #40B2C4;
     display: block; }
-  .page-template-about .aboutWav .center-button, .page-template-about .ourFestival .center-button {
+  .page-template-about .aboutWav .center-button, .page-template-about .ourFestival .center-button, .page-template-about .theTeam .center-button, .page-template-about .press .center-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-  .page-template-about .aboutWav .green-button, .page-template-about .ourFestival .green-button {
+  .page-template-about .aboutWav .green-button, .page-template-about .ourFestival .green-button, .page-template-about .theTeam .green-button, .page-template-about .press .green-button {
     background-color: #72CB7E;
     color: white;
     padding: 10px 30px;
@@ -1486,7 +1600,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     text-align: center;
     text-decoration: none;
     border-radius: 50px;
-    margin: 0 auto; }
+    margin: 20px auto; }
 
 .page-template-about .aboutWav {
   padding-top: 1.5rem; }
@@ -1495,7 +1609,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   content: 'flickity';
   display: none; }
 
-@media (min-width: 620px) {
+@media (min-width: 1080px) {
   .teamMembers {
     /* disable Flickity for large devices */ }
     .teamMembers.about-carousel:after {
@@ -1509,14 +1623,17 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   width: 100%; }
   @media (min-width: 620px) {
     .teamMembers .about-carousel-cell {
+      width: 45%; } }
+  @media (min-width: 1080px) {
+    .teamMembers .about-carousel-cell {
       margin: 0 1rem;
-      width: 90%; } }
+      width: auto; } }
 
 .collaborators.about-carousel:after {
   content: 'flickity';
   display: none; }
 
-@media (min-width: 620px) {
+@media (min-width: 1080px) {
   .collaborators {
     /* disable Flickity for large devices */ }
     .collaborators.about-carousel:after {
@@ -1530,12 +1647,15 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   width: 100%; }
   @media (min-width: 620px) {
     .collaborators .about-carousel-cell {
+      width: 45%; } }
+  @media (min-width: 1080px) {
+    .collaborators .about-carousel-cell {
       margin: 0 1rem;
-      width: 90%; } }
+      width: auto; } }
 
 .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
   width: 45%;
-  height: 45vw;
+  height: 350px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1552,6 +1672,11 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
       width: 25%;
       height: 25vw; } }
+  @media (min-width: 620px) {
+    .teamMember img, .collaborator img, .festival img, .schoolItem img, .pressItem img {
+      height: auto;
+      width: 450px;
+      max-width: none; } }
   .teamMember .entry-title a, .collaborator .entry-title a, .festival .entry-title a, .schoolItem .entry-title a, .pressItem .entry-title a {
     position: absolute;
     bottom: 0;
@@ -1569,11 +1694,17 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     .teamMember .entry-header img, .collaborator .entry-header img, .festival .entry-header img, .schoolItem .entry-header img, .pressItem .entry-header img {
       -o-object-fit: cover;
          object-fit: cover;
-      position: absolute; }
+      position: absolute;
+      height: 100%; }
       @media (min-width: 620px) {
         .teamMember .entry-header img, .collaborator .entry-header img, .festival .entry-header img, .schoolItem .entry-header img, .pressItem .entry-header img {
-          height: 400px;
-          width: 400px; } }
+          height: auto;
+          width: 450px; } }
+
+.schoolItem {
+  width: 100%;
+  height: 45vw;
+  max-height: 300px; }
 
 .teamMember a, .collaborator a {
   background-color: #72CB7E; }
@@ -1582,7 +1713,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   content: 'flickity';
   display: none; }
 
-@media (min-width: 620px) {
+@media (min-width: 1080px) {
   .festivals {
     /* disable Flickity for large devices */ }
     .festivals.about-carousel:after {
@@ -1596,8 +1727,11 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   width: 100%; }
   @media (min-width: 620px) {
     .festivals .about-carousel-cell {
+      width: 45%; } }
+  @media (min-width: 1080px) {
+    .festivals .about-carousel-cell {
       margin: 0 1rem;
-      width: 90%; } }
+      width: auto; } }
 
 .festival a, .schoolItem a {
   background-color: #F9D169;
@@ -1607,7 +1741,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   content: 'flickity';
   display: none; }
 
-@media (min-width: 620px) {
+@media (min-width: 1080px) {
   .press {
     /* disable Flickity for large devices */ }
     .press.about-carousel:after {
@@ -1621,8 +1755,11 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   width: 100%; }
   @media (min-width: 620px) {
     .press .about-carousel-cell {
+      width: 45%; } }
+  @media (min-width: 1080px) {
+    .press .about-carousel-cell {
       margin: 0 1rem;
-      width: 90%; } }
+      width: auto; } }
 
 .pressItem a {
   background-color: #40B2C4; }
@@ -1661,6 +1798,26 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 
 .flickity-page-dots {
   visibility: hidden; }
+
+.pressItem {
+  display: block;
+  height: 400px; }
+  .pressItem .entry-header {
+    height: 300px;
+    overflow: hidden;
+    position: relative; }
+  .pressItem .entry-header img {
+    position: static; }
+  .pressItem p {
+    z-index: 1;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem; }
+    @media (min-width: 620px) {
+      .pressItem p {
+        font-size: 18px;
+        line-height: 1.5; } }
 
 .page-id-81 .main-navigation ul {
   bottom: 1.5rem; }
@@ -1817,60 +1974,60 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         margin-left: 2rem;
         margin-right: 2rem; } }
 
-.single-activity .flickity-button, .single-tribe_events .flickity-button {
+.single-activity .flickity-button {
   display: none; }
 
-.single-activity .flickity-page-dots, .single-tribe_events .flickity-page-dots {
+.single-activity .flickity-page-dots {
   visibility: visible; }
   @media (min-width: 1080px) {
-    .single-activity .flickity-page-dots, .single-tribe_events .flickity-page-dots {
+    .single-activity .flickity-page-dots {
       visibility: hidden; } }
 
-.single-activity .flickity-page-dots .dot, .single-tribe_events .flickity-page-dots .dot {
+.single-activity .flickity-page-dots .dot {
   width: 12px;
   height: 12px;
   opacity: 1;
   background: transparent;
   border: 1px solid #72CB7E; }
 
-.single-activity .flickity-page-dots .dot.is-selected, .single-tribe_events .flickity-page-dots .dot.is-selected {
+.single-activity .flickity-page-dots .dot.is-selected {
   background: #72CB7E; }
 
-.single-activity .carousel-container, .single-tribe_events .carousel-container {
+.single-activity .carousel-container {
   padding-top: 8rem; }
   @media (min-width: 1080px) {
-    .single-activity .carousel-container, .single-tribe_events .carousel-container {
+    .single-activity .carousel-container {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; } }
 
-.single-activity .double-carousel, .single-tribe_events .double-carousel {
+.single-activity .double-carousel {
   margin-bottom: 40px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   width: 100%; }
 
-.single-activity .carousel-cell, .single-tribe_events .carousel-cell {
+.single-activity .carousel-cell {
   height: 300px;
   width: 100%; }
   @media (min-width: 1080px) {
-    .single-activity .carousel-cell, .single-tribe_events .carousel-cell {
+    .single-activity .carousel-cell {
       width: 100%;
       height: 600px;
       margin-right: 10px; } }
 
-.single-activity .carousel-cell img, .single-tribe_events .carousel-cell img {
+.single-activity .carousel-cell img {
   width: 100%;
   height: auto;
   min-height: 300px;
   min-width: 400px; }
   @media (min-width: 1080px) {
-    .single-activity .carousel-cell img, .single-tribe_events .carousel-cell img {
+    .single-activity .carousel-cell img {
       width: 100%;
       height: auto; } }
 
-.single-activity .carousel-nav, .single-tribe_events .carousel-nav {
+.single-activity .carousel-nav {
   display: none;
   height: 100%;
   width: 120px;
@@ -1878,21 +2035,21 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   max-height: 600px;
   overflow-y: scroll; }
   @media (min-width: 1080px) {
-    .single-activity .carousel-nav, .single-tribe_events .carousel-nav {
+    .single-activity .carousel-nav {
       display: block; } }
 
-.single-activity .carousel-nav .carousel-cell, .single-tribe_events .carousel-nav .carousel-cell {
+.single-activity .carousel-nav .carousel-cell {
   height: auto;
   width: 100%;
   margin-bottom: 0.5rem; }
 
-.single-activity .carousel-nav .carousel-cell.is-nav-selected, .single-tribe_events .carousel-nav .carousel-cell.is-nav-selected {
+.single-activity .carousel-nav .carousel-cell.is-nav-selected {
   background: #f7f7f5; }
 
-.single-activity .tags-links a::before, .single-tribe_events .tags-links a::before {
+.single-activity .tags-links a::before {
   content: "#"; }
 
-.single-activity .creat-events-button, .single-tribe_events .creat-events-button {
+.single-activity .creat-events-button {
   background-color: #F9D169;
   border-radius: 25px;
   border: none;
@@ -1903,20 +2060,20 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   font-size: 1.5rem;
   text-shadow: none; }
 
-.single-activity .site-content, .single-tribe_events .site-content {
+.single-activity .site-content {
   padding: 2%; }
 
-.single-activity .entry-title, .single-tribe_events .entry-title {
+.single-activity .entry-title {
   font-size: 1.5rem;
   font-family: "Oswald";
   text-align: center; }
 
-.single-activity .activity-location, .single-tribe_events .activity-location {
+.single-activity .activity-location {
   text-align: center;
   font-family: "Tofino";
   font-size: 1rem; }
 
-.single-activity .description-paragraph, .single-tribe_events .description-paragraph {
+.single-activity .description-paragraph {
   font-family: "Tofino-Text";
   font-size: 0.833rem; }
 
@@ -2649,13 +2806,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
   opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -2730,8 +2887,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2748,8 +2905,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -2768,8 +2925,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2786,8 +2943,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -2978,8 +3135,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2996,8 +3153,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3182,6 +3339,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .post-type-archive-activity .site-content {
   padding: 2%; }
 
+<<<<<<< HEAD
 .post-type-archive-activity fieldset {
   border: none;
   position: relative; }
@@ -3225,6 +3383,63 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 
 .post-type-archive-activity .navigation-arrow {
   color: #72CB7E; }
+=======
+/*
+* This is stylesheet for pages using archive.php template: categories, tags. by kate
+*
+*/
+.archive .site-content, .search .site-content, .search-result .site-content, .error404 .site-content {
+  padding-top: 6rem; }
+  .archive .site-content .content-area .site-main, .search .site-content .content-area .site-main, .search-result .site-content .content-area .site-main, .error404 .site-content .content-area .site-main {
+    padding: 0 4%; }
+    .archive .site-content .content-area .site-main .page-title, .search .site-content .content-area .site-main .page-title, .search-result .site-content .content-area .site-main .page-title, .error404 .site-content .content-area .site-main .page-title {
+      font-family: 'Oswald'; }
+    .archive .site-content .content-area .site-main .article-container, .search .site-content .content-area .site-main .article-container, .search-result .site-content .content-area .site-main .article-container, .error404 .site-content .content-area .site-main .article-container {
+      margin-bottom: 2rem; }
+      .archive .site-content .content-area .site-main .article-container article, .search .site-content .content-area .site-main .article-container article, .search-result .site-content .content-area .site-main .article-container article, .error404 .site-content .content-area .site-main .article-container article {
+        padding: 0.5rem;
+        margin: 0.5rem 0.5rem 3rem 0.5rem;
+        border: 1px solid #72CB7E;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .archive .site-content .content-area .site-main .article-container article .entry-header img, .search .site-content .content-area .site-main .article-container article .entry-header img, .search-result .site-content .content-area .site-main .article-container article .entry-header img, .error404 .site-content .content-area .site-main .article-container article .entry-header img {
+          height: 200px;
+          -o-object-fit: cover;
+             object-fit: cover; }
+        .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title {
+          font-family: 'Oswald';
+          font-weight: 500; }
+          .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a {
+            color: #72CB7E; }
+            .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited {
+              color: #72CB7E; }
+            .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover {
+              color: #72cb7e; }
+      @media (min-width: 620px) {
+        .archive .site-content .content-area .site-main .article-container, .search .site-content .content-area .site-main .article-container, .search-result .site-content .content-area .site-main .article-container, .error404 .site-content .content-area .site-main .article-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 1rem;
+          margin: 0; } }
+    .archive .site-content .content-area .site-main .search-pagination, .search .site-content .content-area .site-main .search-pagination, .search-result .site-content .content-area .site-main .search-pagination, .error404 .site-content .content-area .site-main .search-pagination {
+      text-align: center; }
+      .archive .site-content .content-area .site-main .search-pagination .page-numbers, .search .site-content .content-area .site-main .search-pagination .page-numbers, .search-result .site-content .content-area .site-main .search-pagination .page-numbers, .error404 .site-content .content-area .site-main .search-pagination .page-numbers {
+        padding: 0.5rem 0.8rem;
+        background-color: #40B2C4;
+        color: white;
+        border: 1px solid #40B2C4;
+        border-radius: 20%;
+        margin: 1rem 0.5rem; }
+        .archive .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .search .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .search-result .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .error404 .site-content .content-area .site-main .search-pagination .page-numbers a:visited {
+          color: white; }
+>>>>>>> 55897625dc4dab425b0fea1a1c618f991ce29e82
 
 .error404 .not-found {
   display: -webkit-box;
@@ -3240,6 +3455,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   width: 800px;
   border: 2px solid #72CB7E; }
 
+<<<<<<< HEAD
 .blog .entry-title {
   padding-top: 2rem;
   font-size: 1.5rem;
@@ -3375,3 +3591,157 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+=======
+.tribe-section-cost {
+  display: none; }
+
+.tribe_community_edit .tribe-community-events input.events-community-submit {
+  color: black;
+  border: 2px solid #F9D169;
+  text-transform: none;
+  font-size: 20px;
+  border-radius: 50px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: white;
+  padding: 10px 30px;
+  font-family: "Tofino"; }
+  .tribe_community_edit .tribe-community-events input.events-community-submit:hover, .tribe_community_edit .tribe-community-events input.events-community-submit:active, .tribe_community_edit .tribe-community-events input.events-community-submit:focus {
+    background: #F9D169;
+    color: white; }
+
+.tribe-section-organizer a.tribe-button, .tribe-section-content div.form-controls div, .tribe-section-content div.form-controls input {
+  background: white;
+  border: 2px solid #72CB7E;
+  color: black;
+  border-radius: 50px;
+  text-transform: none;
+  font-family: "Tofino"; }
+  .tribe-section-organizer a.tribe-button:hover, .tribe-section-content div.form-controls div:hover, .tribe-section-content div.form-controls input:hover {
+    color: white;
+    background: 2px solid #72CB7E; }
+
+#tribe-events-pg-template.tribe-events-pg-template a.tribe-button, .event-submission-faq {
+  background: white;
+  text-transform: none;
+  border: 2px solid #72CB7E;
+  font-size: 20px;
+  border-radius: 50px;
+  padding: 10px 30px;
+  display: inline-block;
+  font-family: "Tofino"; }
+  #tribe-events-pg-template.tribe-events-pg-template a.tribe-button:hover, .event-submission-faq:hover {
+    background: #72CB7E;
+    color: white; }
+
+.tribe-community-events .tribe-section.tribe-section-image-uploader .tribe-image-upload-area div.choose-file {
+  text-transform: none;
+  font-size: 20px;
+  padding: 10px 30px;
+  border: 2px solid #72CB7E;
+  font-family: "Tofino"; }
+  .tribe-community-events .tribe-section.tribe-section-image-uploader .tribe-image-upload-area div.choose-file:hover {
+    background: #72CB7E;
+    color: white; }
+
+.tribe-section-content div.form-controls input[name=event_image]:hover {
+  background: #F9D169;
+  color: white; }
+
+.tribe-section-content div.form-controls input:hover:hover {
+  background: #F9D169;
+  color: white; }
+
+.tribe-community-events div.tribe-section, .events-community-post-content #post_content, .events-community-post-title #post_title {
+  border: 2px solid #72CB7E;
+  font-family: "Tofino"; }
+
+#tribe-community-events {
+  background: white;
+  border: none; }
+
+header.my-events-header, .tribe-community-events .tribe-section div.tribe-section-header {
+  border-bottom: none; }
+
+.tribe-section-content .tribe-dropdown-created, .tribe-section-content .venue input[type=text], .tribe-section-content .organizer input[type=text], .tribe-section-website input#EventURL {
+  border: 2px solid #72CB7E; }
+
+a.event-submission-faq {
+  font-size: 20px;
+  border: 2px solid #40B2C4;
+  margin: 0 0 30px 0;
+  line-height: 20px;
+  text-align: center; }
+  a.event-submission-faq:hover {
+    color: white !important;
+    background: #40B2C4; }
+
+header.my-events-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  header.my-events-header h2.my-events {
+    font-size: 2.67rem;
+    margin: 30px 0px;
+    font-family: 'Oswald'; }
+
+.tribe-events-after-html {
+  margin: 0 auto;
+  padding: 10px; }
+  .tribe-events-after-html .faq-item {
+    width: 100%; }
+    @media (min-width: 620px) {
+      .tribe-events-after-html .faq-item {
+        width: 100%; } }
+  @media (min-width: 620px) {
+    .tribe-events-after-html {
+      padding: 60px; } }
+
+h1.submission-header {
+  font-size: 1.5rem; }
+  @media (min-width: 1080px) {
+    h1.submission-header {
+      font-size: 2.67rem; } }
+
+.tribe-community-notice {
+  background-color: yellow; }
+  .tribe-community-notice .submission-thank-you {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .tribe-community-notice a.button {
+    font-size: 20px;
+    display: block;
+    text-transform: none;
+    color: white;
+    font-family: "Tofino";
+    width: 100%; }
+    .tribe-community-notice a.button:hover {
+      color: black; }
+  .tribe-community-notice a.yellow-button {
+    background: #F9D169;
+    color: white;
+    border: 2px solid #F9D169; }
+    .tribe-community-notice a.yellow-button:hover {
+      background: white; }
+  .tribe-community-notice a.blue-button {
+    border: 2px solid #40B2C4;
+    background: #40B2C4;
+    color: white; }
+    .tribe-community-notice a.blue-button:hover {
+      background: white; }
+>>>>>>> 55897625dc4dab425b0fea1a1c618f991ce29e82

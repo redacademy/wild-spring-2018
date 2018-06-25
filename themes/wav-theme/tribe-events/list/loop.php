@@ -28,7 +28,7 @@ $more = false;
 		$eventsText = $numEvents.' event';
 		if ($numEvents > 1) $eventsText .= 's';
 		echo('<h2 class="tribe-events-list-separator-month"><span>'.$groupDate.'</span><span class="number-of-events-day"> ('.$eventsText.')</span></h2>');
-		echo('<div class="same-date-events-container">');
+		echo('<div class="same-date-events-container carousel-front-page" data-flickity=\'{ "watchCSS": true, "groupCells": false }\'> ');
 		echo($body);
 		echo('</div>');
 	}
@@ -65,7 +65,7 @@ $more = false;
 		}
 		//to avoid printing by functions: http://us.php.net/manual/en/function.ob-clean.php
 		ob_start();
-		$groupBody .= '<div class="event-item">';
+		$groupBody .= '<div class="event-item carousel-front-page-cell">';
 		$groupBody .= '<div id="post-'.$post->ID.'" class="';
 		tribe_events_event_classes();
 		$groupBody .= ob_get_contents();

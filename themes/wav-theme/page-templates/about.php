@@ -13,22 +13,23 @@ get_header(); ?>
             <nav>
                 <ul class="aboutNavigation">
                     <li><a href="#aboutJump">About Wav</a></li>
-                    <li><a href="#festivalJump">Festival</a></li> 
-                    <li><a href="#teamJump">Team</a></li> 
+                    <li><a href="#festivalJump">Festival</a></li>
+                    <li><a href="#teamJump">Team</a></li>
                     <li><a href="#collaboratorsJump">Collaborators</a></li>
-                    <li><a href="#workJump">Work</a></li> 
+                    <li><a href="#workJump">Work</a></li>
                     <li><a href="#pressJump">Press</a></li>
                 </ul>
             </nav>
+<!-- the abouv nav should be replaced with registered wigdet area for navigation with custom links. TODO, when time permits -->
 
             <div class="anchor" id="aboutJump"></div>
-           
+
             <section class="aboutWav">
 
                 <h1>About WAV</h1>
 
                 <div class="header-img-container">
-                    <img class="header-img" src="<?php echo esc_url(CFS()->get( 'about_wav_img' )); ?>"> 
+                    <img class="header-img" src="<?php echo esc_url(CFS()->get( 'about_wav_img' )); ?>">
                 </div>
 
                 <p><?php echo esc_html(CFS()->get( 'about_wav' )); ?></p>
@@ -37,7 +38,7 @@ get_header(); ?>
 
                     <div><?php echo CFS()->get( 'video_about_test' );?></div>
 
-                    <p><?php echo esc_url(CFS()->get( 'text_about_video' )); ?></p>
+                    <p><?php echo esc_html(CFS()->get( 'text_about_video' )); ?></p>
 
                 </div>
 
@@ -59,7 +60,7 @@ get_header(); ?>
             <div class="anchor" id="teamJump"></div>
             <section class="theTeam">
                 <h1>The Team</h1>
-                    <div class="teamMembers about-carousel" data-flickity='{ "watchCSS": true }'>
+                    <div class="teamMembers about-carousel" data-flickity='{ "watchCSS": true, "groupCells": true, "freeScroll": false  }'>
 
                         <?php
                             $args = array( 'post_type' => 'person', 'category_name' => 'team', 'order' => 'ASC', 'posts_per_page' => 4,);
@@ -79,13 +80,18 @@ get_header(); ?>
                             </div><!--end of teamMember-->
                             <?php endforeach; wp_reset_postdata(); ?>
                     </div><!--end of teamMembers-->
-                    <a class="hidden-mobile green-button" href=<?php echo get_post_type_archive_link( 'person' ) ?>>See More</a>
+
+                    <div class="center-button">
+                        <a href="<?php echo get_post_type_archive_link( 'person' ) ?>" class="green-button">See More</a>
+                    </div>
+
+                    <!-- <a class="hidden-mobile green-button" href=<?php echo get_post_type_archive_link( 'person' ) ?>>See More</a> -->
             </section>
 
                 <div class="anchor" id="collaboratorsJump"></div>
             <section class="collaborators">
                 <h1>Collaborators</h1>
-                <div class="collaborators about-carousel" data-flickity='{ "watchCSS": true }'>
+                <div class="collaborators about-carousel" data-flickity='{ "watchCSS": true , "groupCells": true, "freeScroll": false }'>
 
                  <?php
                     $args = array( 'post_type' => 'person', 'category_name' => 'collaborator', 'order' => 'ASC', 'posts_per_page' => 3,);
@@ -112,7 +118,7 @@ get_header(); ?>
 
                         <section class="festivals">
                         <h2>Festival History</h2>
-                        <div class="festivals about-carousel" data-flickity='{ "watchCSS": true }'>
+                        <div class="festivals about-carousel" data-flickity='{ "watchCSS": true, "groupCells": true, "freeScroll": false  }'>
 
                         <?php
                             $args = array( 'post_type' => 'festival', 'order' => 'ASC', 'posts_per_page' => 4);
@@ -163,7 +169,7 @@ get_header(); ?>
 
                  <section class="press">
                         <h1>Press</h1>
-                        <div class="press about-carousel" data-flickity='{ "watchCSS": true }'>
+                        <div class="press about-carousel" data-flickity='{ "watchCSS": true , "groupCells": true, "freeScroll": false }'>
 
                         <?php
                             $args = array( 'post_type' => 'press-item', 'order' => 'ASC', 'posts_per_page' => 4);
@@ -179,14 +185,19 @@ get_header(); ?>
 
                                     <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
                                 </header>
-                                <div class="hidden-mobile">
+                                <div>
                                     <p><?php echo esc_html(CFS()->get( 'source' )) ; ?></p>
                                     <p><?php echo esc_html(CFS()->get( 'date' )) ; ?></p>
                                 </div>
                             </div><!--end of pressItem-->
                             <?php endforeach; wp_reset_postdata(); ?>
                     </div><!--end of press-->
-                    <a class="green-button" href=<?php echo get_post_type_archive_link( 'press-items' ) ?>>See More</a>
+
+                    <div class="center-button">
+                        <a href="<?php echo get_post_type_archive_link( 'press-items' ) ?>" class="green-button">See More</a>
+                    </div>
+
+                    <!-- <a class="green-button" href=<?php echo get_post_type_archive_link( 'press-items' ) ?>>See More</a> -->
                 </section>
 
 		</main><!-- #main -->

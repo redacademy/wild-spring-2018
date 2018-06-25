@@ -11,7 +11,7 @@ get_header(); ?>
 
 <div class="top" id="top">
 		<main id="main" class="site-main" role="main">
-			<div class="contact-banner banner">
+			<div class="contact-banner hero-banner">
 			<img src="<?php echo CFS()->get( 'contact_image' ); ?>">
 			</div>
 			<div class="contact-main">

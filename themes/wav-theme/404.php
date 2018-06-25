@@ -45,7 +45,6 @@ get_header(); ?>
 						$archive_content = '<p>' . sprintf( esc_html( 'Try looking in the monthly archives. %1$s' ), convert_smilies( ':)' ) ) . '</p>';
 						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 					?>
-
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 

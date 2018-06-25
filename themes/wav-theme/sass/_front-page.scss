@@ -75,7 +75,7 @@
           }
         article{
             padding: 0 1rem;
-            border: 1px solid green;
+            border: 1px solid $color__green;
             img{
                 margin-top: 1rem;
             }
@@ -171,10 +171,11 @@
                 }
                 li{
                     border:1px solid $color__blue;
-                    border-radius: 25%;
+                    border-radius: 15px;
                     margin: 0.5rem;
                     padding: 0.5rem;
-                    min-width: 100px;
+                    min-width: 5rem;
+                    text-align: center;
                     a{
                         color:black;
                         &:visited{
@@ -189,10 +190,17 @@
         }
          .about-container{
             @include tablet{
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
             margin:0 auto;
-            width:50%;
+            //width:50%;
             }
         }
+
+
+
+
+
             ul.tabs{
                 margin: 0;
                 padding: 0;
@@ -211,16 +219,28 @@
                     color: #222;
                     }
                 }
+                @include tablet{
+                    display: none;
+                }
             }
             .tab-content{
-                display: none;
-                background: #ededed;
-                padding: 15px;
+                //display: none;
+                // background: #ededed;
+                // padding: 15px;
+                @include tablet{
+                    display: inherit;
+                    //display:flex;
+                }
             &.current{
-                display: inherit;
+                display: block;
+                // display: inherit;
             }
     
         }
+
+
+
+
         }
         .button{
             color: white;
