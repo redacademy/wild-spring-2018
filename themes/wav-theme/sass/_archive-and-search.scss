@@ -3,7 +3,7 @@
 *
 */
 
-.archive, .search,.search-result{
+.archive, .search,.search-result, .error404{
     .site-content{
         padding-top: 6rem;
         .content-area{
@@ -17,7 +17,6 @@
                     article{
                         padding: 0.5rem;
                         margin: 0.5rem 0.5rem 3rem 0.5rem;
-                    ;
                         border: 1px solid $color__green;
                         display: flex;
                         flex-wrap:wrap;

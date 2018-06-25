@@ -190,10 +190,17 @@
         }
          .about-container{
             @include tablet{
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
             margin:0 auto;
-            width:50%;
+            //width:50%;
             }
         }
+
+
+
+
+
             ul.tabs{
                 margin: 0;
                 padding: 0;
@@ -214,14 +221,23 @@
                 }
             }
             .tab-content{
-                display: none;
-                background: #ededed;
-                padding: 15px;
+                //display: none;
+                // background: #ededed;
+                // padding: 15px;
+                @include tablet{
+                    display: inherit;
+                    //display:flex;
+                }
             &.current{
-                display: inherit;
+                display: block;
+                // display: inherit;
             }
     
         }
+
+
+
+
         }
         .button{
             color: white;
