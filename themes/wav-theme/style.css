@@ -2021,13 +2021,18 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       height: 600px;
       margin-right: 10px; } }
 
-.single-activity .carousel-cell img {
+.single-activity .double-carousel .carousel-cell img {
   width: 100%;
   height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
   min-height: 300px;
   min-width: 400px; }
   @media (min-width: 1080px) {
-    .single-activity .carousel-cell img {
+    .single-activity .double-carousel .carousel-cell img {
       width: 100%;
       height: auto; } }
 
@@ -2043,9 +2048,20 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       display: block; } }
 
 .single-activity .carousel-nav .carousel-cell {
+  height: 100px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  position: relative; }
+
+.single-activity .carousel-nav .carousel-cell img {
   height: auto;
   width: 100%;
-  margin-bottom: 0.5rem; }
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  min-height: 100px; }
 
 .single-activity .carousel-nav .carousel-cell.is-nav-selected {
   background: #f7f7f5; }
@@ -3320,7 +3336,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%); }
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%); }
   @media (min-width: 1080px) {
     .post-type-archive-activity .carousel-cell img {
       width: 100%;
