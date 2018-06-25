@@ -26,7 +26,7 @@ if ( ! isset( $tribe_event_id ) ) {
 
 <?php do_action( 'tribe_events_community_form_before_template', $tribe_event_id ); ?>
 
-<form method="post" enctype="multipart/form-data" data-datepicker_format="<?php echo esc_attr( tribe_get_option( 'datepickerFormat', 0 ) ); ?>">
+<form method="post" enctype="multipart/form-data" class="event-submission-form" data-datepicker_format="<?php echo esc_attr( tribe_get_option( 'datepickerFormat', 0 ) ); ?>">
 	<input type="hidden" name="post_ID" id="post_ID" value="<?php echo absint( $tribe_event_id ); ?>"/>
 	<?php wp_nonce_field( 'ecp_event_submission' ); ?>
 

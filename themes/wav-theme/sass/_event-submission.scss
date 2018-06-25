@@ -1,5 +1,8 @@
+.tribe-section-cost{
+    display: none;
+}
 
- .tribe_community_edit .tribe-community-events input.events-community-submit{
+.tribe_community_edit .tribe-community-events input.events-community-submit{
     color: black;
     border: 2px solid $color__yellow;
     text-transform: none;
@@ -9,7 +12,7 @@
     background: white;
     padding: 10px 30px;
     font-family: $font-family__button;
-    &:hover{
+    &:hover, &:active, &:focus{
         background: $color__yellow;
         color: white;
     }
@@ -120,14 +123,67 @@ header.my-events-header{
 
 .tribe-events-after-html{
     margin: 0 auto;
+    padding: 10px;
     
     .faq-item{
-        width: 90%;
+        width: 100%;
         @include tablet{
             width: 100%;
         }
     }
     @include tablet{
         padding: 60px;
+    }
+}
+
+h1.submission-header{
+    font-size: $font-size__h1;
+    @include desktop{
+        font-size: $font-size__desktop__h1;
+    }
+    
+}
+
+.tribe-community-notice{
+    background-color: yellow;
+    .submission-thank-you{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+
+    a.button{
+        font-size:$font-size__button;
+        display: block;
+        text-transform: none;
+        color: white;
+        font-family: $font-family__button;
+        width: 100%;
+        &:hover{
+            color: black;
+        }
+
+    }
+    a.yellow-button{
+        background: $color__yellow;
+            color: white;
+            border: 2px solid $color__yellow;
+        &:hover{
+            
+            background: white;
+         
+        }
+    }
+    a.blue-button{
+ 
+        border: 2px solid $color__blue;
+        background: $color__blue;
+        color: white;
+        &:hover{
+
+            background: white;
+        }
     }
 }
