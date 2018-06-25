@@ -14,7 +14,7 @@
 
 // external js: flickity.pkgd.js
 
-var $carousel = $('.carousel').flickity({
+var $carousel = $('.double-carousel').flickity({
 });
 
 var $carouselNav = $('.carousel-nav');

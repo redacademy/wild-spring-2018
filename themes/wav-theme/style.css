@@ -956,197 +956,201 @@ object {
       font-size: 48px;
       font-family: 'Tofino';
       font-weight: 400; }
-  .home section.front-page-banner {
-    max-height: 300px; }
-    @media (min-width: 620px) {
-      .home section.front-page-banner {
-        max-height: 100%; } }
-    .home section.front-page-banner .banner-text {
-      -webkit-transform: translateY(-200px);
-              transform: translateY(-200px);
-      color: white;
+  .home section {
+    padding: 0 4%; }
+    .home section.front-page-banner {
+      padding: 0;
+      max-height: 300px; }
+      @media (min-width: 620px) {
+        .home section.front-page-banner {
+          max-height: 100%; } }
+      .home section.front-page-banner .banner-text {
+        -webkit-transform: translateY(-200px);
+                transform: translateY(-200px);
+        color: white;
+        text-align: left;
+        padding-left: 1rem; }
+        .home section.front-page-banner .banner-text h1 {
+          font-family: 'Oswald';
+          font-size: 48px;
+          font-weight: bolder; }
+        .home section.front-page-banner .banner-text p {
+          font-size: 33px;
+          visibility: hidden;
+          color: white; }
+          @media (min-width: 1080px) {
+            .home section.front-page-banner .banner-text p {
+              visibility: visible; } }
+        .home section.front-page-banner .banner-text h3 {
+          color: white; }
+    .home section .flickity-viewport {
+      -webkit-transition: height 0.2s;
+      transition: height 0.2s; }
+    .home section p {
       text-align: left;
-      padding-left: 1rem; }
-      .home section.front-page-banner .banner-text h1 {
-        font-family: 'Oswald';
-        font-size: 48px;
-        font-weight: bolder; }
-      .home section.front-page-banner .banner-text p {
-        font-size: 33px;
-        visibility: hidden;
-        color: white; }
-        @media (min-width: 1080px) {
-          .home section.front-page-banner .banner-text p {
-            visibility: visible; } }
-      .home section.front-page-banner .banner-text h3 {
-        color: white; }
-  .home section .flickity-viewport {
-    -webkit-transition: height 0.2s;
-    transition: height 0.2s; }
-  .home section p {
-    text-align: left;
-    color: black; }
-  .home section h3 {
-    font-family: 'Oswald';
-    font-size: 36px; }
-    .home section h3 a {
       color: black; }
-      .home section h3 a:visited, .home section h3 a:hover {
+    .home section h3 {
+      font-family: 'Oswald';
+      font-size: 36px; }
+      .home section h3 a {
         color: black; }
-  .home section .read-more {
-    margin-top: auto;
-    text-align: right; }
-    .home section .read-more a {
-      font-size: 24px;
-      color: #72CB7E; }
-  .home section article {
-    padding: 0 1rem;
-    border: 1px solid #72CB7E; }
-    .home section article img {
-      margin-top: 1rem; }
-  .home section .activities-container.carousel-front-page:after {
-    content: 'flickity';
-    display: none; }
-  @media (min-width: 620px) {
-    .home section .activities-container {
-      display: block;
-      /* disable Flickity for large devices */ }
-      .home section .activities-container .button {
-        display: inline; }
-      .home section .activities-container.carousel-front-page:after {
-        content: ''; }
-      .home section .activities-container.carousel-front-page {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex; } }
-  .home section .activities-container .flickity-page-dots {
-    visibility: hidden; }
-  .home section .activities-container .carousel-front-page-cell {
-    margin: 0 1rem;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
+        .home section h3 a:visited, .home section h3 a:hover {
+          color: black; }
+    .home section .read-more {
+      margin-top: auto;
+      text-align: right; }
+      .home section .read-more a {
+        font-size: 24px;
+        color: #72CB7E; }
+    .home section article {
+      padding: 0 1rem;
+      border: 1px solid #72CB7E; }
+      .home section article img {
+        margin-top: 1rem; }
+    .home section .activities-container.carousel-front-page:after {
+      content: 'flickity';
+      display: none; }
     @media (min-width: 620px) {
-      .home section .activities-container .carousel-front-page-cell {
-        margin: 0 1rem;
-        width: 50%; } }
-  .home section .activities-container .activities-posts-single {
-    border: 1px solid #72CB7E; }
-    .home section .activities-container .activities-posts-single .activities-posts-single-text {
-      height: 100%;
+      .home section .activities-container {
+        display: block;
+        /* disable Flickity for large devices */ }
+        .home section .activities-container .button {
+          display: inline; }
+        .home section .activities-container.carousel-front-page:after {
+          content: ''; }
+        .home section .activities-container.carousel-front-page {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; } }
+    .home section .activities-container .flickity-page-dots {
+      visibility: hidden; }
+    .home section .activities-container .carousel-front-page-cell {
+      margin: 0 1rem;
+      width: 100%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column;
-      margin-top: auto; }
-      .home section .activities-container .activities-posts-single .activities-posts-single-text p {
-        -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
-                flex-grow: 1; }
-  .home section .button.contact-button1.activities-button {
-    margin: 2rem auto;
-    max-width: 80%; }
-  .home section .events-container.carousel-front-page:after {
-    content: 'flickity';
-    display: none; }
-  @media (min-width: 620px) {
-    .home section .events-container {
-      display: block;
-      /* disable Flickity for large devices */ }
-      .home section .events-container .button {
-        display: inline; }
-      .home section .events-container.carousel-front-page:after {
-        content: ''; }
-      .home section .events-container.carousel-front-page {
+              flex-direction: column; }
+      @media (min-width: 620px) {
+        .home section .activities-container .carousel-front-page-cell {
+          margin: 0 1rem;
+          width: 50%; } }
+    .home section .activities-container .activities-posts-single {
+      border: 1px solid #72CB7E; }
+      .home section .activities-container .activities-posts-single .activities-posts-single-text {
+        height: 100%;
         display: -webkit-box;
         display: -ms-flexbox;
-        display: flex; } }
-  .home section .events-container .flickity-page-dots {
-    visibility: hidden; }
-  .home section .events-container .carousel-front-page-cell {
-    margin: 0 1rem;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin-top: auto; }
+        .home section .activities-container .activities-posts-single .activities-posts-single-text p {
+          -webkit-box-flex: 1;
+              -ms-flex-positive: 1;
+                  flex-grow: 1; }
+    .home section .button.contact-button1.activities-button {
+      margin: 2rem auto;
+      max-width: 80%; }
+    .home section .events-container.carousel-front-page:after {
+      content: 'flickity';
+      display: none; }
     @media (min-width: 620px) {
-      .home section .events-container .carousel-front-page-cell {
-        margin: 0 1rem;
-        width: 50%; } }
-  .home section .events-container .tags-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-left: 0;
-    margin: 0 auto; }
-    @media (min-width: 620px) {
-      .home section .events-container .tags-list {
-        max-width: 80%; } }
-    .home section .events-container .tags-list li {
-      border: 1px solid #40B2C4;
-      border-radius: 15px;
-      margin: 0.5rem;
-      padding: 0.5rem;
-      min-width: 5rem;
-      text-align: center; }
-      .home section .events-container .tags-list li a {
-        color: black; }
-        .home section .events-container .tags-list li a:visited {
+      .home section .events-container {
+        display: block;
+        /* disable Flickity for large devices */ }
+        .home section .events-container .button {
+          display: inline; }
+        .home section .events-container.carousel-front-page:after {
+          content: ''; }
+        .home section .events-container.carousel-front-page {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; } }
+    .home section .events-container .flickity-page-dots {
+      visibility: hidden; }
+    .home section .events-container .carousel-front-page-cell {
+      margin: 0 1rem;
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      @media (min-width: 620px) {
+        .home section .events-container .carousel-front-page-cell {
+          margin: 0 1rem;
+          width: 50%; } }
+    .home section .events-container .tags-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      padding-left: 0;
+      margin: 0 auto; }
+      @media (min-width: 620px) {
+        .home section .events-container .tags-list {
+          max-width: 80%; } }
+      .home section .events-container .tags-list li {
+        border: 1px solid #40B2C4;
+        border-radius: 15px;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        min-width: 5rem;
+        text-align: center; }
+        .home section .events-container .tags-list li a {
           color: black; }
-        .home section .events-container .tags-list li a:hover {
-          color: black; }
-  @media (min-width: 620px) {
-    .home section .about-container {
-      display: grid;
-      grid-template-columns: 33% 33% 33%;
-      margin: 0 auto; } }
-  .home section ul.tabs {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .home section ul.tabs li {
-      background: none;
-      color: #222;
-      display: inline-block;
-      padding: 10px 15px;
-      cursor: pointer; }
-      .home section ul.tabs li.current {
-        background: #ededed;
-        color: #222; }
+          .home section .events-container .tags-list li a:visited {
+            color: black; }
+          .home section .events-container .tags-list li a:hover {
+            color: black; }
     @media (min-width: 620px) {
-      .home section ul.tabs {
-        display: none; } }
-  @media (min-width: 620px) {
-    .home section .tab-content {
-      display: inherit; } }
-  .home section .tab-content.current {
-    display: block; }
+      .home section .about-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        margin: 0 auto; } }
+    .home section ul.tabs {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .home section ul.tabs li {
+        background: none;
+        color: #222;
+        display: inline-block;
+        padding: 10px 15px;
+        cursor: pointer; }
+        .home section ul.tabs li.current {
+          background: #ededed;
+          color: #222; }
+      @media (min-width: 620px) {
+        .home section ul.tabs {
+          display: none; } }
+    @media (min-width: 620px) {
+      .home section .tab-content {
+        display: inherit; } }
+    .home section .tab-content.current {
+      display: block; }
   .home .button {
     color: white;
     padding: 10px 30px;
@@ -2017,13 +2021,18 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       height: 600px;
       margin-right: 10px; } }
 
-.single-activity .carousel-cell img {
+.single-activity .double-carousel .carousel-cell img {
   width: 100%;
   height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
   min-height: 300px;
   min-width: 400px; }
   @media (min-width: 1080px) {
-    .single-activity .carousel-cell img {
+    .single-activity .double-carousel .carousel-cell img {
       width: 100%;
       height: auto; } }
 
@@ -2039,9 +2048,20 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       display: block; } }
 
 .single-activity .carousel-nav .carousel-cell {
+  height: 100px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  position: relative; }
+
+.single-activity .carousel-nav .carousel-cell img {
   height: auto;
   width: 100%;
-  margin-bottom: 0.5rem; }
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  min-height: 100px; }
 
 .single-activity .carousel-nav .carousel-cell.is-nav-selected {
   background: #f7f7f5; }
@@ -2806,13 +2826,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
   opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -2887,8 +2907,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2905,8 +2925,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -2925,8 +2945,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2943,8 +2963,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -3135,8 +3155,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3153,8 +3173,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3316,7 +3336,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%); }
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%); }
   @media (min-width: 1080px) {
     .post-type-archive-activity .carousel-cell img {
       width: 100%;
