@@ -46,9 +46,13 @@
         }
     }
 
-    .carousel-cell img {
+    .double-carousel .carousel-cell img {
         width: 100%;
         height: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
         min-height: 300px;
         min-width: 400px;
         @include desktop {
@@ -70,10 +74,23 @@
     }
 
     .carousel-nav .carousel-cell {
-    height: auto;
+    height: 100px;
     width: 100%;
     margin-bottom: 0.5rem;
+    position: relative;
     }
+
+    .carousel-nav .carousel-cell img {
+        height: auto;
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);       
+        min-height: 100px;
+
+    }
+
 
     .carousel-nav .carousel-cell.is-nav-selected {
     background: rgb(247, 247, 245);

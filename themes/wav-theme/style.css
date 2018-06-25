@@ -2017,13 +2017,18 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       height: 600px;
       margin-right: 10px; } }
 
-.single-activity .carousel-cell img {
+.single-activity .double-carousel .carousel-cell img {
   width: 100%;
   height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
   min-height: 300px;
   min-width: 400px; }
   @media (min-width: 1080px) {
-    .single-activity .carousel-cell img {
+    .single-activity .double-carousel .carousel-cell img {
       width: 100%;
       height: auto; } }
 
@@ -2039,9 +2044,20 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       display: block; } }
 
 .single-activity .carousel-nav .carousel-cell {
+  height: 100px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  position: relative; }
+
+.single-activity .carousel-nav .carousel-cell img {
   height: auto;
   width: 100%;
-  margin-bottom: 0.5rem; }
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  min-height: 100px; }
 
 .single-activity .carousel-nav .carousel-cell.is-nav-selected {
   background: #f7f7f5; }
@@ -2806,13 +2822,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
   opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -2887,8 +2903,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2905,8 +2921,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -2925,8 +2941,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -2943,8 +2959,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -3135,8 +3151,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3153,8 +3169,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3316,7 +3332,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%); }
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%); }
   @media (min-width: 1080px) {
     .post-type-archive-activity .carousel-cell img {
       width: 100%;
@@ -3339,7 +3356,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .post-type-archive-activity .site-content {
   padding: 2%; }
 
-<<<<<<< HEAD
 .post-type-archive-activity fieldset {
   border: none;
   position: relative; }
@@ -3383,63 +3399,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 
 .post-type-archive-activity .navigation-arrow {
   color: #72CB7E; }
-=======
-/*
-* This is stylesheet for pages using archive.php template: categories, tags. by kate
-*
-*/
-.archive .site-content, .search .site-content, .search-result .site-content, .error404 .site-content {
-  padding-top: 6rem; }
-  .archive .site-content .content-area .site-main, .search .site-content .content-area .site-main, .search-result .site-content .content-area .site-main, .error404 .site-content .content-area .site-main {
-    padding: 0 4%; }
-    .archive .site-content .content-area .site-main .page-title, .search .site-content .content-area .site-main .page-title, .search-result .site-content .content-area .site-main .page-title, .error404 .site-content .content-area .site-main .page-title {
-      font-family: 'Oswald'; }
-    .archive .site-content .content-area .site-main .article-container, .search .site-content .content-area .site-main .article-container, .search-result .site-content .content-area .site-main .article-container, .error404 .site-content .content-area .site-main .article-container {
-      margin-bottom: 2rem; }
-      .archive .site-content .content-area .site-main .article-container article, .search .site-content .content-area .site-main .article-container article, .search-result .site-content .content-area .site-main .article-container article, .error404 .site-content .content-area .site-main .article-container article {
-        padding: 0.5rem;
-        margin: 0.5rem 0.5rem 3rem 0.5rem;
-        border: 1px solid #72CB7E;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column; }
-        .archive .site-content .content-area .site-main .article-container article .entry-header img, .search .site-content .content-area .site-main .article-container article .entry-header img, .search-result .site-content .content-area .site-main .article-container article .entry-header img, .error404 .site-content .content-area .site-main .article-container article .entry-header img {
-          height: 200px;
-          -o-object-fit: cover;
-             object-fit: cover; }
-        .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title {
-          font-family: 'Oswald';
-          font-weight: 500; }
-          .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a {
-            color: #72CB7E; }
-            .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited {
-              color: #72CB7E; }
-            .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover {
-              color: #72cb7e; }
-      @media (min-width: 620px) {
-        .archive .site-content .content-area .site-main .article-container, .search .site-content .content-area .site-main .article-container, .search-result .site-content .content-area .site-main .article-container, .error404 .site-content .content-area .site-main .article-container {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-gap: 1rem;
-          margin: 0; } }
-    .archive .site-content .content-area .site-main .search-pagination, .search .site-content .content-area .site-main .search-pagination, .search-result .site-content .content-area .site-main .search-pagination, .error404 .site-content .content-area .site-main .search-pagination {
-      text-align: center; }
-      .archive .site-content .content-area .site-main .search-pagination .page-numbers, .search .site-content .content-area .site-main .search-pagination .page-numbers, .search-result .site-content .content-area .site-main .search-pagination .page-numbers, .error404 .site-content .content-area .site-main .search-pagination .page-numbers {
-        padding: 0.5rem 0.8rem;
-        background-color: #40B2C4;
-        color: white;
-        border: 1px solid #40B2C4;
-        border-radius: 20%;
-        margin: 1rem 0.5rem; }
-        .archive .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .search .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .search-result .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .error404 .site-content .content-area .site-main .search-pagination .page-numbers a:visited {
-          color: white; }
->>>>>>> 55897625dc4dab425b0fea1a1c618f991ce29e82
 
 .error404 .not-found {
   display: -webkit-box;
@@ -3455,7 +3414,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   width: 800px;
   border: 2px solid #72CB7E; }
 
-<<<<<<< HEAD
 .blog .entry-title {
   padding-top: 2rem;
   font-size: 1.5rem;
@@ -3591,7 +3549,77 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-=======
+
+/*
+* This is stylesheet for pages using archive.php template: categories, tags. by kate
+*
+*/
+.archive .site-content, .search .site-content, .search-result .site-content, .error404 .site-content {
+  padding-top: 6rem; }
+  .archive .site-content .content-area .site-main, .search .site-content .content-area .site-main, .search-result .site-content .content-area .site-main, .error404 .site-content .content-area .site-main {
+    padding: 0 4%; }
+    .archive .site-content .content-area .site-main .page-title, .search .site-content .content-area .site-main .page-title, .search-result .site-content .content-area .site-main .page-title, .error404 .site-content .content-area .site-main .page-title {
+      font-family: 'Oswald'; }
+    .archive .site-content .content-area .site-main .article-container, .search .site-content .content-area .site-main .article-container, .search-result .site-content .content-area .site-main .article-container, .error404 .site-content .content-area .site-main .article-container {
+      margin-bottom: 2rem; }
+      .archive .site-content .content-area .site-main .article-container article, .search .site-content .content-area .site-main .article-container article, .search-result .site-content .content-area .site-main .article-container article, .error404 .site-content .content-area .site-main .article-container article {
+        padding: 0.5rem;
+        margin: 0.5rem 0.5rem 3rem 0.5rem;
+        border: 1px solid #72CB7E;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .archive .site-content .content-area .site-main .article-container article .entry-header img, .search .site-content .content-area .site-main .article-container article .entry-header img, .search-result .site-content .content-area .site-main .article-container article .entry-header img, .error404 .site-content .content-area .site-main .article-container article .entry-header img {
+          height: 200px;
+          -o-object-fit: cover;
+             object-fit: cover; }
+        .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title {
+          font-family: 'Oswald';
+          font-weight: 500; }
+          .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a {
+            color: #72CB7E; }
+            .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited {
+              color: #72CB7E; }
+            .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover {
+              color: #72cb7e; }
+      @media (min-width: 620px) {
+        .archive .site-content .content-area .site-main .article-container, .search .site-content .content-area .site-main .article-container, .search-result .site-content .content-area .site-main .article-container, .error404 .site-content .content-area .site-main .article-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-gap: 1rem;
+          margin: 0; } }
+    .archive .site-content .content-area .site-main .search-pagination, .search .site-content .content-area .site-main .search-pagination, .search-result .site-content .content-area .site-main .search-pagination, .error404 .site-content .content-area .site-main .search-pagination {
+      text-align: center; }
+      .archive .site-content .content-area .site-main .search-pagination .page-numbers, .search .site-content .content-area .site-main .search-pagination .page-numbers, .search-result .site-content .content-area .site-main .search-pagination .page-numbers, .error404 .site-content .content-area .site-main .search-pagination .page-numbers {
+        padding: 0.5rem 0.8rem;
+        background-color: #40B2C4;
+        color: white;
+        border: 1px solid #40B2C4;
+        border-radius: 20%;
+        margin: 1rem 0.5rem; }
+        .archive .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .search .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .search-result .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .error404 .site-content .content-area .site-main .search-pagination .page-numbers a:visited {
+          color: white; }
+
+.error404 .not-found {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto; }
+
+.error404 .page-content div {
+  width: 800px;
+  border: 2px solid #72CB7E; }
+
 .tribe-section-cost {
   display: none; }
 
@@ -3744,4 +3772,3 @@ h1.submission-header {
     color: white; }
     .tribe-community-notice a.blue-button:hover {
       background: white; }
->>>>>>> 55897625dc4dab425b0fea1a1c618f991ce29e82
