@@ -46,7 +46,7 @@ get_header(); ?>
 
 								<div class="small-photo-wrapper">
 									<?php if ( has_post_thumbnail() ) : ?>
-										<?php the_post_thumbnail( 'large' ); ?>
+									<a href=<?php echo get_post_permalink() ?>><?php the_post_thumbnail( 'large' ); ?>
 									<?php endif; ?>
 								</div>
 
