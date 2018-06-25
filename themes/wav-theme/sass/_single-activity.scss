@@ -34,6 +34,8 @@
     margin-bottom: 40px;
     flex-grow: 1;
     width: 100%;
+    
+
     }
 
     .carousel-cell {
@@ -57,7 +59,7 @@
         min-width: 400px;
         @include desktop {
             width: 100%;
-            height: auto;
+            height: 100%;
         }
     }
 
@@ -65,7 +67,7 @@
     display: none;
     height: 100%;
     width: 120px;
-    margin-left: 10px;
+    margin-left: 20px;
     max-height: 600px;
     overflow-y: scroll;
     @include desktop {
@@ -76,7 +78,7 @@
     .carousel-nav .carousel-cell {
     height: 100px;
     width: 100%;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     position: relative;
     }
 
@@ -102,6 +104,14 @@
         }
     }
 
+    .tags-links a {
+        color: black;
+        border: 1px solid $color__blue;
+        border-radius: 20px;
+        padding: 2px 20px;
+        text-align: center;
+        }
+
     .creat-events-button {
         background-color: $color__yellow;
         border-radius: 25px;
@@ -111,6 +121,11 @@
         padding: 1rem 3rem;
         font-size: 1.5rem;
         text-shadow: none;
+        
+    }
+
+    .creat-event-button {
+        text-align: center;
     }
 
     .site-content {
@@ -137,6 +152,18 @@
     .description-paragraph {
         font-family: $font-family__body2;
         font-size: $font-size__body2;
+        position: relative;
+    }
+
+    iframe {
+        border: 1.5px solid $color__green !important;
+        margin-top: 2rem;
+    }
+
+    .flex-container {
+        @include desktop {
+            display: flex;
+        }
     }
 
 

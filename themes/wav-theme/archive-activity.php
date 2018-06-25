@@ -44,7 +44,7 @@ get_header(); ?>
 							<?php 
 							foreach ( $loop as $row ) {?>
 								<div class="carousel-cell">
-									<img src="<?php echo $row['activity_image']; ?>">
+									<a href=<?php echo get_post_permalink() ?>><img src="<?php echo $row['activity_image']; ?>"></a>
 								</div>
 							<?php } 
 							?>

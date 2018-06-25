@@ -2061,13 +2061,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   @media (min-width: 1080px) {
     .single-activity .double-carousel .carousel-cell img {
       width: 100%;
-      height: auto; } }
+      height: 100%; } }
 
 .single-activity .carousel-nav {
   display: none;
   height: 100%;
   width: 120px;
-  margin-left: 10px;
+  margin-left: 20px;
   max-height: 600px;
   overflow-y: scroll; }
   @media (min-width: 1080px) {
@@ -2077,7 +2077,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .single-activity .carousel-nav .carousel-cell {
   height: 100px;
   width: 100%;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   position: relative; }
 
 .single-activity .carousel-nav .carousel-cell img {
@@ -2096,6 +2096,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .single-activity .tags-links a::before {
   content: "#"; }
 
+.single-activity .tags-links a {
+  color: black;
+  border: 1px solid #40B2C4;
+  border-radius: 20px;
+  padding: 2px 20px;
+  text-align: center; }
+
 .single-activity .creat-events-button {
   background-color: #F9D169;
   border-radius: 25px;
@@ -2106,6 +2113,9 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   padding: 1rem 3rem;
   font-size: 1.5rem;
   text-shadow: none; }
+
+.single-activity .creat-event-button {
+  text-align: center; }
 
 .single-activity .site-content {
   padding: 2%; }
@@ -2122,7 +2132,18 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 
 .single-activity .description-paragraph {
   font-family: "Tofino-Text";
-  font-size: 0.833rem; }
+  font-size: 0.833rem;
+  position: relative; }
+
+.single-activity iframe {
+  border: 1.5px solid #72CB7E !important;
+  margin-top: 2rem; }
+
+@media (min-width: 1080px) {
+  .single-activity .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
 
 .answer {
   display: none; }
