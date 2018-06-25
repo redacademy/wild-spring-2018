@@ -19,9 +19,18 @@
         }
     }
     section{
-        padding: 0 4%;;
+        padding: 0 4%;
+        @include tablet{
+            padding: 0 2%;
+        }@include desktop{
+            padding: 0;
+        }
+        max-width: 1200px;
+        margin: 0 auto;
         &.front-page-banner{
             padding: 0;
+            max-width: 100vw;
+            margin: 0;
             max-height:300px;
             @include tablet{
                 max-height: 100%;
@@ -205,7 +214,7 @@
                 padding: 0;
                 list-style: none;
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
                 align-items: center;
              li{
                 background: none;
@@ -214,8 +223,9 @@
                 padding: 10px 15px;
                 cursor: pointer;
                 &.current{
-                    background: #ededed;
-                    color: #222;
+                    // background: #ededed;
+                    // color: #222;
+                    text-decoration: underline;
                     }
                 }
                 @include tablet{
@@ -223,18 +233,20 @@
                 }
             }
             .tab-content{
-                //display: none;
-                // background: #ededed;
-                // padding: 15px;
+                border:1px solid $color__green;
+                padding: 1rem;
+                .read-more{
+                    font-size: 24px;
+                    color:$color__green;
+                }
                 @include tablet{
-                    display: inherit;
-                    //display:flex;
+                    display: flex;
+                    flex-direction: column;
                 }
             &.current{
-                display: block;
-                // display: inherit;
+                display: flex;
+                flex-direction: column;
             }
-    
         }
 
 

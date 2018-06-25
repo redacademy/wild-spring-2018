@@ -123,19 +123,19 @@ get_header(); ?>
                             <h3><?php echo CFS()->get('front_page_wav_what_is_wav_about_header')?></h3>
 							<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_about_img')?>" alt="WAV logo">
                             <p><?php echo CFS()->get('front_page_wav_what_is_wav_about_text')?></p>
-                            <a div="read-more" href="<?php echo get_permalink( get_page_by_title( 'About' ) ) ?>">learn more &rsaquo; </a>
+                            <a class="read-more" href="<?php echo get_permalink( get_page_by_title( 'About' ) ) ?>">learn more &rsaquo; </a>
                         </div>
                         <div id="tab-2" class="single-festival-container tab-content">
                             <h3><?php echo CFS()->get('front_page_wav_what_is_wav_festival_header')?></h3>
 							<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_festival_img')?>" alt="WAV picture of festival activity">
 							<p><?php echo CFS()->get('front_page_wav_what_is_wav_festival_text')?></p>
-                            <a class="read-more" href="<?php echo get_post_type_archive_link( 'festivals' ) ?>">learn more &rsaquo; </a>
+                            <a class="read-more" href="<?php echo get_permalink( get_page_by_title( 'About' ) ) ?>">learn more &rsaquo; </a>
                         </div>
                         <div id="tab-3" class="single-school-container tab-content">
-						<h3><?php echo CFS()->get('front_page_wav_what_is_wav_school_header')?></h3>
-						<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_school_img')?>" alt="WAV image of school outreach activity">
-						<p><?php echo CFS()->get('front_page_wav_what_is_wav_school_text')?></p>
-                        <a href="<?php echo get_post_type_archive_link( 'posts' ) ?>">learn more &rsaquo; </a>
+						    <h3><?php echo CFS()->get('front_page_wav_what_is_wav_school_header')?></h3>
+						    <img src="<?php echo CFS()->get('front_page_wav_what_is_wav_school_img')?>" alt="WAV image of school outreach activity">
+						    <p><?php echo CFS()->get('front_page_wav_what_is_wav_school_text')?></p>
+                            <a class="read-more" href="<?php echo get_permalink( get_page_by_title( 'About' ))?>">learn more &rsaquo; </a>
                         </div>
                 </div>
                 <div class="button contact-button1">
