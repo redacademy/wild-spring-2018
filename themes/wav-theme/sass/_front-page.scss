@@ -219,6 +219,9 @@
                     color: #222;
                     }
                 }
+                @include tablet{
+                    display: none;
+                }
             }
             .tab-content{
                 //display: none;
