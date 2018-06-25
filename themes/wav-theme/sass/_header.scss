@@ -26,9 +26,14 @@
 }
 
 .main-navigation ul {
-    position: absolute;
+    // position: absolute;
     right: 0;
     bottom: 3rem;
+}
+
+.main-navigation ul ul {
+    position: initial;
+    display: none;
 }
 
 .logo {
@@ -101,5 +106,6 @@
             border-bottom: 2px solid black;
         }
     }
+
 
 }

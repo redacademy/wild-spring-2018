@@ -35,6 +35,17 @@ else{
     $('.logo-wav1').css('display','none');
     $('.dark-header').css('background-color', 'hsla(0,0%,100%,.85)');
   
-}
+};
+
+$(".main-navigation ul:has(ul)").on({
+    mouseover: function (event) {
+        event.preventDefault();
+        $('.main-navigation ul').show('.sub-menu');
+    },
+    mouseleave: function (event) {
+        $('.main-navigation ul ul').hide();
+    }
+});
+
 })(jQuery);
 
