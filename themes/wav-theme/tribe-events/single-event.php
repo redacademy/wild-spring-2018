@@ -60,9 +60,9 @@ $event_id = get_the_ID();
 			<!-- .tribe-events-single-event-description -->
 
 			<!-- Event meta -->
-			<div class="tribe-events-single-event-description tribe-events-content">
+			<!-- <div class="tribe-events-single-event-description tribe-events-content">
 				<h3 class="single-event-details-title">Details</h3>
-			</div>
+			</div> -->
 			<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
 			<?php tribe_get_template_part( 'modules/meta' ); ?>
 			<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>

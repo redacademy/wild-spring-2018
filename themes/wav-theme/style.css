@@ -1547,8 +1547,11 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   display: none; }
 
 .tribe_events-template-default.single-tribe_events .events-container {
-  margin-top: 6rem;
-  text-align: center; }
+  text-align: center;
+  max-width: 1200px;
+  margin: 6rem auto 1rem; }
+  .tribe_events-template-default.single-tribe_events .events-container .event-info-container {
+    margin-bottom: 2rem; }
   .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-event-title {
     font-family: 'Oswald'; }
   .tribe_events-template-default.single-tribe_events .events-container .tribe-events-single-section.tribe-events-event-meta {
@@ -1562,6 +1565,30 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     @media (min-width: 1080px) {
       .tribe_events-template-default.single-tribe_events .events-container .single-event-details-title {
         display: inline; } }
+  .tribe_events-template-default.single-tribe_events .events-container .tribe-event-tags {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 0 3rem 0;
+    padding: 0; }
+    .tribe_events-template-default.single-tribe_events .events-container .tribe-event-tags a {
+      border: 1px solid #40B2C4;
+      border-radius: 15px;
+      padding: 0.5rem;
+      margin: 0.2rem;
+      min-width: 5rem;
+      text-align: center; }
+      .tribe_events-template-default.single-tribe_events .events-container .tribe-event-tags a::before {
+        content: '#'; }
+  .tribe_events-template-default.single-tribe_events .events-container .tribe-events-cal-links a {
+    background-color: #F9D169 !important;
+    border-radius: 25px;
+    border: none;
+    color: white !important;
+    padding: 1rem 3rem;
+    font-size: 1.5rem; }
 
 .tribe-events-meta-group.tribe-events-meta-group-details, .tribe-events-meta-group.tribe-events-meta-group-gmap {
   padding: 0;
@@ -2135,18 +2162,9 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   font-size: 1.5rem;
   text-shadow: none; }
 
-<<<<<<< HEAD
 .single-activity .creat-event-button, .single-festival .creat-event-button, .tribe-events-single .creat-event-button {
-=======
-<<<<<<< HEAD
-.single-activity .creat-event-button {
   text-align: center;
   padding-top: 5rem; }
-=======
-.single-activity .creat-event-button, .single-festival .creat-event-button {
->>>>>>> 61f8e40be8835ab74886cd6d3cbf3aaab3653113
-  text-align: center; }
->>>>>>> edb976d6b046e941db7f2ed8c14c508347e2efd6
 
 .single-activity .site-content, .single-festival .site-content, .tribe-events-single .site-content {
   padding: 2%; }
@@ -2156,28 +2174,17 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   font-family: "Oswald";
   text-align: center; }
   @media (min-width: 1080px) {
-    .single-activity .entry-title {
+    .single-activity .entry-title, .single-festival .entry-title, .tribe-events-single .entry-title {
       font-size: 2.67rem;
       font-family: "Oswald";
       text-align: start;
       margin: 0;
       padding-top: 5rem; } }
 
-<<<<<<< HEAD
 .single-activity .activity-location, .single-festival .activity-location, .tribe-events-single .activity-location {
-  text-align: center;
-  font-family: "Tofino";
-  font-size: 1rem; }
-
-.single-activity .description-paragraph, .single-festival .description-paragraph, .tribe-events-single .description-paragraph {
-  font-family: "Tofino-Text";
-  font-size: 0.833rem;
-  position: relative; }
-=======
-.single-activity .activity-location {
   text-align: center; }
   @media (min-width: 1080px) {
-    .single-activity .activity-location {
+    .single-activity .activity-location, .single-festival .activity-location, .tribe-events-single .activity-location {
       font-size: 1.5rem;
       font-weight: 500;
       text-align: start;
@@ -2185,25 +2192,24 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       margin-bottom: 3rem; } }
 
 @media (min-width: 1080px) {
-  .single-activity .description {
+  .single-activity .description, .single-festival .description, .tribe-events-single .description {
     font-size: 2.67rem;
     font-family: "Tofino Bold"; } }
 
-.single-activity .description-paragraph {
+.single-activity .description-paragraph, .single-festival .description-paragraph, .tribe-events-single .description-paragraph {
   font-family: "Tofino";
   font-size: 1rem; }
   @media (min-width: 1080px) {
-    .single-activity .description-paragraph {
+    .single-activity .description-paragraph, .single-festival .description-paragraph, .tribe-events-single .description-paragraph {
       width: 80%;
       font-family: "Tofino-Text";
       font-size: 1rem; } }
->>>>>>> 61f8e40be8835ab74886cd6d3cbf3aaab3653113
 
 .single-activity iframe, .single-festival iframe, .tribe-events-single iframe {
   border: 1.5px solid #72CB7E !important;
   margin-top: 2rem; }
   @media (min-width: 1080px) {
-    .single-activity iframe {
+    .single-activity iframe, .single-festival iframe, .tribe-events-single iframe {
       margin-top: 7rem; } }
 
 @media (min-width: 1080px) {
@@ -2213,18 +2219,18 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     display: flex; } }
 
 @media (min-width: 1080px) {
-  .single-activity .left-side {
+  .single-activity .left-side, .single-festival .left-side, .tribe-events-single .left-side {
     width: 50%; } }
 
 @media (min-width: 1080px) {
-  .single-activity .right-side {
+  .single-activity .right-side, .single-festival .right-side, .tribe-events-single .right-side {
     width: 50%;
     text-align: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; } }
 
-.single-activity .heading-carousel {
+.single-activity .heading-carousel, .single-festival .heading-carousel, .tribe-events-single .heading-carousel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2962,7 +2968,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-<<<<<<< HEAD
   -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
   transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
@@ -2970,23 +2975,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   opacity: 0;
   -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
   transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
-=======
-  -webkit-transition: bottom 0.08s 0s ease-out,
- top 0.08s 0s ease-out,
- opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out,
- top 0.08s 0s ease-out,
- opacity 0s linear; }
-
-.hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
-  opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out,
- top 0.08s ease-out,
- opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out,
- top 0.08s ease-out,
- opacity 0s 0.08s linear; }
->>>>>>> 61f8e40be8835ab74886cd6d3cbf3aaab3653113
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -3061,15 +3049,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-<<<<<<< HEAD
     -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
     transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
-=======
-    -webkit-transition: top 0.1s 0.25s ease-in,
- opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in,
- opacity 0.1s ease-in; }
->>>>>>> 61f8e40be8835ab74886cd6d3cbf3aaab3653113
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3086,15 +3067,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-<<<<<<< HEAD
     -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
     transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
-=======
-    -webkit-transition: top 0.1s ease-out,
- opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out,
- opacity 0.1s 0.12s ease-out; }
->>>>>>> 61f8e40be8835ab74886cd6d3cbf3aaab3653113
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3113,15 +3087,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-<<<<<<< HEAD
     -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
     transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
-=======
-    -webkit-transition: top 0.1s 0.25s ease-in,
- opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in,
- opacity 0.1s ease-in; }
->>>>>>> 61f8e40be8835ab74886cd6d3cbf3aaab3653113
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3138,15 +3105,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-<<<<<<< HEAD
     -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
     transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
-=======
-    -webkit-transition: top 0.1s ease-out,
- opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out,
- opacity 0.1s 0.12s ease-out; }
->>>>>>> 61f8e40be8835ab74886cd6d3cbf3aaab3653113
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -3337,15 +3297,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-<<<<<<< HEAD
     -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
     transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
-=======
-    -webkit-transition: top 0.075s 0.12s ease,
- opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease,
- opacity 0.075s ease; }
->>>>>>> 61f8e40be8835ab74886cd6d3cbf3aaab3653113
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3362,15 +3315,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-<<<<<<< HEAD
     -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
     transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
-=======
-    -webkit-transition: top 0.075s ease,
- opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease,
- opacity 0.075s 0.12s ease; }
->>>>>>> 61f8e40be8835ab74886cd6d3cbf3aaab3653113
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
