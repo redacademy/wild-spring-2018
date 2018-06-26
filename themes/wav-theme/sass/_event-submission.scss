@@ -193,3 +193,15 @@ h1.submission-header{
         width: 50%;
     }
 }
+
+
+
+#tribe-community-events .event-submission-form {
+    .tribe-button-secondary {
+        // background: red;
+    display: block;        
+        &:hover {
+            background: $color__green;
+        }
+    }
+}
