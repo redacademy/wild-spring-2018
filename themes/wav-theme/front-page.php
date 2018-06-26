@@ -71,7 +71,7 @@ get_header(); ?>
 			'posts_per_page' => 3,
 			'orderby' => 'date',
             'order' => 'ASC',
-            'eventDisplay'=>'upcoming'
+            'eventDisplay'=>'list'
         );
             $events = tribe_get_events($args);
 
