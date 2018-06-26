@@ -21,6 +21,7 @@
         }
 }
 
+
 .header-container {
     position: relative;
 }
@@ -56,7 +57,37 @@
     display: none;
 }
 
+.back-button {
+    max-width: 5rem;
+    display: none;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    font-size: 1.75rem;
+    position: absolute;
+    top: 4px;
+    left: 0;
+        i {
+            color: $color__green;
+            text-shadow: none;
+        }
+}
+
+.mobile-title {
+    text-align: center;
+    position: relative;
+    top: -5.5rem;
+}
+
 @include desktop {
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .mobile-title {
+        display: none;
+    }
 
     .logo img {
         bottom: .5rem;

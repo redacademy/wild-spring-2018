@@ -761,8 +761,6 @@ a {
   position: initial; }
 
 @media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none; }
   .main-navigation ul {
     display: block;
     opacity: 1;
@@ -2360,7 +2358,31 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
 .logo-wav1 {
   display: none; }
 
+.back-button {
+  max-width: 5rem;
+  display: none;
+  background: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 1.75rem;
+  position: absolute;
+  top: 4px;
+  left: 0; }
+  .back-button i {
+    color: #72CB7E;
+    text-shadow: none; }
+
+.mobile-title {
+  text-align: center;
+  position: relative;
+  top: -5.5rem; }
+
 @media (min-width: 1080px) {
+  .menu-toggle {
+    display: none; }
+  .mobile-title {
+    display: none; }
   .logo img {
     bottom: .5rem; }
   .sub-menu {
@@ -2426,6 +2448,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   position: absolute;
   right: 0;
   top: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   -webkit-transition-property: opacity, -webkit-filter;
   transition-property: opacity, -webkit-filter;
   transition-property: opacity, filter;
