@@ -8,26 +8,32 @@
 get_header(); ?>
 
 <div class="heading-carousel">
-<section class="carousel-container">
-    <div class="double-carousel carousel-main">
-        <?php $loop = CFS()->get( 'activity_image_loop' );
-        foreach ( $loop as $row ) {?>
-            <div class="carousel-cell">
-                 <img src="<?php echo $row['activity_image']; ?>">
+<?php $loop = CFS()->get( 'activity_image_loop' );
+         
+         if(!empty($loop[0]['activity_image'])): ?>
+        
+        <section class="carousel-container">
+            <div class="double-carousel carousel-main">
+                
+                    <?php foreach ( $loop as $row ) :?>
+                        <div class="carousel-cell">
+                            <img src="<?php echo $row['activity_image']; ?>">
+                        </div>
+                    <?php endforeach; ?>
+                
             </div>
-        <?php } ?>
-    </div>
-       
-    <div class="carousel-nav">
-        <?php $loop = CFS()->get( 'activity_image_loop' );
-            foreach ( $loop as $row ) {?>
-                <div class="carousel-cell">
-                    <img src="<?php echo $row['activity_image']; ?>">
-                </div>
-        <?php } ?>
-    </div>
+            
+            <div class="carousel-nav">
+            
+                <?php   foreach ( $loop as $row ) {?>
+                        <div class="carousel-cell">
+                            <img src="<?php echo $row['activity_image']; ?>">
+                        </div>
+                <?php } ?>
+            </div>
 
-</section>
+        </section>
+        <?php endif; ?> 
 
 <header class="entry-header">
 <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
