@@ -571,6 +571,37 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
+.button {
+  font-size: 20px;
+  display: block;
+  text-transform: none;
+  color: white;
+  font-family: "Tofino";
+  width: 100%;
+  text-align: center;
+  border-radius: 50px;
+  margin: 20px 30px; }
+  @media (min-width: 1080px) {
+    .button {
+      max-width: 300px;
+      display: inline-block; } }
+  .button:hover {
+    color: black; }
+
+.yellow-button {
+  background: #F9D169;
+  color: white;
+  border: 2px solid #F9D169; }
+  .yellow-button:hover {
+    background: white; }
+
+.blue-button {
+  border: 2px solid #40B2C4;
+  background: #40B2C4;
+  color: white; }
+  .blue-button:hover {
+    background: white; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -758,6 +789,14 @@ a {
 .post-navigation .nav-next {
   text-align: right;
   width: 50%; }
+
+.festival-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -2125,7 +2164,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   font-family: "Oswald";
   text-align: center; }
 
-.single-activity .activity-location, .single-festival .activity-location {
+.single-activity .activity-location, .single-activity .festival-date, .single-festival .activity-location, .single-festival .festival-date {
   text-align: center;
   font-family: "Tofino";
   font-size: 1rem; }
