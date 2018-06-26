@@ -13,9 +13,12 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     }
 }
 //the below seen tag displays faq on both submit an event page and the calendar page
-// .tribe-events-after-html{
-//     display:none;
-// }
+.archive.post-type-archive.post-type-archive-tribe_events {
+    .tribe-events-after-html{
+        display:none;
+    }
+}
+
 .container{
     padding:2%;
 }
@@ -95,7 +98,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
                 border:1px solid $color__green;
                 border-radius: 10px;
                 margin: 0.5rem 1rem;
-                flex-grow: 1;
+                // flex-grow: 1;
                 input[type=email], input[type=password], input[type=search], input[type=text], input[type=url]{
                     // border:1px solid $color__green;
                     // border-radius: 25%;
@@ -183,7 +186,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         flex-wrap: wrap;
     }
     .tribe-bar-date-filter{
-        flex-grow: 1;
+        // flex-grow: 1;
     }
     #tribe-bar-collapse-toggle{
         display:none;

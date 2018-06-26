@@ -1248,6 +1248,9 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         margin-top: 0;
         padding-top: 0; } }
 
+.archive.post-type-archive.post-type-archive-tribe_events .tribe-events-after-html {
+  display: none; }
+
 .container {
   padding: 2%; }
 
@@ -1331,10 +1334,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter, #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter {
       border: 1px solid #72CB7E;
       border-radius: 10px;
-      margin: 0.5rem 1rem;
-      -webkit-box-flex: 1;
-          -ms-flex-positive: 1;
-              flex-grow: 1; }
+      margin: 0.5rem 1rem; }
       #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=email], #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=password], #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=search], #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=text], #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-search-filter input[type=url], #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=email], #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=password], #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=search], #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=text], #tribe-events-pg-template.tribe-events-pg-template .tribe-clearfix #tribe-events-bar .tribe-bar-date-filter input[type=url] {
         border: 0.1px solid white;
         margin: 0.5rem 0;
@@ -1395,10 +1395,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
             justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-  #tribe-events-pg-template.tribe-events-pg-template .tribe-bar-date-filter {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1; }
   #tribe-events-pg-template.tribe-events-pg-template #tribe-bar-collapse-toggle {
     display: none; }
   #tribe-events-pg-template.tribe-events-pg-template a {
@@ -1549,6 +1545,9 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   padding: 1rem; }
 
 .tribe_events-template-default.single-tribe_events .tribe-events-before-html {
+  display: none; }
+
+.tribe_events-template-default.single-tribe_events .tribe-events-after-html {
   display: none; }
 
 .tribe_events-template-default.single-tribe_events .events-container {
