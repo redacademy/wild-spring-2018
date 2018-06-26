@@ -126,12 +126,24 @@ a {
 	font-family: 'Tofino';
 	background: $color__blue__menu__background;
 	z-index: 10;
-    bottom: 3rem;
+	bottom: 3rem;
+		@include tablet {
+			width: 40%;
+		}
+	
+		li {
+			border-bottom: 1px solid #fff;
+			padding: 1rem;
+		}
 	
 		a {
 			color: #fff;
-			border-bottom: 1px solid #fff;
-			padding: 1rem;
+		}
+
+		.sub-menu {
+			float: none;
+			box-shadow: none;
+			width: 100%;
 		}
 
 		.social-nav {
@@ -152,6 +164,16 @@ a {
 
 		.social-nav-menu {
 			margin: 0;
+		}
+
+		.sub-menu li {
+			border-bottom: none;
+			padding: 0;
+    		margin-left: 1rem;
+		}
+
+		.socialMediaIconsFooter li {
+			border-bottom: none;
 		}
 }
 

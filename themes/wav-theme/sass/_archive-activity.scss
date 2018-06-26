@@ -53,6 +53,7 @@
         margin: auto;
         @include desktop {
             display: flex;
+            flex-wrap: wrap;
             max-width: 1350px;
         }
 
@@ -64,7 +65,7 @@
         margin: 2rem;
         padding: 0.8rem;
         @include desktop {
-        width: 33%;
+        width: 29%;
         margin: 1rem;
         }
     }
@@ -198,9 +199,9 @@
         margin-top: 0;
     }
 
-
-
-
+    .search-field {
+        max-width: 1350px;
+    }
 
 
 }

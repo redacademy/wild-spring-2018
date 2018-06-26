@@ -48,13 +48,12 @@
             text-align: start;
             font-size: 1.5rem;
 
-
         }
     }
 
     .entry-content {
-        font-size: $font-size__desktop__body;
-        font-family: $font-family__desktop__body;
+        font-size: $font-size__body;
+        font-family: $font-family__body;
         @include desktop {
             margin: 5rem 0;
             font-size: $font-size__desktop__body;

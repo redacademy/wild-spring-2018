@@ -738,10 +738,19 @@ a {
   background: #B4E1E8;
   z-index: 10;
   bottom: 3rem; }
-  .main-navigation.toggled a {
-    color: #fff;
+  @media (min-width: 620px) {
+    .main-navigation.toggled {
+      width: 40%; } }
+  .main-navigation.toggled li {
     border-bottom: 1px solid #fff;
     padding: 1rem; }
+  .main-navigation.toggled a {
+    color: #fff; }
+  .main-navigation.toggled .sub-menu {
+    float: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    width: 100%; }
   .main-navigation.toggled .social-nav {
     display: block;
     padding: 1rem;
@@ -754,6 +763,12 @@ a {
       padding-top: .75rem; }
   .main-navigation.toggled .social-nav-menu {
     margin: 0; }
+  .main-navigation.toggled .sub-menu li {
+    border-bottom: none;
+    padding: 0;
+    margin-left: 1rem; }
+  .main-navigation.toggled .socialMediaIconsFooter li {
+    border-bottom: none; }
 
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -1964,15 +1979,31 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
       margin: 0 1rem;
       width: auto; } }
 
-.page-id-81 .main-navigation ul {
-  top: 3rem; }
+.page-id-81 .involve-banner {
+  display: none; }
+  @media (min-width: 1080px) {
+    .page-id-81 .involve-banner {
+      display: block; } }
+
+.page-id-81 article {
+  padding: 3%;
+  padding-top: 4rem; }
+
+.page-id-81 .paragraph-text {
+  font-family: "Tofino";
+  font-size: 1rem;
+  margin-bottom: 2rem; }
+  @media (min-width: 1080px) {
+    .page-id-81 .paragraph-text {
+      font-size: 1rem;
+      font-family: "Tofino-Text"; } }
 
 .page-id-81 input[type=text],
 .page-id-81 input[type=tel],
 .page-id-81 input[type=email],
 .page-id-81 input[type=date],
 .page-id-81 textarea {
-  border: 1px solid #72CB7E;
+  border: 2px solid #72CB7E;
   border-radius: 5px;
   width: 100%; }
 
@@ -2007,7 +2038,60 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   color: black;
   -webkit-box-shadow: none;
           box-shadow: none;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  text-align: center; }
+
+.page-id-81 .involve-botton {
+  text-align: end;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 4rem; }
+
+.page-id-81 .faq-item {
+  width: 100%; }
+
+.page-id-81 .entry-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .page-id-81 .entry-header h3, .page-id-81 .entry-header p, .page-id-81 .entry-header a {
+    text-align: center; }
+  .page-id-81 .entry-header p {
+    font-family: "Tofino";
+    font-size: "Tofino-Text"; }
+  .page-id-81 .entry-header .browse {
+    text-align: center;
+    margin: 2rem; }
+  .page-id-81 .entry-header a {
+    background-color: #F9D169;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    font-size: 1.5rem;
+    text-shadow: none;
+    text-align: center;
+    padding: 0.5rem 3rem;
+    width: 50%;
+    margin-top: 2rem; }
+
+@media (min-width: 1080px) {
+  .page-id-81 .wpcf7 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .page-id-81 .wpcf7 .wpcf7-form {
+      width: 50%;
+      margin-right: 2rem; }
+    .page-id-81 .wpcf7 .faq-container {
+      width: 50%; }
+      .page-id-81 .wpcf7 .faq-container h1 {
+        margin-top: 0; } }
 
 .page-id-72 {
   background: #fff; }
@@ -2081,10 +2165,15 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
     @media (min-width: 1080px) {
       .page-id-72 .contact-button2 {
         display: none; } }
+  .page-id-72 .faq-item {
+    width: 100%; }
+    @media (min-width: 1080px) {
+      .page-id-72 .faq-item {
+        width: 40vw; } }
   @media (min-width: 1080px) {
     .page-id-72 .contactandfaq {
       margin: 1em; } }
-  .page-id-72 .textwidget {
+  .page-id-72 .hours, .page-id-72 .faq-container {
     margin: 1.25rem; }
   .page-id-72 .widget.widget_text {
     border-bottom: 1px solid #aaa; }
@@ -3071,13 +3160,13 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
   opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -3152,8 +3241,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3170,8 +3259,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3190,8 +3279,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3208,8 +3297,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -3400,8 +3489,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3418,8 +3507,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3602,6 +3691,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
       max-width: 1350px; } }
 
 .post-type-archive-activity .activity-item {
@@ -3611,7 +3702,7 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   padding: 0.8rem; }
   @media (min-width: 1080px) {
     .post-type-archive-activity .activity-item {
-      width: 33%;
+      width: 29%;
       margin: 1rem; } }
 
 .post-type-archive-activity div .site-content {
@@ -3727,6 +3818,9 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
 .post-type-archive-activity .site-footer {
   margin-top: 0; }
 
+.post-type-archive-activity .search-field {
+  max-width: 1350px; }
+
 .error404 .not-found {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3770,8 +3864,6 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   margin-bottom: 0;
   font-size: 1rem;
   font-family: "Tofino Semi Bold"; }
-  .blog .entry-title a {
-    color: black; }
   @media (min-width: 1080px) {
     .blog .entry-title {
       font-family: "Oswald";
@@ -3779,6 +3871,26 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
       text-align: start;
       padding: 0;
       margin: 0; } }
+
+.blog .entry-title {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Tofino Semi Bold"; }
+  .blog .entry-title a {
+    color: black; }
+  @media (min-width: 1080px) {
+    .blog .entry-title {
+      font-family: "Oswald";
+      font-size: 2.5rem;
+      text-align: start;
+      margin-bottom: 1rem; } }
+
+.blog .entry-meta {
+  text-align: center; }
+  @media (min-width: 1080px) {
+    .blog .entry-meta {
+      text-align: start;
+      font-size: 1.5rem; } }
 
 .blog fieldset {
   border: none;
@@ -3827,6 +3939,9 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   margin-bottom: 0; }
   .blog .see-details a {
     color: #72CB7E; }
+
+.blog .navigation-up-arrow {
+  text-align: center; }
 
 .blog .navigation-arrow {
   color: #72CB7E; }
@@ -3922,6 +4037,15 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
 .blog .title-post-on {
   width: 40%; }
 
+.blog .entry-content {
+  font-size: 1rem;
+  font-family: "Tofino"; }
+  @media (min-width: 1080px) {
+    .blog .entry-content {
+      margin: 5rem 0;
+      font-size: 1rem;
+      font-family: "Tofino-Text"; } }
+
 .single-post .image-wrapper {
   height: 200px;
   width: 100%;
@@ -3968,7 +4092,7 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
 
 .single-post .entry-content {
   font-size: 1rem;
-  font-family: "Tofino-Text"; }
+  font-family: "Tofino"; }
   @media (min-width: 1080px) {
     .single-post .entry-content {
       margin: 5rem 0;
