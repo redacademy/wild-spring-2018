@@ -1601,7 +1601,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     display: none; }
   .tribe_events-template-default.single-tribe_events .tribe-events-single {
     margin-top: 5rem;
-    padding: 2%; }
+    padding: 2%;
+    text-align: center; }
     .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container {
       text-align: left;
       max-width: 1200px;
@@ -1612,7 +1613,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         @media (min-width: 620px) {
           .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .event-main-title-details {
             margin: 0;
-            padding-top: 5rem;
             text-align: left; } }
       .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container h2 {
         font-size: 1.5rem; }
@@ -1633,6 +1633,10 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         @media (min-width: 620px) {
           .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .address-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .address-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .single-event-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .date-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .date-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .organizer-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .organizer-details {
             display: block; } }
+      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container h4 {
+        font-weight: 500; }
+      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container dt {
+        font-weight: 500; }
       .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-event-tags {
         display: -webkit-box;
         display: -ms-flexbox;
