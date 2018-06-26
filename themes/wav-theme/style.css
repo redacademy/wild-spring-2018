@@ -1530,6 +1530,9 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .tribe-event-schedule-details {
   text-align: center; }
 
+.tribe-events-ical {
+  display: none; }
+
 .tribe-events-list.tribe-events-day {
   display: -webkit-box;
   display: -ms-flexbox;
