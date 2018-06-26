@@ -66,6 +66,9 @@
         width: 120px;
     }
 
+    .menu-item-has-children:hover > ul{
+        display:block;
+    }
 
     .home, .post-type-archive-tribe_events, .page-id-81, .page-template-contact, {
 

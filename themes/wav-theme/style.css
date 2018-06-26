@@ -2315,6 +2315,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     bottom: .5rem; }
   .sub-menu {
     width: 120px; }
+  .menu-item-has-children:hover > ul {
+    display: block; }
   .home .site-header, .post-type-archive-tribe_events .site-header, .page-id-81 .site-header, .page-template-contact .site-header {
     background-color: transparent; }
     .home .site-header a, .post-type-archive-tribe_events .site-header a, .page-id-81 .site-header a, .page-template-contact .site-header a {
