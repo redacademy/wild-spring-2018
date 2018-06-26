@@ -7,7 +7,6 @@
  * @package wav_starter_Theme
  */
 /* functions.php */
-include('faq/faq.php');
 if ( ! function_exists( 'wav_starter_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -151,6 +150,8 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+include('faq/faq.php');
 
 /**
  * Change Number of Posts on Archive Page.
