@@ -2139,10 +2139,15 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
     @media (min-width: 1080px) {
       .page-id-72 .contact-button2 {
         display: none; } }
+  .page-id-72 .faq-item {
+    width: 100%; }
+    @media (min-width: 1080px) {
+      .page-id-72 .faq-item {
+        width: 40vw; } }
   @media (min-width: 1080px) {
     .page-id-72 .contactandfaq {
       margin: 1em; } }
-  .page-id-72 .textwidget {
+  .page-id-72 .hours, .page-id-72 .faq-container {
     margin: 1.25rem; }
   .page-id-72 .widget.widget_text {
     border-bottom: 1px solid #aaa; }

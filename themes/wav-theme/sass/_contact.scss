@@ -80,13 +80,20 @@
                 }
     }
 
+    .faq-item {
+        width: 100%;
+            @include desktop {
+                width: 40vw;
+            }
+    }
+
     .contactandfaq {
         @include desktop {
             margin: 1em;
         }
     }
 
-    .textwidget {
+    .hours, .faq-container {
         margin: 1.25rem;
     }
 
