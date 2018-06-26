@@ -10,12 +10,27 @@
         
     }
 
+    .search-form{
+        margin: 20px 0px;
+        border: 1px solid $color__green;
+        fieldset{
+            border: none;
+        }
+    }
+
+}
+
+.subtitle-404, .error404 .page-header{
+    margin: 0;
+    padding: 0;
 }
 
 .widgets-404{
     display: flex;
     flex-direction: column;
+    
     .widget{
         border: 1px solid $color__green;
+        padding: 5%;
     }
 }
