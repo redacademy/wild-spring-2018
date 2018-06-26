@@ -3020,21 +3020,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-  -webkit-transition: bottom 0.08s 0s ease-out,
- top 0.08s 0s ease-out,
- opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out,
- top 0.08s 0s ease-out,
- opacity 0s linear; }
+  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
   opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out,
- top 0.08s ease-out,
- opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out,
- top 0.08s ease-out,
- opacity 0s 0.08s linear; }
+  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -3109,10 +3101,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in,
- opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in,
- opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3129,10 +3119,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out,
- opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out,
- opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3151,10 +3139,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in,
- opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in,
- opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3171,10 +3157,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out,
- opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out,
- opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -3365,10 +3349,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease,
- opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease,
- opacity 0.075s ease; }
+    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3385,10 +3367,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.075s ease,
- opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease,
- opacity 0.075s 0.12s ease; }
+    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3873,6 +3853,9 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   width: 100%;
   position: relative;
   overflow: hidden; }
+  @media (min-width: 1080px) {
+    .single-post .image-wrapper {
+      height: 400px; } }
 
 .single-post .image-wrapper img {
   width: 100%;
@@ -3887,12 +3870,36 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .single-post .site-content {
   padding: 2%;
   padding-top: 5rem; }
+  @media (min-width: 1080px) {
+    .single-post .site-content {
+      padding-top: 0; } }
 
 .single-post .entry-title {
-  text-align: center; }
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Tofino Semi Bold"; }
+  @media (min-width: 1080px) {
+    .single-post .entry-title {
+      font-family: "Oswald";
+      font-size: 2.5rem;
+      text-align: start;
+      margin-bottom: 0; } }
 
 .single-post .entry-meta {
   text-align: center; }
+  @media (min-width: 1080px) {
+    .single-post .entry-meta {
+      text-align: start;
+      font-size: 1.5rem; } }
+
+.single-post .entry-content {
+  font-size: 1rem;
+  font-family: "Tofino-Text"; }
+  @media (min-width: 1080px) {
+    .single-post .entry-content {
+      margin: 5rem 0;
+      font-size: 1rem;
+      font-family: "Tofino-Text"; } }
 
 .single-post .tags-links a {
   color: black;
@@ -3906,17 +3913,77 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 
 .single-post .tags {
   text-align: center; }
+  @media (min-width: 1080px) {
+    .single-post .tags {
+      text-align: start; } }
 
-.single-post .nav-previous a {
-  color: #40B2C4; }
+.single-post .nav-previous {
+  margin-top: 4rem;
+  height: 5rem; }
+  .single-post .nav-previous a {
+    color: #40B2C4; }
+    @media (min-width: 1080px) {
+      .single-post .nav-previous a {
+        background: #40B2C4;
+        color: white;
+        padding: 20px 40px;
+        border-radius: 10px; } }
 
-.single-post .nav-next a {
-  color: #F9D169; }
+.single-post .nav-next {
+  margin-top: 4rem;
+  height: 5rem; }
+  .single-post .nav-next a {
+    color: #F9D169; }
+    @media (min-width: 1080px) {
+      .single-post .nav-next a {
+        background: #F9D169;
+        color: white;
+        padding: 20px 40px;
+        border-radius: 10px; } }
 
 .single-post .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+.single-post .single-post-banner {
+  display: none; }
+  @media (min-width: 1080px) {
+    .single-post .single-post-banner {
+      height: 80vh;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      margin-bottom: 4rem;
+      display: block; }
+      .single-post .single-post-banner img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+                transform: translateY(-50%) translateX(-50%); } }
+
+@media (min-width: 1080px) {
+  .single-post .post {
+    border: 1px solid #72CB7E;
+    padding: 3rem; } }
+
+.single-post .page-title {
+  display: none;
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  font-family: "Oswald"; }
+  @media (min-width: 1080px) {
+    .single-post .page-title {
+      display: block;
+      font-size: 2.67rem;
+      font-family: "Oswald";
+      position: absolute;
+      bottom: 10rem;
+      left: 5rem;
+      color: white; } }
 
 /*
 * This is stylesheet for pages using archive.php template: categories, tags. by kate
