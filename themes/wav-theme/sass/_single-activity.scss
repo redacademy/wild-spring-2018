@@ -1,4 +1,4 @@
-.single-activity, .single-festival{
+.single-activity, .single-festival, .tribe-events-single{
 
     .flickity-button {
         display: none;
@@ -148,7 +148,7 @@
         }
     }
 
-    .activity-location {
+    .activity-location, .festival-date {
         text-align: center;
         @include desktop {
             font-size: 1.5rem;

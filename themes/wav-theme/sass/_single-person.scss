@@ -1,0 +1,32 @@
+.single-person{
+    display: flex;
+    flex-direction: column;
+    @include tablet{
+        flex-direction: row;
+    }
+    
+    section{
+
+        width: 100%;
+        padding: 4%;
+        @include tablet{
+            width: 50%;
+        }
+    }
+    .person-profile-picture{
+        display: flex;
+        justify-content: center;
+        @include tablet{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       
+    }
+    .entry-header{
+        text-align: center;
+    }
+    p{
+        line-height: 2.0;
+    }
+}

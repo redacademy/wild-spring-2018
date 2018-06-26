@@ -34,6 +34,9 @@ a {
 	float: left;
 	width: 100%;
 	position: relative;
+		@include desktop {
+			top: -6rem;
+		}
 
 	ul {
 		display: none;
@@ -123,6 +126,7 @@ a {
 	font-family: 'Tofino';
 	background: $color__blue__menu__background;
 	z-index: 10;
+    bottom: 3rem;
 	
 		a {
 			color: #fff;
@@ -154,7 +158,7 @@ a {
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
-	position: inherit;
+	position: initial;
 }
 
 
@@ -193,4 +197,9 @@ a {
 		text-align: right;
 		width: 50%;
 	}
+}
+
+.festival-navigation{
+	display: flex;
+	justify-content: center;
 }

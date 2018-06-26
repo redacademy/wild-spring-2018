@@ -28,7 +28,13 @@
 .main-navigation ul {
     position: absolute;
     right: 0;
-    bottom: 3rem;
+    top: 1rem;
+    
+}
+
+.main-navigation ul ul {
+    position: initial;
+    display: none;
 }
 
 .logo {
@@ -56,6 +62,13 @@
         bottom: .5rem;
     }
 
+    .sub-menu {
+        width: 120px;
+    }
+
+    .menu-item-has-children:hover > ul{
+        display:block;
+    }
 
     .home, .post-type-archive-tribe_events, .page-id-81, .page-template-contact, {
 
@@ -101,5 +114,6 @@
             border-bottom: 2px solid black;
         }
     }
+
 
 }
