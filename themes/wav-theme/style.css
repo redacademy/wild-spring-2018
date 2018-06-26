@@ -762,7 +762,7 @@ a {
 
 @media screen and (min-width: 768px) {
   .main-navigation ul {
-    display: block;
+    display: none;
     opacity: 1;
     height: auto;
     overflow: auto;
@@ -2373,6 +2373,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   top: -5.5rem; }
 
 @media (min-width: 1080px) {
+  .main-navigation ul {
+    display: block; }
   .menu-toggle {
     display: none; }
   .mobile-title {
@@ -3052,7 +3054,6 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-<<<<<<< HEAD
   -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
   transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
@@ -3060,25 +3061,6 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   opacity: 0;
   -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
   transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
-=======
-<<<<<<< HEAD
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
-
-.hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
-  opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
-=======
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
-
-.hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
-  opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
->>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
->>>>>>> 5d869e740e0b960f8552b579e87c786a1e580f09
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -3153,18 +3135,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-<<<<<<< HEAD
     -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
     transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
-=======
-<<<<<<< HEAD
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
-=======
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
->>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
->>>>>>> 5d869e740e0b960f8552b579e87c786a1e580f09
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3181,18 +3153,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-<<<<<<< HEAD
     -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
     transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
-=======
-<<<<<<< HEAD
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
-=======
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
->>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
->>>>>>> 5d869e740e0b960f8552b579e87c786a1e580f09
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3211,18 +3173,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-<<<<<<< HEAD
     -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
     transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
-=======
-<<<<<<< HEAD
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
-=======
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
->>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
->>>>>>> 5d869e740e0b960f8552b579e87c786a1e580f09
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3239,18 +3191,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-<<<<<<< HEAD
     -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
     transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
-=======
-<<<<<<< HEAD
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
-=======
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
->>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
->>>>>>> 5d869e740e0b960f8552b579e87c786a1e580f09
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -3441,18 +3383,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-<<<<<<< HEAD
     -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
     transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
-=======
-<<<<<<< HEAD
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
-=======
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
->>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
->>>>>>> 5d869e740e0b960f8552b579e87c786a1e580f09
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3469,18 +3401,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-<<<<<<< HEAD
     -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
     transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
-=======
-<<<<<<< HEAD
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
-=======
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
->>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
->>>>>>> 5d869e740e0b960f8552b579e87c786a1e580f09
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -4068,7 +3990,6 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   display: -ms-flexbox;
   display: flex; }
 
-<<<<<<< HEAD
 .single-post .single-post-banner {
   display: none; }
   @media (min-width: 1080px) {
@@ -4108,8 +4029,6 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
       left: 5rem;
       color: white; } }
 
-=======
->>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
 /*
 * This is stylesheet for pages using archive.php template: categories, tags. by kate
 *
