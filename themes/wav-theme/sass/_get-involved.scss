@@ -92,6 +92,10 @@
             font-family: $font-family__body;
             font-size: $font-family__desktop__body;
         }
+        .browse {
+            text-align: center;
+            margin: 2rem;
+        }
         a {            
             background-color: $color__yellow;
             border-radius: 25px;
@@ -101,12 +105,29 @@
             font-size: 1.5rem;
             text-shadow: none;            
             text-align: center;
+            padding: 0.5rem 3rem;
             width: 50%;
             margin-top: 2rem;
                        
         }
 
 
+    }
+
+    .wpcf7 {
+        @include desktop {
+            display: flex;
+            .wpcf7-form {
+                width: 50%;
+                margin-right: 2rem;
+            }
+            .faq-container {
+                width: 50%;
+                h1 {
+                    margin-top: 0;
+                }
+            }
+        }
     }
 
 }

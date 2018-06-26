@@ -7,7 +7,6 @@ class FAQs {
 	
 	public static function shortcode_callback( $atts, $content='') {
 		if(!self::$scripts_loaded)
-			self::enqueue_files();
 		
 		extract( shortcode_atts(array('title' => ''), $atts) );
 		
@@ -19,10 +18,6 @@ class FAQs {
 		
 		return $html;
 		
-	}
-	
-	protected static function enqueue_files() {
-		wp_enqueue_script('jquery');
 	}
 }
 ?>
