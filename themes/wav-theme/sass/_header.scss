@@ -60,6 +60,17 @@
 .back-button {
     max-width: 5rem;
     display: none;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    font-size: 1.75rem;
+    position: absolute;
+    top: 4px;
+    left: 0;
+        i {
+            color: $color__green;
+            text-shadow: none;
+        }
 }
 
 @include desktop {

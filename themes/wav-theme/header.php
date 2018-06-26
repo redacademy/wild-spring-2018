@@ -27,7 +27,9 @@
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/wav-logo-white.svg'; ?>" class="logo-wav1" alt="Wav Logo" />
 								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/wav-logo.svg'; ?>" class="logo-wav2" alt="Wav Logo" />
 							</a>	
-							<button class="back-button">Go Back</button>
+							<button class="back-button">
+								<i class="fas fa-chevron-left"></i>
+							</button>
 					</div>
 						<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 						<p class="site-description"><?php bloginfo( 'description' ); ?></p>

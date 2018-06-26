@@ -2350,7 +2350,18 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 
 .back-button {
   max-width: 5rem;
-  display: none; }
+  display: none;
+  background: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 1.75rem;
+  position: absolute;
+  top: 4px;
+  left: 0; }
+  .back-button i {
+    color: #72CB7E;
+    text-shadow: none; }
 
 @media (min-width: 1080px) {
   .logo img {
@@ -2418,6 +2429,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   position: absolute;
   right: 0;
   top: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   -webkit-transition-property: opacity, -webkit-filter;
   transition-property: opacity, -webkit-filter;
   transition-property: opacity, filter;
