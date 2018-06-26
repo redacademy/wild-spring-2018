@@ -27,7 +27,7 @@
     font-family: $font-family__button;
     &:hover{
         color: white;
-        background: 2px solid $color__green;
+        background: $color__green;
     }
 }
 
@@ -185,5 +185,11 @@ h1.submission-header{
 
             background: white;
         }
+    }
+}
+
+.submission-success-desktop{
+    @include desktop{
+        width: 50%;
     }
 }

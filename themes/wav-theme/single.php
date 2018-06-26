@@ -11,11 +11,12 @@ get_header(); ?>
 	if(!empty($banner_img)): ?>
 
 	<div class="single-post-banner"><img src="<?php echo $banner_img; ?> " alt="banner image for WAV post page"></div>
+	<h1 id="1" class="page-title">Our Blog</h1>
 	<?php
 	endif;
 	?>
 	
-	<h1 id="1" class="page-title">Our Blog</h1>
+
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">

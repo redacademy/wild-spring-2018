@@ -10,7 +10,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-            <nav>
+            <div class="aboutNavigationWrapper">
                 <ul class="aboutNavigation">
                     <li><a href="#aboutJump">About Wav</a></li>
                     <li><a href="#festivalJump">Festival</a></li>
@@ -19,7 +19,7 @@ get_header(); ?>
                     <li><a href="#workJump">Work</a></li>
                     <li><a href="#pressJump">Press</a></li>
                 </ul>
-            </nav>
+</div>
 <!-- the abouv nav should be replaced with registered wigdet area for navigation with custom links. TODO, when time permits -->
 
             <div class="anchor" id="aboutJump"></div>

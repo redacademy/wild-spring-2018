@@ -1664,12 +1664,21 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 10px;
+  padding: 10px 20px;
   position: fixed;
   width: 100%;
+  margin: 0 auto;
   z-index: 3; }
+  @media (min-width: 1080px) {
+    .aboutNavigation {
+      padding: 10px 50px; } }
   .aboutNavigation a {
     color: white; }
+
+.aboutNavigationWrapper {
+  background-color: #72CB7E;
+  width: 100%;
+  height: 45px; }
 
 .videoAboutWav p {
   width: 80%;
@@ -1939,7 +1948,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         font-size: 18px;
         line-height: 1.5; } }
 
-section.about-wav, section.our-festival, section.theTeam, section.collaborators, section.festivals, section.school-outreach, section.press {
+section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, section.festivals, section.school-outreach, section.press {
   max-width: 1200px;
   margin: 0 auto; }
 
@@ -3752,6 +3761,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   .widgets-404 .widget {
     border: 1px solid #72CB7E;
     padding: 5%; }
+  .widgets-404 .widgettitle, .widgets-404 .widget-title {
+    margin: 0; }
 
 .blog .entry-title {
   padding-top: 2rem;
@@ -4138,6 +4149,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   .widgets-404 .widget {
     border: 1px solid #72CB7E;
     padding: 5%; }
+  .widgets-404 .widgettitle, .widgets-404 .widget-title {
+    margin: 0; }
 
 .single-person {
   display: -webkit-box;
@@ -4209,7 +4222,7 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   font-family: "Tofino"; }
   .tribe-section-organizer a.tribe-button:hover, .tribe-section-content div.form-controls div:hover, .tribe-section-content div.form-controls input:hover {
     color: white;
-    background: 2px solid #72CB7E; }
+    background: #72CB7E; }
 
 #tribe-events-pg-template.tribe-events-pg-template a.tribe-button, .event-submission-faq {
   background: white;
@@ -4334,3 +4347,7 @@ h1.submission-header {
     color: white; }
     .tribe-community-notice a.blue-button:hover {
       background: white; }
+
+@media (min-width: 1080px) {
+  .submission-success-desktop {
+    width: 50%; } }
