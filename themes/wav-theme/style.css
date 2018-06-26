@@ -591,13 +591,6 @@ input[type="submit"] {
   line-height: 1;
   padding: .6rem 1rem .4rem;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -1443,6 +1436,10 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; }
+        @media (min-width: 620px) {
+          #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-event-image {
+            height: 200px;
+            overflow: hidden; } }
         #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description {
           margin-top: auto; }
           #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description .tribe-event-tags {
@@ -1551,7 +1548,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   display: none; }
 
 .tribe_events-template-default.single-tribe_events .events-container {
-  text-align: center;
+  text-align: left;
   max-width: 1200px;
   margin: 6rem auto 1rem; }
   .tribe_events-template-default.single-tribe_events .events-container h2 {
