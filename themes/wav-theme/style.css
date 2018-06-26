@@ -1200,9 +1200,8 @@ object {
     color: white;
     padding: 10px 30px;
     max-width: 300px;
-    margin: 0 auto;
-    border-radius: 50px;
-    margin: 1rem; }
+    margin: 1rem auto;
+    border-radius: 50px; }
     @media (min-width: 620px) {
       .home .button {
         display: inline-block; } }
