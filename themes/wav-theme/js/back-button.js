@@ -11,6 +11,4 @@
                 window.history.back(-1);
             }
         });
-    })
-
-(jQuery);
+  })(jQuery);
