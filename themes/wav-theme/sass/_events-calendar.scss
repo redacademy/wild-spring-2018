@@ -233,6 +233,12 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
                 .type-tribe_events{
                     display:flex;
                     flex-direction:column;
+                    .tribe-events-event-image{
+                        @include tablet{
+                            height: 200px;
+                            overflow: hidden;
+                        }
+                    }
                     // justify-content: center;
                     // margin-top: auto;
                     .tribe-events-list-event-description{
