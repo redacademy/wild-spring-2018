@@ -64,6 +64,10 @@
 
     .sub-menu {
         width: 120px;
+
+        a {
+            max-width: 120px;
+        }
     }
 
     .menu-item-has-children:hover > ul{
