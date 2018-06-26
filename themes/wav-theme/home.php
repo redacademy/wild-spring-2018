@@ -7,10 +7,14 @@
 
 get_header(); ?>
 
+	<div class="activity-banner"><img src="<?php echo CFS()->get("hero_image_blogs", 226); ?> " alt="banner image for WAV blog page"></div>
+
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-            <h1 class="entry-title">Our Blog</h1>
+
+            <h1 id="1" class="page-title">Our Blog</h1>
 
             <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
                 <fieldset>
@@ -26,11 +30,11 @@ get_header(); ?>
                 </fieldset>
             </form>
 
-		<?php if ( have_posts() ) : ?>
+        <?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
 				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+					<h2 class="page-title screen-reader-text"><?php single_post_title(); ?></h2>
 				</header>
 			<?php endif; ?>
 
@@ -43,11 +47,15 @@ get_header(); ?>
                 <div class="blogs-item">
 
                     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                    <div class="image-header-container">
+
                             <div class="image-wrapper">
                                 <?php if ( has_post_thumbnail() ) : ?>
                                 <a href=<?php echo get_post_permalink() ?>><?php the_post_thumbnail( 'large' ); ?></a>
                                 <?php endif; ?>
                             </div>
+
+                            <div class="title-post-on">
 
                             <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
@@ -56,6 +64,9 @@ get_header(); ?>
                                 <?php the_time('F j, Y / h:i A') ?>
                             </div><!-- .entry-meta -->
                             <?php endif; ?>
+
+                            </div>
+                    </div>
 
                         <div class="entry-content">
                             <?php the_excerpt(); ?>

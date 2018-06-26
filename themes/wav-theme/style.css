@@ -622,13 +622,6 @@ input[type="submit"] {
   line-height: 1;
   padding: .6rem 1rem .4rem;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); }
-  button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -1482,6 +1475,10 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; }
+        @media (min-width: 620px) {
+          #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-event-image {
+            height: 200px;
+            overflow: hidden; } }
         #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description {
           margin-top: auto; }
           #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description .tribe-event-tags {
@@ -1590,7 +1587,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   display: none; }
 
 .tribe_events-template-default.single-tribe_events .events-container {
-  text-align: center;
+  text-align: left;
   max-width: 1200px;
   margin: 6rem auto 1rem; }
   .tribe_events-template-default.single-tribe_events .events-container h2 {
@@ -2158,9 +2155,7 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   left: 50%;
   top: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
-  min-height: 300px;
-  min-width: 400px; }
+          transform: translateY(-50%) translateX(-50%); }
   @media (min-width: 1080px) {
     .single-activity .double-carousel .carousel-cell img, .single-festival .double-carousel .carousel-cell img, .tribe-events-single .double-carousel .carousel-cell img {
       width: 100%;
@@ -2364,6 +2359,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
     bottom: .5rem; }
   .sub-menu {
     width: 120px; }
+    .sub-menu a {
+      max-width: 120px; }
   .menu-item-has-children:hover > ul {
     display: block; }
   .home .site-header, .post-type-archive-tribe_events .site-header, .page-id-81 .site-header, .page-template-contact .site-header {
@@ -3031,13 +3028,21 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+  -webkit-transition: bottom 0.08s 0s ease-out,
+ top 0.08s 0s ease-out,
+ opacity 0s linear;
+  transition: bottom 0.08s 0s ease-out,
+ top 0.08s 0s ease-out,
+ opacity 0s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
   opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+  -webkit-transition: bottom 0.08s ease-out,
+ top 0.08s ease-out,
+ opacity 0s 0.08s linear;
+  transition: bottom 0.08s ease-out,
+ top 0.08s ease-out,
+ opacity 0s 0.08s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -3112,8 +3117,10 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in,
+ opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in,
+ opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3130,8 +3137,10 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out,
+ opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out,
+ opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3150,8 +3159,10 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in,
+ opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in,
+ opacity 0.1s ease-in; }
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3168,8 +3179,10 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out,
+ opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out,
+ opacity 0.1s 0.12s ease-out; }
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -3360,8 +3373,10 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+    -webkit-transition: top 0.075s 0.12s ease,
+ opacity 0.075s ease;
+    transition: top 0.075s 0.12s ease,
+ opacity 0.075s ease; }
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3378,8 +3393,10 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+    -webkit-transition: top 0.075s ease,
+ opacity 0.075s 0.12s ease;
+    transition: top 0.075s ease,
+ opacity 0.075s 0.12s ease; }
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3555,15 +3572,30 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   content: " >"; }
 
 .post-type-archive-activity .activities-wrapper {
-  text-align: center; }
+  text-align: center;
+  margin: auto; }
+  @media (min-width: 1080px) {
+    .post-type-archive-activity .activities-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      max-width: 1350px; } }
 
 .post-type-archive-activity .activity-item {
+  position: relative;
   border: 1px solid #72CB7E;
   margin: 2rem;
   padding: 0.8rem; }
+  @media (min-width: 1080px) {
+    .post-type-archive-activity .activity-item {
+      width: 33%;
+      margin: 1rem; } }
 
-.post-type-archive-activity .site-content {
+.post-type-archive-activity div .site-content {
   padding: 2%; }
+  @media (min-width: 1080px) {
+    .post-type-archive-activity div .site-content {
+      padding-top: 0; } }
 
 .post-type-archive-activity fieldset {
   border: none;
@@ -3583,7 +3615,12 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
 
 .post-type-archive-activity .entry-title {
   padding-top: 2rem;
-  font-size: 1.5rem; }
+  font-size: 1rem;
+  font-family: 1.5rem; }
+  @media (min-width: 1080px) {
+    .post-type-archive-activity .entry-title {
+      font-size: 1.5rem;
+      font-family: "Tofino Bold"; } }
 
 .post-type-archive-activity .activity-location {
   text-align: center;
@@ -3592,22 +3629,80 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
 
 .post-type-archive-activity .description-paragraph {
   font-family: "Tofino-Text";
-  font-size: 0.833rem; }
+  font-size: 0.833rem;
+  height: 20%; }
+
+@media (min-width: 1080px) {
+  .post-type-archive-activity .tags {
+    margin-bottom: 4rem; } }
+
+.post-type-archive-activity .tags-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .post-type-archive-activity .tags-links a {
   color: black;
   border: 1px solid #40B2C4;
   border-radius: 20px;
-  padding: 2px 20px; }
+  padding: 2px 10px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  max-width: 33%; }
 
 .post-type-archive-activity .see-details {
   text-align: end;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 10px;
+  right: 10px; }
   .post-type-archive-activity .see-details a {
     color: #72CB7E; }
 
 .post-type-archive-activity .navigation-arrow {
   color: #72CB7E; }
+
+.post-type-archive-activity .navigation-up-arrow {
+  text-align: center; }
+
+.post-type-archive-activity .activity-banner {
+  display: none; }
+  @media (min-width: 1080px) {
+    .post-type-archive-activity .activity-banner {
+      height: 80vh;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      margin-bottom: 3rem;
+      display: block; }
+      .post-type-archive-activity .activity-banner img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+                transform: translateY(-50%) translateX(-50%); } }
+
+.post-type-archive-activity .page-title {
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  font-family: "Oswald"; }
+  @media (min-width: 1080px) {
+    .post-type-archive-activity .page-title {
+      font-size: 2.67rem;
+      font-family: "Oswald";
+      position: absolute;
+      bottom: 10rem;
+      color: white; } }
+
+.post-type-archive-activity .site-footer {
+  margin-top: 0; }
 
 .error404 .not-found {
   display: -webkit-box;
@@ -3625,11 +3720,19 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
 
 .blog .entry-title {
   padding-top: 2rem;
-  font-size: 1.5rem;
   text-align: center;
-  margin-bottom: 0; }
-  .blog .entry-title a:visited {
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-family: "Tofino Semi Bold"; }
+  .blog .entry-title a {
     color: black; }
+  @media (min-width: 1080px) {
+    .blog .entry-title {
+      font-family: "Oswald";
+      font-size: 1.5rem;
+      text-align: start;
+      padding: 0;
+      margin: 0; } }
 
 .blog fieldset {
   border: none;
@@ -3649,14 +3752,23 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
 
 .blog .blogs-wrapper {
   text-align: center; }
+  @media (min-width: 1080px) {
+    .blog .blogs-wrapper {
+      text-align: start; } }
 
 .blog .blogs-item {
   border: 1px solid #72CB7E;
   margin: 2rem;
   padding: 0.8rem; }
+  @media (min-width: 1080px) {
+    .blog .blogs-item {
+      padding: 3rem; } }
 
 .blog .site-content {
   padding: 2%; }
+  @media (min-width: 1080px) {
+    .blog .site-content {
+      padding-top: 0; } }
 
 .blog .tags-links a {
   color: black;
@@ -3681,6 +3793,10 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   width: 100%;
   position: relative;
   overflow: hidden; }
+  @media (min-width: 1080px) {
+    .blog .image-wrapper {
+      height: 250px;
+      width: 50%; } }
 
 .blog .image-wrapper img {
   width: 100%;
@@ -3708,6 +3824,57 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   font-size: 4rem;
   position: relative;
   top: 0.8rem; }
+
+.blog .site-footer {
+  margin-top: 0; }
+
+.blog .activity-banner {
+  display: none; }
+  @media (min-width: 1080px) {
+    .blog .activity-banner {
+      height: 80vh;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      margin-bottom: 3rem;
+      display: block; }
+      .blog .activity-banner img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+                transform: translateY(-50%) translateX(-50%); } }
+
+.blog .page-title {
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  font-family: "Oswald"; }
+  @media (min-width: 1080px) {
+    .blog .page-title {
+      font-size: 2.67rem;
+      font-family: "Oswald";
+      position: absolute;
+      bottom: 10rem;
+      left: 5rem;
+      color: white; } }
+
+@media (min-width: 1080px) {
+  .blog .image-header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; } }
+
+.blog .title-post-on {
+  width: 40%; }
 
 .single-post .image-wrapper {
   height: 200px;
