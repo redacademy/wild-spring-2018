@@ -46,33 +46,38 @@ $event_id = get_the_ID();
     </div>
 	<?php endif; ?>
 </section>
-
-			<div class="events-container">
-			<?php the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' ); ?>
-			<?php echo('<p>'.tribe_get_start_date($event).'<p>');?>
-			<!-- Event content -->
-			<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
-			<div class="event-info-container">
-			<div class="tribe-events-single-event-description tribe-events-content">
-				<h3 class="single-event-title">Description</h3>
-				<?php the_content(); ?>
-			</div>
-			<!-- .tribe-events-single-event-description -->
-
-			<!-- Event meta -->
-			<!-- <div class="tribe-events-single-event-description tribe-events-content">
-				<h3 class="single-event-details-title">Details</h3>
-			</div> -->
-			<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
-			<?php tribe_get_template_part( 'modules/meta' ); ?>
-			<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
-			</div><!--end of event-info-container-->
-
-			<?php echo tribe_meta_event_tags( sprintf( esc_html__( 'Tags', 'the-events-calendar' ), tribe_get_event_label_singular() ), ' ', false ) ?>
-			
-			<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
-		</div> <!-- #post-x -->
-		</div><!--events-container-->
+<?php 
+	//$event = get_post($event_id);
+	echo('<div class="events-container">');
+		echo('<h1 class="tribe-events-single-event-title">'.the_title().'</h1>');
+		echo('<p>'.tribe_get_start_date($event_id).'</p>');
+		echo('<div class="event-info-container">');
+			echo('<div class="tribe-events-single-event-description tribe-events-content">');
+				echo('<h3 class="single-event-title">Description</h3>');
+				the_content();
+				echo('<h3 class="single-event-details">Details</h3>');
+				echo('<h4>Date and time</h4>');
+				echo('<p>'.tribe_get_start_date($event_id).'</p>');
+				if (tribe_has_organizer()) {
+					echo('<h4>Organizer</h4>');
+					echo('<p>'.tribe_get_organizer($event_id).'</p>');
+				}
+				$venue = tribe_get_venue_details($event_id);
+				if (array_key_exists('address', $venue))
+				{
+					$address = $venue['address'];
+					echo('<h4>Location</h4>');
+					echo('<p>'.$address.'</p>');
+					//echo('<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q='.urlencode($address).'&key=AIzaSyBLLT_lEBaqsLZ5W8a4lq0FI8FK2Nfr2QI" allowfullscreen></iframe>');
+					//tribe_get_template_part( 'modules/meta' );
+					tribe_get_template_part( 'modules/meta/map' );
+				}
+				//echo('<h4>Tags</h4>');
+				echo(tribe_meta_event_tags('','',false));
+			echo('</div>');
+		echo('</div>');
+	echo('</div>');
+			?>
 
 		<?php if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) comments_template() ?>
 	<?php endwhile; ?>

@@ -53,7 +53,7 @@ get_header(); ?>
                 <p><?php echo esc_html(CFS()->get( 'our_festival' )); ?></p>
 
                 <div class="center-button">
-                    <a href="<?php echo get_post_type_archive_link( 'festival' ) ?>" class="green-button">More Information</a>
+                    <a href="<?php echo esc_url(get_post_type_archive_link( 'festival' )) ?>" class="green-button">More Information</a>
                 </div>
             </section>
 
@@ -71,7 +71,7 @@ get_header(); ?>
                             <div class="teamMember about-carousel-cell">
                                 <!-- <header class="entry-header"> -->
                                     <?php if ( has_post_thumbnail() ) : ?>
-                                    <a href="<?php echo esc_url( CFS()->get( 'personal_webpage' )) ?>" alt="Team Image"><?php the_post_thumbnail( 'large' ); ?></a>
+                                    <a href="<?php echo esc_url( get_permalink()) ?>" alt="Team Image"><?php the_post_thumbnail( 'large' ); ?></a>
                                     <?php endif; ?>
 
                                     <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
@@ -82,7 +82,7 @@ get_header(); ?>
                     </div><!--end of teamMembers-->
 
                     <div class="center-button">
-                        <a href="<?php echo get_post_type_archive_link( 'person' ) ?>" class="green-button">See More</a>
+                        <a href="<?php echo esc_url(get_post_type_archive_link( 'person' )) ?>" class="green-button">See More</a>
                     </div>
 
                     <!-- <a class="hidden-mobile green-button" href=<?php echo get_post_type_archive_link( 'person' ) ?>>See More</a> -->
@@ -194,10 +194,10 @@ get_header(); ?>
                     </div><!--end of press-->
 
                     <div class="center-button">
-                        <a href="<?php echo get_post_type_archive_link( 'press-items' ) ?>" class="green-button">See More</a>
+                        <a href="<?php echo esc_url(get_post_type_archive_link( 'press-item' )) ?>" class="green-button">See More</a>
                     </div>
 
-                    <!-- <a class="green-button" href=<?php echo get_post_type_archive_link( 'press-items' ) ?>>See More</a> -->
+                    <!-- <a class="green-button" href=<?php echo get_post_type_archive_link( 'press-item' ) ?>>See More</a> -->
                 </section>
 
 		</main><!-- #main -->

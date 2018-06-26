@@ -163,6 +163,7 @@
 .teamMember, .collaborator, .festival, .schoolItem, .pressItem{
     width: 45%;
     height: 350px;
+    // height: 45vw;
     // padding: 10px;
     // border: 3px solid skyblue;
     position: relative;
@@ -172,6 +173,9 @@
     overflow: hidden;
     margin: 5px;
     // border: 3px solid blue;
+    @include tablet{
+        height: 45vw;
+    }
     @include desktop{
         width: 25%;
         height: 25vw;
@@ -179,7 +183,8 @@
     }
 
     img{
-    
+        // height: auto;
+        // width: 400px;
         @include tablet{
             height: auto;
             width: 450px;
