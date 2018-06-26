@@ -22,14 +22,15 @@
 			<header id="masthead" class="site-header light-header" role="banner">
 				<!-- <div class="header-container"> -->
 				<div class="site-branding">
-				<div class="logo">
-						<a href="<?php echo home_url(); ?>">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/wav-logo-white.svg'; ?>" class="logo-wav1" alt="Wav Logo" />
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/wav-logo.svg'; ?>" class="logo-wav2" alt="Wav Logo" />
-						</a>	
-						<button class="back-button">Go Back</button>
-					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+					<div class="logo">
+							<a href="<?php echo home_url(); ?>">
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/wav-logo-white.svg'; ?>" class="logo-wav1" alt="Wav Logo" />
+								<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/wav-logo.svg'; ?>" class="logo-wav2" alt="Wav Logo" />
+							</a>	
+							<button class="back-button">Go Back</button>
+					</div>
+						<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 				</div><!-- .site-branding -->
 
 				<div class="menu-toggle">

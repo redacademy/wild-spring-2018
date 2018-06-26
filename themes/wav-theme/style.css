@@ -2348,7 +2348,12 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .logo-wav1 {
   display: none; }
 
+.back-button {
+  max-width: 5rem; }
+
 @media (min-width: 1080px) {
+  .back-button {
+    display: none; }
   .logo img {
     bottom: .5rem; }
   .sub-menu {
