@@ -34,7 +34,6 @@ get_header(); ?>
 </header><!-- .entry-header -->
 
 
-
 <p class="activity-location">
 <?php echo CFS()->get('activity_location') ?>
 </p>

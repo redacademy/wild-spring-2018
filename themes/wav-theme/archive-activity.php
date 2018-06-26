@@ -7,13 +7,17 @@
 
 get_header(); ?>
 
+
+	<div class="activity-banner"><img src="<?php echo CFS()->get("hero_image_archive_activity", 299); ?> " alt="banner image for WAV front-page"> </div>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+				
+	
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header" id="1">				
-                <h1 class="entry-title">Outdoor Activity Ideas</h1>
+                <h1 class="page-title">Outdoor Activity Ideas</h1>
 			</header>
 
 			<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
@@ -53,7 +57,7 @@ get_header(); ?>
 					<?php endif; ?>
 
 					<header class="entry-header">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 					</header>
 
 					<p class="activity-location">
@@ -81,19 +85,20 @@ get_header(); ?>
 
 					<?php endwhile; ?>
 
-					<p class="navigation-up-arrow">
-						<a href="#1" class="navigation-arrow">▲</a>
-					</p>
-
-
-
 					<?php else : ?>
 
 					<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
         			<?php endif; ?>
 
-            </div>
+			</div>
+
+			<?php WAV_Starter_numbered_pagination(); ?>
+
+			
+			<p class="navigation-up-arrow">
+				<a href="#1" class="navigation-arrow">▲</a>
+			</p>
 
 
 		</main><!-- #main -->

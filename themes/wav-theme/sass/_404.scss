@@ -4,10 +4,18 @@
         flex-direction: column;
         margin: 0 auto;
     }
-    .page-content div{
-        width: 800px;
-        border: 2px solid $color__green;
+    .page-content{
+        max-width: 1200px;
+        // border: 2px solid $color__green;
         
     }
 
+}
+
+.widgets-404{
+    display: flex;
+    flex-direction: column;
+    .widget{
+        border: 1px solid $color__green;
+    }
 }
