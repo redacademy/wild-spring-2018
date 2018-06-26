@@ -13,6 +13,7 @@ jQuery( document ).ready(function( $ ) {
     
    $(question).click(function(){
       $(answer).slideToggle();
+      $(this).next().slideToggle('fast');
     });
      
   });
