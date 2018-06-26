@@ -1,11 +1,23 @@
 .blog {
+
     .entry-title {
         padding-top: 2rem;
-        font-size: $font-size__h1;
         text-align: center;
         margin-bottom: 0;
-        a:visited {
+        a {
             color: black;
+        }
+        // font-size: $font-size__h2;
+        font-size: 1rem;
+        font-family: $font-family__h2;
+        @include desktop {
+            // font-size: $font-size__desktop__h2;
+            // font-family: $font-family__desktop__h2;
+            font-family: $font-family__desktop__h1;
+            font-size: 1.5rem;
+            text-align: start;
+            padding: 0;
+            margin: 0
         }
     }
 
@@ -29,6 +41,9 @@
 
     .blogs-wrapper {
         text-align: center;
+        @include desktop {
+            text-align: start;
+        }
 
     }
 
@@ -36,10 +51,16 @@
         border: 1px solid $color__green;
         margin: 2rem;
         padding: 0.8rem;
+        @include desktop {
+            padding: 3rem;
+        }
     }
 
     .site-content {
         padding: 2%;
+        @include desktop {
+            padding-top: 0;
+        }
     }
 
     .tags-links a {
@@ -63,6 +84,7 @@
 
     .nav-links a {
         color: $color__green;
+
     }
 
     .image-wrapper {
@@ -70,6 +92,10 @@
         width: 100%;
         position: relative;
         overflow: hidden;
+        @include desktop {
+            height: 250px;
+            width: 50%;
+        }
     }
 
     .image-wrapper img {
@@ -105,5 +131,54 @@
         top: 0.8rem;        
     }
 
+    .site-footer {
+        margin-top: 0;
+    }
+
+    .activity-banner {
+        display: none;
+        @include desktop {
+        height: 80vh;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+        margin-bottom: 3rem;        
+        display: block;
+        img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%);
+        }
+        }        
+    }
+
+    .page-title {
+        padding-top: 2rem;
+        font-size: $font-size__h1;
+        font-family: $font-family__h1;
+        @include desktop {
+            font-size: $font-size__desktop__h1;
+            font-family: $font-family__desktop__h1;
+        position: absolute;
+        bottom: 10rem;
+        left: 5rem;
+        color: white;
+        }
+    }
+
+    .image-header-container {
+        @include desktop {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        }
+    }
+
+    .title-post-on {
+        width: 40%;
+    }
 
 }
