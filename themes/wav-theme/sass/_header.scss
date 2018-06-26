@@ -81,6 +81,10 @@
 
 @include desktop {
 
+    .main-navigation ul {
+        display: block;
+    }
+
     .menu-toggle {
         display: none;
     }
