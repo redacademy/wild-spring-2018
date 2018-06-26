@@ -761,8 +761,6 @@ a {
   position: initial; }
 
 @media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none; }
   .main-navigation ul {
     display: block;
     opacity: 1;
@@ -2363,7 +2361,16 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     color: #72CB7E;
     text-shadow: none; }
 
+.mobile-title {
+  text-align: center;
+  position: relative;
+  top: -5.5rem; }
+
 @media (min-width: 1080px) {
+  .menu-toggle {
+    display: none; }
+  .mobile-title {
+    display: none; }
   .logo img {
     bottom: .5rem; }
   .sub-menu {

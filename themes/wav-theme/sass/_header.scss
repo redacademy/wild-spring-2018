@@ -73,8 +73,21 @@
         }
 }
 
+.mobile-title {
+    text-align: center;
+    position: relative;
+    top: -5.5rem;
+}
+
 @include desktop {
 
+    .menu-toggle {
+        display: none;
+    }
+
+    .mobile-title {
+        display: none;
+    }
 
     .logo img {
         bottom: .5rem;
