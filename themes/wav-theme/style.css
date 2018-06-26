@@ -1700,7 +1700,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .page-template-about .aboutWav, .page-template-about .ourFestival, .page-template-about .theTeam, .page-template-about .press {
   padding: 10px; }
   .page-template-about .aboutWav a, .page-template-about .ourFestival a, .page-template-about .theTeam a, .page-template-about .press a {
-    text-align: right;
+    text-align: center;
     text-decoration: none;
     color: #40B2C4;
     display: block; }
@@ -1774,7 +1774,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 
 .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
   width: 45%;
-  height: 350px;
+  height: 300px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1794,11 +1794,14 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
       width: 25%;
       height: 25vw; } }
-  @media (min-width: 620px) {
-    .teamMember img, .collaborator img, .festival img, .schoolItem img, .pressItem img {
-      height: auto;
-      width: 450px;
-      max-width: none; } }
+  .teamMember img, .collaborator img, .festival img, .schoolItem img, .pressItem img {
+    max-width: none;
+    width: 450px; }
+    @media (min-width: 620px) {
+      .teamMember img, .collaborator img, .festival img, .schoolItem img, .pressItem img {
+        height: auto;
+        width: 450px;
+        max-width: none; } }
   .teamMember .entry-title a, .collaborator .entry-title a, .festival .entry-title a, .schoolItem .entry-title a, .pressItem .entry-title a {
     position: absolute;
     bottom: 0;
@@ -1844,17 +1847,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
-.festivals .about-carousel-cell {
-  margin: 0 1rem;
-  width: 100%; }
-  @media (min-width: 620px) {
-    .festivals .about-carousel-cell {
-      width: 45%; } }
-  @media (min-width: 1080px) {
-    .festivals .about-carousel-cell {
-      margin: 0 1rem;
-      width: auto; } }
-
 .festival a, .schoolItem a {
   background-color: #F9D169;
   opacity: 0.9; }
@@ -1883,7 +1875,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       margin: 0 1rem;
       width: auto; } }
 
-.pressItem a {
+.pressItem .entry-title a {
   background-color: #40B2C4; }
 
 .schoolOutreach-container {
@@ -1940,6 +1932,22 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       .pressItem p {
         font-size: 18px;
         line-height: 1.5; } }
+
+section.about-wav, section.our-festival, section.theTeam, section.collaborators, section.festivals, section.school-outreach, section.press {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.about-carousel-cell {
+  margin: 0 1rem;
+  width: 100%; }
+  @media (min-width: 620px) {
+    .about-carousel-cell {
+      width: 45%;
+      height: 300px; } }
+  @media (min-width: 1080px) {
+    .about-carousel-cell {
+      margin: 0 1rem;
+      width: auto; } }
 
 .page-id-81 .main-navigation ul {
   top: 3rem; }
@@ -3020,6 +3028,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
+<<<<<<< HEAD
   -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
   transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
@@ -3027,6 +3036,15 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   opacity: 0;
   -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
   transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+=======
+  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+
+.hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
+  opacity: 0;
+  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+>>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -3101,8 +3119,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
+<<<<<<< HEAD
     -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
     transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+=======
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+>>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3119,8 +3142,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
+<<<<<<< HEAD
     -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
     transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+=======
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+>>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3139,8 +3167,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
+<<<<<<< HEAD
     -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
     transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+=======
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+>>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3157,8 +3190,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
+<<<<<<< HEAD
     -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
     transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+=======
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+>>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -3349,8 +3387,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
+<<<<<<< HEAD
     -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
     transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+=======
+    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+>>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3367,8 +3410,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
+<<<<<<< HEAD
     -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
     transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+=======
+    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+>>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3686,9 +3734,19 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
           flex-direction: column;
   margin: 0 auto; }
 
-.error404 .page-content div {
-  width: 800px;
-  border: 2px solid #72CB7E; }
+.error404 .page-content {
+  max-width: 1200px; }
+
+.widgets-404 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .widgets-404 .widget {
+    border: 1px solid #72CB7E; }
 
 .blog .entry-title {
   padding-top: 2rem;
@@ -3946,6 +4004,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   display: -ms-flexbox;
   display: flex; }
 
+<<<<<<< HEAD
 .single-post .single-post-banner {
   display: none; }
   @media (min-width: 1080px) {
@@ -3985,6 +4044,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       left: 5rem;
       color: white; } }
 
+=======
+>>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
 /*
 * This is stylesheet for pages using archive.php template: categories, tags. by kate
 *
@@ -4051,9 +4112,19 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
           flex-direction: column;
   margin: 0 auto; }
 
-.error404 .page-content div {
-  width: 800px;
-  border: 2px solid #72CB7E; }
+.error404 .page-content {
+  max-width: 1200px; }
+
+.widgets-404 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .widgets-404 .widget {
+    border: 1px solid #72CB7E; }
 
 .single-person {
   display: -webkit-box;

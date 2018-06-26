@@ -63,7 +63,7 @@
     .aboutWav, .ourFestival, .theTeam, .press{
         padding: 10px;
         a{
-            text-align: right;
+            text-align: center;
             text-decoration: none;
             color: $color__blue;
             display: block;
@@ -162,7 +162,7 @@
 
 .teamMember, .collaborator, .festival, .schoolItem, .pressItem{
     width: 45%;
-    height: 350px;
+    height: 300px;
     // height: 45vw;
     // padding: 10px;
     // border: 3px solid skyblue;
@@ -184,7 +184,8 @@
 
     img{
         // height: auto;
-        // width: 400px;
+        max-width: none;
+        width: 450px;
         @include tablet{
             height: auto;
             width: 450px;
@@ -269,17 +270,17 @@
              grid-template-columns: 1fr 1fr 1fr 1fr;
                  }
     }
-    .about-carousel-cell {
-        margin: 0 1rem;
-        width: 100%;
-        @include tablet{
-            width: 45%;
-        }
-        @include desktop{
-            margin: 0 1rem;
-            width: auto;
-        }
-      }
+    // .about-carousel-cell {
+    //     margin: 0 1rem;
+    //     width: 100%;
+    //     @include tablet{
+    //         width: 45%;
+    //     }
+    //     @include desktop{
+    //         margin: 0 1rem;
+    //         width: auto;
+    //     }
+    //   }
 }
 .festival a, .schoolItem a{
     background-color: $color__yellow;
@@ -314,7 +315,7 @@
       }
 
 }
-.pressItem a{
+.pressItem .entry-title a{
     background-color: $color__blue;
 }
 .schoolOutreach-container{
@@ -380,3 +381,21 @@
         
     }
 }
+
+section.about-wav, section.our-festival, section.theTeam, section.collaborators, section.festivals, section.school-outreach, section.press{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+    .about-carousel-cell {
+        margin: 0 1rem;
+        width: 100%;
+        @include tablet{
+            width: 45%;
+            height: 300px;
+        }
+        @include desktop{
+            margin: 0 1rem;
+            width: auto;
+        }
+      }
