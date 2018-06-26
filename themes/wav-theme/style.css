@@ -2104,7 +2104,15 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
       top: -7px; } }
   .page-id-72 .contactus {
     text-transform: capitalize;
-    margin: 0; }
+    margin: 0;
+    padding-left: 1rem; }
+  .page-id-72 .faq-title {
+    border-bottom: 1px solid #aaa; }
+    @media (min-width: 1080px) {
+      .page-id-72 .faq-title {
+        border-bottom: 0; } }
+    .page-id-72 .faq-title h1 {
+      padding-left: 1.25rem; }
   .page-id-72 .contact-top {
     border-bottom: 1px solid #aaa;
     display: -webkit-box;
@@ -2139,9 +2147,9 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
     background-color: #F9D169;
     text-transform: uppercase;
     color: #fff;
-    margin-bottom: .5rem;
+    margin-bottom: .25rem;
     position: absolute;
-    right: 0%;
+    right: 1rem;
     bottom: 1%; }
     .page-id-72 .contact-button1 a {
       color: #fff; }
@@ -2175,15 +2183,11 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
       margin: 1em; } }
   .page-id-72 .hours, .page-id-72 .faq-container {
     margin: 1.25rem; }
-  .page-id-72 .widget.widget_text {
-    border-bottom: 1px solid #aaa; }
-    @media (min-width: 1080px) {
-      .page-id-72 .widget.widget_text {
-        border: none; } }
   @media (min-width: 1080px) {
     .page-id-72 .contact-submit {
       border-left: 2px solid #aaa; } }
   .page-id-72 input[type=text], .page-id-72 input[type=email], .page-id-72 input[type=submit], .page-id-72 label, .page-id-72 .entry-title {
+    border-color: #72CB7E;
     width: 95vw;
     margin-left: .5rem;
     margin-right: .5rem;
@@ -2194,16 +2198,18 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
         margin-left: 2rem;
         margin-right: 2rem; } }
   .page-id-72 .wpcf7-form-control.wpcf7-textarea {
+    border-color: #72CB7E;
     width: 95vw;
     margin-left: .5rem;
     margin-right: .5rem;
-    max-height: 7rem;
+    height: 7rem;
     border-radius: 5px; }
     @media (min-width: 1080px) {
       .page-id-72 .wpcf7-form-control.wpcf7-textarea {
         width: 45vw;
         margin-left: 2rem;
-        margin-right: 2rem; } }
+        margin-right: 2rem;
+        height: 45vh; } }
 
 .single-activity .flickity-button, .single-festival .flickity-button, .tribe-events-single .flickity-button {
   display: none; }
@@ -2397,7 +2403,7 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   display: none; }
 
 .faq-item {
-  border: 2px solid #72CB7E;
+  border: 1px solid #72CB7E;
   border-radius: 5px;
   padding: .5rem;
   border-spacing: 1rem;
