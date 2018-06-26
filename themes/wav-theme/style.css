@@ -1703,7 +1703,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .page-template-about .aboutWav, .page-template-about .ourFestival, .page-template-about .theTeam, .page-template-about .press {
   padding: 10px; }
   .page-template-about .aboutWav a, .page-template-about .ourFestival a, .page-template-about .theTeam a, .page-template-about .press a {
-    text-align: right;
+    text-align: center;
     text-decoration: none;
     color: #40B2C4;
     display: block; }
@@ -1777,7 +1777,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 
 .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
   width: 45%;
-  height: 350px;
+  height: 300px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1797,11 +1797,14 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
       width: 25%;
       height: 25vw; } }
-  @media (min-width: 620px) {
-    .teamMember img, .collaborator img, .festival img, .schoolItem img, .pressItem img {
-      height: auto;
-      width: 450px;
-      max-width: none; } }
+  .teamMember img, .collaborator img, .festival img, .schoolItem img, .pressItem img {
+    max-width: none;
+    width: 450px; }
+    @media (min-width: 620px) {
+      .teamMember img, .collaborator img, .festival img, .schoolItem img, .pressItem img {
+        height: auto;
+        width: 450px;
+        max-width: none; } }
   .teamMember .entry-title a, .collaborator .entry-title a, .festival .entry-title a, .schoolItem .entry-title a, .pressItem .entry-title a {
     position: absolute;
     bottom: 0;
@@ -1847,17 +1850,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
-.festivals .about-carousel-cell {
-  margin: 0 1rem;
-  width: 100%; }
-  @media (min-width: 620px) {
-    .festivals .about-carousel-cell {
-      width: 45%; } }
-  @media (min-width: 1080px) {
-    .festivals .about-carousel-cell {
-      margin: 0 1rem;
-      width: auto; } }
-
 .festival a, .schoolItem a {
   background-color: #F9D169;
   opacity: 0.9; }
@@ -1886,7 +1878,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       margin: 0 1rem;
       width: auto; } }
 
-.pressItem a {
+.pressItem .entry-title a {
   background-color: #40B2C4; }
 
 .schoolOutreach-container {
@@ -1943,6 +1935,22 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       .pressItem p {
         font-size: 18px;
         line-height: 1.5; } }
+
+section.about-wav, section.our-festival, section.theTeam, section.collaborators, section.festivals, section.school-outreach, section.press {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.about-carousel-cell {
+  margin: 0 1rem;
+  width: 100%; }
+  @media (min-width: 620px) {
+    .about-carousel-cell {
+      width: 45%;
+      height: 300px; } }
+  @media (min-width: 1080px) {
+    .about-carousel-cell {
+      margin: 0 1rem;
+      width: auto; } }
 
 .page-id-81 .main-navigation ul {
   top: 3rem; }
