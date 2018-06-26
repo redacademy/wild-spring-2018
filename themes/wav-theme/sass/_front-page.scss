@@ -124,6 +124,15 @@
               }
             .activities-posts-single{
                 border: 1px solid $color__green;
+                img{
+                    @include tablet{
+                        height: 20rem;
+                    }
+                        @include desktop{ 
+                            height: 25rem;
+                        }
+
+                }
                 .activities-posts-single-text{
                     height: 100%;
                     display: flex;
@@ -233,8 +242,11 @@
                 }
             }
             .tab-content{
+                display: flex;
+                flex-direction: column;
                 border:1px solid $color__green;
                 padding: 1rem;
+                margin: 0 1rem 2rem 0;
                 .read-more{
                     font-size: 24px;
                     color:$color__green;
@@ -250,17 +262,17 @@
         }
 
 
-
-
         }
         .button{
             color: white;
             padding: 10px 30px;
+            max-width: 300px;
+            margin: 1rem auto;
                 @include tablet{
                 display: inline-block;
                  }
             border-radius: 50px;
-            margin: 1rem;
+           
             a{
                 color: white;
                 text-transform: capitalize;
