@@ -1503,7 +1503,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
             #tribe-events-pg-template.tribe-events-pg-template .tribe-events-loop .same-date-events-container .event-item.carousel-front-page-cell .type-tribe_events .tribe-events-list-event-description .tribe-event-tags a {
               border: 1px solid #40B2C4;
               border-radius: 15px;
-              padding: 0.5rem;
+              padding: 0.2rem 0.5rem;
               margin: 0.2rem;
               min-width: 5rem;
               text-align: center; }
@@ -1523,7 +1523,12 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     display: none; }
 
 .tribe-events-list-event-title {
-  font-family: 'Oswald'; }
+  font-family: 'Oswald';
+  font-size: 2rem;
+  text-align: center; }
+
+.tribe-event-schedule-details {
+  text-align: center; }
 
 .tribe-events-list.tribe-events-day {
   display: -webkit-box;
