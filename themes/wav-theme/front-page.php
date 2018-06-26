@@ -38,7 +38,8 @@ get_header(); ?>
 							<div class="activities-posts-single-text">
 								<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 								<?php if ( has_post_thumbnail() ) : ?>
-								<?php the_post_thumbnail( '' ); ?>
+                                <?php the_post_thumbnail( '' ); ?>
+                                <?php endif; ?>
                                 <p><?php echo CFS()->get('description')?></p>
 
                                 <div class="read-more">
@@ -46,7 +47,6 @@ get_header(); ?>
                         </div>
 							</div><!-- .activities-posts-single-text-->
                         </article><!-- activities-posts-single -->
-                        <?php endif; ?>
 
 					<?php endforeach; wp_reset_postdata(); ?>
 

@@ -1,17 +1,36 @@
 //This is the style for single-evnet page with carousel. The php template for this style is: tribe-events/single-event.php
 
 .tribe_events-template-default.single-tribe_events{
+    padding: 2%;
     .tribe-events-before-html{
         display: none;
     }
     .tribe-events-after-html{
         display: none;
     }
+    .tribe-events-single{
+        padding: 2%;
     .events-container{
         // margin-top: 6rem;
         text-align: left;
         max-width: 1200px;
         margin: 6rem auto 1rem;
+        @include tablet{
+            // display: flex;
+        }
+
+        .event-main-title-details{
+            // font-size: $font-size__h1;
+            // font-family: $font-family__h1;
+            text-align: center;
+            @include tablet {
+                // font-size: $font-size__desktop__h1;
+                // font-family: $font-family__desktop__h1;
+                margin: 0;
+                padding-top: 5rem;
+                text-align: left;
+            }
+        }
         h2{
             font-size: 1.5rem;
         }
@@ -21,34 +40,30 @@
         .tribe-events-single-event-title{
             font-family: 'Oswald';
         }
-        //  .events-container.single-event-details-title {
-        //      @include desktop{
-        //         display:none;
-        //      }
 
-        // }
-            // h2{
-            //     @include tablet{
-            //         display: none;
-            //     }
-            // }
         .tribe-events-single-section.tribe-events-event-meta{
             text-align: left;
             dd{
                 margin: 0;
             }
         }
-        .tribe-events-single-event-description.tribe-events-content{
+        .tribe-events-single-event-description{
             text-align: left;
             a{
                 text-align: right;
             }
 
         }
-        .single-event-details-title{
+        // .single-event-details-title{
+        //     display: none;
+        //     @include desktop{
+        //         display:inline; 
+        //     }
+        // }
+        .address-title, .address-details, .single-event-details, .date-title,.date-details, .organizer-title, .organizer-details{
             display: none;
-            @include desktop{
-                display:inline; 
+            @include tablet{
+                display: block;
             }
         }
         .tribe-event-tags{ 
@@ -61,31 +76,33 @@
             border-radius: 15px;
             padding: 0.5rem;
             margin: 0.2rem;
-            min-width: 5rem;
+            // min-width: 5rem;
             text-align: center;
             &::before{
                 content: '#';
                 }
             }
         }
-        .tribe-events-cal-links{
-            a{
-                background-color: $color__green !important;
-                border-radius: 25px;
-                border: none;
-                color: white !important;
-                padding: 1rem 3rem;
-                font-size: 1.5rem;
-            }
 
+    }
+    .tribe-events-cal-links{
+        a{
+            background-color: $color__green !important;
+            border-radius: 25px;
+            border: none;
+            color: white !important;
+            padding: 1rem 3rem;
+            font-size: 1.5rem;
         }
 
     }
+    .tribe-events-meta-group.tribe-events-meta-group-details, .tribe-events-meta-group.tribe-events-meta-group-gmap{
+        padding: 0;
+        margin: 0;
+    }
+    .tribe-events-ical.tribe-events-button{
+        display: none;
+    }
+}//.tribe-events-single
 }
-.tribe-events-meta-group.tribe-events-meta-group-details, .tribe-events-meta-group.tribe-events-meta-group-gmap{
-    padding: 0;
-    margin: 0;
-}
-.tribe-events-ical.tribe-events-button{
-    display: none;
-}
+

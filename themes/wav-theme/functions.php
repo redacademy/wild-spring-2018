@@ -152,3 +152,14 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 
+// function number_of_posts_on_archive($query){
+// //     if ($query->is_archive && !is_front_page() &&!is_home()) {
+// //             $query->set('posts_per_page', 12);
+// //    }
+//    if ($query->is_post_type_archive('activity')  && !is_front_page()) {
+// 	$query->set('posts_per_page', 12);
+// 	}
+//     return $query;
+// }
+
+// add_filter('pre_get_posts', 'number_of_posts_on_archive');
