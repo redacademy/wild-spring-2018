@@ -120,7 +120,8 @@ function wav_starter_scripts() {
 	wp_enqueue_script( 'submission', get_template_directory_uri() . '/build/js/submission.min.js', array('jquery'), '20180619', true );
 	wp_enqueue_script( 'header-script', get_template_directory_uri() . '/build/js/header.min.js', array('jquery'), '20180621', true );
 	wp_enqueue_script( 'archive-activity', get_template_directory_uri() . '/build/js/archive-activity.min.js', array('jquery'), '20180622', true );
-	wp_enqueue_script( 'faq', get_template_directory_uri() . '/build/js/faq.min.js', array('jquery'), '20180622', true );
+	wp_enqueue_script( 'faq', get_template_directory_uri() . '/build/js/faq.min.js', array('jquery'), '20180625', true );
+	wp_enqueue_script( 'back-button', get_template_directory_uri() . '/build/js/back-button.min.js', array('jquery'), '20180626', true );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

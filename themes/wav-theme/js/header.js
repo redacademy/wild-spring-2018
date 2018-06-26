@@ -35,7 +35,7 @@ else{
     $('.logo-wav1').css('display','none');
     $('.dark-header').css('background-color', 'hsla(0,0%,100%,.85)');
   
-};
+}
 
 // $(".main-navigation ul").on({
 //     mouseover: function (event) {
