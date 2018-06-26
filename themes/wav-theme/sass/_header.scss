@@ -59,13 +59,11 @@
 
 .back-button {
     max-width: 5rem;
+    display: none;
 }
 
 @include desktop {
 
-    .back-button {
-        display: none;
-    }
 
     .logo img {
         bottom: .5rem;

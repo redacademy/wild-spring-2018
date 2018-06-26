@@ -2349,11 +2349,10 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   display: none; }
 
 .back-button {
-  max-width: 5rem; }
+  max-width: 5rem;
+  display: none; }
 
 @media (min-width: 1080px) {
-  .back-button {
-    display: none; }
   .logo img {
     bottom: .5rem; }
   .sub-menu {
