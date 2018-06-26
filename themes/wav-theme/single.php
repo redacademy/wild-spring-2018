@@ -7,6 +7,16 @@
 
 get_header(); ?>
 
+	<?php $banner_img =  CFS()->get("hero_image_post"); 
+	if(!empty($banner_img)): ?>
+
+	<div class="single-post-banner"><img src="<?php echo $banner_img; ?> " alt="banner image for WAV post page"></div>
+	<?php
+	endif;
+	?>
+	
+	<h1 id="1" class="page-title">Our Blog</h1>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -21,7 +31,7 @@ get_header(); ?>
                     <?php endif; ?>
                 </div>
 
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 
 				<div class="entry-meta">
 					<p> posted on <?php  the_time('F j, Y / h:i A') ?> </p>
