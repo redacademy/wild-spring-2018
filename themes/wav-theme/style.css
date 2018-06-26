@@ -1949,15 +1949,31 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
       margin: 0 1rem;
       width: auto; } }
 
-.page-id-81 .main-navigation ul {
-  top: 3rem; }
+.page-id-81 .involve-banner {
+  display: none; }
+  @media (min-width: 1080px) {
+    .page-id-81 .involve-banner {
+      display: block; } }
+
+.page-id-81 article {
+  padding: 3%;
+  padding-top: 4rem; }
+
+.page-id-81 .paragraph-text {
+  font-family: "Tofino";
+  font-size: 1rem;
+  margin-bottom: 2rem; }
+  @media (min-width: 1080px) {
+    .page-id-81 .paragraph-text {
+      font-size: 1rem;
+      font-family: "Tofino-Text"; } }
 
 .page-id-81 input[type=text],
 .page-id-81 input[type=tel],
 .page-id-81 input[type=email],
 .page-id-81 input[type=date],
 .page-id-81 textarea {
-  border: 1px solid #72CB7E;
+  border: 2px solid #72CB7E;
   border-radius: 5px;
   width: 100%; }
 
@@ -1992,7 +2008,43 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   color: black;
   -webkit-box-shadow: none;
           box-shadow: none;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  text-align: center; }
+
+.page-id-81 .involve-botton {
+  text-align: end;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 4rem; }
+
+.page-id-81 .faq-item {
+  width: 100%; }
+
+.page-id-81 .entry-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .page-id-81 .entry-header h3, .page-id-81 .entry-header p, .page-id-81 .entry-header a {
+    text-align: center; }
+  .page-id-81 .entry-header p {
+    font-family: "Tofino";
+    font-size: "Tofino-Text"; }
+  .page-id-81 .entry-header a {
+    background-color: #F9D169;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    font-size: 1.5rem;
+    text-shadow: none;
+    text-align: center;
+    width: 50%;
+    margin-top: 2rem; }
 
 .page-id-72 {
   background: #fff; }
@@ -3028,7 +3080,6 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-<<<<<<< HEAD
   -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
   transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
@@ -3036,15 +3087,6 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   opacity: 0;
   -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
   transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
-=======
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
-
-.hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
-  opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
->>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -3119,13 +3161,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-<<<<<<< HEAD
     -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
     transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
-=======
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
->>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3142,13 +3179,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-<<<<<<< HEAD
     -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
     transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
-=======
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
->>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3167,13 +3199,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-<<<<<<< HEAD
     -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
     transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
-=======
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
->>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3190,13 +3217,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-<<<<<<< HEAD
     -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
     transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
-=======
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
->>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -3387,13 +3409,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-<<<<<<< HEAD
     -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
     transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
-=======
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
->>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3410,13 +3427,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-<<<<<<< HEAD
     -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
     transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
-=======
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
->>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3599,6 +3611,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
       max-width: 1350px; } }
 
 .post-type-archive-activity .activity-item {
@@ -3608,7 +3622,7 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   padding: 0.8rem; }
   @media (min-width: 1080px) {
     .post-type-archive-activity .activity-item {
-      width: 33%;
+      width: 29%;
       margin: 1rem; } }
 
 .post-type-archive-activity div .site-content {
@@ -3754,8 +3768,6 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   margin-bottom: 0;
   font-size: 1rem;
   font-family: "Tofino Semi Bold"; }
-  .blog .entry-title a {
-    color: black; }
   @media (min-width: 1080px) {
     .blog .entry-title {
       font-family: "Oswald";
@@ -3763,6 +3775,26 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
       text-align: start;
       padding: 0;
       margin: 0; } }
+
+.blog .entry-title {
+  text-align: center;
+  font-size: 1rem;
+  font-family: "Tofino Semi Bold"; }
+  .blog .entry-title a {
+    color: black; }
+  @media (min-width: 1080px) {
+    .blog .entry-title {
+      font-family: "Oswald";
+      font-size: 2.5rem;
+      text-align: start;
+      margin-bottom: 1rem; } }
+
+.blog .entry-meta {
+  text-align: center; }
+  @media (min-width: 1080px) {
+    .blog .entry-meta {
+      text-align: start;
+      font-size: 1.5rem; } }
 
 .blog fieldset {
   border: none;
@@ -3811,6 +3843,9 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   margin-bottom: 0; }
   .blog .see-details a {
     color: #72CB7E; }
+
+.blog .navigation-up-arrow {
+  text-align: center; }
 
 .blog .navigation-arrow {
   color: #72CB7E; }
@@ -3906,6 +3941,15 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
 .blog .title-post-on {
   width: 40%; }
 
+.blog .entry-content {
+  font-size: 1rem;
+  font-family: "Tofino"; }
+  @media (min-width: 1080px) {
+    .blog .entry-content {
+      margin: 5rem 0;
+      font-size: 1rem;
+      font-family: "Tofino-Text"; } }
+
 .single-post .image-wrapper {
   height: 200px;
   width: 100%;
@@ -3952,7 +3996,7 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
 
 .single-post .entry-content {
   font-size: 1rem;
-  font-family: "Tofino-Text"; }
+  font-family: "Tofino"; }
   @media (min-width: 1080px) {
     .single-post .entry-content {
       margin: 5rem 0;
@@ -4004,7 +4048,6 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   display: -ms-flexbox;
   display: flex; }
 
-<<<<<<< HEAD
 .single-post .single-post-banner {
   display: none; }
   @media (min-width: 1080px) {
@@ -4044,8 +4087,6 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
       left: 5rem;
       color: white; } }
 
-=======
->>>>>>> 02d1b61f89bd94d8523cceac9fb43af27c2e5e60
 /*
 * This is stylesheet for pages using archive.php template: categories, tags. by kate
 *

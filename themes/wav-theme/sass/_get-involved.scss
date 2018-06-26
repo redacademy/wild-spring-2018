@@ -1,26 +1,36 @@
 .page-id-81 {
 
-    // img {
-    //     display: none;
-    // }
-
-    .main-navigation ul {
-        top: 3rem;
+    .involve-banner {
+        display: none;
+        @include desktop {
+            display: block;
+        }
     }
 
-    // .post-81 {
-    //     padding: 3%;
-    // }
+    article {
+        padding: 3%;
+        padding-top: 4rem;
+    }
+
+    .paragraph-text {
+        font-family: $font-family__body;
+        font-size: $font-size__body;
+        margin-bottom: 2rem;
+        @include desktop {
+            font-size: $font-size__desktop__body;
+            font-family: $font-family__desktop__body;
+        }
+    }
+
 
     input[type=text],
     input[type=tel],
     input[type=email],
     input[type=date],
     textarea {
-        border: 1px solid $color__green;
+        border: 2px solid $color__green;
         border-radius: 5px;
         width: 100%;
-
     }
 
     .get-inv-form {
@@ -57,6 +67,46 @@
         color: black;
         box-shadow: none;
         font-size: 1.5rem;
+        text-align: center;
+
+    }
+
+    .involve-botton {
+        text-align: end;
+        width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .faq-item {
+        width: 100%;
+    }
+
+    .entry-header { 
+        display: flex;
+        flex-direction: column;
+        h3, p, a {
+        text-align: center;
+        }
+        p {
+            font-family: $font-family__body;
+            font-size: $font-family__desktop__body;
+        }
+        a {            
+            background-color: $color__yellow;
+            border-radius: 25px;
+            border: none;
+            color: white;
+            box-shadow: none;
+            font-size: 1.5rem;
+            text-shadow: none;            
+            text-align: center;
+            width: 50%;
+            margin-top: 2rem;
+                       
+        }
+
+
     }
 
 }
