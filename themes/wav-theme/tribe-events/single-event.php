@@ -49,13 +49,14 @@ $event_id = get_the_ID();
 <?php 
 	//$event = get_post($event_id);
 	echo('<div class="events-container">');
-		// echo('<h1 class="tribe-events-single-event-title">'.the_title().'</h1>');?>
+		// echo('<h1 class="tribe-events-single-event-title">'.the_title().'</h1>');
+		?>
 		<div class="event-main-title-details">
-		<?the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' );
-		echo('<p>'.tribe_get_start_date($event_id).'</p>');
-		echo('<div class="event-info-container">');?>
+		<?php the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' );
+		echo('<p>'.tribe_get_start_date($event_id).'</p>');?>
 		</div>
-			<?echo('<div class="tribe-events-single-event-description tribe-events-content">');
+		<?php echo('<div class="event-info-container">');
+			echo('<div class="tribe-events-single-event-description tribe-events-content">');
 				echo('<h3 class="single-event-title">Description</h3>');
 				the_content();
 				echo('<h3 class="single-event-details">Details</h3>');
