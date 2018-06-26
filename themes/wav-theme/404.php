@@ -18,13 +18,13 @@ get_header(); ?>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php echo esc_html( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?' ); ?></p>
+					<p class="subtitle-404"><?php echo esc_html( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?' ); ?></p>
 
 					<?php get_search_form(); ?>
 					<div class="widgets-404">
 
 						<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
-					</div>
+					
 
 					<?php if ( WAV_Starter_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 					<div class="widget widget_categories">
@@ -47,6 +47,8 @@ get_header(); ?>
 						$archive_content = '<p>' . sprintf( esc_html( 'Try looking in the monthly archives. %1$s' ), convert_smilies( ':)' ) ) . '</p>';
 						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 					?>
+
+					</div>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 

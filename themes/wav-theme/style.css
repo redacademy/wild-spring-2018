@@ -3697,6 +3697,16 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
 .error404 .page-content {
   max-width: 1200px; }
 
+.error404 .search-form {
+  margin: 20px 0px;
+  border: 1px solid #72CB7E; }
+  .error404 .search-form fieldset {
+    border: none; }
+
+.subtitle-404, .error404 .page-header {
+  margin: 0;
+  padding: 0; }
+
 .widgets-404 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3706,7 +3716,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
       -ms-flex-direction: column;
           flex-direction: column; }
   .widgets-404 .widget {
-    border: 1px solid #72CB7E; }
+    border: 1px solid #72CB7E;
+    padding: 5%; }
 
 .blog .entry-title {
   padding-top: 2rem;
@@ -3985,6 +3996,16 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
 .error404 .page-content {
   max-width: 1200px; }
 
+.error404 .search-form {
+  margin: 20px 0px;
+  border: 1px solid #72CB7E; }
+  .error404 .search-form fieldset {
+    border: none; }
+
+.subtitle-404, .error404 .page-header {
+  margin: 0;
+  padding: 0; }
+
 .widgets-404 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3994,7 +4015,8 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
       -ms-flex-direction: column;
           flex-direction: column; }
   .widgets-404 .widget {
-    border: 1px solid #72CB7E; }
+    border: 1px solid #72CB7E;
+    padding: 5%; }
 
 .single-person {
   display: -webkit-box;
