@@ -11,7 +11,7 @@
                     '<img src="./../../wav/wp-content/themes/wav-theme/assets/images/Checkmark.svg"/>',
                     '<h3> Thank you! </h3>',
                     '<p> A representative will be in contact with you shortly. ',
-                    '<a href="../events");">Browse Events</a>'
+                    '<div class="browse"><a href="../events");">Browse Events</a></div>'
                 );
             }
 

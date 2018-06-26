@@ -5,7 +5,6 @@
         $('.back-button').css('display', 'block'),
         $('.main-navigation ul').css('top', '3rem');
     }
-
         $('.back-button').click(function(e) {
             e.preventDefault();
             if($('body').hasClass('single')){
