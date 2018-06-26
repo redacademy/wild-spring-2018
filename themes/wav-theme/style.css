@@ -1790,6 +1790,9 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
           align-items: center;
   overflow: hidden;
   margin: 5px; }
+  @media (min-width: 620px) {
+    .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
+      height: 45vw; } }
   @media (min-width: 1080px) {
     .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
       width: 25%;
