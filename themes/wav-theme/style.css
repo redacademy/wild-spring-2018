@@ -3821,6 +3821,49 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   width: 800px;
   border: 2px solid #72CB7E; }
 
+.single-person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media (min-width: 620px) {
+    .single-person {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+  .single-person section {
+    width: 100%;
+    padding: 4%; }
+    @media (min-width: 620px) {
+      .single-person section {
+        width: 50%; } }
+  .single-person .person-profile-picture {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media (min-width: 620px) {
+      .single-person .person-profile-picture {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
+  .single-person .entry-header {
+    text-align: center; }
+  .single-person p {
+    line-height: 2.0; }
+
 .tribe-section-cost {
   display: none; }
 
