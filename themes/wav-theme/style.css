@@ -3687,6 +3687,13 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
       max-width: 1350px; } }
 
 .post-type-archive-activity .activity-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   border: 1px solid #72CB7E;
   margin: 2rem;
@@ -3737,10 +3744,6 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
   font-size: 0.833rem;
   height: 20%; }
 
-@media (min-width: 1080px) {
-  .post-type-archive-activity .tags {
-    margin-bottom: 4rem; } }
-
 .post-type-archive-activity .tags-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3762,10 +3765,7 @@ section.about-wav, section.our-festival, section.theTeam, section.collaborators,
 
 .post-type-archive-activity .see-details {
   text-align: end;
-  margin-bottom: 0;
-  position: absolute;
-  bottom: 10px;
-  right: 10px; }
+  margin-bottom: 0; }
   .post-type-archive-activity .see-details a {
     color: #72CB7E; }
 

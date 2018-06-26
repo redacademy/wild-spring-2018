@@ -7,6 +7,14 @@
 
 get_header(); ?>
 
+	<?php $banner_img =  CFS()->get("hero_image_post"); 
+	if(!empty($banner_img)): ?>
+
+	<div class="single-post-banner"><img src="<?php echo $banner_img; ?> " alt="banner image for WAV post page"></div>
+	<?php
+	endif;
+	?>
+
 
 	<div class="activity-banner"><img src="<?php echo CFS()->get("hero_image_archive_activity", 299); ?> " alt="banner image for WAV front-page"> </div>
 
