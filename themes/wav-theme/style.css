@@ -1585,12 +1585,14 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .tribe_events-template-default.single-tribe_events .tribe-events-after-html {
     display: none; }
   .tribe_events-template-default.single-tribe_events .tribe-events-single {
+    margin-top: 5rem;
     padding: 2%; }
     .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container {
       text-align: left;
       max-width: 1200px;
-      margin: 6rem auto 1rem; }
+      margin: 1rem auto 1rem; }
       .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .event-main-title-details {
+        padding: 0;
         text-align: center; }
         @media (min-width: 620px) {
           .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .event-main-title-details {

@@ -9,26 +9,29 @@
         display: none;
     }
     .tribe-events-single{
+        margin-top: 5rem;
         padding: 2%;
     .events-container{
-        // margin-top: 6rem;
         text-align: left;
         max-width: 1200px;
-        margin: 6rem auto 1rem;
+        margin: 1rem auto 1rem;
         @include tablet{
             // display: flex;
+            // margin-top: 6rem;
         }
 
         .event-main-title-details{
             // font-size: $font-size__h1;
             // font-family: $font-family__h1;
+            padding: 0;
             text-align: center;
             @include tablet {
                 // font-size: $font-size__desktop__h1;
                 // font-family: $font-family__desktop__h1;
-                margin: 0;
+                margin:0;
                 padding-top: 5rem;
                 text-align: left;
+                // transform: translateY(-550%)
             }
         }
         h2{
