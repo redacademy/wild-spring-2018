@@ -738,10 +738,19 @@ a {
   background: #B4E1E8;
   z-index: 10;
   bottom: 3rem; }
-  .main-navigation.toggled a {
-    color: #fff;
+  @media (min-width: 620px) {
+    .main-navigation.toggled {
+      width: 40%; } }
+  .main-navigation.toggled li {
     border-bottom: 1px solid #fff;
     padding: 1rem; }
+  .main-navigation.toggled a {
+    color: #fff; }
+  .main-navigation.toggled .sub-menu {
+    float: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    width: 100%; }
   .main-navigation.toggled .social-nav {
     display: block;
     padding: 1rem;
@@ -754,6 +763,12 @@ a {
       padding-top: .75rem; }
   .main-navigation.toggled .social-nav-menu {
     margin: 0; }
+  .main-navigation.toggled .sub-menu li {
+    border-bottom: none;
+    padding: 0;
+    margin-left: 1rem; }
+  .main-navigation.toggled .socialMediaIconsFooter li {
+    border-bottom: none; }
 
 .menu-toggle,
 .main-navigation.toggled ul {
