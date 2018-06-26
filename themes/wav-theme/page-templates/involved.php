@@ -13,7 +13,13 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
             <div class="get-involved hero-banner">
-                <img src="<?php echo CFS()->get( 'get_involved_image' ); ?>">
+                <?php $banner_img =  CFS()->get("get_involved_image"); 
+                if(!empty($banner_img)): ?>
+
+                <div class="involve-banner"><img src="<?php echo $banner_img; ?> " alt="banner image for WAV involve page"></div>
+                <?php
+                endif;
+                ?>
             </div>
 
                 <?php while ( have_posts() ) : the_post(); ?>
@@ -36,9 +42,6 @@ get_header(); ?>
 
 
 			<?php endwhile; // End of the loop. ?>
-
-        <img src="<?php echo CFS()->get( 'side_image' ); ?>">
-
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
