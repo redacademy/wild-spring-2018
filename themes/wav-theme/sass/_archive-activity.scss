@@ -54,7 +54,7 @@
         @include desktop {
             display: flex;
             flex-wrap: wrap;
-            max-width: 1350px;
+            justify-content: center;
         }
 
     }
@@ -82,8 +82,11 @@
     fieldset {
         border: none;
         position: relative;
+        left: 3%;
+        width: 50%;
+
         input[type=search]{
-            width: 95%;
+            width: 100%;
             border-radius: 7px;
             border: 1px solid $color__green;
         }
