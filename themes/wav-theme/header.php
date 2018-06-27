@@ -34,8 +34,9 @@
 						<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 						<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 				</div><!-- .site-branding -->
-				<p class="mobile-title"> Wild About Vancouver </p>
-
+					<a class="title-home" href="<?php echo home_url(); ?>">
+						<p class="mobile-title"> Wild About Vancouver </p>
+					</a>
 				<div class="menu-toggle">
 
 					<button class="hamburger hamburger--collapse" type="button" aria-expanded="false" aria-controls="primary-menu">
