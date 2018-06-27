@@ -12,11 +12,11 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-            <div class="get-involved hero-banner">
+            <div class="get-involved">
                 <?php $banner_img =  CFS()->get("get_involved_image"); 
                 if(!empty($banner_img)): ?>
 
-                <div class="involve-banner"><img src="<?php echo $banner_img; ?> " alt="banner image for WAV involve page"></div>
+                <div class="involve-banner"><img class="hero-banner" src="<?php echo $banner_img; ?> " alt="banner image for WAV involve page"></div>
                 <?php
                 endif;
                 ?>

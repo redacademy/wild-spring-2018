@@ -3,19 +3,34 @@
 }
 
 .faq-item {
-	border: 1px solid $color__green;
+	border: 2px solid $color__green;
 	border-radius: 5px;
-	padding: .5rem;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
 	border-spacing: 1rem;
 	margin-bottom: 1rem;
+	position: relative;
 
 		a {
 			color: black;
 		}
 }
 
+.question {
+	padding-left: .5rem;
+	padding-right: .5rem;
+	&::after {
+		color: $color__green;
+		font-family: 'FontAwesome';
+		content: '\f067';
+		position: absolute;
+		right: 1rem;
+	}
+}
+
 .answer {
 	border-top: 1px solid $color__green;
+	padding: 1rem;
 }
 
 .faq-container h1 {

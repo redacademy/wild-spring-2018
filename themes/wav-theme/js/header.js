@@ -3,8 +3,9 @@
 //Function to add dark-banner once user has scrolled past hero-banner
 var bannerHeight= $('.hero-banner').height();
 
-if($('body').hasClass('home') || $('body').hasClass('page-template-contact')||$('body').hasClass('page-template-involved')
-    ||$('body').hasClass('events-list')
+if($('body').hasClass('home') || $('body').hasClass('page-template-contact') || $('body').hasClass('page-template-involved')
+    || $('body').hasClass('events-list') || $('body').hasClass('blog') || $('body').hasClass('post-type-archive-tribe_events')
+    || $('body').hasClass('post-type-archive-activity')
 ){
 
 $(window).scroll(function(){

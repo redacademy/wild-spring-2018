@@ -1,5 +1,4 @@
 .site-header {
-        background-color: hsla(0,0%,100%,.85);
         padding: 1rem;
 		position: fixed;
 		transition: top .5s linear;
@@ -83,9 +82,18 @@
     top: -5.5rem;
 }
 
-.single-activity {
+.single-activity, .single-tribe_events, .single-festival, .single-post {
     .mobile-title{
         top: -1.5rem;
+    }
+}
+
+.single-festival {
+    .site-content {
+        padding-top: 2.5rem;
+        @include desktop {
+            padding-top: 5rem;
+        }
     }
 }
 
@@ -131,7 +139,7 @@
         display:block;
     }
 
-    .home, .post-type-archive-tribe_events, .page-id-81, .post-type-archive-activity, .page-template-contact, .group-blog {
+    .home, .blog, .post-type-archive.post-type-archive-tribe_events, .page-id-81, .post-type-archive-activity, .page-template-contact{
 
         .site-header {
             background-color: transparent;
@@ -155,7 +163,7 @@
         }
 
 
-    .blog, .page-template-about, .single-activity {
+    .page-template-about, .single-activity{
 
         .logo-wav2 {
             display: inline;
@@ -177,6 +185,14 @@
 
         .sub-menu {
             background-color: rgba(255, 255, 255, 0.85);
+        }
+
+        .logo-wav1 {
+            display: none;
+        }
+
+        .logo-wav2 {
+            display: inline;
         }
     }
 

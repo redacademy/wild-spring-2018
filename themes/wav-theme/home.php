@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<div class="activity-banner"><img src="<?php echo CFS()->get("hero_image_blogs", 226); ?> " alt="banner image for WAV blog page"></div>
+	<div class="activity-banner"><img class="hero-banner" src="<?php echo CFS()->get("hero_image_blogs", 226); ?> " alt="banner image for WAV blog page"></div>
 
 
 	<div id="primary" class="content-area">
