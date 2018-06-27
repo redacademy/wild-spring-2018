@@ -27,7 +27,7 @@ get_header(); ?>
 						'post_type' => 'activity',
 						'posts_per_page' => 2,
 						'orderby' => 'date',
-						'order' => 'ASC'
+						'order' => 'DESC'
 						);
 					$latest_activity_posts = get_posts( $args ); // returns an array of posts
 					?>

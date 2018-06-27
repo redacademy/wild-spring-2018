@@ -282,6 +282,33 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     .tribe-events-sub-nav{
         display: none;
     }
+    #tribe-mobile-container{
+        padding: 2%;
+    }
+    .tribe-events-mobile{
+        // display:none;
+            border: 1px solid $color__green;
+            padding: 2%;
+            margin: 2%;
+            .summary{
+                text-align: center;
+                font-family: 'Oswald';
+                font-size: 1.5rem;
+                margin: 0.5rem;
+            }
+            .tribe-events-event-schedule-details{
+                display: block;
+                margin: 0.5rem auto;
+                text-align: center;
+            }
+            .tribe-events-read-more{
+                text-align: right;
+                color:$color__green;
+                    &:hover:visited{
+                        color:$color__green;
+                        }
+                }
+    }
 }
 .tribe-events-list-event-title{
     font-family: 'Oswald';
@@ -377,13 +404,7 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 // }
 // .tribe-bar-views-inner{
 //     background-color: white;
-// }s
-.tribe-mobile-container{
-    // display:none;
-    .tribe-mobile-day{
-        border: 1px solid $color__green;
-        padding: 1rem;
-    }
-}
+// }
+
 
 

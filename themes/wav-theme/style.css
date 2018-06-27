@@ -1101,10 +1101,14 @@ object {
       border: 1px solid #72CB7E; }
       @media (min-width: 620px) {
         .home section .activities-container .activities-posts-single img {
-          height: 20rem; } }
+          height: 20rem;
+          -o-object-fit: cover;
+             object-fit: cover; } }
       @media (min-width: 1080px) {
         .home section .activities-container .activities-posts-single img {
-          height: 25rem; } }
+          height: 25rem;
+          -o-object-fit: cover;
+             object-fit: cover; } }
       .home section .activities-container .activities-posts-single .activities-posts-single-text {
         height: 100%;
         display: -webkit-box;
@@ -1121,7 +1125,7 @@ object {
                   flex-grow: 1; }
     .home section .button.contact-button1.activities-button {
       margin: 2rem auto;
-      max-width: 80%; }
+      max-width: 300px; }
     .home section .events-container.carousel-front-page:after {
       content: 'flickity';
       display: none; }
@@ -1521,6 +1525,26 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
                 color: #72CB7E; }
   #tribe-events-pg-template.tribe-events-pg-template .tribe-events-sub-nav {
     display: none; }
+  #tribe-events-pg-template.tribe-events-pg-template #tribe-mobile-container {
+    padding: 2%; }
+  #tribe-events-pg-template.tribe-events-pg-template .tribe-events-mobile {
+    border: 1px solid #72CB7E;
+    padding: 2%;
+    margin: 2%; }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-mobile .summary {
+      text-align: center;
+      font-family: 'Oswald';
+      font-size: 1.5rem;
+      margin: 0.5rem; }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-mobile .tribe-events-event-schedule-details {
+      display: block;
+      margin: 0.5rem auto;
+      text-align: center; }
+    #tribe-events-pg-template.tribe-events-pg-template .tribe-events-mobile .tribe-events-read-more {
+      text-align: right;
+      color: #72CB7E; }
+      #tribe-events-pg-template.tribe-events-pg-template .tribe-events-mobile .tribe-events-read-more:hover:visited {
+        color: #72CB7E; }
 
 .tribe-events-list-event-title {
   font-family: 'Oswald';
@@ -1596,10 +1620,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 @media (min-width: 620px) {
   .number-of-events-day {
     display: none; } }
-
-.tribe-mobile-container .tribe-mobile-day {
-  border: 1px solid #72CB7E;
-  padding: 1rem; }
 
 .tribe_events-template-default.single-tribe_events {
   padding: 2%; }
