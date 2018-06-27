@@ -3731,7 +3731,9 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
       display: flex;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-      max-width: 1350px; } }
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
 
 .post-type-archive-activity .activity-item {
   display: -webkit-box;
@@ -3758,7 +3760,9 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
 
 .post-type-archive-activity fieldset {
   border: none;
-  position: relative; }
+  position: relative;
+  left: 3%;
+  width: 50%; }
   .post-type-archive-activity fieldset input[type=search] {
     width: 95%;
     border-radius: 7px;
@@ -3870,13 +3874,28 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   margin: 0 auto; }
 
 .error404 .page-content {
-  max-width: 1200px; }
+  max-width: 1200px;
+  margin: 0; }
 
 .error404 .search-form {
   margin: 20px 0px;
   border: 1px solid #72CB7E; }
   .error404 .search-form fieldset {
     border: none; }
+
+.error404 h2 {
+  font-family: 'Oswald'; }
+
+.error404 ul {
+  margin: 0; }
+  .error404 ul li {
+    list-style-type: circle; }
+  .error404 ul a {
+    color: black;
+    line-height: 2.0; }
+  .error404 ul a:hover {
+    color: #72CB7E;
+    font-weight: 600; }
 
 .subtitle-404, .error404 .page-header {
   margin: 0;
@@ -3890,9 +3909,23 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  @media (min-width: 1080px) {
+    .widgets-404 {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      width: 100%; } }
   .widgets-404 .widget {
     border: 1px solid #72CB7E;
     padding: 5%; }
+    @media (min-width: 1080px) {
+      .widgets-404 .widget {
+        padding: 30px;
+        width: 32%; } }
   .widgets-404 .widgettitle, .widgets-404 .widget-title {
     margin: 0; }
 
@@ -4288,13 +4321,28 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   margin: 0 auto; }
 
 .error404 .page-content {
-  max-width: 1200px; }
+  max-width: 1200px;
+  margin: 0; }
 
 .error404 .search-form {
   margin: 20px 0px;
   border: 1px solid #72CB7E; }
   .error404 .search-form fieldset {
     border: none; }
+
+.error404 h2 {
+  font-family: 'Oswald'; }
+
+.error404 ul {
+  margin: 0; }
+  .error404 ul li {
+    list-style-type: circle; }
+  .error404 ul a {
+    color: black;
+    line-height: 2.0; }
+  .error404 ul a:hover {
+    color: #72CB7E;
+    font-weight: 600; }
 
 .subtitle-404, .error404 .page-header {
   margin: 0;
@@ -4308,13 +4356,32 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  @media (min-width: 1080px) {
+    .widgets-404 {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      width: 100%; } }
   .widgets-404 .widget {
     border: 1px solid #72CB7E;
     padding: 5%; }
+    @media (min-width: 1080px) {
+      .widgets-404 .widget {
+        padding: 30px;
+        width: 32%; } }
   .widgets-404 .widgettitle, .widgets-404 .widget-title {
     margin: 0; }
 
-.single-person {
+.single-person .site-content, .single-press-item .site-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 30px; }
+
+.single-person, .single-press-item .press-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4323,18 +4390,18 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
       -ms-flex-direction: column;
           flex-direction: column; }
   @media (min-width: 620px) {
-    .single-person {
+    .single-person, .single-press-item .press-item {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row; } }
-  .single-person section {
+  .single-person section, .single-person .image-wrapper, .single-person .text-wrapper, .single-press-item .press-item section, .single-press-item .press-item .image-wrapper, .single-press-item .press-item .text-wrapper {
     width: 100%;
     padding: 4%; }
     @media (min-width: 620px) {
-      .single-person section {
+      .single-person section, .single-person .image-wrapper, .single-person .text-wrapper, .single-press-item .press-item section, .single-press-item .press-item .image-wrapper, .single-press-item .press-item .text-wrapper {
         width: 50%; } }
-  .single-person .person-profile-picture {
+  .single-person .person-profile-picture, .single-person .image-wrapper, .single-press-item .press-item .person-profile-picture, .single-press-item .press-item .image-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4342,7 +4409,7 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
         -ms-flex-pack: center;
             justify-content: center; }
     @media (min-width: 620px) {
-      .single-person .person-profile-picture {
+      .single-person .person-profile-picture, .single-person .image-wrapper, .single-press-item .press-item .person-profile-picture, .single-press-item .press-item .image-wrapper {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -4352,9 +4419,11 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center; } }
-  .single-person .entry-header {
+  .single-person .entry-header, .single-person .entry-title, .single-press-item .press-item .entry-header, .single-press-item .press-item .entry-title {
     text-align: center; }
-  .single-person p {
+  .single-person .entry-content, .single-press-item .press-item .entry-content {
+    text-align: center; }
+  .single-person p, .single-press-item .press-item p {
     line-height: 2.0; }
 
 .tribe-section-cost {
