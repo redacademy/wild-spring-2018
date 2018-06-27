@@ -3728,7 +3728,7 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   border: none;
   position: relative; }
   .post-type-archive-activity fieldset input[type=search] {
-    width: 100%;
+    width: 95%;
     border-radius: 7px;
     border: 1px solid #72CB7E; }
   .post-type-archive-activity fieldset .search-submit {
