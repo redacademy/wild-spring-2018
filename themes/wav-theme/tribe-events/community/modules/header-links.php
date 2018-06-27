@@ -26,7 +26,7 @@ $post_id = get_the_ID();
 		} elseif ( $post_id && tribe_is_venue( $post_id ) ) {
 			esc_html_e( 'Edit Venue', 'tribe-events-community' );
 		} else {
-			esc_html_e( 'Add New Event', 'tribe-events-community' );
+			esc_html_e( 'Create Your Event', 'tribe-events-community' );
 		}
 		?>
 	</h2>
@@ -34,7 +34,7 @@ $post_id = get_the_ID();
 	<?php if ( is_user_logged_in() ) : ?>
 	<a
 		href="<?php echo esc_url( tribe_community_events_list_events_link() ); ?>"
-		class="tribe-button tribe-button-secondary"
+		class="tribe-button tribe-button-secondary hidden-submit-button"
 	>
 		<?php esc_html_e( 'View Your Submitted Events', 'tribe-events-community' ); ?>
 	</a>

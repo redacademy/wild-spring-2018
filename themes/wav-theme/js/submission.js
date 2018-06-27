@@ -24,11 +24,8 @@
       
         if($('body').hasClass('tribe_community_edit') && ($('.tribe-community-notice-update'))){
            
-
             $('.tribe-community-notice').empty();
-            $('.event-submission-faq').css('display','none');
-            $('.my-events-header').css('display','none')
-
+           
             var successMessage='';
             successMessage+= '<section class="submission-success-message">';
             successMessage+= '<h1 class="submission-header">Create Your Event</h1>';
@@ -42,6 +39,14 @@
             successMessage+= '</section>'
 
             $('.tribe-community-notice').append(successMessage);
+
+            // if($('.submission-thank-you')){
+            //     $('.event-submission-faq').css('display','none');
+            //     $('.my-events-header').css('display','none');
+            // }
+     
+
+          
               
    
         }

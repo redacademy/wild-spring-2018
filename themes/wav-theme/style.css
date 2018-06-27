@@ -1874,7 +1874,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       width: auto; } }
 
 .page-template-about .teamMember, .page-template-about .collaborator, .page-template-about .festival, .page-template-about .schoolItem, .page-template-about .pressItem {
-  width: 45%;
   height: 300px;
   position: relative;
   display: -webkit-box;
@@ -1888,13 +1887,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
           align-items: center;
   overflow: hidden;
   margin: 5px; }
-  @media (min-width: 620px) {
-    .page-template-about .teamMember, .page-template-about .collaborator, .page-template-about .festival, .page-template-about .schoolItem, .page-template-about .pressItem {
-      height: 45vw; } }
-  @media (min-width: 1080px) {
-    .page-template-about .teamMember, .page-template-about .collaborator, .page-template-about .festival, .page-template-about .schoolItem, .page-template-about .pressItem {
-      width: 25%;
-      height: 25vw; } }
   .page-template-about .teamMember img, .page-template-about .collaborator img, .page-template-about .festival img, .page-template-about .schoolItem img, .page-template-about .pressItem img {
     max-width: none;
     width: 450px; }
@@ -2471,6 +2463,16 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+
+.single-activity .site-content, .single-festival .site-content, .tribe-events-single .site-content {
+  padding-top: 5rem;
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 2%;
+  padding-right: 2%; }
+  @media (min-width: 1080px) {
+    .single-activity .site-content, .single-festival .site-content, .tribe-events-single .site-content {
+      padding-top: 0; } }
 
 .answer {
   display: none; }
@@ -3319,13 +3321,13 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
   opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -3400,8 +3402,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3418,8 +3420,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3438,8 +3440,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3456,8 +3458,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -3648,8 +3650,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3666,8 +3668,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -4374,7 +4376,7 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
       left: 5rem;
       color: white; } }
 
-/*
+/**
 * This is stylesheet for pages using archive.php template: categories, tags. by kate
 *
 */
@@ -4702,3 +4704,22 @@ h1.submission-header {
   display: block; }
   #tribe-community-events .event-submission-form .tribe-button-secondary:hover {
     background: #72CB7E; }
+
+.submission-thank-you a.blue-button {
+  background-color: #40B2C4;
+  border: 2px solid #40B2C4;
+  color: white; }
+  .submission-thank-you a.blue-button:hover {
+    background-color: white !important;
+    color: black; }
+
+.submission-thank-you a.yellow-button {
+  background-color: #F9D169;
+  border: 2px solid #F9D169;
+  color: white !important; }
+  .submission-thank-you a.yellow-button:hover {
+    background-color: white;
+    color: black !important; }
+
+.hidden-submit-button {
+  display: none !important; }
