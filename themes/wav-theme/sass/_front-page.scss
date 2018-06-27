@@ -127,9 +127,11 @@
                 img{
                     @include tablet{
                         height: 20rem;
+                        object-fit: cover;
                     }
                         @include desktop{ 
                             height: 25rem;
+                            object-fit: cover;
                         }
 
                 }
@@ -146,7 +148,7 @@
         }
         .button.contact-button1.activities-button{
             margin: 2rem auto;
-            max-width: 80%;
+            max-width: 300px;
         }
         .events-container{
             &.carousel-front-page:after {
