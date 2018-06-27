@@ -7,16 +7,18 @@
 
 get_header(); ?>
 
-	<?php $banner_img =  CFS()->get("hero_image_post"); 
+	<?php $banner_img =  CFS()->get("hero_image_archive_activity", 368); 
 	if(!empty($banner_img)): ?>
 
-	<div class="single-post-banner"><img src="<?php echo $banner_img; ?> " alt="banner image for WAV post page"></div>
-	<?php
+	<div class="activity-banner"><img src="<?php echo $banner_img; ?> " alt="banner image for WAV archive activity page"></div>
+	
+	<header class="page-header" id="1">				
+        <h1 class="page-title">Outdoor Activity Ideas</h1>
+	</header>
+
+	<?php	
 	endif;
 	?>
-
-
-	<div class="activity-banner"><img src="<?php echo CFS()->get("hero_image_archive_activity", 299); ?> " alt="banner image for WAV front-page"> </div>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -24,9 +26,6 @@ get_header(); ?>
 	
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header" id="1">				
-                <h1 class="page-title">Outdoor Activity Ideas</h1>
-			</header>
 
 			<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
                 <fieldset>
