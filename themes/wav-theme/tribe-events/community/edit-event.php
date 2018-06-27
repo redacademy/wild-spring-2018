@@ -56,6 +56,7 @@ if ( ! isset( $tribe_event_id ) ) {
 	<?php tribe_get_template_part( 'community/modules/submit' ); ?>
 </form>
 
-
+<div id="faq">
+	<h1>FAQ</h1></div>
 
 <?php do_action( 'tribe_events_community_form_after_template', $tribe_event_id ); ?>

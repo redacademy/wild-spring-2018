@@ -1726,6 +1726,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-ical.tribe-events-button {
     display: none; }
 
+.single-tribe_events .site-content {
+  width: 100vw; }
+
+.single-tribe_events .tribe_events {
+  padding-left: 2%;
+  padding-right: 2%; }
+
 .aboutNavigation {
   background-color: #72CB7E;
   list-style-type: none;
@@ -1867,7 +1874,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       width: auto; } }
 
 .page-template-about .teamMember, .page-template-about .collaborator, .page-template-about .festival, .page-template-about .schoolItem, .page-template-about .pressItem {
-  width: 45%;
   height: 300px;
   position: relative;
   display: -webkit-box;
@@ -1881,13 +1887,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
           align-items: center;
   overflow: hidden;
   margin: 5px; }
-  @media (min-width: 620px) {
-    .page-template-about .teamMember, .page-template-about .collaborator, .page-template-about .festival, .page-template-about .schoolItem, .page-template-about .pressItem {
-      height: 45vw; } }
-  @media (min-width: 1080px) {
-    .page-template-about .teamMember, .page-template-about .collaborator, .page-template-about .festival, .page-template-about .schoolItem, .page-template-about .pressItem {
-      width: 25%;
-      height: 25vw; } }
   .page-template-about .teamMember img, .page-template-about .collaborator img, .page-template-about .festival img, .page-template-about .schoolItem img, .page-template-about .pressItem img {
     max-width: none;
     width: 450px; }
@@ -2212,7 +2211,7 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
     -webkit-box-shadow: none;
             box-shadow: none;
     text-shadow: none;
-    background-color: #9c6;
+    background-color: #72CB7E;
     color: #fff; }
   .page-id-72 .contact-button1 {
     background-color: #F9D169;
@@ -2465,6 +2464,16 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
       -ms-flex-direction: column;
           flex-direction: column; }
 
+.single-activity .site-content, .single-festival .site-content, .tribe-events-single .site-content {
+  padding-top: 5rem;
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 2%;
+  padding-right: 2%; }
+  @media (min-width: 1080px) {
+    .single-activity .site-content, .single-festival .site-content, .tribe-events-single .site-content {
+      padding-top: 0; } }
+
 .answer {
   display: none; }
 
@@ -2474,14 +2483,21 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   padding-top: .5rem;
   padding-bottom: .5rem;
   border-spacing: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   position: relative; }
+  @media (min-width: 1080px) {
+    .faq-item {
+      margin-bottom: .5rem; } }
   .faq-item a {
     color: black; }
 
 .question {
   padding-left: .5rem;
-  padding-right: .5rem; }
+  padding-right: .5rem;
+  font-size: .8rem; }
+  @media (min-width: 1080px) {
+    .question {
+      font-size: 1rem; } }
   .question::after {
     color: #72CB7E;
     font-family: 'FontAwesome';
@@ -2503,23 +2519,36 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   transition: top .5s linear;
   width: 100%;
   z-index: 4;
-  height: 3.55rem; }
+  height: 3.55rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
   @media (min-width: 1080px) {
     .site-header {
       height: 5rem; }
+      .site-header .light-header .menu a:hover {
+        border-bottom: 2px solid white; }
+      .site-header .dark-header .menu a:hover {
+        border-bottom: 2px solid black; }
       .site-header a {
         padding-left: .5rem;
         padding-right: .5rem;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        color: black;
+        color: #fff;
         font-family: 'Tofino';
         font-size: 1.25rem; } }
 
+.title-home {
+  color: black; }
+  .title-home:visited {
+    color: black; }
+
 .dark-header {
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.85); }
 
 .header-container {
   position: relative; }
@@ -2542,7 +2571,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
     width: 4rem;
     padding: .5rem;
     position: relative;
-    bottom: 1.25rem; }
+    bottom: 1.25rem;
+    right: 1rem; }
 
 .logo-wav1 {
   display: none; }
@@ -2582,7 +2612,17 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
 .events-single .site-content {
   position: absolute; }
 
+.events-archive .site-content {
+  padding-top: 0rem !important; }
+
+.home .site-content, .blog .site-content, .post-type-archive.post-type-archive-tribe_events .site-content, .page-id-81 .site-content, .post-type-archive-activity .site-content, .page-template-contact .site-content, .single-activity .site-content {
+  padding-top: 5rem; }
+
 @media (min-width: 1080px) {
+  .site-header {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
   .main-navigation ul {
     display: block; }
   .menu-toggle {
@@ -2601,11 +2641,15 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
               box-shadow: none; }
   .menu-item-has-children:hover > ul {
     display: block; }
-  .home .site-header, .blog .site-header, .post-type-archive.post-type-archive-tribe_events .site-header, .page-id-81 .site-header, .post-type-archive-activity .site-header, .page-template-contact .site-header {
-    background-color: transparent; }
-    .home .site-header a, .blog .site-header a, .post-type-archive.post-type-archive-tribe_events .site-header a, .page-id-81 .site-header a, .post-type-archive-activity .site-header a, .page-template-contact .site-header a {
+  .home .site-content, .blog .site-content, .post-type-archive.post-type-archive-tribe_events .site-content, .page-id-81 .site-content, .post-type-archive-activity .site-content, .page-template-contact .site-content, .single-activity .site-content {
+    padding-top: 0; }
+  .home .site-header.light-header, .blog .site-header.light-header, .post-type-archive.post-type-archive-tribe_events .site-header.light-header, .page-id-81 .site-header.light-header, .post-type-archive-activity .site-header.light-header, .page-template-contact .site-header.light-header, .single-activity .site-header.light-header {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+    .home .site-header.light-header a, .blog .site-header.light-header a, .post-type-archive.post-type-archive-tribe_events .site-header.light-header a, .page-id-81 .site-header.light-header a, .post-type-archive-activity .site-header.light-header a, .page-template-contact .site-header.light-header a, .single-activity .site-header.light-header a {
       color: white; }
-    .home .site-header .menu a:hover, .blog .site-header .menu a:hover, .post-type-archive.post-type-archive-tribe_events .site-header .menu a:hover, .page-id-81 .site-header .menu a:hover, .post-type-archive-activity .site-header .menu a:hover, .page-template-contact .site-header .menu a:hover {
+    .home .site-header.light-header .menu a:hover, .blog .site-header.light-header .menu a:hover, .post-type-archive.post-type-archive-tribe_events .site-header.light-header .menu a:hover, .page-id-81 .site-header.light-header .menu a:hover, .post-type-archive-activity .site-header.light-header .menu a:hover, .page-template-contact .site-header.light-header .menu a:hover, .single-activity .site-header.light-header .menu a:hover {
       border-bottom: 2px solid white; }
   .logo-wav1 {
     display: inline;
@@ -2616,16 +2660,19 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
     display: inline; }
   .page-template-about .logo-wav1, .single-activity .logo-wav1 {
     display: none; }
-  .site-header.dark-header .menu a {
-    color: black; }
-  .site-header.dark-header .menu a:hover {
-    border-bottom: 2px solid black; }
-  .site-header.dark-header .sub-menu {
-    background-color: rgba(255, 255, 255, 0.85); }
-  .site-header.dark-header .logo-wav1 {
-    display: none; }
-  .site-header.dark-header .logo-wav2 {
-    display: inline; } }
+  .dark-header {
+    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
+    .dark-header .menu a {
+      color: black; }
+    .dark-header .menu a:hover {
+      border-bottom: 2px solid black; }
+    .dark-header .sub-menu {
+      background-color: rgba(255, 255, 255, 0.85); }
+    .dark-header .logo-wav1 {
+      display: none; }
+    .dark-header .logo-wav2 {
+      display: inline; } }
 
 .widget-area a {
   border-radius: 8rem;
@@ -3929,6 +3976,7 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
       font-family: "Oswald";
       position: absolute;
       bottom: 10rem;
+      left: 5rem;
       color: white; } }
 
 .post-type-archive-activity .site-footer {
@@ -4101,7 +4149,7 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   overflow: hidden; }
   @media (min-width: 1080px) {
     .blog .image-wrapper {
-      height: 250px;
+      height: 300px;
       width: 50%; } }
 
 .blog .image-wrapper img {
@@ -4198,7 +4246,7 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   overflow: hidden; }
   @media (min-width: 1080px) {
     .single-post .image-wrapper {
-      height: 400px; } }
+      height: 600px; } }
 
 .single-post .image-wrapper img {
   width: 100%;
@@ -4210,12 +4258,12 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-transform: translateY(-50%) translateX(-50%);
           transform: translateY(-50%) translateX(-50%); }
 
-.single-post .site-content {
-  padding: 2%;
-  padding-top: 3.75rem; }
-  @media (min-width: 1080px) {
-    .single-post .site-content {
-      padding-top: 5rem; } }
+@media (min-width: 1080px) {
+  .single-post .site-content {
+    padding-top: 5rem; } }
+
+.single-post .site-main {
+  padding: 2%; }
 
 .single-post .entry-title {
   text-align: center;
@@ -4328,19 +4376,19 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
       left: 5rem;
       color: white; } }
 
-/*
+/**
 * This is stylesheet for pages using archive.php template: categories, tags. by kate
 *
 */
-.post-type-archive-activity .site-content, .search .site-content, .search-result .site-content, .error404 .site-content {
+.archive .site-content, .post-type-archive-activity .site-content, .search .site-content, .search-result .site-content, .error404 .site-content {
   padding-top: 5rem; }
-  .post-type-archive-activity .site-content .content-area .site-main, .search .site-content .content-area .site-main, .search-result .site-content .content-area .site-main, .error404 .site-content .content-area .site-main {
+  .archive .site-content .content-area .site-main, .post-type-archive-activity .site-content .content-area .site-main, .search .site-content .content-area .site-main, .search-result .site-content .content-area .site-main, .error404 .site-content .content-area .site-main {
     padding: 0 4%; }
-    .post-type-archive-activity .site-content .content-area .site-main .page-title, .search .site-content .content-area .site-main .page-title, .search-result .site-content .content-area .site-main .page-title, .error404 .site-content .content-area .site-main .page-title {
+    .archive .site-content .content-area .site-main .page-title, .post-type-archive-activity .site-content .content-area .site-main .page-title, .search .site-content .content-area .site-main .page-title, .search-result .site-content .content-area .site-main .page-title, .error404 .site-content .content-area .site-main .page-title {
       font-family: 'Oswald'; }
-    .post-type-archive-activity .site-content .content-area .site-main .article-container, .search .site-content .content-area .site-main .article-container, .search-result .site-content .content-area .site-main .article-container, .error404 .site-content .content-area .site-main .article-container {
+    .archive .site-content .content-area .site-main .article-container, .post-type-archive-activity .site-content .content-area .site-main .article-container, .search .site-content .content-area .site-main .article-container, .search-result .site-content .content-area .site-main .article-container, .error404 .site-content .content-area .site-main .article-container {
       margin-bottom: 2rem; }
-      .post-type-archive-activity .site-content .content-area .site-main .article-container article, .search .site-content .content-area .site-main .article-container article, .search-result .site-content .content-area .site-main .article-container article, .error404 .site-content .content-area .site-main .article-container article {
+      .archive .site-content .content-area .site-main .article-container article, .post-type-archive-activity .site-content .content-area .site-main .article-container article, .search .site-content .content-area .site-main .article-container article, .search-result .site-content .content-area .site-main .article-container article, .error404 .site-content .content-area .site-main .article-container article {
         padding: 0.5rem;
         margin: 0.5rem 0.5rem 3rem 0.5rem;
         border: 1px solid #72CB7E;
@@ -4353,35 +4401,35 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; }
-        .post-type-archive-activity .site-content .content-area .site-main .article-container article .entry-header img, .search .site-content .content-area .site-main .article-container article .entry-header img, .search-result .site-content .content-area .site-main .article-container article .entry-header img, .error404 .site-content .content-area .site-main .article-container article .entry-header img {
+        .archive .site-content .content-area .site-main .article-container article .entry-header img, .post-type-archive-activity .site-content .content-area .site-main .article-container article .entry-header img, .search .site-content .content-area .site-main .article-container article .entry-header img, .search-result .site-content .content-area .site-main .article-container article .entry-header img, .error404 .site-content .content-area .site-main .article-container article .entry-header img {
           height: 200px;
           -o-object-fit: cover;
              object-fit: cover; }
-        .post-type-archive-activity .site-content .content-area .site-main .article-container article .entry-header .entry-title, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title {
+        .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title, .post-type-archive-activity .site-content .content-area .site-main .article-container article .entry-header .entry-title, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title {
           font-family: 'Oswald';
           font-weight: 500; }
-          .post-type-archive-activity .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a {
+          .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .post-type-archive-activity .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a {
             color: #72CB7E; }
-            .post-type-archive-activity .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited {
+            .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .post-type-archive-activity .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited {
               color: #72CB7E; }
-            .post-type-archive-activity .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover {
+            .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .post-type-archive-activity .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover {
               color: #72cb7e; }
       @media (min-width: 620px) {
-        .post-type-archive-activity .site-content .content-area .site-main .article-container, .search .site-content .content-area .site-main .article-container, .search-result .site-content .content-area .site-main .article-container, .error404 .site-content .content-area .site-main .article-container {
+        .archive .site-content .content-area .site-main .article-container, .post-type-archive-activity .site-content .content-area .site-main .article-container, .search .site-content .content-area .site-main .article-container, .search-result .site-content .content-area .site-main .article-container, .error404 .site-content .content-area .site-main .article-container {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           grid-gap: 1rem;
           margin: 0; } }
-    .post-type-archive-activity .site-content .content-area .site-main .search-pagination, .search .site-content .content-area .site-main .search-pagination, .search-result .site-content .content-area .site-main .search-pagination, .error404 .site-content .content-area .site-main .search-pagination {
+    .archive .site-content .content-area .site-main .search-pagination, .post-type-archive-activity .site-content .content-area .site-main .search-pagination, .search .site-content .content-area .site-main .search-pagination, .search-result .site-content .content-area .site-main .search-pagination, .error404 .site-content .content-area .site-main .search-pagination {
       text-align: center; }
-      .post-type-archive-activity .site-content .content-area .site-main .search-pagination .page-numbers, .search .site-content .content-area .site-main .search-pagination .page-numbers, .search-result .site-content .content-area .site-main .search-pagination .page-numbers, .error404 .site-content .content-area .site-main .search-pagination .page-numbers {
+      .archive .site-content .content-area .site-main .search-pagination .page-numbers, .post-type-archive-activity .site-content .content-area .site-main .search-pagination .page-numbers, .search .site-content .content-area .site-main .search-pagination .page-numbers, .search-result .site-content .content-area .site-main .search-pagination .page-numbers, .error404 .site-content .content-area .site-main .search-pagination .page-numbers {
         padding: 0.5rem 0.8rem;
         background-color: #40B2C4;
         color: white;
         border: 1px solid #40B2C4;
         border-radius: 20%;
         margin: 1rem 0.5rem; }
-        .post-type-archive-activity .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .search .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .search-result .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .error404 .site-content .content-area .site-main .search-pagination .page-numbers a:visited {
+        .archive .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .post-type-archive-activity .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .search .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .search-result .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .error404 .site-content .content-area .site-main .search-pagination .page-numbers a:visited {
           color: white; }
 
 .error404 .not-found {
@@ -4656,3 +4704,22 @@ h1.submission-header {
   display: block; }
   #tribe-community-events .event-submission-form .tribe-button-secondary:hover {
     background: #72CB7E; }
+
+.submission-thank-you a.blue-button {
+  background-color: #40B2C4;
+  border: 2px solid #40B2C4;
+  color: white; }
+  .submission-thank-you a.blue-button:hover {
+    background-color: white !important;
+    color: black; }
+
+.submission-thank-you a.yellow-button {
+  background-color: #F9D169;
+  border: 2px solid #F9D169;
+  color: white !important; }
+  .submission-thank-you a.yellow-button:hover {
+    background-color: white;
+    color: black !important; }
+
+.hidden-submit-button {
+  display: none !important; }

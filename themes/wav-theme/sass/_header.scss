@@ -5,22 +5,43 @@
 		width: 100%;
         z-index: 4;
         height: 3.55rem;
+        background-color: rgba(255, 255, 255, 0.85);
+        box-shadow: 0 3px 3px rgba(0,0,0,.2);
 
         @include desktop {
+            .light-header {
+                .menu a:hover {
+                    border-bottom: 2px solid white;
+                }
+             }
+             .dark-header {
+                .menu a:hover {
+                    border-bottom: 2px solid black;
+                }
+             }
             height: 5rem;
             a {
                 padding-left: .5rem;
                 padding-right: .5rem;
                 display: flex;
-                color: black;
+                color: #fff;
                 font-family: 'Tofino';
                 font-size: 1.25rem;
             }
         }
 }
 
+.title-home {
+    color: black;
+        &:visited {
+            color: black;
+        }
+}
+
+
 .dark-header {
     box-shadow: 0 3px 3px rgba(0,0,0,.2);
+    background-color: rgba(255, 255, 255, 0.85);
 }
 
 
@@ -51,6 +72,7 @@
         padding: .5rem;
         position: relative;
         bottom: 1.25rem;
+        right: 1rem;
 
     }
 
@@ -107,7 +129,24 @@
     }
 }
 
+.events-archive {
+    .site-content {
+        padding-top: 0rem !important;
+    }
+}
+
+.home, .blog, .post-type-archive.post-type-archive-tribe_events, .page-id-81, .post-type-archive-activity, .page-template-contact, .single-activity,{
+    .site-content {
+        padding-top: 5rem;
+    }
+}
+
 @include desktop {
+
+    .site-header {
+        background-color: transparent;
+        box-shadow: none;
+    }
 
     .main-navigation ul {
         display: block;
@@ -139,9 +178,11 @@
         display:block;
     }
 
-    .home, .blog, .post-type-archive.post-type-archive-tribe_events, .page-id-81, .post-type-archive-activity, .page-template-contact{
-
-        .site-header {
+    .home, .blog, .post-type-archive.post-type-archive-tribe_events, .page-id-81, .post-type-archive-activity, .page-template-contact, .single-activity {
+        .site-content {
+            padding-top: 0;
+        }
+        .site-header.light-header {
             background-color: transparent;
             a {
                 color: white;
@@ -150,6 +191,8 @@
             .menu a:hover {
                 border-bottom: 2px solid white;
             }
+
+            box-shadow: none;
         }
 
         }
@@ -174,7 +217,8 @@
         }
     }
 
-    .site-header.dark-header {
+    .dark-header {
+        box-shadow: 0 3px 3px rgba(0,0,0,.2);
             .menu a {
                 color: black;
         }

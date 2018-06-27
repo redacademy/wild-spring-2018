@@ -201,3 +201,28 @@ h1.submission-header{
         }
     }
 }
+
+.submission-thank-you{
+    a.blue-button{
+        background-color: $color__blue;
+        border: 2px solid $color__blue;
+        color: white;
+        &:hover{
+            background-color: white !important; 
+            color: black;
+        }
+    }
+    a.yellow-button{
+        background-color: $color__yellow;
+        border: 2px solid $color__yellow;
+        color: white !important; 
+        &:hover{
+            background-color: white;
+            color: black !important;
+        }
+    }
+}
+
+.hidden-submit-button{
+    display: none !important;
+}

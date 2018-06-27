@@ -7,7 +7,7 @@
 
 get_header(); ?>
 <!-- 368 -->
-	<?php $banner_img =  esc_url(CFS()->get("hero_image_archive_activity", 299)); 
+	<?php $banner_img =  esc_url(CFS()->get("hero_image_archive_activity", 368)); 
 	if(!empty($banner_img)): ?>
 
 	<div class="activity-banner"><img class="hero-banner" src="<?php echo $banner_img; ?> " alt="banner image for WAV archive activity page"></div>
