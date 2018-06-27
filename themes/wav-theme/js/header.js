@@ -40,21 +40,5 @@ else{
   
 }
 
-// $(".main-navigation ul").on({
-//     mouseover: function (event) {
-//         var width = $('body').width();
-//         event.preventDefault();
-//         if (width > 1060 && '.sub-menu' > 0){
-//             $('.main-navigation ul').show('.sub-menu');
-//         }
-//     },
-//     mouseleave: function (event) {
-//         var width = $('body').width();
-//         if (width > 1060){
-//             $('.main-navigation ul ul').hide();
-//         }
-//     }
-// });
-
 })(jQuery);
 

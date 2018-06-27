@@ -19,6 +19,7 @@
         }
 }
 
+
 .dark-header {
     box-shadow: 0 3px 3px rgba(0,0,0,.2);
 }
@@ -51,6 +52,7 @@
         padding: .5rem;
         position: relative;
         bottom: 1.25rem;
+        right: 1rem;
 
     }
 
@@ -104,6 +106,12 @@
 
     .site-content {
         position: absolute;
+    }
+}
+
+.events-archive {
+    .site-content {
+        padding-top: 0rem !important;
     }
 }
 

@@ -8,8 +8,11 @@
 	padding-top: .5rem;
 	padding-bottom: .5rem;
 	border-spacing: 1rem;
-	margin-bottom: 1rem;
+	margin-bottom: .5rem;
 	position: relative;
+		@include desktop {
+			margin-bottom: .5rem;
+		}
 
 		a {
 			color: black;
@@ -19,6 +22,10 @@
 .question {
 	padding-left: .5rem;
 	padding-right: .5rem;
+		font-size: .8rem;
+			@include desktop {
+				font-size: 1rem;
+			}
 	&::after {
 		color: $color__green;
 		font-family: 'FontAwesome';
