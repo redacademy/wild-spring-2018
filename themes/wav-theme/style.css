@@ -1861,7 +1861,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
       width: auto; } }
 
 .page-template-about .teamMember, .page-template-about .collaborator, .page-template-about .festival, .page-template-about .schoolItem, .page-template-about .pressItem {
-  width: 45%;
   height: 300px;
   position: relative;
   display: -webkit-box;
@@ -1875,13 +1874,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
           align-items: center;
   overflow: hidden;
   margin: 5px; }
-  @media (min-width: 620px) {
-    .page-template-about .teamMember, .page-template-about .collaborator, .page-template-about .festival, .page-template-about .schoolItem, .page-template-about .pressItem {
-      height: 45vw; } }
-  @media (min-width: 1080px) {
-    .page-template-about .teamMember, .page-template-about .collaborator, .page-template-about .festival, .page-template-about .schoolItem, .page-template-about .pressItem {
-      width: 25%;
-      height: 25vw; } }
   .page-template-about .teamMember img, .page-template-about .collaborator img, .page-template-about .festival img, .page-template-about .schoolItem img, .page-template-about .pressItem img {
     max-width: none;
     width: 450px; }
@@ -4322,7 +4314,7 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
       left: 5rem;
       color: white; } }
 
-/*
+/**
 * This is stylesheet for pages using archive.php template: categories, tags. by kate
 *
 */
@@ -4650,3 +4642,22 @@ h1.submission-header {
   display: block; }
   #tribe-community-events .event-submission-form .tribe-button-secondary:hover {
     background: #72CB7E; }
+
+.submission-thank-you a.blue-button {
+  background-color: #40B2C4;
+  border: 2px solid #40B2C4;
+  color: white; }
+  .submission-thank-you a.blue-button:hover {
+    background-color: white !important;
+    color: black; }
+
+.submission-thank-you a.yellow-button {
+  background-color: #F9D169;
+  border: 2px solid #F9D169;
+  color: white !important; }
+  .submission-thank-you a.yellow-button:hover {
+    background-color: white;
+    color: black !important; }
+
+.hidden-submit-button {
+  display: none !important; }
