@@ -1621,6 +1621,20 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .number-of-events-day {
     display: none; } }
 
+.create-event .button.contact-button1.create-event-button {
+  margin: 0;
+  max-width: 90%; }
+  @media (min-width: 620px) {
+    .create-event .button.contact-button1.create-event-button {
+      max-width: 30%;
+      margin: 0; } }
+  @media (min-width: 1080px) {
+    .create-event .button.contact-button1.create-event-button {
+      margin: 0;
+      max-width: 30%; } }
+  .create-event .button.contact-button1.create-event-button a:hover {
+    color: white; }
+
 .tribe_events-template-default.single-tribe_events .tribe-events-before-html {
   display: none; }
 
@@ -3764,7 +3778,7 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   left: 3%;
   width: 50%; }
   .post-type-archive-activity fieldset input[type=search] {
-    width: 95%;
+    width: 100%;
     border-radius: 7px;
     border: 1px solid #72CB7E; }
   .post-type-archive-activity fieldset .search-submit {
