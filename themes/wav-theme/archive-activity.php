@@ -10,7 +10,7 @@ get_header(); ?>
 	<?php $banner_img =  esc_url(CFS()->get("hero_image_archive_activity", 299)); 
 	if(!empty($banner_img)): ?>
 
-	<div class="activity-banner"><img src="<?php echo $banner_img; ?> " alt="banner image for WAV archive activity page"></div>
+	<div class="activity-banner"><img class="hero-banner" src="<?php echo $banner_img; ?> " alt="banner image for WAV archive activity page"></div>
 	
 	<header class="page-header" id="1">				
         <h1 class="page-title">Outdoor Activity Ideas</h1>

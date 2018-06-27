@@ -10,8 +10,8 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 <!--banner-->
-	<section class="front-page-banner hero-banner">
-		<img src="<?php echo CFS()->get( 'front_page_wav_img' ); ?> " alt="banner image for WAV front-page">
+	<section class="front-page-banner">
+		<img  class="hero-banner" src="<?php echo CFS()->get( 'front_page_wav_img' ); ?> " alt="banner image for WAV front-page">
         <div class="banner-text">
             <h1><?php echo CFS()->get('front_page_wav_main_title')?></h1>
             <p><?php echo CFS()->get('front_page_wav_mission')?></p>
@@ -81,6 +81,12 @@ get_header(); ?>
             else foreach( $events as $event ) {
                 echo('<article class="event-post-single carousel-front-page-cell">');
                 echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_post_thumbnail( $event, 'large') .'</a></div>');
+
+
+
+
+
+
                 echo('<h3 class="entry-title"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_title( $event).'</a></h3>' );
                 // echo('<p>'.$event->post_content.'</p>');
                 echo('<p>'.tribe_get_start_date($event).'<p>');
@@ -101,7 +107,7 @@ get_header(); ?>
                 </div><!-- events-container -->
                 <div class="events-buttons-container">
                     <div class="button contact-button1">
-                    <a href=<?php echo get_post_type_archive_link( 'tribe_event' ) ?>>create events</a>
+                    <a class="events-calendar-create-event-button" href="<?php echo home_url( '/events/community/add' )?>">Create Event </a>
                     </div>
                     <div class="button blue-button">
                             <a href=<?php echo get_post_type_archive_link( 'tribe_events' ) ?>>find events</a>
@@ -130,13 +136,13 @@ get_header(); ?>
                             <h3><?php echo CFS()->get('front_page_wav_what_is_wav_festival_header')?></h3>
 							<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_festival_img')?>" alt="WAV picture of festival activity">
 							<p><?php echo CFS()->get('front_page_wav_what_is_wav_festival_text')?></p>
-                            <a class="read-more" href="<?php echo get_permalink( get_page_by_title( 'About' ) ) ?>">learn more &rsaquo; </a>
+                            <a class="read-more" href="<?php echo home_url( '/festivals' )?>">learn more &rsaquo; </a>
                         </div>
                         <div id="tab-3" class="single-school-container tab-content">
 						    <h3><?php echo CFS()->get('front_page_wav_what_is_wav_school_header')?></h3>
 						    <img src="<?php echo CFS()->get('front_page_wav_what_is_wav_school_img')?>" alt="WAV image of school outreach activity">
 						    <p><?php echo CFS()->get('front_page_wav_what_is_wav_school_text')?></p>
-                            <a class="read-more" href="<?php echo get_permalink( get_page_by_title( 'About' ))?>">learn more &rsaquo; </a>
+                            <a class="read-more" href="<?php echo home_url( '/blog' )?>">learn more &rsaquo; </a>
                         </div>
                 </div>
                 <div class="button contact-button1">

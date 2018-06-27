@@ -138,12 +138,17 @@ a {
 	
 		a {
 			color: #fff;
+			font-weight: 450;
 		}
 
 		.sub-menu {
 			float: none;
 			box-shadow: none;
 			width: 100%;
+				a{
+					font-weight: 300;
+					padding-bottom: .25rem;
+				}
 		}
 
 		.social-nav {
@@ -174,6 +179,7 @@ a {
 
 		.socialMediaIconsFooter li {
 			border-bottom: none;
+			padding: 0;
 		}
 }
 

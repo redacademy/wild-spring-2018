@@ -594,6 +594,8 @@ table {
   border: 2px solid #F9D169; }
   .yellow-button:hover {
     background: white; }
+  .yellow-button:visited {
+    color: white; }
 
 .blue-button {
   border: 2px solid #40B2C4;
@@ -601,6 +603,8 @@ table {
   color: white; }
   .blue-button:hover {
     background: white; }
+  .blue-button:visited {
+    color: white; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -745,12 +749,16 @@ a {
     border-bottom: 1px solid #fff;
     padding: 1rem; }
   .main-navigation.toggled a {
-    color: #fff; }
+    color: #fff;
+    font-weight: 450; }
   .main-navigation.toggled .sub-menu {
     float: none;
     -webkit-box-shadow: none;
             box-shadow: none;
     width: 100%; }
+    .main-navigation.toggled .sub-menu a {
+      font-weight: 300;
+      padding-bottom: .25rem; }
   .main-navigation.toggled .social-nav {
     display: block;
     padding: 1rem;
@@ -768,7 +776,8 @@ a {
     padding: 0;
     margin-left: 1rem; }
   .main-navigation.toggled .socialMediaIconsFooter li {
-    border-bottom: none; }
+    border-bottom: none;
+    padding: 0; }
 
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -1621,78 +1630,95 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .number-of-events-day {
     display: none; } }
 
-.tribe_events-template-default.single-tribe_events {
-  padding: 2%; }
-  .tribe_events-template-default.single-tribe_events .tribe-events-before-html {
-    display: none; }
-  .tribe_events-template-default.single-tribe_events .tribe-events-after-html {
-    display: none; }
-  .tribe_events-template-default.single-tribe_events .tribe-events-single {
-    margin-top: 5rem;
-    padding: 2%;
-    text-align: center; }
-    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container {
-      text-align: left;
-      max-width: 1200px;
-      margin: 1rem auto 1rem; }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .event-main-title-details {
-        padding: 0;
-        text-align: center; }
-        @media (min-width: 620px) {
-          .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .event-main-title-details {
-            margin: 0;
-            text-align: left; } }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container h2 {
-        font-size: 1.5rem; }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .event-info-container {
-        margin-bottom: 2rem; }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-event-title {
-        font-family: 'Oswald'; }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-section.tribe-events-event-meta {
-        text-align: left; }
-        .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-section.tribe-events-event-meta dd {
-          margin: 0; }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-event-description {
-        text-align: left; }
-        .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-event-description a {
-          text-align: right; }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .address-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .address-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .single-event-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .date-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .date-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .organizer-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .organizer-details {
-        display: none; }
-        @media (min-width: 620px) {
-          .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .address-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .address-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .single-event-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .date-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .date-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .organizer-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .organizer-details {
-            display: block; } }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container h4 {
-        font-weight: 500; }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container dt {
-        font-weight: 500; }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-event-tags {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        margin: 0 0 3rem 0;
-        padding: 0; }
-        .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-event-tags a {
-          border: 1px solid #40B2C4;
-          border-radius: 15px;
-          padding: 0.5rem;
-          margin: 0.2rem;
-          text-align: center; }
-          .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-event-tags a::before {
-            content: '#'; }
-    .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-cal-links a {
-      background-color: #72CB7E !important;
-      border-radius: 25px;
-      border: none;
-      color: white !important;
-      padding: 1rem 3rem;
-      font-size: 1.5rem; }
-    .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-meta-group.tribe-events-meta-group-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-meta-group.tribe-events-meta-group-gmap {
+.create-event a {
+  display: block;
+  margin: 0;
+  max-width: 90%; }
+  @media (min-width: 620px) {
+    .create-event a {
+      max-width: 30%;
+      margin: 0; } }
+  @media (min-width: 1080px) {
+    .create-event a {
+      margin: 0;
+      max-width: 30%; } }
+  .create-event a:hover {
+    color: white; }
+  .create-event a:visited {
+    color: white; }
+
+.tribe_events-template-default.single-tribe_events .tribe-events-before-html {
+  display: none; }
+
+.tribe_events-template-default.single-tribe_events .tribe-events-after-html {
+  display: none; }
+
+.tribe_events-template-default.single-tribe_events .tribe-events-single {
+  margin-top: 5rem;
+  padding: 2%;
+  text-align: center; }
+  .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container {
+    text-align: left;
+    max-width: 1200px;
+    margin: 1rem auto 1rem; }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .event-main-title-details {
       padding: 0;
-      margin: 0; }
-    .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-ical.tribe-events-button {
+      text-align: center; }
+      @media (min-width: 620px) {
+        .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .event-main-title-details {
+          margin: 0;
+          text-align: left; } }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container h2 {
+      font-size: 1.5rem; }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .event-info-container {
+      margin-bottom: 2rem; }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-event-title {
+      font-family: 'Oswald'; }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-section.tribe-events-event-meta {
+      text-align: left; }
+      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-section.tribe-events-event-meta dd {
+        margin: 0; }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-event-description {
+      text-align: left; }
+      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-event-description a {
+        text-align: right; }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .address-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .address-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .single-event-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .date-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .date-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .organizer-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .organizer-details {
       display: none; }
+      @media (min-width: 620px) {
+        .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .address-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .address-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .single-event-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .date-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .date-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .organizer-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .organizer-details {
+          display: block; } }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container h4 {
+      font-weight: 500; }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container dt {
+      font-weight: 500; }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-event-tags {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      margin: 0 0 3rem 0;
+      padding: 0; }
+      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-event-tags a {
+        border: 1px solid #40B2C4;
+        border-radius: 15px;
+        padding: 0.5rem;
+        margin: 0.2rem;
+        text-align: center; }
+        .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-event-tags a::before {
+          content: '#'; }
+  .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-cal-links a {
+    background-color: #72CB7E !important;
+    border-radius: 25px;
+    border: none;
+    color: white !important;
+    padding: 1rem 3rem;
+    font-size: 1.5rem; }
+  .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-meta-group.tribe-events-meta-group-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-meta-group.tribe-events-meta-group-gmap {
+    padding: 0;
+    margin: 0; }
+  .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-ical.tribe-events-button {
+    display: none; }
 
 .aboutNavigation {
   background-color: #72CB7E;
@@ -1786,55 +1812,55 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .page-template-about .aboutWav {
   padding-top: 1.5rem; }
 
-.teamMembers.about-carousel:after {
+.page-template-about .teamMembers.about-carousel:after {
   content: 'flickity';
   display: none; }
 
 @media (min-width: 1080px) {
-  .teamMembers {
+  .page-template-about .teamMembers {
     /* disable Flickity for large devices */ }
-    .teamMembers.about-carousel:after {
+    .page-template-about .teamMembers.about-carousel:after {
       content: ''; }
-    .teamMembers.about-carousel {
+    .page-template-about .teamMembers.about-carousel {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
-.teamMembers .about-carousel-cell {
+.page-template-about .teamMembers .about-carousel-cell {
   margin: 0 1rem;
   width: 100%; }
   @media (min-width: 620px) {
-    .teamMembers .about-carousel-cell {
+    .page-template-about .teamMembers .about-carousel-cell {
       width: 45%; } }
   @media (min-width: 1080px) {
-    .teamMembers .about-carousel-cell {
+    .page-template-about .teamMembers .about-carousel-cell {
       margin: 0 1rem;
       width: auto; } }
 
-.collaborators.about-carousel:after {
+.page-template-about .collaborators.about-carousel:after {
   content: 'flickity';
   display: none; }
 
 @media (min-width: 1080px) {
-  .collaborators {
+  .page-template-about .collaborators {
     /* disable Flickity for large devices */ }
-    .collaborators.about-carousel:after {
+    .page-template-about .collaborators.about-carousel:after {
       content: ''; }
-    .collaborators.about-carousel {
+    .page-template-about .collaborators.about-carousel {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr; } }
 
-.collaborators .about-carousel-cell {
+.page-template-about .collaborators .about-carousel-cell {
   margin: 0 1rem;
   width: 100%; }
   @media (min-width: 620px) {
-    .collaborators .about-carousel-cell {
+    .page-template-about .collaborators .about-carousel-cell {
       width: 45%; } }
   @media (min-width: 1080px) {
-    .collaborators .about-carousel-cell {
+    .page-template-about .collaborators .about-carousel-cell {
       margin: 0 1rem;
       width: auto; } }
 
-.teamMember, .collaborator, .festival, .schoolItem, .pressItem {
+.page-template-about .teamMember, .page-template-about .collaborator, .page-template-about .festival, .page-template-about .schoolItem, .page-template-about .pressItem {
   width: 45%;
   height: 300px;
   position: relative;
@@ -1850,21 +1876,21 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   overflow: hidden;
   margin: 5px; }
   @media (min-width: 620px) {
-    .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
+    .page-template-about .teamMember, .page-template-about .collaborator, .page-template-about .festival, .page-template-about .schoolItem, .page-template-about .pressItem {
       height: 45vw; } }
   @media (min-width: 1080px) {
-    .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
+    .page-template-about .teamMember, .page-template-about .collaborator, .page-template-about .festival, .page-template-about .schoolItem, .page-template-about .pressItem {
       width: 25%;
       height: 25vw; } }
-  .teamMember img, .collaborator img, .festival img, .schoolItem img, .pressItem img {
+  .page-template-about .teamMember img, .page-template-about .collaborator img, .page-template-about .festival img, .page-template-about .schoolItem img, .page-template-about .pressItem img {
     max-width: none;
     width: 450px; }
     @media (min-width: 620px) {
-      .teamMember img, .collaborator img, .festival img, .schoolItem img, .pressItem img {
+      .page-template-about .teamMember img, .page-template-about .collaborator img, .page-template-about .festival img, .page-template-about .schoolItem img, .page-template-about .pressItem img {
         height: auto;
         width: 450px;
         max-width: none; } }
-  .teamMember .entry-title a, .collaborator .entry-title a, .festival .entry-title a, .schoolItem .entry-title a, .pressItem .entry-title a {
+  .page-template-about .teamMember .entry-title a, .page-template-about .collaborator .entry-title a, .page-template-about .festival .entry-title a, .page-template-about .schoolItem .entry-title a, .page-template-about .pressItem .entry-title a {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1875,70 +1901,67 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     padding: 10px;
     text-align: center;
     opacity: 0.9; }
-  .teamMember .entry-header, .collaborator .entry-header, .festival .entry-header, .schoolItem .entry-header, .pressItem .entry-header {
+  .page-template-about .teamMember .entry-header, .page-template-about .collaborator .entry-header, .page-template-about .festival .entry-header, .page-template-about .schoolItem .entry-header, .page-template-about .pressItem .entry-header {
     height: 100%;
     width: 100%; }
-    .teamMember .entry-header img, .collaborator .entry-header img, .festival .entry-header img, .schoolItem .entry-header img, .pressItem .entry-header img {
+    .page-template-about .teamMember .entry-header img, .page-template-about .collaborator .entry-header img, .page-template-about .festival .entry-header img, .page-template-about .schoolItem .entry-header img, .page-template-about .pressItem .entry-header img {
       -o-object-fit: cover;
          object-fit: cover;
       position: absolute;
       height: 100%; }
       @media (min-width: 620px) {
-        .teamMember .entry-header img, .collaborator .entry-header img, .festival .entry-header img, .schoolItem .entry-header img, .pressItem .entry-header img {
+        .page-template-about .teamMember .entry-header img, .page-template-about .collaborator .entry-header img, .page-template-about .festival .entry-header img, .page-template-about .schoolItem .entry-header img, .page-template-about .pressItem .entry-header img {
           height: auto;
           width: 450px; } }
 
-.schoolItem {
+.page-template-about .schoolItem {
   width: 100%;
   height: 45vw;
   max-height: 300px; }
 
-.teamMember a, .collaborator a {
+.page-template-about .teamMember a, .page-template-about .collaborator a {
   background-color: #72CB7E; }
 
-.festivals.about-carousel:after {
+.page-template-about .festivals.about-carousel:after {
   content: 'flickity';
   display: none; }
 
 @media (min-width: 1080px) {
-  .festivals {
+  .page-template-about .festivals {
     /* disable Flickity for large devices */ }
-    .festivals.about-carousel:after {
+    .page-template-about .festivals.about-carousel:after {
       content: ''; }
-    .festivals.about-carousel {
+    .page-template-about .festivals.about-carousel {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
-.festival a, .schoolItem a {
+.page-template-about .festival a, .page-template-about .schoolItem a {
   background-color: #F9D169;
   opacity: 0.9; }
 
-.press.about-carousel:after {
+.page-template-about .press.about-carousel:after {
   content: 'flickity';
   display: none; }
 
 @media (min-width: 1080px) {
-  .press {
+  .page-template-about .press {
     /* disable Flickity for large devices */ }
-    .press.about-carousel:after {
+    .page-template-about .press.about-carousel:after {
       content: ''; }
-    .press.about-carousel {
+    .page-template-about .press.about-carousel {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
-.press .about-carousel-cell {
+.page-template-about .press .about-carousel-cell {
   margin: 0 1rem;
   width: 100%; }
   @media (min-width: 620px) {
-    .press .about-carousel-cell {
+    .page-template-about .press .about-carousel-cell {
       width: 45%; } }
   @media (min-width: 1080px) {
-    .press .about-carousel-cell {
+    .page-template-about .press .about-carousel-cell {
       margin: 0 1rem;
       width: auto; } }
-
-.pressItem .entry-title a {
-  background-color: #40B2C4; }
 
 .schoolOutreach-container {
   display: grid;
@@ -1975,23 +1998,26 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .flickity-page-dots {
   visibility: hidden; }
 
-.pressItem {
+.page-template-about .pressItem .entry-title a {
+  background-color: #40B2C4; }
+
+.page-template-about .pressItem {
   display: block;
   height: 400px; }
-  .pressItem .entry-header {
+  .page-template-about .pressItem .entry-header {
     height: 300px;
     overflow: hidden;
     position: relative; }
-  .pressItem .entry-header img {
+  .page-template-about .pressItem .entry-header img {
     position: static; }
-  .pressItem p {
+  .page-template-about .pressItem p {
     z-index: 1;
     text-align: center;
     margin: 0;
     padding: 0;
     font-size: 1.5rem; }
     @media (min-width: 620px) {
-      .pressItem p {
+      .page-template-about .pressItem p {
         font-size: 18px;
         line-height: 1.5; } }
 
@@ -2010,6 +2036,13 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
     .about-carousel-cell {
       margin: 0 1rem;
       width: auto; } }
+
+.page-id-81 .mobile-title {
+  top: -4rem; }
+
+@media (min-width: 1080px) {
+  .page-id-81 .menu {
+    top: 2.5rem; } }
 
 .page-id-81 .involve-banner {
   display: none; }
@@ -2262,17 +2295,15 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
 .single-activity .flickity-page-dots .dot.is-selected, .single-festival .flickity-page-dots .dot.is-selected, .tribe-events-single .flickity-page-dots .dot.is-selected {
   background: #72CB7E; }
 
-.single-activity .carousel-container, .single-festival .carousel-container, .tribe-events-single .carousel-container {
-  padding-top: 8rem; }
-  @media (min-width: 1080px) {
-    .single-activity .carousel-container, .single-festival .carousel-container, .tribe-events-single .carousel-container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-ordinal-group: 3;
-          -ms-flex-order: 2;
-              order: 2;
-      padding-top: 0; } }
+@media (min-width: 1080px) {
+  .single-activity .carousel-container, .single-festival .carousel-container, .tribe-events-single .carousel-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding-top: 0; } }
 
 .single-activity .double-carousel, .single-festival .double-carousel, .tribe-events-single .double-carousel {
   margin-bottom: 40px;
@@ -2358,9 +2389,6 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   text-align: center;
   padding-top: 5rem; }
 
-.single-activity .site-content, .single-festival .site-content, .tribe-events-single .site-content {
-  padding: 2%; }
-
 .single-activity .entry-title, .single-festival .entry-title, .tribe-events-single .entry-title {
   font-size: 1.5rem;
   font-family: "Oswald";
@@ -2435,23 +2463,34 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   display: none; }
 
 .faq-item {
-  border: 1px solid #72CB7E;
+  border: 2px solid #72CB7E;
   border-radius: 5px;
-  padding: .5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
   border-spacing: 1rem;
   margin-bottom: 1rem;
-  width: 40vw; }
+  position: relative; }
   .faq-item a {
     color: black; }
 
+.question {
+  padding-left: .5rem;
+  padding-right: .5rem; }
+  .question::after {
+    color: #72CB7E;
+    font-family: 'FontAwesome';
+    content: '\f067';
+    position: absolute;
+    right: 1rem; }
+
 .answer {
-  border-top: 1px solid #72CB7E; }
+  border-top: 1px solid #72CB7E;
+  padding: 1rem; }
 
 .faq-container h1 {
   text-transform: uppercase; }
 
 .site-header {
-  background-color: rgba(255, 255, 255, 0.85);
   padding: 1rem;
   position: fixed;
   -webkit-transition: top .5s linear;
@@ -2472,6 +2511,10 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
         font-family: 'Tofino';
         font-size: 1.25rem; } }
 
+.dark-header {
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
+
 .header-container {
   position: relative; }
 
@@ -2482,7 +2525,9 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
 
 .main-navigation ul ul {
   position: initial;
-  display: none; }
+  display: none;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
 
 .logo {
   width: 5rem; }
@@ -2516,6 +2561,21 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   position: relative;
   top: -5.5rem; }
 
+.single-activity .mobile-title, .single-tribe_events .mobile-title, .single-festival .mobile-title, .single-post .mobile-title {
+  top: -1.5rem; }
+
+.single-festival .site-content {
+  padding-top: 2.5rem; }
+  @media (min-width: 1080px) {
+    .single-festival .site-content {
+      padding-top: 5rem; } }
+
+.tribe-events-single .carousel-container {
+  padding-top: 0; }
+
+.events-single .site-content {
+  position: absolute; }
+
 @media (min-width: 1080px) {
   .main-navigation ul {
     display: block; }
@@ -2526,30 +2586,40 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   .logo img {
     bottom: .5rem; }
   .sub-menu {
-    width: 120px; }
+    width: 200px;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
     .sub-menu a {
-      max-width: 120px; }
+      width: 100%;
+      -webkit-box-shadow: none;
+              box-shadow: none; }
   .menu-item-has-children:hover > ul {
     display: block; }
-  .home .site-header, .post-type-archive-tribe_events .site-header, .page-id-81 .site-header, .page-template-contact .site-header {
+  .home .site-header, .blog .site-header, .post-type-archive.post-type-archive-tribe_events .site-header, .page-id-81 .site-header, .post-type-archive-activity .site-header, .page-template-contact .site-header {
     background-color: transparent; }
-    .home .site-header a, .post-type-archive-tribe_events .site-header a, .page-id-81 .site-header a, .page-template-contact .site-header a {
+    .home .site-header a, .blog .site-header a, .post-type-archive.post-type-archive-tribe_events .site-header a, .page-id-81 .site-header a, .post-type-archive-activity .site-header a, .page-template-contact .site-header a {
       color: white; }
-    .home .site-header .menu a:hover, .post-type-archive-tribe_events .site-header .menu a:hover, .page-id-81 .site-header .menu a:hover, .page-template-contact .site-header .menu a:hover {
+    .home .site-header .menu a:hover, .blog .site-header .menu a:hover, .post-type-archive.post-type-archive-tribe_events .site-header .menu a:hover, .page-id-81 .site-header .menu a:hover, .post-type-archive-activity .site-header .menu a:hover, .page-template-contact .site-header .menu a:hover {
       border-bottom: 2px solid white; }
   .logo-wav1 {
     display: inline;
     background: transparent; }
   .logo-wav2 {
     display: none; }
-  .blog .logo-wav2, .page-template-about .logo-wav2, .post-type-archive-activity .logo-wav2, .single-activity .logo-wav2 {
+  .page-template-about .logo-wav2, .single-activity .logo-wav2 {
     display: inline; }
-  .blog .logo-wav1, .page-template-about .logo-wav1, .post-type-archive-activity .logo-wav1, .single-activity .logo-wav1 {
+  .page-template-about .logo-wav1, .single-activity .logo-wav1 {
     display: none; }
   .site-header.dark-header .menu a {
     color: black; }
   .site-header.dark-header .menu a:hover {
-    border-bottom: 2px solid black; } }
+    border-bottom: 2px solid black; }
+  .site-header.dark-header .sub-menu {
+    background-color: rgba(255, 255, 255, 0.85); }
+  .site-header.dark-header .logo-wav1 {
+    display: none; }
+  .site-header.dark-header .logo-wav2 {
+    display: inline; } }
 
 .widget-area a {
   border-radius: 8rem;
@@ -3198,13 +3268,13 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
   opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -3279,8 +3349,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3297,8 +3367,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3317,8 +3387,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3335,8 +3405,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -3527,8 +3597,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3545,8 +3615,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3752,11 +3822,9 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
       width: 29%;
       margin: 1rem; } }
 
-.post-type-archive-activity div .site-content {
-  padding: 2%; }
-  @media (min-width: 1080px) {
-    .post-type-archive-activity div .site-content {
-      padding-top: 0; } }
+@media (min-width: 1080px) {
+  .post-type-archive-activity div .site-content {
+    padding-top: 0; } }
 
 .post-type-archive-activity fieldset {
   border: none;
@@ -3871,11 +3939,21 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 1200px; }
 
 .error404 .page-content {
-  max-width: 1200px;
   margin: 0; }
+  .error404 .page-content ul {
+    margin: 0; }
+    .error404 .page-content ul li {
+      list-style-type: circle; }
+    .error404 .page-content ul a {
+      color: black;
+      line-height: 2.0; }
+    .error404 .page-content ul a:hover {
+      color: #72CB7E;
+      font-weight: 600; }
 
 .error404 .search-form {
   margin: 20px 0px;
@@ -3885,17 +3963,6 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
 
 .error404 h2 {
   font-family: 'Oswald'; }
-
-.error404 ul {
-  margin: 0; }
-  .error404 ul li {
-    list-style-type: circle; }
-  .error404 ul a {
-    color: black;
-    line-height: 2.0; }
-  .error404 ul a:hover {
-    color: #72CB7E;
-    font-weight: 600; }
 
 .subtitle-404, .error404 .page-header {
   margin: 0;
@@ -3993,11 +4060,12 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
     .blog .blogs-item {
       padding: 3rem; } }
 
-.blog .site-content {
-  padding: 2%; }
-  @media (min-width: 1080px) {
-    .blog .site-content {
-      padding-top: 0; } }
+.blog .blog .site-main {
+  position: absolute; }
+
+@media (min-width: 1080px) {
+  .blog .site-content {
+    padding-top: 0; } }
 
 .blog .tags-links a {
   color: black;
@@ -4138,10 +4206,10 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
 
 .single-post .site-content {
   padding: 2%;
-  padding-top: 5rem; }
+  padding-top: 3.75rem; }
   @media (min-width: 1080px) {
     .single-post .site-content {
-      padding-top: 0; } }
+      padding-top: 5rem; } }
 
 .single-post .entry-title {
   text-align: center;
@@ -4258,15 +4326,15 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
 * This is stylesheet for pages using archive.php template: categories, tags. by kate
 *
 */
-.archive .site-content, .search .site-content, .search-result .site-content, .error404 .site-content {
-  padding-top: 6rem; }
-  .archive .site-content .content-area .site-main, .search .site-content .content-area .site-main, .search-result .site-content .content-area .site-main, .error404 .site-content .content-area .site-main {
+.post-type-archive-activity .site-content, .search .site-content, .search-result .site-content, .error404 .site-content {
+  padding-top: 5rem; }
+  .post-type-archive-activity .site-content .content-area .site-main, .search .site-content .content-area .site-main, .search-result .site-content .content-area .site-main, .error404 .site-content .content-area .site-main {
     padding: 0 4%; }
-    .archive .site-content .content-area .site-main .page-title, .search .site-content .content-area .site-main .page-title, .search-result .site-content .content-area .site-main .page-title, .error404 .site-content .content-area .site-main .page-title {
+    .post-type-archive-activity .site-content .content-area .site-main .page-title, .search .site-content .content-area .site-main .page-title, .search-result .site-content .content-area .site-main .page-title, .error404 .site-content .content-area .site-main .page-title {
       font-family: 'Oswald'; }
-    .archive .site-content .content-area .site-main .article-container, .search .site-content .content-area .site-main .article-container, .search-result .site-content .content-area .site-main .article-container, .error404 .site-content .content-area .site-main .article-container {
+    .post-type-archive-activity .site-content .content-area .site-main .article-container, .search .site-content .content-area .site-main .article-container, .search-result .site-content .content-area .site-main .article-container, .error404 .site-content .content-area .site-main .article-container {
       margin-bottom: 2rem; }
-      .archive .site-content .content-area .site-main .article-container article, .search .site-content .content-area .site-main .article-container article, .search-result .site-content .content-area .site-main .article-container article, .error404 .site-content .content-area .site-main .article-container article {
+      .post-type-archive-activity .site-content .content-area .site-main .article-container article, .search .site-content .content-area .site-main .article-container article, .search-result .site-content .content-area .site-main .article-container article, .error404 .site-content .content-area .site-main .article-container article {
         padding: 0.5rem;
         margin: 0.5rem 0.5rem 3rem 0.5rem;
         border: 1px solid #72CB7E;
@@ -4279,35 +4347,35 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; }
-        .archive .site-content .content-area .site-main .article-container article .entry-header img, .search .site-content .content-area .site-main .article-container article .entry-header img, .search-result .site-content .content-area .site-main .article-container article .entry-header img, .error404 .site-content .content-area .site-main .article-container article .entry-header img {
+        .post-type-archive-activity .site-content .content-area .site-main .article-container article .entry-header img, .search .site-content .content-area .site-main .article-container article .entry-header img, .search-result .site-content .content-area .site-main .article-container article .entry-header img, .error404 .site-content .content-area .site-main .article-container article .entry-header img {
           height: 200px;
           -o-object-fit: cover;
              object-fit: cover; }
-        .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title {
+        .post-type-archive-activity .site-content .content-area .site-main .article-container article .entry-header .entry-title, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title {
           font-family: 'Oswald';
           font-weight: 500; }
-          .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a {
+          .post-type-archive-activity .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a {
             color: #72CB7E; }
-            .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited {
+            .post-type-archive-activity .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a:visited {
               color: #72CB7E; }
-            .archive .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover {
+            .post-type-archive-activity .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .search .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .search-result .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover, .error404 .site-content .content-area .site-main .article-container article .entry-header .entry-title a:hover {
               color: #72cb7e; }
       @media (min-width: 620px) {
-        .archive .site-content .content-area .site-main .article-container, .search .site-content .content-area .site-main .article-container, .search-result .site-content .content-area .site-main .article-container, .error404 .site-content .content-area .site-main .article-container {
+        .post-type-archive-activity .site-content .content-area .site-main .article-container, .search .site-content .content-area .site-main .article-container, .search-result .site-content .content-area .site-main .article-container, .error404 .site-content .content-area .site-main .article-container {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           grid-gap: 1rem;
           margin: 0; } }
-    .archive .site-content .content-area .site-main .search-pagination, .search .site-content .content-area .site-main .search-pagination, .search-result .site-content .content-area .site-main .search-pagination, .error404 .site-content .content-area .site-main .search-pagination {
+    .post-type-archive-activity .site-content .content-area .site-main .search-pagination, .search .site-content .content-area .site-main .search-pagination, .search-result .site-content .content-area .site-main .search-pagination, .error404 .site-content .content-area .site-main .search-pagination {
       text-align: center; }
-      .archive .site-content .content-area .site-main .search-pagination .page-numbers, .search .site-content .content-area .site-main .search-pagination .page-numbers, .search-result .site-content .content-area .site-main .search-pagination .page-numbers, .error404 .site-content .content-area .site-main .search-pagination .page-numbers {
+      .post-type-archive-activity .site-content .content-area .site-main .search-pagination .page-numbers, .search .site-content .content-area .site-main .search-pagination .page-numbers, .search-result .site-content .content-area .site-main .search-pagination .page-numbers, .error404 .site-content .content-area .site-main .search-pagination .page-numbers {
         padding: 0.5rem 0.8rem;
         background-color: #40B2C4;
         color: white;
         border: 1px solid #40B2C4;
         border-radius: 20%;
         margin: 1rem 0.5rem; }
-        .archive .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .search .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .search-result .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .error404 .site-content .content-area .site-main .search-pagination .page-numbers a:visited {
+        .post-type-archive-activity .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .search .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .search-result .site-content .content-area .site-main .search-pagination .page-numbers a:visited, .error404 .site-content .content-area .site-main .search-pagination .page-numbers a:visited {
           color: white; }
 
 .error404 .not-found {
@@ -4318,11 +4386,21 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 1200px; }
 
 .error404 .page-content {
-  max-width: 1200px;
   margin: 0; }
+  .error404 .page-content ul {
+    margin: 0; }
+    .error404 .page-content ul li {
+      list-style-type: circle; }
+    .error404 .page-content ul a {
+      color: black;
+      line-height: 2.0; }
+    .error404 .page-content ul a:hover {
+      color: #72CB7E;
+      font-weight: 600; }
 
 .error404 .search-form {
   margin: 20px 0px;
@@ -4332,17 +4410,6 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
 
 .error404 h2 {
   font-family: 'Oswald'; }
-
-.error404 ul {
-  margin: 0; }
-  .error404 ul li {
-    list-style-type: circle; }
-  .error404 ul a {
-    color: black;
-    line-height: 2.0; }
-  .error404 ul a:hover {
-    color: #72CB7E;
-    font-weight: 600; }
 
 .subtitle-404, .error404 .page-header {
   margin: 0;

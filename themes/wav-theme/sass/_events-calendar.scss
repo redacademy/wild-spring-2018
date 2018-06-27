@@ -405,6 +405,29 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 // .tribe-bar-views-inner{
 //     background-color: white;
 // }
+.create-event{
+    a{
+    display: block;
+    margin: 0;
+    max-width: 90%;
+    @include tablet{
+        max-width: 30%;
+        margin: 0;
+    }
+    @include desktop{
+        margin: 0;
+        max-width: 30%;
+
+    }
+        &:hover{
+            color:white;
+        }
+        &:visited{
+            color:white;
+        }
+    }
+
+}
 
 
 

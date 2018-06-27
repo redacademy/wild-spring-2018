@@ -21,9 +21,9 @@
 
     .site-content {
         padding: 2%;
-        padding-top: 5rem;
+        padding-top: 3.75rem;
         @include desktop {
-            padding-top: 0;
+            padding-top: 5rem;
         }
     }
 

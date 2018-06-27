@@ -56,20 +56,6 @@ get_header(); ?>
 	<a href="../../get-involved" class="button blue-button">Volunteer</a>
 								</div>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php while ( have_posts() ) : the_post(); ?>
-
-			<?php the_post_navigation( array(
-            'prev_text'                  => __( '&#8249; Prev Post' ),
-            'next_text'                  => __( 'Next Post &#8250;' ),
-       		 ) ); ?>
-
-		<?php endwhile; // End of the loop. ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
 
 	
 
