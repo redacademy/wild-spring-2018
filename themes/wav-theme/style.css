@@ -594,6 +594,8 @@ table {
   border: 2px solid #F9D169; }
   .yellow-button:hover {
     background: white; }
+  .yellow-button:visited {
+    color: white; }
 
 .blue-button {
   border: 2px solid #40B2C4;
@@ -601,6 +603,8 @@ table {
   color: white; }
   .blue-button:hover {
     background: white; }
+  .blue-button:visited {
+    color: white; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -1786,55 +1790,55 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .page-template-about .aboutWav {
   padding-top: 1.5rem; }
 
-.teamMembers.about-carousel:after {
+.page-template-about .teamMembers.about-carousel:after {
   content: 'flickity';
   display: none; }
 
 @media (min-width: 1080px) {
-  .teamMembers {
+  .page-template-about .teamMembers {
     /* disable Flickity for large devices */ }
-    .teamMembers.about-carousel:after {
+    .page-template-about .teamMembers.about-carousel:after {
       content: ''; }
-    .teamMembers.about-carousel {
+    .page-template-about .teamMembers.about-carousel {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
-.teamMembers .about-carousel-cell {
+.page-template-about .teamMembers .about-carousel-cell {
   margin: 0 1rem;
   width: 100%; }
   @media (min-width: 620px) {
-    .teamMembers .about-carousel-cell {
+    .page-template-about .teamMembers .about-carousel-cell {
       width: 45%; } }
   @media (min-width: 1080px) {
-    .teamMembers .about-carousel-cell {
+    .page-template-about .teamMembers .about-carousel-cell {
       margin: 0 1rem;
       width: auto; } }
 
-.collaborators.about-carousel:after {
+.page-template-about .collaborators.about-carousel:after {
   content: 'flickity';
   display: none; }
 
 @media (min-width: 1080px) {
-  .collaborators {
+  .page-template-about .collaborators {
     /* disable Flickity for large devices */ }
-    .collaborators.about-carousel:after {
+    .page-template-about .collaborators.about-carousel:after {
       content: ''; }
-    .collaborators.about-carousel {
+    .page-template-about .collaborators.about-carousel {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr; } }
 
-.collaborators .about-carousel-cell {
+.page-template-about .collaborators .about-carousel-cell {
   margin: 0 1rem;
   width: 100%; }
   @media (min-width: 620px) {
-    .collaborators .about-carousel-cell {
+    .page-template-about .collaborators .about-carousel-cell {
       width: 45%; } }
   @media (min-width: 1080px) {
-    .collaborators .about-carousel-cell {
+    .page-template-about .collaborators .about-carousel-cell {
       margin: 0 1rem;
       width: auto; } }
 
-.teamMember, .collaborator, .festival, .schoolItem, .pressItem {
+.page-template-about .teamMember, .page-template-about .collaborator, .page-template-about .festival, .page-template-about .schoolItem, .page-template-about .pressItem {
   width: 45%;
   height: 300px;
   position: relative;
@@ -1850,21 +1854,21 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   overflow: hidden;
   margin: 5px; }
   @media (min-width: 620px) {
-    .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
+    .page-template-about .teamMember, .page-template-about .collaborator, .page-template-about .festival, .page-template-about .schoolItem, .page-template-about .pressItem {
       height: 45vw; } }
   @media (min-width: 1080px) {
-    .teamMember, .collaborator, .festival, .schoolItem, .pressItem {
+    .page-template-about .teamMember, .page-template-about .collaborator, .page-template-about .festival, .page-template-about .schoolItem, .page-template-about .pressItem {
       width: 25%;
       height: 25vw; } }
-  .teamMember img, .collaborator img, .festival img, .schoolItem img, .pressItem img {
+  .page-template-about .teamMember img, .page-template-about .collaborator img, .page-template-about .festival img, .page-template-about .schoolItem img, .page-template-about .pressItem img {
     max-width: none;
     width: 450px; }
     @media (min-width: 620px) {
-      .teamMember img, .collaborator img, .festival img, .schoolItem img, .pressItem img {
+      .page-template-about .teamMember img, .page-template-about .collaborator img, .page-template-about .festival img, .page-template-about .schoolItem img, .page-template-about .pressItem img {
         height: auto;
         width: 450px;
         max-width: none; } }
-  .teamMember .entry-title a, .collaborator .entry-title a, .festival .entry-title a, .schoolItem .entry-title a, .pressItem .entry-title a {
+  .page-template-about .teamMember .entry-title a, .page-template-about .collaborator .entry-title a, .page-template-about .festival .entry-title a, .page-template-about .schoolItem .entry-title a, .page-template-about .pressItem .entry-title a {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1875,70 +1879,67 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
     padding: 10px;
     text-align: center;
     opacity: 0.9; }
-  .teamMember .entry-header, .collaborator .entry-header, .festival .entry-header, .schoolItem .entry-header, .pressItem .entry-header {
+  .page-template-about .teamMember .entry-header, .page-template-about .collaborator .entry-header, .page-template-about .festival .entry-header, .page-template-about .schoolItem .entry-header, .page-template-about .pressItem .entry-header {
     height: 100%;
     width: 100%; }
-    .teamMember .entry-header img, .collaborator .entry-header img, .festival .entry-header img, .schoolItem .entry-header img, .pressItem .entry-header img {
+    .page-template-about .teamMember .entry-header img, .page-template-about .collaborator .entry-header img, .page-template-about .festival .entry-header img, .page-template-about .schoolItem .entry-header img, .page-template-about .pressItem .entry-header img {
       -o-object-fit: cover;
          object-fit: cover;
       position: absolute;
       height: 100%; }
       @media (min-width: 620px) {
-        .teamMember .entry-header img, .collaborator .entry-header img, .festival .entry-header img, .schoolItem .entry-header img, .pressItem .entry-header img {
+        .page-template-about .teamMember .entry-header img, .page-template-about .collaborator .entry-header img, .page-template-about .festival .entry-header img, .page-template-about .schoolItem .entry-header img, .page-template-about .pressItem .entry-header img {
           height: auto;
           width: 450px; } }
 
-.schoolItem {
+.page-template-about .schoolItem {
   width: 100%;
   height: 45vw;
   max-height: 300px; }
 
-.teamMember a, .collaborator a {
+.page-template-about .teamMember a, .page-template-about .collaborator a {
   background-color: #72CB7E; }
 
-.festivals.about-carousel:after {
+.page-template-about .festivals.about-carousel:after {
   content: 'flickity';
   display: none; }
 
 @media (min-width: 1080px) {
-  .festivals {
+  .page-template-about .festivals {
     /* disable Flickity for large devices */ }
-    .festivals.about-carousel:after {
+    .page-template-about .festivals.about-carousel:after {
       content: ''; }
-    .festivals.about-carousel {
+    .page-template-about .festivals.about-carousel {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
-.festival a, .schoolItem a {
+.page-template-about .festival a, .page-template-about .schoolItem a {
   background-color: #F9D169;
   opacity: 0.9; }
 
-.press.about-carousel:after {
+.page-template-about .press.about-carousel:after {
   content: 'flickity';
   display: none; }
 
 @media (min-width: 1080px) {
-  .press {
+  .page-template-about .press {
     /* disable Flickity for large devices */ }
-    .press.about-carousel:after {
+    .page-template-about .press.about-carousel:after {
       content: ''; }
-    .press.about-carousel {
+    .page-template-about .press.about-carousel {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr; } }
 
-.press .about-carousel-cell {
+.page-template-about .press .about-carousel-cell {
   margin: 0 1rem;
   width: 100%; }
   @media (min-width: 620px) {
-    .press .about-carousel-cell {
+    .page-template-about .press .about-carousel-cell {
       width: 45%; } }
   @media (min-width: 1080px) {
-    .press .about-carousel-cell {
+    .page-template-about .press .about-carousel-cell {
       margin: 0 1rem;
       width: auto; } }
-
-.pressItem .entry-title a {
-  background-color: #40B2C4; }
 
 .schoolOutreach-container {
   display: grid;
@@ -1975,23 +1976,26 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 .flickity-page-dots {
   visibility: hidden; }
 
-.pressItem {
+.page-template-about .pressItem .entry-title a {
+  background-color: #40B2C4; }
+
+.page-template-about .pressItem {
   display: block;
   height: 400px; }
-  .pressItem .entry-header {
+  .page-template-about .pressItem .entry-header {
     height: 300px;
     overflow: hidden;
     position: relative; }
-  .pressItem .entry-header img {
+  .page-template-about .pressItem .entry-header img {
     position: static; }
-  .pressItem p {
+  .page-template-about .pressItem p {
     z-index: 1;
     text-align: center;
     margin: 0;
     padding: 0;
     font-size: 1.5rem; }
     @media (min-width: 620px) {
-      .pressItem p {
+      .page-template-about .pressItem p {
         font-size: 18px;
         line-height: 1.5; } }
 
