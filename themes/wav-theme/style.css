@@ -4210,7 +4210,7 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   overflow: hidden; }
   @media (min-width: 1080px) {
     .single-post .image-wrapper {
-      height: 500px; } }
+      height: 600px; } }
 
 .single-post .image-wrapper img {
   width: 100%;
@@ -4222,12 +4222,12 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-transform: translateY(-50%) translateX(-50%);
           transform: translateY(-50%) translateX(-50%); }
 
-.single-post .site-content {
-  padding: 2%;
-  padding-top: 3.75rem; }
-  @media (min-width: 1080px) {
-    .single-post .site-content {
-      padding-top: 5rem; } }
+@media (min-width: 1080px) {
+  .single-post .site-content {
+    padding-top: 5rem; } }
+
+.single-post .site-main {
+  padding: 2%; }
 
 .single-post .entry-title {
   text-align: center;

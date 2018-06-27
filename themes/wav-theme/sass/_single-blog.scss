@@ -5,7 +5,7 @@
         position: relative;
         overflow: hidden;
         @include desktop {
-            height: 500px;
+            height: 600px;
         }
     }
 
@@ -20,11 +20,13 @@
     }
 
     .site-content {
-        padding: 2%;
-        padding-top: 3.75rem;
         @include desktop {
             padding-top: 5rem;
         }
+    }
+
+    .site-main {
+        padding: 2%;
     }
 
     .entry-title {
