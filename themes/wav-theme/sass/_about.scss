@@ -105,6 +105,8 @@
    
     
 }
+
+.page-template-about{
 .teamMembers{
     &.about-carousel:after {
         content: 'flickity';
@@ -162,16 +164,7 @@
       }
 }
 
-// .teamMember, .collaborator{
-//     @include desktop{
-//         a{
-//             display: none;
-//         }
-//         &:hover a{
-//             display: block;
-//         }
-//     }
-// }
+
 
 .teamMember, .collaborator, .festival, .schoolItem, .pressItem{
     width: 45%;
@@ -226,14 +219,6 @@
        
     }
 
-    // .entry-title a{
-    //     @include desktop{
-    //         display: none;
-    //     }
-    // }
-
-
-
 
     .entry-header{
         height: 100%;
@@ -283,54 +268,47 @@
              grid-template-columns: 1fr 1fr 1fr 1fr;
                  }
     }
-    // .about-carousel-cell {
-    //     margin: 0 1rem;
-    //     width: 100%;
-    //     @include tablet{
-    //         width: 45%;
-    //     }
-    //     @include desktop{
-    //         margin: 0 1rem;
-    //         width: auto;
-    //     }
-    //   }
+
 }
 .festival a, .schoolItem a{
     background-color: $color__yellow;
     opacity: 0.9;
 }
-.press{
-    &.about-carousel:after {
-        content: 'flickity';
-        display: none;
-      }
-    @include desktop{
-        // display: block;
-        /* disable Flickity for large devices */
-        &.about-carousel:after {
-                content: '';
-                 }
-         &.about-carousel{
-             display:grid;
-             grid-template-columns: 1fr 1fr 1fr 1fr;
-                 }
-    }
-    .about-carousel-cell {
-        margin: 0 1rem;
-        width: 100%;
-        @include tablet{
-            width: 45%;
-        }
-        @include desktop{
-            margin: 0 1rem;
-            width: auto;
-        }
-      }
+}
 
+.page-template-about{
+    .press{
+        &.about-carousel:after {
+            content: 'flickity';
+            display: none;
+          }
+        @include desktop{
+            // display: block;
+            /* disable Flickity for large devices */
+            &.about-carousel:after {
+                    content: '';
+                     }
+             &.about-carousel{
+                 display:grid;
+                 grid-template-columns: 1fr 1fr 1fr 1fr;
+                     }
+        }
+        .about-carousel-cell {
+            margin: 0 1rem;
+            width: 100%;
+            @include tablet{
+                width: 45%;
+            }
+            @include desktop{
+                margin: 0 1rem;
+                width: auto;
+            }
+          }
+    
+    }
 }
-.pressItem .entry-title a{
-    background-color: $color__blue;
-}
+
+
 .schoolOutreach-container{
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -356,44 +334,45 @@
     @include tablet{
         flex-direction: row; 
     }
-    // iframe{
-    //     // width: 50%;
 
-    // }
-    // p{
-    //     width: 50%;
-    // }
     
 }
 .flickity-page-dots{
     visibility: hidden;
 }
 
-.pressItem{
-    display: block;
-    height: 400px;
-    .entry-header{
-        height: 300px;
-        overflow: hidden;
-        position: relative;
+.page-template-about{
+    .pressItem .entry-title a{
+        background-color: $color__blue;
     }
-    .entry-header img{
-        position: static;
-    }
-    p{
-        z-index: 1;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        font-size: $font-size__h1;
-        @include tablet{
-            font-size: $font-size__desktop__base-size;
-            line-height: 1.5;
-        }
 
-        
+    .pressItem{
+        display: block;
+        height: 400px;
+        .entry-header{
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        .entry-header img{
+            position: static;
+        }
+        p{
+            z-index: 1;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-size: $font-size__h1;
+            @include tablet{
+                font-size: $font-size__desktop__base-size;
+                line-height: 1.5;
+            }
+    
+            
+        }
     }
 }
+
 
 section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, section.festivals, section.school-outreach, section.press{
     max-width: 1200px;

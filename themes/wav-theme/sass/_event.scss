@@ -1,7 +1,6 @@
 //This is the style for single-evnet page with carousel. The php template for this style is: tribe-events/single-event.php
 
 .tribe_events-template-default.single-tribe_events{
-    padding: 2%;
     .tribe-events-before-html{
         display: none;
     }
@@ -11,27 +10,18 @@
     .tribe-events-single{
         margin-top: 5rem;
         padding: 2%;
+        text-align: center;
     .events-container{
         text-align: left;
         max-width: 1200px;
         margin: 1rem auto 1rem;
-        @include tablet{
-            // display: flex;
-            // margin-top: 6rem;
-        }
-
         .event-main-title-details{
-            // font-size: $font-size__h1;
-            // font-family: $font-family__h1;
+
             padding: 0;
             text-align: center;
             @include tablet {
-                // font-size: $font-size__desktop__h1;
-                // font-family: $font-family__desktop__h1;
                 margin:0;
-                padding-top: 5rem;
                 text-align: left;
-                // transform: translateY(-550%)
             }
         }
         h2{
@@ -57,17 +47,18 @@
             }
 
         }
-        // .single-event-details-title{
-        //     display: none;
-        //     @include desktop{
-        //         display:inline; 
-        //     }
-        // }
+
         .address-title, .address-details, .single-event-details, .date-title,.date-details, .organizer-title, .organizer-details{
             display: none;
             @include tablet{
                 display: block;
             }
+        }
+        h4{
+            font-weight: 500;
+        }
+        dt{
+            font-weight: 500;
         }
         .tribe-event-tags{ 
             display: flex;

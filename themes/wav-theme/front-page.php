@@ -27,7 +27,7 @@ get_header(); ?>
 						'post_type' => 'activity',
 						'posts_per_page' => 2,
 						'orderby' => 'date',
-						'order' => 'ASC'
+						'order' => 'DESC'
 						);
 					$latest_activity_posts = get_posts( $args ); // returns an array of posts
 					?>
@@ -80,7 +80,13 @@ get_header(); ?>
             }
             else foreach( $events as $event ) {
                 echo('<article class="event-post-single carousel-front-page-cell">');
-                echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_post_thumbnail( $event, 'large').'</a></div>');
+                echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_post_thumbnail( $event, 'large') .'</a></div>');
+
+
+
+
+
+
                 echo('<h3 class="entry-title"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_title( $event).'</a></h3>' );
                 // echo('<p>'.$event->post_content.'</p>');
                 echo('<p>'.tribe_get_start_date($event).'<p>');
@@ -101,7 +107,7 @@ get_header(); ?>
                 </div><!-- events-container -->
                 <div class="events-buttons-container">
                     <div class="button contact-button1">
-                    <a href=<?php echo get_post_type_archive_link( 'tribe_event' ) ?>>create events</a>
+                    <a class="events-calendar-create-event-button" href="<?php echo home_url( '/events/community/add' )?>">Create Event </a>
                     </div>
                     <div class="button blue-button">
                             <a href=<?php echo get_post_type_archive_link( 'tribe_events' ) ?>>find events</a>
@@ -130,13 +136,13 @@ get_header(); ?>
                             <h3><?php echo CFS()->get('front_page_wav_what_is_wav_festival_header')?></h3>
 							<img src="<?php echo CFS()->get('front_page_wav_what_is_wav_festival_img')?>" alt="WAV picture of festival activity">
 							<p><?php echo CFS()->get('front_page_wav_what_is_wav_festival_text')?></p>
-                            <a class="read-more" href="<?php echo get_permalink( get_page_by_title( 'About' ) ) ?>">learn more &rsaquo; </a>
+                            <a class="read-more" href="<?php echo home_url( '/festivals' )?>">learn more &rsaquo; </a>
                         </div>
                         <div id="tab-3" class="single-school-container tab-content">
 						    <h3><?php echo CFS()->get('front_page_wav_what_is_wav_school_header')?></h3>
 						    <img src="<?php echo CFS()->get('front_page_wav_what_is_wav_school_img')?>" alt="WAV image of school outreach activity">
 						    <p><?php echo CFS()->get('front_page_wav_what_is_wav_school_text')?></p>
-                            <a class="read-more" href="<?php echo get_permalink( get_page_by_title( 'About' ))?>">learn more &rsaquo; </a>
+                            <a class="read-more" href="<?php echo home_url( '/blog' )?>">learn more &rsaquo; </a>
                         </div>
                 </div>
                 <div class="button contact-button1">

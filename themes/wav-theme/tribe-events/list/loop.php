@@ -88,3 +88,8 @@ $more = false;
 	?>
 
 </div><!-- .tribe-events-loop -->
+<div class="create-event">
+<a class="button contact-button1 create-event-button" href="<?php echo home_url( '/events/community/add' )?>">Create Event </a>
+</div>
+
+

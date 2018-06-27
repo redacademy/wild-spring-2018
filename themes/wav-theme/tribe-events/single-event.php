@@ -25,45 +25,36 @@ $event_id = get_the_ID();
 	<?php while ( have_posts() ) :  the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<?php $loop = CFS()->get( 'events_loop' );
 
-<!-- if !carousel and featured image -> get the featured img
-	<div class="event-featured-image">
-	</div>
-if !carouserl and !featured image - get the hardcoded img
-	<div class="event-placeholder-image">
-		<img src="./../../wp-content/themes/wav-theme/assets/images/WAV_placeholder_img.png"/>
-	</div> -->
+					if ( !empty($loop[0]['event_image'])) :?>
+						<section class="carousel-container">
+						<div class="double-carousel carousel-main">
+					<?php foreach ( $loop as $row ) {?>
+						<div class="carousel-cell">
+							<img src="<?php echo $row['event_image']; ?>">
+						</div>
+					<?php } ?>
+				</div>
 
+				<div class="carousel-nav">
+					<?php $loop = CFS()->get( 'events_loop' );
+						foreach ( $loop as $row ) {?>
+							<div class="carousel-cell">
+								<img src="<?php echo $row['event_image']; ?>">
+							</div>
+					<?php } ?>
+				</div>
+				<?php
 
-<section class="carousel-container">
-    <div class="double-carousel carousel-main">
-		<?php $loop = CFS()->get( 'events_loop' );
-		if ( ! empty ( $loop ) && ! is_wp_error( $loop ) ) :
-        foreach ( $loop as $row ) {?>
-            <div class="carousel-cell">
-                 <img src="<?php echo $row['event_image']; ?>">
-            </div>
-        <?php } ?>
-    </div>
-
-    <div class="carousel-nav">
-        <?php $loop = CFS()->get( 'events_loop' );
-            foreach ( $loop as $row ) {?>
-                <div class="carousel-cell">
-                    <img src="<?php echo $row['event_image']; ?>">
-                </div>
-        <?php } ?>
-	</div>
-	<?php
-
-	elseif(empty($loop) && has_post_thumbnail()):
-	echo ('<div class="event-featured-image">'. the_post_thumbnail( 'large' ).'</div');
-	 else:
-		// echo '<h1>hello</h1>';
-		echo ('<div class="event-placeholder-image"><img src="./../../wp-content/themes/wav-theme/assets/images/WAV_placeholder_img.png"/>
-		</div>');
-	endif; ?>
-</section>
+				elseif(empty($loop[0]['event_image']) && has_post_thumbnail()):
+				echo ('<div class="event-featured-image">'. the_post_thumbnail( 'large' ).'</div');
+				else:
+					// echo '<h1>hello</h1>';
+					echo ('<div class="event-placeholder-image"><img src="./../../wp-content/themes/wav-theme/assets/images/WAV_placeholder_img.png"/>
+					</div>');
+				endif; ?>
+			</section>
 
 <?php 
 	//$event = get_post($event_id);
