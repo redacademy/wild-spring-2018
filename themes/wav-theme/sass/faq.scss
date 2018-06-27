@@ -19,6 +19,10 @@
 .question {
 	padding-left: .5rem;
 	padding-right: .5rem;
+		font-size: .8rem;
+			@include desktop {
+				font-size: 1rem;
+			}
 	&::after {
 		color: $color__green;
 		font-family: 'FontAwesome';
