@@ -1,11 +1,17 @@
-.single-person{
+.single-person .site-content, .single-press-item .site-content{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.single-person, .single-press-item .press-item{
     display: flex;
     flex-direction: column;
     @include tablet{
         flex-direction: row;
     }
     
-    section{
+    section, .image-wrapper, .text-wrapper {
 
         width: 100%;
         padding: 4%;
@@ -13,7 +19,7 @@
             width: 50%;
         }
     }
-    .person-profile-picture{
+    .person-profile-picture, .image-wrapper{
         display: flex;
         justify-content: center;
         @include tablet{
@@ -23,10 +29,16 @@
         }
        
     }
-    .entry-header{
+    .entry-header, .entry-title{
+        text-align: center;
+    }
+    .entry-content{
         text-align: center;
     }
     p{
         line-height: 2.0;
     }
+    // .image-wrapper{
+    //     display: flex
+    // }
 }
