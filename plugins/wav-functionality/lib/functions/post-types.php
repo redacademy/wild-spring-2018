@@ -41,7 +41,7 @@ function wav_register_person() {
 	);
 	$args = array(
 		'label'                 => 'Person',
-		'description'           => 'Custom post type for persons',
+		'description'           => 'The team members and collaborators that have impacted Wild About Vancouver.',
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
@@ -159,7 +159,7 @@ function wav_register_festival() {
 	);
 	$args = array(
 		'label'                 => 'Festival',
-		'description'           => 'custom post time to show festivals',
+		'description'           => 'An archive of our previous festival and our most current festival.',
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'post-formats' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
@@ -217,7 +217,7 @@ function wav_register_activity() {
 	);
 	$args = array(
 		'label'                 => 'Activity',
-		'description'           => 'Custom post type for activities',
+		'description'           => 'Check out our collection of activities and get inspired to get outside!',
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail' ),
 		'taxonomies'            => array( 'category', 'post_tag' ),
