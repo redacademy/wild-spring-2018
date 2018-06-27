@@ -1,6 +1,5 @@
 .site-header {
         background-color: hsla(0,0%,100%,.85);
-        // border-bottom: 1px solid #e1e1e1;
         padding: 1rem;
 		position: fixed;
 		transition: top .5s linear;
@@ -21,6 +20,10 @@
         }
 }
 
+.dark-header {
+    box-shadow: 0 3px 3px rgba(0,0,0,.2);
+}
+
 
 .header-container {
     position: relative;
@@ -36,6 +39,7 @@
 .main-navigation ul ul {
     position: initial;
     display: none;
+    box-shadow: none;
 }
 
 .logo {
@@ -79,6 +83,22 @@
     top: -5.5rem;
 }
 
+.single-activity {
+    .mobile-title{
+        top: -1.5rem;
+    }
+}
+
+.tribe-events-single .carousel-container {
+    padding-top: 0;
+}
+.events-single {
+
+    .site-content {
+        position: absolute;
+    }
+}
+
 @include desktop {
 
     .main-navigation ul {
@@ -98,10 +118,12 @@
     }
 
     .sub-menu {
-        width: 120px;
+        width: 200px;
+        box-shadow: none;
 
         a {
-            max-width: 120px;
+            width: 100%;
+            box-shadow: none;
         }
     }
 
@@ -109,7 +131,7 @@
         display:block;
     }
 
-    .home, .post-type-archive-tribe_events, .page-id-81, .page-template-contact, {
+    .home, .post-type-archive-tribe_events, .page-id-81, .post-type-archive-activity, .page-template-contact, .group-blog {
 
         .site-header {
             background-color: transparent;
@@ -133,7 +155,7 @@
         }
 
 
-    .blog, .page-template-about, .post-type-archive-activity, .single-activity {
+    .blog, .page-template-about, .single-activity {
 
         .logo-wav2 {
             display: inline;
@@ -151,6 +173,10 @@
 
         .menu a:hover {   
             border-bottom: 2px solid black;
+        }
+
+        .sub-menu {
+            background-color: rgba(255, 255, 255, 0.85);
         }
     }
 

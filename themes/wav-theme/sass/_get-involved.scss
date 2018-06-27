@@ -1,5 +1,15 @@
 .page-id-81 {
 
+    .mobile-title {
+        top: -4rem;
+    }
+
+    .menu {
+        @include desktop {
+            top: 2.5rem;
+        }
+    }
+
     .involve-banner {
         display: none;
         @include desktop {
