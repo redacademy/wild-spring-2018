@@ -19,7 +19,7 @@ $(window).scroll(function(){
         $('.light-header').css('background-color', 'transparent');
         
     }
-    
+
     else{
         $('.site-header').removeClass('light-header').addClass('dark-header');
         $('.logo-wav2').css('display','block');
