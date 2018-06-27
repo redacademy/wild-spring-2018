@@ -7,7 +7,7 @@
 
 get_header(); ?>
 <!-- 368 -->
-	<?php $banner_img =  CFS()->get("hero_image_archive_activity", 368); 
+	<?php $banner_img =  esc_url(CFS()->get("hero_image_archive_activity", 299)); 
 	if(!empty($banner_img)): ?>
 
 	<div class="activity-banner"><img src="<?php echo $banner_img; ?> " alt="banner image for WAV archive activity page"></div>
@@ -53,7 +53,7 @@ get_header(); ?>
 							<?php 
 							foreach ( $loop as $row ) {?>
 								<div class="carousel-cell">
-									<a href=<?php echo get_post_permalink() ?>><img src="<?php echo $row['activity_image']; ?>"></a>
+									<a href=<?php echo esc_url(get_post_permalink()) ?>><img src="<?php echo $row['activity_image']; ?>"></a>
 								</div>
 							<?php } 
 							?>
@@ -66,7 +66,7 @@ get_header(); ?>
 					</header>
 
 					<p class="activity-location">
-						<?php echo CFS()->get('activity_location') ?>
+						<?php echo esc_html( CFS()->get('activity_location')) ?>
 					</p>
 
 					<p class="description-paragraph">
@@ -83,7 +83,7 @@ get_header(); ?>
 					</div>
 					
 					<p class="see-details">
-						<a href="<?php the_permalink(); ?>"class="see-detail-button">See details</a>
+						<a href="<?php esc_url(the_permalink()); ?>"class="see-detail-button">See details</a>
 					</p>
 				</div>
 

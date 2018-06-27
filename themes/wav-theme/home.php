@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<div class="activity-banner"><img src="<?php echo CFS()->get("hero_image_blogs", 226); ?> " alt="banner image for WAV blog page"></div>
+	<div class="activity-banner"><img src="<?php echo esc_url(CFS()->get("hero_image_blogs", 226)); ?> " alt="banner image for WAV blog page"></div>
 
 
 	<div id="primary" class="content-area">
@@ -51,7 +51,7 @@ get_header(); ?>
 
                             <div class="image-wrapper">
                                 <?php if ( has_post_thumbnail() ) : ?>
-                                <a href=<?php echo get_post_permalink() ?>><?php the_post_thumbnail( 'large' ); ?></a>
+                                <a href=<?php echo esc_url(get_post_permalink()) ?>><?php the_post_thumbnail( 'large' ); ?></a>
                                 <?php endif; ?>
                             </div>
 
@@ -83,7 +83,7 @@ get_header(); ?>
                     </div>
                                     
                     <p class="see-details">
-                        <a href="<?php the_permalink(); ?>"class="see-detail-button">Read More</a>
+                        <a href="<?php esc_url(the_permalink()); ?>"class="see-detail-button">Read More</a>
                     </p>
                     
                 </div>
