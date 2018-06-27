@@ -81,6 +81,12 @@ get_header(); ?>
             else foreach( $events as $event ) {
                 echo('<article class="event-post-single carousel-front-page-cell">');
                 echo('<div><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_post_thumbnail( $event, 'large') .'</a></div>');
+
+
+
+
+
+
                 echo('<h3 class="entry-title"><a href="'.esc_url( get_permalink($event) ).'" rel="bookmark">'.get_the_title( $event).'</a></h3>' );
                 // echo('<p>'.$event->post_content.'</p>');
                 echo('<p>'.tribe_get_start_date($event).'<p>');

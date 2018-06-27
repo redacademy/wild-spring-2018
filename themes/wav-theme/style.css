@@ -1621,78 +1621,78 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .number-of-events-day {
     display: none; } }
 
-.tribe_events-template-default.single-tribe_events {
-  padding: 2%; }
-  .tribe_events-template-default.single-tribe_events .tribe-events-before-html {
-    display: none; }
-  .tribe_events-template-default.single-tribe_events .tribe-events-after-html {
-    display: none; }
-  .tribe_events-template-default.single-tribe_events .tribe-events-single {
-    margin-top: 5rem;
-    padding: 2%;
-    text-align: center; }
-    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container {
-      text-align: left;
-      max-width: 1200px;
-      margin: 1rem auto 1rem; }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .event-main-title-details {
-        padding: 0;
-        text-align: center; }
-        @media (min-width: 620px) {
-          .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .event-main-title-details {
-            margin: 0;
-            text-align: left; } }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container h2 {
-        font-size: 1.5rem; }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .event-info-container {
-        margin-bottom: 2rem; }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-event-title {
-        font-family: 'Oswald'; }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-section.tribe-events-event-meta {
-        text-align: left; }
-        .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-section.tribe-events-event-meta dd {
-          margin: 0; }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-event-description {
-        text-align: left; }
-        .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-event-description a {
-          text-align: right; }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .address-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .address-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .single-event-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .date-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .date-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .organizer-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .organizer-details {
-        display: none; }
-        @media (min-width: 620px) {
-          .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .address-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .address-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .single-event-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .date-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .date-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .organizer-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .organizer-details {
-            display: block; } }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container h4 {
-        font-weight: 500; }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container dt {
-        font-weight: 500; }
-      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-event-tags {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-        margin: 0 0 3rem 0;
-        padding: 0; }
-        .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-event-tags a {
-          border: 1px solid #40B2C4;
-          border-radius: 15px;
-          padding: 0.5rem;
-          margin: 0.2rem;
-          text-align: center; }
-          .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-event-tags a::before {
-            content: '#'; }
-    .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-cal-links a {
-      background-color: #72CB7E !important;
-      border-radius: 25px;
-      border: none;
-      color: white !important;
-      padding: 1rem 3rem;
-      font-size: 1.5rem; }
-    .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-meta-group.tribe-events-meta-group-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-meta-group.tribe-events-meta-group-gmap {
+.tribe_events-template-default.single-tribe_events .tribe-events-before-html {
+  display: none; }
+
+.tribe_events-template-default.single-tribe_events .tribe-events-after-html {
+  display: none; }
+
+.tribe_events-template-default.single-tribe_events .tribe-events-single {
+  margin-top: 5rem;
+  padding: 2%;
+  text-align: center; }
+  .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container {
+    text-align: left;
+    max-width: 1200px;
+    margin: 1rem auto 1rem; }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .event-main-title-details {
       padding: 0;
-      margin: 0; }
-    .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-ical.tribe-events-button {
+      text-align: center; }
+      @media (min-width: 620px) {
+        .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .event-main-title-details {
+          margin: 0;
+          text-align: left; } }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container h2 {
+      font-size: 1.5rem; }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .event-info-container {
+      margin-bottom: 2rem; }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-event-title {
+      font-family: 'Oswald'; }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-section.tribe-events-event-meta {
+      text-align: left; }
+      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-section.tribe-events-event-meta dd {
+        margin: 0; }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-event-description {
+      text-align: left; }
+      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-events-single-event-description a {
+        text-align: right; }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .address-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .address-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .single-event-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .date-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .date-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .organizer-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .organizer-details {
       display: none; }
+      @media (min-width: 620px) {
+        .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .address-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .address-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .single-event-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .date-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .date-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .organizer-title, .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .organizer-details {
+          display: block; } }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container h4 {
+      font-weight: 500; }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container dt {
+      font-weight: 500; }
+    .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-event-tags {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      margin: 0 0 3rem 0;
+      padding: 0; }
+      .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-event-tags a {
+        border: 1px solid #40B2C4;
+        border-radius: 15px;
+        padding: 0.5rem;
+        margin: 0.2rem;
+        text-align: center; }
+        .tribe_events-template-default.single-tribe_events .tribe-events-single .events-container .tribe-event-tags a::before {
+          content: '#'; }
+  .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-cal-links a {
+    background-color: #72CB7E !important;
+    border-radius: 25px;
+    border: none;
+    color: white !important;
+    padding: 1rem 3rem;
+    font-size: 1.5rem; }
+  .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-meta-group.tribe-events-meta-group-details, .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-meta-group.tribe-events-meta-group-gmap {
+    padding: 0;
+    margin: 0; }
+  .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-ical.tribe-events-button {
+    display: none; }
 
 .aboutNavigation {
   background-color: #72CB7E;
@@ -3198,13 +3198,13 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
   opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -3279,8 +3279,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3297,8 +3297,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3317,8 +3317,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3335,8 +3335,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -3527,8 +3527,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3545,8 +3545,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
