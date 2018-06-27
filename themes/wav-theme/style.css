@@ -2519,12 +2519,17 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   transition: top .5s linear;
   width: 100%;
   z-index: 4;
-  height: 3.55rem; }
+  height: 3.55rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
   @media (min-width: 1080px) {
     .site-header {
       height: 5rem; }
-      .site-header .menu a:hover {
+      .site-header .light-header .menu a:hover {
         border-bottom: 2px solid white; }
+      .site-header .dark-header .menu a:hover {
+        border-bottom: 2px solid black; }
       .site-header a {
         padding-left: .5rem;
         padding-right: .5rem;
@@ -2535,9 +2540,15 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
         font-family: 'Tofino';
         font-size: 1.25rem; } }
 
+.title-home {
+  color: black; }
+  .title-home:visited {
+    color: black; }
+
 .dark-header {
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.85); }
 
 .header-container {
   position: relative; }
@@ -2604,7 +2615,14 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
 .events-archive .site-content {
   padding-top: 0rem !important; }
 
+.home .site-content, .blog .site-content, .post-type-archive.post-type-archive-tribe_events .site-content, .page-id-81 .site-content, .post-type-archive-activity .site-content, .page-template-contact .site-content, .single-activity .site-content {
+  padding-top: 5rem; }
+
 @media (min-width: 1080px) {
+  .site-header {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
   .main-navigation ul {
     display: block; }
   .menu-toggle {
@@ -2623,11 +2641,15 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
               box-shadow: none; }
   .menu-item-has-children:hover > ul {
     display: block; }
-  .home .site-header, .blog .site-header, .post-type-archive.post-type-archive-tribe_events .site-header, .page-id-81 .site-header, .post-type-archive-activity .site-header, .page-template-contact .site-header {
-    background-color: transparent; }
-    .home .site-header a, .blog .site-header a, .post-type-archive.post-type-archive-tribe_events .site-header a, .page-id-81 .site-header a, .post-type-archive-activity .site-header a, .page-template-contact .site-header a {
+  .home .site-content, .blog .site-content, .post-type-archive.post-type-archive-tribe_events .site-content, .page-id-81 .site-content, .post-type-archive-activity .site-content, .page-template-contact .site-content, .single-activity .site-content {
+    padding-top: 0; }
+  .home .site-header.light-header, .blog .site-header.light-header, .post-type-archive.post-type-archive-tribe_events .site-header.light-header, .page-id-81 .site-header.light-header, .post-type-archive-activity .site-header.light-header, .page-template-contact .site-header.light-header, .single-activity .site-header.light-header {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+    .home .site-header.light-header a, .blog .site-header.light-header a, .post-type-archive.post-type-archive-tribe_events .site-header.light-header a, .page-id-81 .site-header.light-header a, .post-type-archive-activity .site-header.light-header a, .page-template-contact .site-header.light-header a, .single-activity .site-header.light-header a {
       color: white; }
-    .home .site-header .menu a:hover, .blog .site-header .menu a:hover, .post-type-archive.post-type-archive-tribe_events .site-header .menu a:hover, .page-id-81 .site-header .menu a:hover, .post-type-archive-activity .site-header .menu a:hover, .page-template-contact .site-header .menu a:hover {
+    .home .site-header.light-header .menu a:hover, .blog .site-header.light-header .menu a:hover, .post-type-archive.post-type-archive-tribe_events .site-header.light-header .menu a:hover, .page-id-81 .site-header.light-header .menu a:hover, .post-type-archive-activity .site-header.light-header .menu a:hover, .page-template-contact .site-header.light-header .menu a:hover, .single-activity .site-header.light-header .menu a:hover {
       border-bottom: 2px solid white; }
   .logo-wav1 {
     display: inline;
@@ -2638,16 +2660,19 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
     display: inline; }
   .page-template-about .logo-wav1, .single-activity .logo-wav1 {
     display: none; }
-  .site-header.dark-header .menu a {
-    color: black; }
-  .site-header.dark-header .menu a:hover {
-    border-bottom: 2px solid black; }
-  .site-header.dark-header .sub-menu {
-    background-color: rgba(255, 255, 255, 0.85); }
-  .site-header.dark-header .logo-wav1 {
-    display: none; }
-  .site-header.dark-header .logo-wav2 {
-    display: inline; } }
+  .dark-header {
+    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
+    .dark-header .menu a {
+      color: black; }
+    .dark-header .menu a:hover {
+      border-bottom: 2px solid black; }
+    .dark-header .sub-menu {
+      background-color: rgba(255, 255, 255, 0.85); }
+    .dark-header .logo-wav1 {
+      display: none; }
+    .dark-header .logo-wav2 {
+      display: inline; } }
 
 .widget-area a {
   border-radius: 8rem;
