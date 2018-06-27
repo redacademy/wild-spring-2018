@@ -406,7 +406,8 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
 //     background-color: white;
 // }
 .create-event{
-    .button.contact-button1.create-event-button{
+    a{
+    display: block;
     margin: 0;
     max-width: 90%;
     @include tablet{
@@ -418,12 +419,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
         max-width: 30%;
 
     }
-    a{
         &:hover{
             color:white;
         }
+        &:visited{
+            color:white;
+        }
     }
-}
 
 }
 
