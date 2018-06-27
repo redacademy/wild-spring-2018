@@ -4478,10 +4478,6 @@ h1.submission-header {
     .tribe-community-notice a.blue-button:hover {
       background: white; }
 
-@media (min-width: 1080px) {
-  .submission-success-desktop {
-    width: 50%; } }
-
 #tribe-community-events .event-submission-form .tribe-button-secondary {
   display: block; }
   #tribe-community-events .event-submission-form .tribe-button-secondary:hover {
