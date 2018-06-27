@@ -49,7 +49,8 @@ get_header(); ?>
 					
 
 				<div class="entry-content">
-					<?php the_content(); ?>
+                    <?php the_content(); ?>
+                    <p><a href="<?php echo esc_url(CFS()->get('external_hyperlink'));?>" alt="Link to article"> To read more click here </a></p>
 					<?php
 						wp_link_pages( array(
 							'before' => '<div class="page-links">' . esc_html( 'Pages:' ),

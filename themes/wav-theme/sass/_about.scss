@@ -7,14 +7,27 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 10px 20px;
+    @include desktop{
+        padding: 10px 50px;
+    }
     position: fixed;
     width: 100%;
+    
+    // max-width: 1200px;
+    margin: 0 auto;
+
     z-index: 3;
  
     a{
         color: white;
     }
+}
+
+.aboutNavigationWrapper{
+    background-color: $color__green;
+    width: 100%;
+    height: 45px;
 }
 
 .videoAboutWav p{
@@ -382,7 +395,7 @@
     }
 }
 
-section.about-wav, section.our-festival, section.theTeam, section.collaborators, section.festivals, section.school-outreach, section.press{
+section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, section.festivals, section.school-outreach, section.press{
     max-width: 1200px;
     margin: 0 auto;
 }

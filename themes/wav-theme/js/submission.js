@@ -43,7 +43,7 @@
 
             $('.tribe-community-notice').append(successMessage);
               
-        
+   
         }
 
         // tribe_community_edit + tribe-community-notice-update is true

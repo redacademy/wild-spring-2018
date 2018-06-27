@@ -27,7 +27,7 @@
     font-family: $font-family__button;
     &:hover{
         color: white;
-        background: 2px solid $color__green;
+        background: $color__green;
     }
 }
 
@@ -184,6 +184,20 @@ h1.submission-header{
         &:hover{
 
             background: white;
+        }
+    }
+}
+
+
+
+
+
+#tribe-community-events .event-submission-form {
+    .tribe-button-secondary {
+        // background: red;
+    display: block;        
+        &:hover {
+            background: $color__green;
         }
     }
 }
