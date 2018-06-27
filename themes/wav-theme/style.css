@@ -4203,7 +4203,7 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
       font-family: "Tofino-Text"; } }
 
 .single-post .image-wrapper {
-  height: 200px;
+  height: 300px;
   width: 100%;
   position: relative;
   overflow: hidden; }
