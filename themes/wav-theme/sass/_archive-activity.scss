@@ -73,7 +73,7 @@
     }
 
     div .site-content  {
-        // padding: 2%;
+        padding: 2%;
         @include desktop {
             padding-top: 0;
         }
@@ -81,10 +81,11 @@
 
     fieldset {
         border: none;
-        position: relative;
-        left: 3%;
-        width: 50%;
-
+        width: 94%;
+        padding-left: 0;
+        @include desktop {
+            margin: 0 auto;
+        }
         input[type=search]{
             width: 100%;
             border-radius: 7px;
@@ -181,12 +182,17 @@
     
 
     .page-title {
+
         padding-top: 2rem;
+        padding-left: 4%;
+        margin-left: 2rem;
         font-size: $font-size__h1;
         font-family: $font-family__h1;
         @include desktop {
-            font-size: $font-size__desktop__h1;
-            font-family: $font-family__desktop__h1;
+        font-size: $font-size__desktop__h1;
+        font-family: $font-family__desktop__h1;
+        padding-left: 0;
+        margin-left: 0;
         position: absolute;
         bottom: 10rem;
         left: 5rem;
@@ -200,6 +206,13 @@
 
     .search-field {
         max-width: 1350px;
+    }
+
+    .search-form {
+        margin-left: 2rem;
+        @include desktop {
+            margin-left: 0;
+        }
     }
 
 
