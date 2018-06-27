@@ -41,7 +41,7 @@ get_header(); ?>
 
 
 <p class="activity-location">
-<?php echo CFS()->get('activity_location') ?>
+<?php echo esc_html(CFS()->get('activity_location')); ?>
 </p>
 
 </div>
@@ -69,7 +69,7 @@ get_header(); ?>
 </h2>
 
 <p class="location">
-<?php echo CFS()->get('location') ?>
+<?php echo esc_html(CFS()->get('location')) ?>
 </p>
 
 <h2 class="tags">Tags</h2>
@@ -94,7 +94,7 @@ get_header(); ?>
 </div>
 
 <p class="creat-event-button">
-<input type="submit" value="Create Event" class="creat-events-button">
+<a class="creat-events-button" href="<?php echo home_url( '/events/community/add' )?>">Create Event </a>
 </p>
 
 <?php get_footer(); ?>
