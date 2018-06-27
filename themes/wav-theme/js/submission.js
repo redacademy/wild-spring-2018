@@ -43,9 +43,7 @@
 
             $('.tribe-community-notice').append(successMessage);
               
-            $('.tribe-community-notice-update').addClass('submission-success-desktop');
-            $('.tribe-events-after-html').addClass('submission-success-desktop');
-        
+   
         }
 
         // tribe_community_edit + tribe-community-notice-update is true
