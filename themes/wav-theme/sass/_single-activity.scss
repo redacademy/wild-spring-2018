@@ -24,7 +24,7 @@
       }
     
     .carousel-container {
-        padding-top: 8rem;
+        // padding-top: 8rem;
         @include desktop {
             display: flex;
             order: 2;
@@ -128,10 +128,6 @@
     .creat-event-button {
         text-align: center;
         padding-top: 5rem;
-    }
-
-    .site-content {
-        padding: 2%;
     }
 
     .entry-title {

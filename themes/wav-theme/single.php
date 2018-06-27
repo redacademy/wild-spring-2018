@@ -7,12 +7,11 @@
 
 get_header(); ?>
 
-	<?php $banner_img =  CFS()->get("hero_image_post"); 
+	<?php $banner_img =  esc_url(CFS()->get("hero_image_post")); 
 	if(!empty($banner_img)): ?>
-
-	<div class="single-post-banner"><img src="<?php echo $banner_img; ?> " alt="banner image for WAV post page"></div>
-	<h1 id="1" class="page-title">Our Blog</h1>
-	<?php
+		<div class="single-post-banner"><img src="<?php echo $banner_img; ?> " alt="banner image for WAV post page"></div>
+		<h1 id="1" class="page-title">Our Blog</h1>
+		<?php
 	endif;
 	?>
 	
