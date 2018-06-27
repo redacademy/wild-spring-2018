@@ -103,6 +103,9 @@ table {
 		background: white;
 	 
 	}
+	&:visited{
+		color: white;
+	}
 }
 .blue-button{
 
@@ -112,5 +115,8 @@ table {
 	&:hover{
 
 		background: white;
+	}
+	&:visited{
+		color: white;
 	}
 }
