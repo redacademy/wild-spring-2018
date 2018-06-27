@@ -83,15 +83,19 @@
     top: -5.5rem;
 }
 
-.single {
+.single-activity {
     .mobile-title{
         top: -1.5rem;
     }
 }
 
+.tribe-events-single .carousel-container {
+    padding-top: 0;
+}
 .events-single {
-    .mobile-title {
-        bottom: 0;
+
+    .site-content {
+        position: absolute;
     }
 }
 
@@ -127,7 +131,7 @@
         display:block;
     }
 
-    .home, .post-type-archive-tribe_events, .page-id-81, .page-template-contact, .group-blog {
+    .home, .post-type-archive-tribe_events, .page-id-81, .post-type-archive-activity, .page-template-contact, .group-blog {
 
         .site-header {
             background-color: transparent;
@@ -151,7 +155,7 @@
         }
 
 
-    .blog, .page-template-about, .post-type-archive-activity, .single-activity {
+    .blog, .page-template-about, .single-activity {
 
         .logo-wav2 {
             display: inline;
