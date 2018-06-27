@@ -3867,11 +3867,21 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 1200px; }
 
 .error404 .page-content {
-  max-width: 1200px;
   margin: 0; }
+  .error404 .page-content ul {
+    margin: 0; }
+    .error404 .page-content ul li {
+      list-style-type: circle; }
+    .error404 .page-content ul a {
+      color: black;
+      line-height: 2.0; }
+    .error404 .page-content ul a:hover {
+      color: #72CB7E;
+      font-weight: 600; }
 
 .error404 .search-form {
   margin: 20px 0px;
@@ -3881,17 +3891,6 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
 
 .error404 h2 {
   font-family: 'Oswald'; }
-
-.error404 ul {
-  margin: 0; }
-  .error404 ul li {
-    list-style-type: circle; }
-  .error404 ul a {
-    color: black;
-    line-height: 2.0; }
-  .error404 ul a:hover {
-    color: #72CB7E;
-    font-weight: 600; }
 
 .subtitle-404, .error404 .page-header {
   margin: 0;
@@ -4314,11 +4313,21 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 1200px; }
 
 .error404 .page-content {
-  max-width: 1200px;
   margin: 0; }
+  .error404 .page-content ul {
+    margin: 0; }
+    .error404 .page-content ul li {
+      list-style-type: circle; }
+    .error404 .page-content ul a {
+      color: black;
+      line-height: 2.0; }
+    .error404 .page-content ul a:hover {
+      color: #72CB7E;
+      font-weight: 600; }
 
 .error404 .search-form {
   margin: 20px 0px;
@@ -4328,17 +4337,6 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
 
 .error404 h2 {
   font-family: 'Oswald'; }
-
-.error404 ul {
-  margin: 0; }
-  .error404 ul li {
-    list-style-type: circle; }
-  .error404 ul a {
-    color: black;
-    line-height: 2.0; }
-  .error404 ul a:hover {
-    color: #72CB7E;
-    font-weight: 600; }
 
 .subtitle-404, .error404 .page-header {
   margin: 0;

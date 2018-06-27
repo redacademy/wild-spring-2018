@@ -3,12 +3,31 @@
         display: flex;
         flex-direction: column;
         margin: 0 auto;
+        max-width: 1200px;
     }
     .page-content{
-        max-width: 1200px;
+       
         margin: 0;
         // border: 2px solid $color__green;
-        
+        ul{
+            margin: 0;
+            li{
+                list-style-type: circle;
+            }
+            a{
+                
+                color: black;
+                line-height: 2.0;
+            }
+            
+            a:hover{
+                color: $color__green;
+                font-weight: 600;
+            }
+            a:visited{
+                // color: black;
+            }
+        }
     }
 
     .search-form{
@@ -21,25 +40,7 @@
     h2{
         font-family: 'Oswald';
         }
-    ul{
-        margin: 0;
-        li{
-            list-style-type: circle;
-        }
-        a{
-            
-            color: black;
-            line-height: 2.0;
-        }
-        
-        a:hover{
-            color: $color__green;
-            font-weight: 600;
-        }
-        a:visited{
-            // color: black;
-        }
-    }
+
 
 }
 
