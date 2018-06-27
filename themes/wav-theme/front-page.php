@@ -10,8 +10,8 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 <!--banner-->
-	<section class="front-page-banner hero-banner">
-		<img src="<?php echo CFS()->get( 'front_page_wav_img' ); ?> " alt="banner image for WAV front-page">
+	<section class="front-page-banner">
+		<img  class="hero-banner" src="<?php echo CFS()->get( 'front_page_wav_img' ); ?> " alt="banner image for WAV front-page">
         <div class="banner-text">
             <h1><?php echo CFS()->get('front_page_wav_main_title')?></h1>
             <p><?php echo CFS()->get('front_page_wav_mission')?></p>

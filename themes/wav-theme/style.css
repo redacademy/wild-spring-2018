@@ -1979,6 +1979,13 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
       margin: 0 1rem;
       width: auto; } }
 
+.page-id-81 .mobile-title {
+  top: -4rem; }
+
+@media (min-width: 1080px) {
+  .page-id-81 .menu {
+    top: 2.5rem; } }
+
 .page-id-81 .involve-banner {
   display: none; }
   @media (min-width: 1080px) {
@@ -2407,8 +2414,7 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   border-radius: 5px;
   padding: .5rem;
   border-spacing: 1rem;
-  margin-bottom: 1rem;
-  width: 40vw; }
+  margin-bottom: 1rem; }
   .faq-item a {
     color: black; }
 
@@ -2440,6 +2446,10 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
         font-family: 'Tofino';
         font-size: 1.25rem; } }
 
+.dark-header {
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
+
 .header-container {
   position: relative; }
 
@@ -2450,7 +2460,9 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
 
 .main-navigation ul ul {
   position: initial;
-  display: none; }
+  display: none;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
 
 .logo {
   width: 5rem; }
@@ -2484,6 +2496,12 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   position: relative;
   top: -5.5rem; }
 
+.single .mobile-title {
+  top: -1.5rem; }
+
+.events-single .mobile-title {
+  bottom: 0; }
+
 @media (min-width: 1080px) {
   .main-navigation ul {
     display: block; }
@@ -2494,16 +2512,20 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   .logo img {
     bottom: .5rem; }
   .sub-menu {
-    width: 120px; }
+    width: 200px;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
     .sub-menu a {
-      max-width: 120px; }
+      width: 100%;
+      -webkit-box-shadow: none;
+              box-shadow: none; }
   .menu-item-has-children:hover > ul {
     display: block; }
-  .home .site-header, .post-type-archive-tribe_events .site-header, .page-id-81 .site-header, .page-template-contact .site-header {
+  .home .site-header, .post-type-archive-tribe_events .site-header, .page-id-81 .site-header, .page-template-contact .site-header, .group-blog .site-header {
     background-color: transparent; }
-    .home .site-header a, .post-type-archive-tribe_events .site-header a, .page-id-81 .site-header a, .page-template-contact .site-header a {
+    .home .site-header a, .post-type-archive-tribe_events .site-header a, .page-id-81 .site-header a, .page-template-contact .site-header a, .group-blog .site-header a {
       color: white; }
-    .home .site-header .menu a:hover, .post-type-archive-tribe_events .site-header .menu a:hover, .page-id-81 .site-header .menu a:hover, .page-template-contact .site-header .menu a:hover {
+    .home .site-header .menu a:hover, .post-type-archive-tribe_events .site-header .menu a:hover, .page-id-81 .site-header .menu a:hover, .page-template-contact .site-header .menu a:hover, .group-blog .site-header .menu a:hover {
       border-bottom: 2px solid white; }
   .logo-wav1 {
     display: inline;
@@ -2517,7 +2539,9 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   .site-header.dark-header .menu a {
     color: black; }
   .site-header.dark-header .menu a:hover {
-    border-bottom: 2px solid black; } }
+    border-bottom: 2px solid black; }
+  .site-header.dark-header .sub-menu {
+    background-color: rgba(255, 255, 255, 0.85); } }
 
 .widget-area a {
   border-radius: 8rem;
@@ -3166,13 +3190,13 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
    * Minus
    */
 .hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
-  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
-  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+  -webkit-transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear;
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
   opacity: 0;
-  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
-  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+  -webkit-transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
 
 .hamburger--minus.is-active .hamburger-inner::before {
   top: 0; }
@@ -3247,8 +3271,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3265,8 +3289,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
@@ -3285,8 +3309,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
-    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin-r .hamburger-inner::after {
     -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3303,8 +3327,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(90deg);
@@ -3495,8 +3519,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
           transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--squeeze .hamburger-inner::before {
-    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
-    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
+    -webkit-transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease; }
   .hamburger--squeeze .hamburger-inner::after {
     -webkit-transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     transition: bottom 0.075s 0.12s ease, -webkit-transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -3513,8 +3537,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   .hamburger--squeeze.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
-    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
+    -webkit-transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease; }
   .hamburger--squeeze.is-active .hamburger-inner::after {
     bottom: 0;
     -webkit-transform: rotate(-90deg);
