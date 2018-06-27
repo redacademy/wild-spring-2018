@@ -205,7 +205,17 @@
         flex-direction: column;
     }
 
-
+    .site-content {
+        @include desktop {
+            padding-top: 0;
+        }
+        padding-top: 5rem;
+        // padding: 2%;
+        max-width: 1200px;
+        margin: auto;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
 
 
    

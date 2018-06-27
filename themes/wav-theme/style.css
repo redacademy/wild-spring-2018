@@ -2472,6 +2472,16 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
       -ms-flex-direction: column;
           flex-direction: column; }
 
+.single-activity .site-content, .single-festival .site-content, .tribe-events-single .site-content {
+  padding-top: 5rem;
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 2%;
+  padding-right: 2%; }
+  @media (min-width: 1080px) {
+    .single-activity .site-content, .single-festival .site-content, .tribe-events-single .site-content {
+      padding-top: 0; } }
+
 .answer {
   display: none; }
 
