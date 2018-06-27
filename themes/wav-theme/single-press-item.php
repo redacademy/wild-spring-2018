@@ -32,20 +32,9 @@ get_header(); ?>
                     <?php endif; ?>
                 </div>
 
-				<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+                <div class="text-wrapper">
 
-				<div class="entry-meta">
-					<p> posted on <?php  the_time('F j, Y / h:i A') ?> </p>
-				</div><!-- .entry-meta -->
-
-                <div class="tags">
-                    <?php
-                    $tags_list = get_the_tag_list( '', esc_html( ' ' ) );
-                    if ( $tags_list ) {
-                    printf( '<span class="tags-links">' . esc_html( '%1$s' ) . '</span>', $tags_list ); // WPCS: XSS OK.
-                    }                                
-                    ?>
-                </div>
+				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 					
 
 				<div class="entry-content">
@@ -59,7 +48,7 @@ get_header(); ?>
 					?>
 				</div><!-- .entry-content -->
 
-
+                            </div>
 			</article><!-- #post-## -->
 
 			<?php the_post_navigation( array(

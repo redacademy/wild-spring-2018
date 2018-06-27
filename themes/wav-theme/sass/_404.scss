@@ -6,6 +6,7 @@
     }
     .page-content{
         max-width: 1200px;
+        margin: 0;
         // border: 2px solid $color__green;
         
     }
@@ -15,6 +16,28 @@
         border: 1px solid $color__green;
         fieldset{
             border: none;
+        }
+    }
+    h2{
+        font-family: 'Oswald';
+        }
+    ul{
+        margin: 0;
+        li{
+            list-style-type: circle;
+        }
+        a{
+            
+            color: black;
+            line-height: 2.0;
+        }
+        
+        a:hover{
+            color: $color__green;
+            font-weight: 600;
+        }
+        a:visited{
+            // color: black;
         }
     }
 
@@ -28,10 +51,21 @@
 .widgets-404{
     display: flex;
     flex-direction: column;
+    @include desktop{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        
+
+    }
     
     .widget{
         border: 1px solid $color__green;
         padding: 5%;
+        @include desktop{
+            padding: 30px;
+            width: 32%;
+        }
     }
     .widgettitle, .widget-title{
         margin: 0;
