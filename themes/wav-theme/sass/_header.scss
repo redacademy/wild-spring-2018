@@ -7,12 +7,15 @@
         height: 3.55rem;
 
         @include desktop {
+            .menu a:hover {
+                border-bottom: 2px solid white;
+            }
             height: 5rem;
             a {
                 padding-left: .5rem;
                 padding-right: .5rem;
                 display: flex;
-                color: black;
+                color: #fff;
                 font-family: 'Tofino';
                 font-size: 1.25rem;
             }

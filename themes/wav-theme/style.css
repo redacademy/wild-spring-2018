@@ -1726,6 +1726,13 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-ical.tribe-events-button {
     display: none; }
 
+.single-tribe_events .site-content {
+  width: 100vw; }
+
+.single-tribe_events .tribe_events {
+  padding-left: 2%;
+  padding-right: 2%; }
+
 .aboutNavigation {
   background-color: #72CB7E;
   list-style-type: none;
@@ -2514,13 +2521,15 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   @media (min-width: 1080px) {
     .site-header {
       height: 5rem; }
+      .site-header .menu a:hover {
+        border-bottom: 2px solid white; }
       .site-header a {
         padding-left: .5rem;
         padding-right: .5rem;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        color: black;
+        color: #fff;
         font-family: 'Tofino';
         font-size: 1.25rem; } }
 
