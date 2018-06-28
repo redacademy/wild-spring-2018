@@ -2597,7 +2597,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
 .mobile-title {
   text-align: center;
   position: relative;
-  top: -5.5rem; }
+  top: -5.5rem;
+  display: none; }
 
 .single-activity .mobile-title, .single-tribe_events .mobile-title, .single-festival .mobile-title, .single-post .mobile-title {
   top: -1.5rem; }
