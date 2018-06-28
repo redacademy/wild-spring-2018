@@ -1726,9 +1726,6 @@ Please check the Skeleton style from Events/Setting/Display in dashboard and the
   .tribe_events-template-default.single-tribe_events .tribe-events-single .tribe-events-ical.tribe-events-button {
     display: none; }
 
-.single-tribe_events .site-content {
-  width: 100vw; }
-
 .single-tribe_events .tribe_events {
   padding-left: 2%;
   padding-right: 2%; }
@@ -2608,9 +2605,6 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
 
 .tribe-events-single .carousel-container {
   padding-top: 0; }
-
-.events-single .site-content {
-  position: absolute; }
 
 .events-archive .site-content {
   padding-top: 0rem !important; }

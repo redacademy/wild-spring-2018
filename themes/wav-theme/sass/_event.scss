@@ -101,9 +101,10 @@
 }
 
 .single-tribe_events {
-    .site-content {
-        width: 100vw;
-    }
+    //I commented this out becuase it caused a scrolling bar at the bootom of the single event page
+    // .site-content {
+    //     width: 100vw;
+    // }
     .tribe_events {
         padding-left: 2%;
         padding-right: 2%;
