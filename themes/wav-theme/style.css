@@ -4742,7 +4742,7 @@ h1.submission-header {
   color: white; }
   .submission-thank-you a.blue-button:hover {
     background-color: white !important;
-    color: black; }
+    color: black !important; }
 
 .submission-thank-you a.yellow-button {
   background-color: #F9D169;

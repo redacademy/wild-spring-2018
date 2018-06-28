@@ -22,9 +22,11 @@
     })
 
       
-        if($('body').hasClass('tribe_community_edit') && ($('body').hasClass('tribe-community-notice-update'))){
+        if($('body').hasClass('tribe_community_edit') && ($('.tribe-community-notice').hasClass('tribe-community-notice-update'))){
            
+
             $('.tribe-community-notice').empty();
+
            
             var successMessage='';
             successMessage+= '<section class="submission-success-message">';
