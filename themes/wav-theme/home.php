@@ -7,14 +7,24 @@
 
 get_header(); ?>
 
-	<div class="activity-banner"><img class="hero-banner" src="<?php echo esc_url(CFS()->get("hero_image_blogs", 226)); ?> " alt="banner image for WAV blog page"></div>
+    
+    <?php $banner_img =  esc_url(CFS()->get("hero_image_blogs", 226)); 
+	if(!empty($banner_img)): ?>
 
+	<div class="activity-banner"><img class="hero-banner" src="<?php echo $banner_img; ?> " alt="banner image for WAV archive blog page"></div>
+	
+	<header class="page-header" id="1">				
+        <h1 id="1" class="page-title">Our Blog</h1>
+	</header>
+
+	<?php	
+	endif;
+	?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 
-            <h1 id="1" class="page-title">Our Blog</h1>
 
             <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
                 <fieldset>

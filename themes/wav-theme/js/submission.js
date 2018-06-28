@@ -22,13 +22,15 @@
     })
 
       
-        if($('body').hasClass('tribe_community_edit') && ($('.tribe-community-notice-update'))){
+        if($('body').hasClass('tribe_community_edit') && ($('.tribe-community-notice').hasClass('tribe-community-notice-update'))){
            
+
             $('.tribe-community-notice').empty();
+
            
             var successMessage='';
             successMessage+= '<section class="submission-success-message">';
-            successMessage+= '<h1 class="submission-header">Create Your Event</h1>';
+            // successMessage+= '<h1 class="submission-header">Create Your Event</h1>';
             successMessage+= '<div class="submission-thank-you">'
             successMessage+= '<img src="./../../../wp-content/themes/wav-theme/assets/images/Checkmark.svg"/>'
             successMessage+= '<h3> Thank you for submitting your event! </h3>'
