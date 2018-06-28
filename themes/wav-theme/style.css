@@ -2520,6 +2520,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
   background-color: rgba(255, 255, 255, 0.85);
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
+  .site-header .menu a:hover {
+    border-bottom: 2px solid white; }
   @media (min-width: 1080px) {
     .site-header {
       height: 5rem; }
@@ -2592,7 +2594,8 @@ section.aboutWav, section.ourFestival, section.theTeam, section.collaborators, s
 .mobile-title {
   text-align: center;
   position: relative;
-  top: -5.5rem; }
+  top: -5.5rem;
+  display: none; }
 
 .single-activity .mobile-title, .single-tribe_events .mobile-title, .single-festival .mobile-title, .single-post .mobile-title {
   top: -1.5rem; }
